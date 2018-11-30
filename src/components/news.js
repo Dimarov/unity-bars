@@ -21,7 +21,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
-  padding-top: 8rem;
+  padding: 8rem 1rem;
 `
 
 const StyledTitle = styled.h2`
@@ -44,28 +44,63 @@ const StyledGrid = styled.div`
   max-width: 1440px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
   padding: 1rem;
 
   @media screen and (max-width: 60rem) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
   }
 `
 
-const StyledProduct = styled.div`
+const StyledNews = styled.div`
   width: 100%;
-  height: 20rem;
+  height: 24rem;
   border-radius: .125rem;
   background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+
+  :hover div {
+    height: 20rem;
+  }
 
   @media screen and (max-width: 60rem) {
-    height: 12rem;
+    height: 24rem;
   }
 `
+const StyledNewsPhoto = styled.div`
+  background: red;
+  border-radius: .125rem;
+  width: 100%;
+  height: 16rem;
+  transition: all .3s ease-in-out;
+`
+
+const StyledNewsTitle = styled.h2`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: .5rem 0 1rem 2rem;
+  color: #3EC4E1;
+  transition: all .3s ease-in-out;
+`
+
+const StyledNewsDate = styled.p`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 1rem 2rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  transition: all .3s ease-in-out;
+`
+
 
 const News = (props) => (
   <StyledBackground>
@@ -76,14 +111,52 @@ const News = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-    </StyledGrid>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+      <StyledNews>
+        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsDate>26.11.2018</StyledNewsDate>
+      </StyledNews>
+        </StyledGrid>
   </StyledBackground>
 )
 

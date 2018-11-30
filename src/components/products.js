@@ -29,7 +29,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
-  padding-top: 8rem;
+  padding: 8rem 1rem;
 `
 
 const StyledTitle = styled.h2`
@@ -70,7 +70,7 @@ const StyledProduct = styled.div`
   border-radius: .125rem;
   background: #fafafa;
   position: relative;
-  transition: all .3s ease-in;
+  transition: all .3s ease-in-out;
   cursor: pointer;
 
   :hover {
@@ -108,7 +108,7 @@ const StyledProductTitle = styled.h2`
   color: #3EC4E1;
   opacity: 0;
   margin: 0;
-  transition: all .3s ease-in;
+  transition: all .3s ease-in-out;
 `
 
 const StyledProductSubtitle = styled.p`
@@ -123,7 +123,7 @@ const StyledProductSubtitle = styled.p`
   color: #1A1A1A;
   opacity: 0;
   margin: 0;
-  transition: all .3s ease-in;
+  transition: all .3s ease-in-out;
 `
 
 const StyledProductImage = styled.img`
@@ -131,7 +131,7 @@ const StyledProductImage = styled.img`
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  transition: all .3s ease-in;
+  transition: all .3s ease-in-out;
 `
 
 const Products = (props) => (
