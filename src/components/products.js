@@ -4,6 +4,14 @@ import styled from "styled-components"
 
 import bg from "../images/products.jpg"
 
+import absbars from "../images/absbars.png"
+import absbarsmmfo from "../images/absbarsmmfo.png"
+import corp2 from "../images/corp2.png"
+import corplight from "../images/corplight.png"
+import creditmodule from "../images/creditmodule.png"
+import datawarehouse from "../images/datawarehouse.png"
+import electronicarchive from "../images/electronica.png"
+
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
@@ -39,7 +47,7 @@ const StyledSubtitle = styled.p`
 `
 
 const StyledGrid = styled.div`
-  height: 120vh;
+  height: auto;
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
@@ -48,13 +56,82 @@ const StyledGrid = styled.div`
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
   padding: 1rem;
+
+  @media screen and (max-width: 60rem) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
 `
 
 const StyledProduct = styled.div`
   width: 100%;
-  height: 100%;
+  height: 20rem;
   border-radius: .125rem;
   background: #fafafa;
+  position: relative;
+  transition: all .3s ease-in;
+  cursor: pointer;
+
+  :hover {
+    background: #EEE;
+  }
+
+  :hover img {
+    filter: brightness(100);
+  }
+
+  :hover h2 {
+    opacity: 1;
+    top: 15%;
+  }
+
+  :hover p {
+    opacity: 1;
+    bottom: 5%;
+  }
+
+  @media screen and (max-width: 60rem) {
+    height: 12rem;
+  }
+`
+
+const StyledProductTitle = styled.h2`
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%,-50%);
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3EC4E1;
+  opacity: 0;
+  margin: 0;
+  transition: all .3s ease-in;
+`
+
+const StyledProductSubtitle = styled.p`
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  opacity: 0;
+  margin: 0;
+  transition: all .3s ease-in;
+`
+
+const StyledProductImage = styled.img`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transition: all .3s ease-in;
 `
 
 const Products = (props) => (
@@ -66,13 +143,41 @@ const Products = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Автоматизована банківська система BARS</StyledProductTitle>
+        <StyledProductSubtitle>Система з комплексним або індивідуальним підходом до клієнта. Автоматизує широкий спектр бізнес-процесів і функцій банку</StyledProductSubtitle>
+        <StyledProductImage src={absbars} />
+      </StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Автоматизована банківська система BARS MMFO</StyledProductTitle>
+        <StyledProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</StyledProductSubtitle>
+        <StyledProductImage src={absbarsmmfo} />
+      </StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
+        <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою на базі Web-технологій</StyledProductSubtitle>
+        <StyledProductImage src={corp2} />
+      </StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Клієнт-банк</StyledProductTitle>
+        <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних осіб</StyledProductSubtitle>
+        <StyledProductImage src={corplight} />
+      </StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Кредитний модуль</StyledProductTitle>
+        <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом обслуговування клієнтів</StyledProductSubtitle>
+        <StyledProductImage src={creditmodule} />
+      </StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Електронне сховище</StyledProductTitle>
+        <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
+        <StyledProductImage src={datawarehouse} />
+      </StyledProduct>
+      <StyledProduct>
+        <StyledProductTitle>Електронний архів</StyledProductTitle>
+        <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному вигляді</StyledProductSubtitle>
+        <StyledProductImage src={electronicarchive} />
+      </StyledProduct>
     </StyledGrid>
   </StyledBackground>
 )

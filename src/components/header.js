@@ -119,9 +119,15 @@ const Header = ({ siteTitle }) => (
           </StyledLink>
         </StyledLinkContainer>
         <LanguageList>
-          <LanguageButton selected>UK</LanguageButton>
-          <LanguageButton>RU</LanguageButton>
-          <LanguageButton>EN</LanguageButton>
+          <Link to="/">
+            <LanguageButton selected>UK</LanguageButton>
+          </Link>
+          <Link to="/index-ru">
+            <LanguageButton>RU</LanguageButton>
+          </Link>
+          <Link to="/index-en">
+            <LanguageButton>EN</LanguageButton>
+          </Link>
         </LanguageList>
       </Navigation>
     </Container>

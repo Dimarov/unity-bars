@@ -14,6 +14,10 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+
+  @media screen and (max-width: 60rem) {
+    padding: 0 1rem;
+  }
 `
 
 const StyledHeader = styled.div`
@@ -51,6 +55,12 @@ const StyledGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-gap: 3rem 1rem;
+
+  @media screen and (max-width: 60rem) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem .5rem;
+  }
 `
 
 const StyledSecondGrid = styled.div`
@@ -60,6 +70,12 @@ const StyledSecondGrid = styled.div`
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: .125rem;
+
+  @media screen and (max-width: 60rem) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: .125rem;
+  }
 `
 
 const StyledClient = styled.div`
@@ -82,10 +98,10 @@ const StyledPerson = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
-  transition: all .3s ease-out;
+  transition: all .1s ease-out;
 
   :hover {
-    transform: translateY(-.5rem);
+    transform: translateY(-.125rem);
   }
 `
 
@@ -94,6 +110,10 @@ const StyledPersonPhoto = styled.div`
   height: 12rem;
   background: red;
   border-radius: .125rem;
+
+  @media screen and (max-width: 60rem) {
+    height: 10rem;
+  }
 `
 
 const StyledPersonName = styled.h3`
@@ -101,6 +121,10 @@ const StyledPersonName = styled.h3`
   font-size: 1.25rem;
   font-weight: 400;
   margin: 1rem 0 0;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1rem;
+  }
 `
 
 const StyledPersonPosition = styled.h3`
@@ -109,6 +133,10 @@ const StyledPersonPosition = styled.h3`
   font-weight: 200;
   margin: .5rem 0;
   color: #37B3FF;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1rem;
+  }
 `
 
 function Employees(props) {
@@ -188,6 +216,7 @@ const Company = (props) => (
         <StyledPartner></StyledPartner>
         <StyledPartner></StyledPartner>
       </StyledSecondGrid>
+      <br />
     </Container>
   </StyledBackground>
 )
