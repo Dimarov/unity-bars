@@ -20,15 +20,25 @@ const StyledBackground = styled.div`
   width: 100%;
   height: 40rem;
   margin: .5rem 0;
-  background: url(${props => props.themeColor || "#000"});
+  background: ${props => props.themeColor || "#000"};
   background-size: cover;
+
+  @media screen and (max-width: 60rem) {
+    height: 32rem;
+  }
 `
 
 const StyledContent = styled.div`
   height: 100%;
   width: 100%;
+  padding: 0 8rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 60rem) {
+    padding: 0 1rem;
+  }
 `
 
 const StyledInfo = styled.div`
@@ -38,6 +48,13 @@ const StyledInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 60rem) {
+    flex: 0 0 100%;
+    height: 50%;
+    padding: 0;
+    align-items: center;
+  }
 `
 
 const StyledImageContainer = styled.div`
@@ -45,10 +62,37 @@ const StyledImageContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 60rem) {
+    flex: 0 0 100%;
+    height: 50%;
+    order: 2;
+  }
 `
 
-const StyledImage = styled.img`
-  height: 100%;
+const StyledImageBone = styled.img`
+  height: 24rem;
+
+  @media screen and (max-width: 60rem) {
+    height: 10rem;
+  }
+`
+
+const StyledImageCorp = styled.img`
+  height: 32rem;
+
+  @media screen and (max-width: 60rem) {
+    height: 12rem;
+  }
+`
+
+const StyledImageForward = styled.img`
+  height: 36rem;
+
+  @media screen and (max-width: 60rem) {
+    height: 14rem;
+  }
 `
 
 const StyledTitle = styled.h2`
@@ -56,6 +100,15 @@ const StyledTitle = styled.h2`
   font-weight: 600;
   font-family: myriad-pro, sans-serif;
   color: ${props => props.themeColorSecondary || "#FFF"};
+
+  @media screen and (max-width: 60rem) {
+    font-size: 2rem;
+    margin: .25rem 0;
+  }
+`
+
+const StyledSpan = styled.span`
+  color: ${props => props.color || props.themeColorSecondary};
 `
 
 const StyledSubtitle = styled.p`
@@ -63,12 +116,23 @@ const StyledSubtitle = styled.p`
   font-weight: 400;
   font-family: myriad-pro, sans-serif;
   color: ${props => props.themeColorSecondary || "#FFF"};
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1rem;
+    margin: .25rem 0;
+    text-align: center;
+  }
 `
 
 const StyledButtonContainer = styled.div`
   width: 100%;
   display: flex;
   margin: 1rem 0;
+
+  @media screen and (max-width: 60rem) {
+    margin: .5rem 0;
+    justify-content: space-between;
+  }
 `
 
 const StyledButton = styled.button`
@@ -94,6 +158,12 @@ const StyledButton = styled.button`
   :active {
     transform: translateY(.0625rem);
   }
+
+  @media screen and (max-width: 60rem) {
+    padding: .3rem 1.25rem;
+    margin: 0 .5rem;
+    font-size: .65rem;
+  }
 `
 
 const StyledMoreButton = styled(Link)`
@@ -109,6 +179,11 @@ const StyledMoreButton = styled(Link)`
   :hover {
     filter: contrast(50%);
   }
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
 `
 
 const products = [
@@ -119,10 +194,10 @@ const products = [
 
 const ProductPreview = (props) => (
   <div>
-    <StyledBackground themeColor={testti}>
+    <StyledBackground themeColor='#000'>
       <StyledContent>
         <StyledImageContainer>
-          <StyledImage src={corpImage} />
+          <StyledImageBone src={boneImage} />
         </StyledImageContainer>
         <StyledInfo>
           <StyledTitle themeColorSecondary='#FFF'>Bone</StyledTitle>
@@ -139,7 +214,7 @@ const ProductPreview = (props) => (
     <StyledBackground themeColor='#FEFEFE'>
       <StyledContent>
         <StyledInfo>
-          <StyledTitle themeColorSecondary='#303030'>CorpLight Ощадбанк</StyledTitle>
+          <StyledTitle themeColorSecondary='#303030'>CorpLight <StyledSpan color="#3EC4E1">Ощадбанк</StyledSpan></StyledTitle>
           <StyledSubtitle themeColorSecondary='#303030'>Онлайн система управління банківськими рахунками та продуктами</StyledSubtitle>
           <StyledButtonContainer>
             <StyledButton themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</StyledButton>
@@ -149,28 +224,28 @@ const ProductPreview = (props) => (
           <StyledMoreButton themeColorSecondary='#303030'>Більше</StyledMoreButton>
         </StyledInfo>
         <StyledImageContainer>
-          <StyledImage src={corpImage} />
+          <StyledImageCorp src={corpImage} />
         </StyledImageContainer>
       </StyledContent>
     </StyledBackground>
+    <StyledBackground themeColor='#FAFAFA'>
+      <StyledContent>
+        <StyledImageContainer>
+          <StyledImageForward src={forwardImage} />
+        </StyledImageContainer>
+        <StyledInfo>
+          <StyledTitle themeColorSecondary='#29333E'><StyledSpan color="#991F3A">Forward</StyledSpan> Online</StyledTitle>
+          <StyledSubtitle themeColorSecondary='#29333E'>24/7 доступ до Ваших банківських сервісів</StyledSubtitle>
+          <StyledButtonContainer>
+            <StyledButton themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</StyledButton>
+            <StyledButton themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</StyledButton>
+            <StyledButton outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</StyledButton>
+          </StyledButtonContainer>
+          <StyledMoreButton themeColorSecondary='#29333E'>Більше</StyledMoreButton>
+        </StyledInfo>
+      </StyledContent>
+    </StyledBackground>
   </div>
-  // <StyledBackground key={product.id} themeColor={product.themeColor}>
-  //   <StyledContent>
-  //     <StyledInfo order={product.order}>
-  //       <StyledTitle themeColorSecondary={product.themeColorSecondary}>{product.title}</StyledTitle>
-  //       <StyledSubtitle themeColorSecondary={product.themeColorSecondary}>{product.subtitle}</StyledSubtitle>
-  //       <StyledButtonContainer>
-  //         <StyledButton themeColor={product.themeColor} themeColorSecondary={product.themeColorSecondary}>App Store</StyledButton>
-  //         <StyledButton themeColor={product.themeColor} themeColorSecondary={product.themeColorSecondary}>Google Play</StyledButton>
-  //         <StyledButton outline themeColor={product.themeColor} themeColorSecondary={product.themeColorSecondary}>Web Demo</StyledButton>
-  //       </StyledButtonContainer>
-  //       <StyledMoreButton themeColorSecondary={product.themeColorSecondary}>Більше</StyledMoreButton>
-  //     </StyledInfo>
-  //     <StyledImageContainer>
-  //       <StyledImage src={test} />
-  //     </StyledImageContainer>
-  //   </StyledContent>
-  // </StyledBackground>
 )
 
 export default ProductPreview

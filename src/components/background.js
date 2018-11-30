@@ -19,6 +19,10 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+
+  @media screen and (max-width: 60rem) {
+    padding: 0 1rem;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -32,6 +36,10 @@ const StyledContent = styled.div`
 
 const BackgroundImage = styled.img`
   width: 32rem;
+
+  @media screen and (max-width: 60rem) {
+    width: 16rem;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -56,6 +64,10 @@ const StyledButton = styled.button`
 
   :active {
     transform: translateY(.0625rem);
+  }
+
+  @media screen and (max-width: 60rem) {
+    padding: .4rem 2rem;
   }
 `;
 

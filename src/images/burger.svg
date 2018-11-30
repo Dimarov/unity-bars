@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="burger" transform="translate(-176 -26)">
+    <rect id="Rectangle_16" data-name="Rectangle 16" class="cls-1" width="32" height="2" rx="1" transform="translate(176 26)"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" class="cls-1" width="32" height="2" rx="1" transform="translate(176 36)"/>
+  </g>
+</svg>

@@ -17,6 +17,10 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+
+  @media screen and (max-width: 60rem) {
+    padding: 0 1rem;
+  }
 `;
 
 const Navigation = styled.div`
@@ -30,6 +34,19 @@ const Navigation = styled.div`
 
 const StyledLogo = styled.img`
   margin: 0;
+`;
+
+const StyledLinkContainer = styled.div`
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: myriad-pro, sans-serif;
+
+  @media screen and (max-width: 60rem) {
+    display: none;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -78,27 +95,29 @@ const Header = ({ siteTitle }) => (
         <StyledLink to="/">
           <StyledLogo src={logo} />
         </StyledLink>
-        <StyledLink to="/">
-          Головна
-        </StyledLink>
-        <StyledLink to="/company">
-          Компанія
-        </StyledLink>
-        <StyledLink to="/products">
-          Продукти
-        </StyledLink>
-        <StyledLink to="/projects">
-          Проекти
-        </StyledLink>
-        <StyledLink to="/news">
-          Новини
-        </StyledLink>
-        <StyledLink to="/vacancies">
-          Вакансії
-        </StyledLink>
-        <StyledLink to="/contacts">
-          Контакти
-        </StyledLink>
+        <StyledLinkContainer>
+          <StyledLink to="/">
+            Головна
+          </StyledLink>
+          <StyledLink to="/company">
+            Компанія
+          </StyledLink>
+          <StyledLink to="/products">
+            Продукти
+          </StyledLink>
+          <StyledLink to="/projects">
+            Проекти
+          </StyledLink>
+          <StyledLink to="/news">
+            Новини
+          </StyledLink>
+          <StyledLink to="/vacancies">
+            Вакансії
+          </StyledLink>
+          <StyledLink to="/contacts">
+            Контакти
+          </StyledLink>
+        </StyledLinkContainer>
         <LanguageList>
           <LanguageButton selected>UK</LanguageButton>
           <LanguageButton>RU</LanguageButton>

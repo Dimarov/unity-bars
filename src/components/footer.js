@@ -16,6 +16,10 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+
+  @media screen and (max-width: 60rem) {
+    padding: 0 1rem;
+  }
 `;
 
 const FooterContent = styled.div`
@@ -32,6 +36,10 @@ const IconContainer = styled.div`
   display: flex;
   justify-content: space-between;
   opacity: .4;
+
+  @media screen and (max-width: 60rem) {
+    flex: 0 0 10%;
+  }
 `
 
 const Title = styled.h2`
@@ -41,6 +49,10 @@ const Title = styled.h2`
   color: #fff;
   opacity: .4;
   margin: 0;
+
+  @media screen and (max-width: 60rem) {
+    font-size: .75rem;
+  }
 `
 
 const Footer = ({ siteTitle }) => (
