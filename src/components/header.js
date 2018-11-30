@@ -8,7 +8,7 @@ const StyledHeader = styled.div`
   position: fixed;
   width: 100%;
   height: 4rem;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.75);
   z-index: 9000;
 `;
 

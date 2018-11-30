@@ -2,13 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 
-import test from "../images/Notebook.png"
-
 import boneImage from "../images/bone.png"
 import corpImage from "../images/corp.png"
 import forwardImage from "../images/forward.png"
-
-import testti from "../images/01.jpg"
 
 const StyledProductPreviews = styled.div`
   width: 100%;
