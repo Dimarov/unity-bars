@@ -8,16 +8,9 @@ const StyledHeader = styled.div`
   position: fixed;
   width: 100%;
   height: 4rem;
-  background: rgba(26,26,26,.9);
-`;
-
-const StyledHeaderContainer = styled.div`
-  position: relative;
-  background: rgba(26,26,26,.9);
-  width: 100%;
-  height: 4rem;
+  background: rgba(0,0,0,.6);
   z-index: 9000;
-`
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -79,43 +72,41 @@ const LanguageButton = styled.button`
 `;
 
 const Header = ({ siteTitle }) => (
-  <StyledHeaderContainer>
-    <StyledHeader>
-      <Container>
-        <Navigation>
-          <StyledLink to="/">
-            <StyledLogo src={logo} />
-          </StyledLink>
-          <StyledLink to="/">
-            Головна
-          </StyledLink>
-          <StyledLink to="/company">
-            Компанія
-          </StyledLink>
-          <StyledLink to="/products">
-            Продукти
-          </StyledLink>
-          <StyledLink to="/projects">
-            Проекти
-          </StyledLink>
-          <StyledLink to="/news">
-            Новини
-          </StyledLink>
-          <StyledLink to="/vacancies">
-            Вакансії
-          </StyledLink>
-          <StyledLink to="/contacts">
-            Контакти
-          </StyledLink>
-          <LanguageList>
-            <LanguageButton selected>UK</LanguageButton>
-            <LanguageButton>RU</LanguageButton>
-            <LanguageButton>EN</LanguageButton>
-          </LanguageList>
-        </Navigation>
-      </Container>
-    </StyledHeader>
-  </StyledHeaderContainer>
+  <StyledHeader>
+    <Container>
+      <Navigation>
+        <StyledLink to="/">
+          <StyledLogo src={logo} />
+        </StyledLink>
+        <StyledLink to="/">
+          Головна
+        </StyledLink>
+        <StyledLink to="/company">
+          Компанія
+        </StyledLink>
+        <StyledLink to="/products">
+          Продукти
+        </StyledLink>
+        <StyledLink to="/projects">
+          Проекти
+        </StyledLink>
+        <StyledLink to="/news">
+          Новини
+        </StyledLink>
+        <StyledLink to="/vacancies">
+          Вакансії
+        </StyledLink>
+        <StyledLink to="/contacts">
+          Контакти
+        </StyledLink>
+        <LanguageList>
+          <LanguageButton selected>UK</LanguageButton>
+          <LanguageButton>RU</LanguageButton>
+          <LanguageButton>EN</LanguageButton>
+        </LanguageList>
+      </Navigation>
+    </Container>
+  </StyledHeader>
 )
 
 export default Header

@@ -3,11 +3,15 @@ import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import unitybarslogobackground from '../images/unitybarslogobackground.png'
+import ub from '../images/ub-background.jpg'
 
 const StyledBackground = styled.div`
   width: 100%;
   height: 100vh;
-  background: ${props => props.color};
+  background-image: url(${ub});
+  background-size: cover;
+  box-shadow: inset 0rem -10rem 10rem rgba(0,0,0,0.8);
+  filter: grayscale(.9);
 `;
 
 const Container = styled.div`
@@ -27,27 +31,27 @@ const StyledContent = styled.div`
 `;
 
 const BackgroundImage = styled.img`
-  width: 24rem;
+  width: 32rem;
 `;
 
 const StyledButton = styled.button`
   outline: none;
-  border: .125rem solid #1A1A1A;
+  border: .125rem solid #FFF;
   border-radius: .125rem;
-  background: ${props => props.outline ? "none" : "#1A1A1A"};
+  background: ${props => props.outline ? "none" : "#FFF"};
   padding: .5rem 3rem;
   margin: 1rem;
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: ${props => props.outline ? "#1A1A1A" : "#FFF"};
+  color: ${props => props.outline ? "#FFF" : "#000"};
   cursor: pointer;
   transition: all .3s ease-out;
 
   :focus,
   :hover {
-    background: ${props => props.outline ? "#1A1A1A" : "none"};
-    color: ${props => props.outline ? "#FFF" : "#1A1A1A"};
+    background: ${props => props.outline ? "#FFF" : "none"};
+    color: ${props => props.outline ? "#000" : "#FFF"};
   }
 
   :active {
@@ -55,38 +59,18 @@ const StyledButton = styled.button`
   }
 `;
 
-function DateBackground(props) {
-  const date = new Date();
-
-  function setColor(i) {
-    if (i > 10 && i < 20) {
-      return "#c1c1c1";
-    }
-    else {
-      return "#000";
-    }
-  }
-
-  const color = setColor(date.getHours());
-  console.log(date.getHours())
-  console.log(color)
-  return (
-    <StyledBackground color={color} >
-      <Container>
-        <StyledContent>
-          <BackgroundImage src={unitybarslogobackground} />
-          <div>
-            <StyledButton>Про Нас</StyledButton>
-            <StyledButton outline>Новини</StyledButton>
-          </div>
-        </StyledContent>
-      </Container>
-    </StyledBackground>
-  );
-}
-
 const Background = () => (
-  <DateBackground />
+  <StyledBackground>
+    <Container>
+      <StyledContent className="content">
+        <BackgroundImage src={unitybarslogobackground} />
+        <div>
+          <StyledButton>Про Нас</StyledButton>
+          <StyledButton outline>Продукти</StyledButton>
+        </div>
+      </StyledContent>
+    </Container>
+  </StyledBackground>
 )
 
 export default Background

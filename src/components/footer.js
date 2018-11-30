@@ -8,7 +8,7 @@ import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 const StyledFooter = styled.div`
   width: 100%;
   height: 6rem;
-  background: rgba(26,26,26,1);
+  background: rgba(0,0,0,1);
 `;
 
 const Container = styled.div`
