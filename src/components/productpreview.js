@@ -131,7 +131,7 @@ const StyledButtonContainer = styled.div`
 
   @media screen and (max-width: 60rem) {
     margin: .5rem 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 `
 
@@ -186,12 +186,6 @@ const StyledMoreButton = styled(Link)`
   }
 `
 
-const products = [
-  {id: 1, title: 'Bone', subtitle: 'Інтернет банкінг для МСП та приватних клієнтів', themeColor: '#1A1A1A', themeColorSecondary: '#FFF', order: '1', image: '../images/bone.png'},
-  {id: 2, title: 'Corplight Ощадбанк', subtitle: 'Онлайн система управління банківськими рахунками та продуктами', themeColor: '#FEFEFE', themeColorSecondary: '#303030', order: '0', image: {corpImage}},
-  {id: 3, title: 'Forward Online', subtitle: '24/7 доступ до Ваших банківських сервісів', themeColor: '#991F3A', themeColorSecondary: '#FEFEFE', order: '1', image: {forwardImage}},
-]
-
 const ProductPreview = (props) => (
   <div>
     <StyledBackground themeColor='#000'>
@@ -207,7 +201,7 @@ const ProductPreview = (props) => (
             <StyledButton themeColor='#000' themeColorSecondary='#FFF'>Google Play</StyledButton>
             <StyledButton outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</StyledButton>
           </StyledButtonContainer>
-          <StyledMoreButton themeColorSecondary='#FFF'>Більше</StyledMoreButton>
+          <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
         </StyledInfo>
       </StyledContent>
     </StyledBackground>
@@ -221,7 +215,7 @@ const ProductPreview = (props) => (
             <StyledButton themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</StyledButton>
             <StyledButton outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</StyledButton>
           </StyledButtonContainer>
-          <StyledMoreButton themeColorSecondary='#303030'>Більше</StyledMoreButton>
+          <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
         </StyledInfo>
         <StyledImageContainer>
           <StyledImageCorp src={corpImage} />
@@ -241,7 +235,7 @@ const ProductPreview = (props) => (
             <StyledButton themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</StyledButton>
             <StyledButton outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</StyledButton>
           </StyledButtonContainer>
-          <StyledMoreButton themeColorSecondary='#29333E'>Більше</StyledMoreButton>
+          <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
         </StyledInfo>
       </StyledContent>
     </StyledBackground>

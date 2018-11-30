@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 
+import bg from "../images/products.jpg"
+
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
@@ -17,7 +19,8 @@ const Container = styled.div`
 const StyledHeader = styled.div`
   width: 100%;
   height: 32rem;
-  background: green;
+  background-image: url(${bg});
+  background-size: cover;
   padding-top: 8rem;
 `
 

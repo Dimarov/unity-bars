@@ -8,9 +8,6 @@ import Products from '../components/products'
 const ProductsPage = () => (
   <Layout>
     <Products />
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 
