@@ -58,7 +58,7 @@ const StyledGrid = styled.div`
 
 const StyledNews = styled.div`
   width: 100%;
-  height: 24rem;
+  height: 28rem;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
@@ -72,7 +72,7 @@ const StyledNews = styled.div`
   }
 
   @media screen and (max-width: 60rem) {
-    height: 24rem;
+    height: 28rem;
   }
 `
 const StyledNewsPhoto = styled.div`
@@ -113,47 +113,47 @@ const News = (props) => (
     <StyledGrid>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Зі святом Україно!</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>New Data Migration to BARS-MMFO database!</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Система обміну даними з ПФУ для автоматичної обробки та зарахування пенсій в онлайн режимі</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Well Done Data Migration BARS-MMFO</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Well Done Data Migration</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Новини з НБУ</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Підсумки ІТ-конференції «Сучасні тенденції з реалізації IT проектів в банках та фінансових установах»</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Конференція «Сучасні тенденції з реалізації IT проектів в банках та фінансових установах»</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Something New</StyledNewsTitle>
+        <StyledNewsTitle>Well Done Data Migration</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
         </StyledGrid>
