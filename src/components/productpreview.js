@@ -190,8 +190,8 @@ const ProductPreview = (props) => (
           <StyledImageBone src={boneImage} alt="bone"/>
         </StyledImageContainer>
         <StyledInfo>
-          <StyledTitle themeColorSecondary='#FFF'>Bone</StyledTitle>
-          <StyledSubtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСП та приватних клієнтів</StyledSubtitle>
+          <StyledTitle themeColorSecondary='#FFF'>B.One</StyledTitle>
+          <StyledSubtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та приватних клієнтів</StyledSubtitle>
           <StyledButtonContainer>
             <StyledButton themeColor='#000' themeColorSecondary='#FFF'>App Store</StyledButton>
             <StyledButton themeColor='#000' themeColorSecondary='#FFF'>Google Play</StyledButton>
