@@ -120,6 +120,10 @@ const StyledNewsText = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all .3s ease-in-out;
+
+  @media screen and (max-width: 60rem) {
+    width: 18rem;
+  }
 `
 
 const StyledNewsDate = styled.p`

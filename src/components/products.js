@@ -88,7 +88,7 @@ const StyledProduct = styled.div`
     top: 15%;
 
     @media screen and (max-width: 60rem) {
-      top: 40%;
+      top: 35%;
     }
   }
 
@@ -121,6 +121,7 @@ const StyledProductTitle = styled.h2`
   border-radius: .125rem;
   opacity: 0;
   margin: 0;
+  z-index: 999;
   transition: all .3s ease-in-out;
 `
 
