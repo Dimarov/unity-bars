@@ -167,16 +167,20 @@ const Products = (props) => (
         <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних осіб</StyledProductSubtitle>
         <StyledProductImage src={corplight} />
       </StyledProduct>
+      <Link to="/creditmodule">
       <StyledProduct>
         <StyledProductTitle>Кредитний модуль</StyledProductTitle>
         <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом обслуговування клієнтів</StyledProductSubtitle>
         <StyledProductImage src={creditmodule} />
       </StyledProduct>
+      </Link>
+      <Link to="/datawarehouse">
       <StyledProduct>
         <StyledProductTitle>Електронне сховище</StyledProductTitle>
         <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
         <StyledProductImage src={datawarehouse} />
       </StyledProduct>
+      </Link>
       <StyledProduct>
         <StyledProductTitle>Електронний архів</StyledProductTitle>
         <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному вигляді</StyledProductSubtitle>
