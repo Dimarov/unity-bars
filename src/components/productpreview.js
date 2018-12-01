@@ -76,7 +76,7 @@ const StyledImageBone = styled.img`
 `
 
 const StyledImageCorp = styled.img`
-  height: 32rem;
+  height: 28rem;
 
   @media screen and (max-width: 60rem) {
     height: 12rem;
@@ -110,7 +110,7 @@ const StyledSpan = styled.span`
 const StyledSubtitle = styled.p`
   font-size: 2rem;
   font-weight: 400;
-  line-height: 3rem;
+  line-height: 3alt="bone"rem;
   font-family: myriad-pro, sans-serif;
   color: ${props => props.themeColorSecondary || "#FFF"};
 
@@ -188,7 +188,7 @@ const ProductPreview = (props) => (
     <StyledBackground themeColor='#000'>
       <StyledContent>
         <StyledImageContainer>
-          <StyledImageBone src={boneImage} />
+          <StyledImageBone src={boneImage} alt="bone"/>
         </StyledImageContainer>
         <StyledInfo>
           <StyledTitle themeColorSecondary='#FFF'>Bone</StyledTitle>
@@ -215,14 +215,14 @@ const ProductPreview = (props) => (
           <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
         </StyledInfo>
         <StyledImageContainer>
-          <StyledImageCorp src={corpImage} />
+          <StyledImageCorp src={corpImage} alt="corplight" />
         </StyledImageContainer>
       </StyledContent>
     </StyledBackground>
     <StyledBackground themeColor='#FAFAFA'>
       <StyledContent>
         <StyledImageContainer>
-          <StyledImageForward src={forwardImage} />
+          <StyledImageForward src={forwardImage} alt="forward" />
         </StyledImageContainer>
         <StyledInfo>
           <StyledTitle themeColorSecondary='#29333E'><StyledSpan color="#991F3A">Forward</StyledSpan> Online</StyledTitle>

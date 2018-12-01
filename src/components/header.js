@@ -10,6 +10,12 @@ const StyledHeader = styled.div`
   height: 4rem;
   background: rgba(0,0,0,.6);
   z-index: 9000;
+  transition: all .3s ease-in-out;
+
+  @media screen and (max-width: 60rem) {
+    height: ${props => props.isOpened ? '4rem' : 'auto'};
+    overflow: ${props => props.isOpened ? 'hidden' : 'visible'};
+  }
 `;
 
 const Container = styled.div`
@@ -30,10 +36,40 @@ const Navigation = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: myriad-pro, sans-serif;
+
+  @media screen and (max-width: 60rem) {
+    padding: .5rem 0;
+    height: auto;
+    flex-direction: column;
+  }
 `;
 
 const StyledLogo = styled.img`
   margin: 0;
+`;
+
+const StyledBurger = styled.div`
+  height: 2rem;
+  width: 2rem;
+  background: #fff;
+  display: none;
+
+  @media screen and (max-width: 60rem) {
+    display: block;
+  }
+`
+
+const StyledMobileLinkContainer = styled.div`
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: myriad-pro, sans-serif;
+
+  @media screen and (max-width: 60rem) {
+    width: 100%;
+  }
 `;
 
 const StyledLinkContainer = styled.div`
@@ -45,7 +81,7 @@ const StyledLinkContainer = styled.div`
   font-family: myriad-pro, sans-serif;
 
   @media screen and (max-width: 60rem) {
-    display: none;
+    flex-direction: column;
   }
 `;
 
@@ -60,10 +96,21 @@ const StyledLink = styled(Link)`
   :hover {
     color: #a1a1a1;
   }
+
+  @media screen and (max-width: 60rem) {
+    margin: .5rem 0;
+  }
 `;
 
 const LanguageList = styled.div`
-  flex: 0 0 8.25rem;
+  width: 8.25rem;
+
+  @media screen and (max-width: 60rem) {
+    width: 100%;
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+  }
 `;
 
 const LanguageButton = styled.button`
@@ -88,50 +135,70 @@ const LanguageButton = styled.button`
   }
 `;
 
-const Header = ({ siteTitle }) => (
-  <StyledHeader>
-    <Container>
-      <Navigation>
-        <StyledLink to="/">
-          <StyledLogo src={logo} />
-        </StyledLink>
-        <StyledLinkContainer>
-          <StyledLink to="/">
-            Головна
-          </StyledLink>
-          <StyledLink to="/company">
-            Компанія
-          </StyledLink>
-          <StyledLink to="/products">
-            Продукти
-          </StyledLink>
-          <StyledLink to="/projects">
-            Проекти
-          </StyledLink>
-          <StyledLink to="/news">
-            Новини
-          </StyledLink>
-          <StyledLink to="/vacancies">
-            Вакансії
-          </StyledLink>
-          <StyledLink to="/contacts">
-            Контакти
-          </StyledLink>
-        </StyledLinkContainer>
-        <LanguageList>
-          <Link to="/">
-            <LanguageButton selected>UK</LanguageButton>
-          </Link>
-          <Link to="/index-ru">
-            <LanguageButton>RU</LanguageButton>
-          </Link>
-          <Link to="/index-en">
-            <LanguageButton>EN</LanguageButton>
-          </Link>
-        </LanguageList>
-      </Navigation>
-    </Container>
-  </StyledHeader>
-)
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isOpened: true};
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(state => ({
+      isOpened: !state.isOpened
+    }));
+  }
+
+  render() {
+    return(
+      <StyledHeader isOpened={this.state.isOpened}>
+        <Container>
+          <Navigation>
+            <StyledMobileLinkContainer>
+              <StyledLink to="/">
+                <StyledLogo src={logo} alt="small-logo"/>
+              </StyledLink>
+              <StyledBurger onClick={this.handleClick}/>
+            </StyledMobileLinkContainer>
+            <StyledLinkContainer>
+              <StyledLink to="/">
+                Головна
+              </StyledLink>
+              <StyledLink to="/company">
+                Компанія
+              </StyledLink>
+              <StyledLink to="/products">
+                Продукти
+              </StyledLink>
+              <StyledLink to="/projects">
+                Проекти
+              </StyledLink>
+              <StyledLink to="/news">
+                Новини
+              </StyledLink>
+              <StyledLink to="/vacancies">
+                Вакансії
+              </StyledLink>
+              <StyledLink to="/contacts">
+                Контакти
+              </StyledLink>
+            </StyledLinkContainer>
+            <LanguageList>
+              <Link to="/">
+                <LanguageButton selected>UK</LanguageButton>
+              </Link>
+              <Link to="/index-ru">
+                <LanguageButton>RU</LanguageButton>
+              </Link>
+              <Link to="/index-en">
+                <LanguageButton>EN</LanguageButton>
+              </Link>
+            </LanguageList>
+          </Navigation>
+        </Container>
+      </StyledHeader>
+    );
+  }
+}
 
 export default Header

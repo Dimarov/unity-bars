@@ -76,7 +76,7 @@ const Background = () => (
   <StyledBackground>
     <Container>
       <StyledContent className="content">
-        <BackgroundImage src={unitybarslogobackground} />
+        <BackgroundImage src={unitybarslogobackground} alt="city-view" />
         <div>
           <Link to="/company">
             <StyledButton>Про Нас</StyledButton>
