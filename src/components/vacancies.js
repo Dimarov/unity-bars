@@ -22,7 +22,7 @@ const StyledHeader = styled.div`
   background-image: url(${bg});
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 8rem;
+  padding: 8rem 1rem;
 `
 
 const StyledTitle = styled.h2`
@@ -75,7 +75,7 @@ const StyledVacancySubtitle = styled.h3`
   font-size: 1rem;
   font-weight: 600;
   color: #1A1A1A;
-  margin: 1rem 2rem;
+  margin: 2rem 2rem 1rem;
 `
 
 const StyledVacancyText = styled.p`

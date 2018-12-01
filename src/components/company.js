@@ -182,7 +182,8 @@ const Company = (props) => (
     <StyledHeader>
       <Container>
         <StyledTitle>Компанія</StyledTitle>
-        <StyledSubtitle>UNITY-BARS пропонує послуги по індивідуальній розробці програмного забезпечення в зручних для замовника моделях взаємодії</StyledSubtitle>
+        <StyledSubtitle>UNITY BARS – провідна українська фінтех компанія, спеціалізована на впровадженні ефективного та сучасного програмного забезпечення для банків та фінансових установ.
+</StyledSubtitle>
       </Container>
     </StyledHeader>
     <Container>

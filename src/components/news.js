@@ -4,8 +4,13 @@ import styled from "styled-components"
 
 import bg from "../images/products.jpg"
 
-import one from "../images/news/news-1.jpg"
-import two from "../images/news/news-2.jpg"
+import one from "../images/news/news1.jpg"
+import two from "../images/news/news2.jpg"
+import three from "../images/news/news3.jpg"
+import four from "../images/news/news4.jpg"
+import five from "../images/news/news5.jpg"
+import six from "../images/news/news6.jpg"
+
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -49,7 +54,7 @@ const StyledGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-gap: 1rem;
   padding: 1rem;
 
@@ -62,7 +67,7 @@ const StyledGrid = styled.div`
 
 const StyledNews = styled.div`
   width: 100%;
-  height: 32rem;
+  height: 34rem;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
@@ -76,11 +81,11 @@ const StyledNews = styled.div`
   }
 
   @media screen and (max-width: 60rem) {
-    height: 28rem;
+    height: 36rem;
   }
 `
 const StyledNewsPhoto = styled.div`
-  background-image: url(${two});
+  background-image: url(${props => props.image});
   background-size: cover;
   background-position: center;
   filter: grayscale(100);
@@ -132,39 +137,39 @@ const News = (props) => (
     </StyledHeader>
     <StyledGrid>
       <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsPhoto image={one}></StyledNewsPhoto>
         <StyledNewsTitle>Зі святом Україно!</StyledNewsTitle>
-        <StyledNewsText>After migrations of new regions, we have:
-          39 440 338 — bank accounts (18 959 127 active)
-          11 420 634 — bank clients (8 853 913 active)
-          More then 7 700 — active users
+        <StyledNewsText>
+          Вітаємо всіх українців з національним святом!
         </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsPhoto image={two}></StyledNewsPhoto>
         <StyledNewsTitle>New Data Migration to BARS-MMFO database!</StyledNewsTitle>
-        <StyledNewsText>After migrations of new regions, we have:
-          39 440 338 — bank accounts (18 959 127 active)
-          11 420 634 — bank clients (8 853 913 active)
-          More then 7 700 — active users
+        <StyledNewsText>
+          After migrations of new regions VINNITSIA / ZHYTOMYR, our database is:
+          46 071 894 — bank accounts (21 451 999 active)
+          13 526 371 — bank clients (9 960 526 active)
+          More then 8 500 — active users
         </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsPhoto image={three}></StyledNewsPhoto>
         <StyledNewsTitle>Система обміну даними з ПФУ для автоматичної обробки та зарахування пенсій в онлайн режимі</StyledNewsTitle>
-        <StyledNewsText>After migrations of new regions, we have:
-          39 440 338 — bank accounts (18 959 127 active)
-          11 420 634 — bank clients (8 853 913 active)
-          More then 7 700 — active users
+        <StyledNewsText>
+          Прискорення процесу обробки реєстрів та виплати пенсій отримувачам.
+          Усунення ризиків, зв’язаних з ручною обробкою реєстрів на виплату.
+          Зменшення вартості на логістику реєстрів.
         </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsPhoto image={four}></StyledNewsPhoto>
         <StyledNewsTitle>Well Done Data Migration BARS-MMFO</StyledNewsTitle>
-        <StyledNewsText>After migrations of new regions, we have:
+        <StyledNewsText>
+          After migrations of new regions, we have:
           39 440 338 — bank accounts (18 959 127 active)
           11 420 634 — bank clients (8 853 913 active)
           More then 7 700 — active users
@@ -172,22 +177,21 @@ const News = (props) => (
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsPhoto image={five}></StyledNewsPhoto>
         <StyledNewsTitle>Well Done Data Migration</StyledNewsTitle>
-        <StyledNewsText>After migrations of new regions, we have:
-          39 440 338 — bank accounts (18 959 127 active)
-          11 420 634 — bank clients (8 853 913 active)
-          More then 7 700 — active users
+        <StyledNewsText>
+          05/17 Donetsk
+          9 423 729 accounts
+          2 864 882 bank clients
         </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
+        <StyledNewsPhoto image={six}></StyledNewsPhoto>
         <StyledNewsTitle>Новини з НБУ</StyledNewsTitle>
-        <StyledNewsText>After migrations of new regions, we have:
-          39 440 338 — bank accounts (18 959 127 active)
-          11 420 634 — bank clients (8 853 913 active)
-          More then 7 700 — active users
+        <StyledNewsText>
+          В жовтні 2017 року НБУ спільно з UNITY-BARS успішно виконали переведення системи автоматизації банку (САБ) на трирівневу архітектуру,
+          що надає Банку такі переваги: масштабованість, високу надійність, низькі вимоги до каналу зв’язку та високий рівень безпеки.
         </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>

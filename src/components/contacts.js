@@ -22,7 +22,7 @@ const StyledHeader = styled.div`
   background-image: url(${bg});
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 8rem;
+  padding: 8rem 1rem;
 `
 
 const StyledTitle = styled.h2`
@@ -82,7 +82,7 @@ const StyledContactText = styled.p`
 
 const StyledContact = styled.div`
   width: 100%;
-  height: 30rem;
+  height: 32rem;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
@@ -106,6 +106,14 @@ const StyledContactForm = styled.form`
   }
 `
 
+const StyledContactFormTitle = styled.h3`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin: 1rem;
+`
+
 const StyledContactInput = styled.input`
   outline: none;
   background: none;
@@ -116,7 +124,21 @@ const StyledContactInput = styled.input`
   color: #1A1A1A;
   border: .125rem solid #DDD;
   border-radius: .25rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
+`
+
+const StyledContactTextarea = styled.textarea`
+  outline: none;
+  background: none;
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: .5rem 0;
+  color: #1A1A1A;
+  border: .125rem solid #DDD;
+  border-radius: .25rem;
+  padding: 1rem 1rem;
+  resize: none;
 `
 
 const StyledContactSubmit = styled.input`
@@ -157,11 +179,11 @@ const Contacts = (props) => (
       </StyledContact>
       <StyledContact>
         <StyledContactForm>
-          <StyledContactTitle>Відправити повідомлення</StyledContactTitle>
+          <StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>
           <StyledContactInput placeholder="Ваше Ім'я" />
           <StyledContactInput placeholder="Ваш Email" />
           <StyledContactInput placeholder="Ваш Телефон" />
-          <StyledContactInput placeholder="Ваше Повідомлення" />
+          <StyledContactTextarea placeholder="Ваше Повідомлення" />
           <StyledContactSubmit type="submit" value="Надіслати" />
         </StyledContactForm>
       </StyledContact>
