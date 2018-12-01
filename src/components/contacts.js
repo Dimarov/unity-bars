@@ -21,6 +21,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
+  background-attachment: fixed;
   padding-top: 8rem;
 `
 
@@ -45,25 +46,96 @@ const StyledGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-template-rows: 1fr;
   padding: 1rem;
 
   @media screen and (max-width: 60rem) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
   }
 `
 
-const StyledProduct = styled.div`
+const StyledContactTitle = styled.h2`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 1rem 2rem;
+`
+
+const StyledContactSubtitle = styled.h3`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin: 1rem 2rem;
+`
+
+const StyledContactText = styled.p`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin: .25rem 2rem;
+`
+
+const StyledContact = styled.div`
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   border-radius: .125rem;
   background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media screen and (max-width: 60rem) {
-    height: 12rem;
+    height: 32rem;
+  }
+`
+
+const StyledContactForm = styled.form`
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 60rem) {
+    width: 90%;
+    margin-left: 5%;
+  }
+`
+
+const StyledContactInput = styled.input`
+  outline: none;
+  background: none;
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: .5rem 0;
+  color: #1A1A1A;
+  border: .125rem solid #DDD;
+  border-radius: .25rem;
+  padding: 1rem 2rem;
+`
+
+const StyledContactSubmit = styled.input`
+  outline: none;
+  background: none;
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: .5rem 0;
+  color: #3EC4E1;
+  border: .125rem solid #3EC4E1;
+  border-radius: .25rem;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  transition: all .1s ease-in;
+
+  :hover {
+    background: #3EC4E1;
+    color: #fff;
   }
 `
 
@@ -73,17 +145,26 @@ const Contacts = (props) => (
       <Container>
         <StyledTitle>Контакти</StyledTitle>
         <StyledSubtitle>Зв'яжіться з нами і дізнайтеся, як ми можемо допомогти вашому бізнесу досягти високих результатів
-</StyledSubtitle>
+        </StyledSubtitle>
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
+      <StyledContact>
+        <StyledContactTitle>Контакти</StyledContactTitle>
+        <StyledContactText>02152, м. Київ, проспект Павла Тичини, 1В, офіс А</StyledContactText>
+        <StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>
+        <StyledContactText>bars@unity-bars.com</StyledContactText>
+      </StyledContact>
+      <StyledContact>
+        <StyledContactForm>
+          <StyledContactTitle>Відправити повідомлення</StyledContactTitle>
+          <StyledContactInput placeholder="Ваше Ім'я" />
+          <StyledContactInput placeholder="Ваш Email" />
+          <StyledContactInput placeholder="Ваш Телефон" />
+          <StyledContactInput placeholder="Ваше Повідомлення" />
+          <StyledContactSubmit type="submit" value="Надіслати" />
+        </StyledContactForm>
+      </StyledContact>
     </StyledGrid>
   </StyledBackground>
 )

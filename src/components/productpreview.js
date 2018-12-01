@@ -110,6 +110,7 @@ const StyledSpan = styled.span`
 const StyledSubtitle = styled.p`
   font-size: 2rem;
   font-weight: 400;
+  line-height: 3rem;
   font-family: myriad-pro, sans-serif;
   color: ${props => props.themeColorSecondary || "#FFF"};
 

@@ -4,6 +4,9 @@ import styled from "styled-components"
 
 import bg from "../images/products.jpg"
 
+import one from "../images/news/news-1.jpg"
+import two from "../images/news/news-2.jpg"
+
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
@@ -21,6 +24,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
+  background-attachment: fixed;
   padding: 8rem 1rem;
 `
 
@@ -45,20 +49,20 @@ const StyledGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
   padding: 1rem;
 
   @media screen and (max-width: 60rem) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
   }
 `
 
 const StyledNews = styled.div`
   width: 100%;
-  height: 28rem;
+  height: 32rem;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
@@ -76,11 +80,18 @@ const StyledNews = styled.div`
   }
 `
 const StyledNewsPhoto = styled.div`
-  background: red;
+  background-image: url(${two});
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100);
   border-radius: .125rem;
   width: 100%;
   height: 16rem;
   transition: all .3s ease-in-out;
+
+  :hover {
+    filter: grayscale(0);
+  }
 `
 
 const StyledNewsTitle = styled.h2`
@@ -89,6 +100,15 @@ const StyledNewsTitle = styled.h2`
   font-weight: 400;
   margin: .5rem 0 1rem 2rem;
   color: #3EC4E1;
+  transition: all .3s ease-in-out;
+`
+
+const StyledNewsText = styled.p`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: .5rem 2rem;
+  color: #1A1A1A;
   transition: all .3s ease-in-out;
 `
 
@@ -114,46 +134,61 @@ const News = (props) => (
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
         <StyledNewsTitle>Зі святом Україно!</StyledNewsTitle>
+        <StyledNewsText>After migrations of new regions, we have:
+          39 440 338 — bank accounts (18 959 127 active)
+          11 420 634 — bank clients (8 853 913 active)
+          More then 7 700 — active users
+        </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
         <StyledNewsTitle>New Data Migration to BARS-MMFO database!</StyledNewsTitle>
+        <StyledNewsText>After migrations of new regions, we have:
+          39 440 338 — bank accounts (18 959 127 active)
+          11 420 634 — bank clients (8 853 913 active)
+          More then 7 700 — active users
+        </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
         <StyledNewsTitle>Система обміну даними з ПФУ для автоматичної обробки та зарахування пенсій в онлайн режимі</StyledNewsTitle>
+        <StyledNewsText>After migrations of new regions, we have:
+          39 440 338 — bank accounts (18 959 127 active)
+          11 420 634 — bank clients (8 853 913 active)
+          More then 7 700 — active users
+        </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
         <StyledNewsTitle>Well Done Data Migration BARS-MMFO</StyledNewsTitle>
+        <StyledNewsText>After migrations of new regions, we have:
+          39 440 338 — bank accounts (18 959 127 active)
+          11 420 634 — bank clients (8 853 913 active)
+          More then 7 700 — active users
+        </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
         <StyledNewsTitle>Well Done Data Migration</StyledNewsTitle>
+        <StyledNewsText>After migrations of new regions, we have:
+          39 440 338 — bank accounts (18 959 127 active)
+          11 420 634 — bank clients (8 853 913 active)
+          More then 7 700 — active users
+        </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto></StyledNewsPhoto>
         <StyledNewsTitle>Новини з НБУ</StyledNewsTitle>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Підсумки ІТ-конференції «Сучасні тенденції з реалізації IT проектів в банках та фінансових установах»</StyledNewsTitle>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Конференція «Сучасні тенденції з реалізації IT проектів в банках та фінансових установах»</StyledNewsTitle>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto></StyledNewsPhoto>
-        <StyledNewsTitle>Well Done Data Migration</StyledNewsTitle>
+        <StyledNewsText>After migrations of new regions, we have:
+          39 440 338 — bank accounts (18 959 127 active)
+          11 420 634 — bank clients (8 853 913 active)
+          More then 7 700 — active users
+        </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
         </StyledGrid>

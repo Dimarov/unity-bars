@@ -21,6 +21,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
+  background-attachment: fixed;
   padding-top: 8rem;
 `
 
@@ -43,36 +44,30 @@ const StyledGrid = styled.div`
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
-
-  @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
-  }
 `
 
 const StyledVacancy = styled.div`
   width: 100%;
-  height: 44rem;
+  height: auto;
   border-radius: .125rem;
   background: #fafafa;
-
-  @media screen and (max-width: 60rem) {
-    height: 12rem;
-  }
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
 `
 
 const StyledVacancyTitle = styled.h2`
+  display: inline;
+  padding: .25rem .5rem;
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #3EC4E1;
   margin: 1rem 2rem;
+  border: .125rem solid #3EC4E1;
+  border-radius: .125rem;
 `
 
 const StyledVacancySubtitle = styled.h3`
@@ -124,73 +119,44 @@ const Vacancies = (props) => (
         <StyledVacancyText>Тісна співпраця з замовником та розробниками.</StyledVacancyText>
       </StyledVacancy>
       <StyledVacancy>
-        <StyledVacancyTitle>QA</StyledVacancyTitle>
+        <StyledVacancyTitle>Project Manager</StyledVacancyTitle>
         <StyledVacancySubtitle>Необхідно:</StyledVacancySubtitle>
-        <StyledVacancyText>Знання теорії тестування, методологій та технік.</StyledVacancyText>
-        <StyledVacancyText>Досвід створення тестової документації (тест-план, чек-листи, тест-кейси).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з Jira, Confluence.</StyledVacancyText>
-        <StyledVacancyText>Вміння працювати з Internet Explorer, Chrome developer tools.</StyledVacancyText>
-        <StyledVacancyText>Базові знання SQL (Oracle).</StyledVacancyText>
-        <StyledVacancyText>Базові знання клієнт-серверної архітектури.</StyledVacancyText>
+        <StyledVacancyText>Технічна вища освіта.</StyledVacancyText>
+        <StyledVacancyText>Досвід управління проектами з розробки та впровадження ПЗ від 3-х років.</StyledVacancyText>
+        <StyledVacancyText>Теоретичні знання в області проектного менеджменту та досвід їх застосування.</StyledVacancyText>
+        <StyledVacancyText>Розуміння основних принципів та бізнес-процесів функціонування систем банківської автоматизації.</StyledVacancyText>
+        <StyledVacancyText>Досвід написання проектної та технічної документації.</StyledVacancyText>
+        <StyledVacancyText>Досвід керівництва та координації роботи внутрішніх робочих груп.</StyledVacancyText>
+        <StyledVacancyText>Комунікабельність, високий рівень самоорганізації та мотивації, здатність та бажання до самонавчання, стресостійкість.</StyledVacancyText>
+        <StyledVacancyText>Вміння працювати в режимі багатозадачності.</StyledVacancyText>
         <StyledVacancySubtitle>Буде перевагою:</StyledVacancySubtitle>
-        <StyledVacancyText>Технічна освіта (Інформаційні технології, комп’ютерні науки та ін.).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з банківським програмним забезпеченням.</StyledVacancyText>
-        <StyledVacancyText>Вміння тестувати веб-сервіси спеціальними програмними засобами (Postman, SoapUI).</StyledVacancyText>
-        <StyledVacancyText>Вміння проводити тестування навантаження (Jmeter).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з Git або SVN.</StyledVacancyText>
+        <StyledVacancyText>Досвід управління проектами з розробки ПЗ у банківському секторі.</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи розробником та/або архітектором ПЗ.</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи бізнес-аналітиком у банківській сфері.</StyledVacancyText>
+        <StyledVacancyText>Знання прикладних банківських модулів.</StyledVacancyText>
         <StyledVacancySubtitle>Обов'язки:</StyledVacancySubtitle>
-        <StyledVacancyText>Тестування банківського програмного забеспечення.</StyledVacancyText>
-        <StyledVacancyText>Створення тестової документації: чек-листи та деталізовані тест-кейси.</StyledVacancyText>
-        <StyledVacancyText>Документування інцидентів.</StyledVacancyText>
-        <StyledVacancyText>Робота з базою даних, написання SQL-запитів.</StyledVacancyText>
-        <StyledVacancyText>Участь в приймальному тестуванні на майданчику замовника.</StyledVacancyText>
-        <StyledVacancyText>Тісна співпраця з замовником та розробниками.</StyledVacancyText>
+        <StyledVacancyText>Виявлення та деталізація вимог Замовника.</StyledVacancyText>
+        <StyledVacancyText>Складання плану та бюджету проекту.</StyledVacancyText>
+        <StyledVacancyText>Участь в формуванні команди, організація, мотивація команди проекту.</StyledVacancyText>
+        <StyledVacancyText>Оцінка ризиків проекту та варіантів їх уникнення.</StyledVacancyText>
+        <StyledVacancyText>Підготовка детального технічного завдання та супутньої документації по проекту, в тому числі згідно ДЕСТ.</StyledVacancyText>
+        <StyledVacancyText>Постановка завдань розробникам.</StyledVacancyText>
+        <StyledVacancyText>Дослідження та аналіз ринку банківських послуг.</StyledVacancyText>
+        <StyledVacancyText>Тісна взаємодія із Замовниками та Партнерами.</StyledVacancyText>
       </StyledVacancy>
       <StyledVacancy>
-        <StyledVacancyTitle>QA</StyledVacancyTitle>
+        <StyledVacancyTitle>ORACLE DBA</StyledVacancyTitle>
         <StyledVacancySubtitle>Необхідно:</StyledVacancySubtitle>
-        <StyledVacancyText>Знання теорії тестування, методологій та технік.</StyledVacancyText>
-        <StyledVacancyText>Досвід створення тестової документації (тест-план, чек-листи, тест-кейси).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з Jira, Confluence.</StyledVacancyText>
-        <StyledVacancyText>Вміння працювати з Internet Explorer, Chrome developer tools.</StyledVacancyText>
-        <StyledVacancyText>Базові знання SQL (Oracle).</StyledVacancyText>
-        <StyledVacancyText>Базові знання клієнт-серверної архітектури.</StyledVacancyText>
+        <StyledVacancyText>Вища освіта;</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи адміністратором баз даних від 5-х років.</StyledVacancyText>
+        <StyledVacancyText>ДДосвід адміністрування ОС сертифікована для СУБД Oracle.</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи з налаштування конфігурацій і оптимізації продуктивності СУБД.</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи з резервним копіюванням, відновленням баз даних.</StyledVacancyText>
+        <StyledVacancyText>Знання серверного обладнання та кластерних технологій.</StyledVacancyText>
         <StyledVacancySubtitle>Буде перевагою:</StyledVacancySubtitle>
-        <StyledVacancyText>Технічна освіта (Інформаційні технології, комп’ютерні науки та ін.).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з банківським програмним забезпеченням.</StyledVacancyText>
-        <StyledVacancyText>Вміння тестувати веб-сервіси спеціальними програмними засобами (Postman, SoapUI).</StyledVacancyText>
-        <StyledVacancyText>Вміння проводити тестування навантаження (Jmeter).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з Git або SVN.</StyledVacancyText>
-        <StyledVacancySubtitle>Обов'язки:</StyledVacancySubtitle>
-        <StyledVacancyText>Тестування банківського програмного забеспечення.</StyledVacancyText>
-        <StyledVacancyText>Створення тестової документації: чек-листи та деталізовані тест-кейси.</StyledVacancyText>
-        <StyledVacancyText>Документування інцидентів.</StyledVacancyText>
-        <StyledVacancyText>Робота з базою даних, написання SQL-запитів.</StyledVacancyText>
-        <StyledVacancyText>Участь в приймальному тестуванні на майданчику замовника.</StyledVacancyText>
-        <StyledVacancyText>Тісна співпраця з замовником та розробниками.</StyledVacancyText>
-      </StyledVacancy>
-      <StyledVacancy>
-        <StyledVacancyTitle>QA</StyledVacancyTitle>
-        <StyledVacancySubtitle>Необхідно:</StyledVacancySubtitle>
-        <StyledVacancyText>Знання теорії тестування, методологій та технік.</StyledVacancyText>
-        <StyledVacancyText>Досвід створення тестової документації (тест-план, чек-листи, тест-кейси).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з Jira, Confluence.</StyledVacancyText>
-        <StyledVacancyText>Вміння працювати з Internet Explorer, Chrome developer tools.</StyledVacancyText>
-        <StyledVacancyText>Базові знання SQL (Oracle).</StyledVacancyText>
-        <StyledVacancyText>Базові знання клієнт-серверної архітектури.</StyledVacancyText>
-        <StyledVacancySubtitle>Буде перевагою:</StyledVacancySubtitle>
-        <StyledVacancyText>Технічна освіта (Інформаційні технології, комп’ютерні науки та ін.).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з банківським програмним забезпеченням.</StyledVacancyText>
-        <StyledVacancyText>Вміння тестувати веб-сервіси спеціальними програмними засобами (Postman, SoapUI).</StyledVacancyText>
-        <StyledVacancyText>Вміння проводити тестування навантаження (Jmeter).</StyledVacancyText>
-        <StyledVacancyText>Досвід роботи з Git або SVN.</StyledVacancyText>
-        <StyledVacancySubtitle>Обов'язки:</StyledVacancySubtitle>
-        <StyledVacancyText>Тестування банківського програмного забеспечення.</StyledVacancyText>
-        <StyledVacancyText>Створення тестової документації: чек-листи та деталізовані тест-кейси.</StyledVacancyText>
-        <StyledVacancyText>Документування інцидентів.</StyledVacancyText>
-        <StyledVacancyText>Робота з базою даних, написання SQL-запитів.</StyledVacancyText>
-        <StyledVacancyText>Участь в приймальному тестуванні на майданчику замовника.</StyledVacancyText>
-        <StyledVacancyText>Тісна співпраця з замовником та розробниками.</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи з PL / SQL.</StyledVacancyText>
+        <StyledVacancyText>Досвід роботи в фінансово-банківському секторі;</StyledVacancyText>
+        <StyledVacancyText>Наявність сертифікатів або підтвердження кваліфікації з СУБД Oracle.</StyledVacancyText>
       </StyledVacancy>
     </StyledGrid>
   </StyledBackground>

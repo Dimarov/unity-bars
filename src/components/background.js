@@ -8,6 +8,7 @@ import ub from '../images/ub-background.jpg'
 const StyledBackground = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: #000;
   background-image: url(${ub});
   background-size: cover;
   box-shadow: inset 0rem -10rem 10rem rgba(0,0,0,0.8);

@@ -21,6 +21,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
+  background-attachment: fixed;
   padding-top: 8rem;
 `
 
@@ -44,19 +45,19 @@ const StyledGrid = styled.div`
   max-width: 1440px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
   padding: 1rem;
 
   @media screen and (max-width: 60rem) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
   }
 `
 
-const StyledProduct = styled.div`
+const StyledProject = styled.div`
   width: 100%;
   height: 20rem;
   border-radius: .125rem;
@@ -76,13 +77,7 @@ const Projects = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
-      <StyledProduct></StyledProduct>
+      <StyledProject></StyledProject>
     </StyledGrid>
   </StyledBackground>
 )

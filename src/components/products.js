@@ -29,6 +29,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${bg});
   background-size: cover;
+  background-attachment: fixed;
   padding: 8rem 1rem;
 `
 
@@ -105,7 +106,10 @@ const StyledProductTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 600;
+  padding: .5rem 1rem;
   color: #3EC4E1;
+  border: .125rem solid #3EC4E1;
+  border-radius: .125rem;
   opacity: 0;
   margin: 0;
   transition: all .3s ease-in-out;
