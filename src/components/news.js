@@ -68,7 +68,7 @@ const StyledGrid = styled.div`
 
 const StyledNews = styled.div`
   width: 100%;
-  height: 34rem;
+  height: 32rem;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
@@ -115,6 +115,10 @@ const StyledNewsText = styled.p`
   font-weight: 400;
   margin: .5rem 2rem;
   color: #1A1A1A;
+  width: 24rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: all .3s ease-in-out;
 `
 
@@ -127,6 +131,77 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
+function NewsGrid(props) {
+  const newsTile = props.news.map((newsTile) =>
+    <StyledNews key={newsTile.id}>
+      <StyledNewsPhoto image={`${newsTile.image}`}></StyledNewsPhoto>
+      <StyledNewsTitle>{newsTile.title}</StyledNewsTitle>
+      <StyledNewsText>{newsTile.text}</StyledNewsText>
+      <StyledNewsDate>{newsTile.date}</StyledNewsDate>
+    </StyledNews>
+  );
+
+  return (
+    <StyledGrid>
+      {newsTile}
+    </StyledGrid>
+  );
+}
+
+const news = [
+  {
+    id: 1,
+    title: 'З Днем Незалежності, Україно!',
+    text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою✊🇺🇦',
+    date: '26.11.2018',
+    image: `${one}`,
+  },
+  {
+    id: 2,
+    title: 'Новий Трансфер Данних до BARS MMFO',
+    text: [
+          "Черговий трансфер данних, тепер для регіонів Вінниці та Житомира, всього оновлено:",
+          "46 071 894 – Банкових рахунків (21 451 999 діючих)",
+          "13 526 371 – Клієнтів банку (9 960 526 діючих)",
+          "Більше ніж 8 500 активних користувачів!",
+          "У Львові:",
+          "49 266 910 – Банкових рахунків (22 551 403 діючих)",
+          "14 766 645 – Клієнтів банку (10 255 043 діючих)",
+          "Більше ніж 9 500 активних користувачів!",
+          "Залишаємось на звязку ✌️",
+        ],
+          date: '26.11.2018',
+          image: `${two}`,
+  },
+  {
+    id: 3,
+    title: 'Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ',
+    text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
+    date: '26.11.2018',
+    image: `${three}`,
+  },
+  {
+    id: 4,
+    title: 'З Днем Незалежності, Україно!',
+    text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
+    date: '26.11.2018',
+    image: `${four}`,
+  },
+  {
+    id: 5,
+    title: 'З Днем Незалежності, Україно!',
+    text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
+    date: '26.11.2018',
+    image: `${five}`,
+  },
+  {
+    id: 6,
+    title: 'З Днем Незалежності, Україно!',
+    text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
+    date: '26.11.2018',
+    image: `${six}`,
+  },
+]
 
 const News = (props) => (
   <StyledBackground>
@@ -136,67 +211,7 @@ const News = (props) => (
         <StyledSubtitle>Останні новини в Unity-Bars</StyledSubtitle>
       </Container>
     </StyledHeader>
-    <StyledGrid>
-      <StyledNews>
-        <StyledNewsPhoto image={one}></StyledNewsPhoto>
-        <StyledNewsTitle>Зі святом Україно!</StyledNewsTitle>
-        <StyledNewsText>
-          Вітаємо всіх українців з національним святом!
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={two}></StyledNewsPhoto>
-        <StyledNewsTitle>New Data Migration to BARS-MMFO database!</StyledNewsTitle>
-        <StyledNewsText>
-          After migrations of new regions VINNITSIA / ZHYTOMYR, our database is:
-          46 071 894 — bank accounts (21 451 999 active)
-          13 526 371 — bank clients (9 960 526 active)
-          More then 8 500 — active users
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={three}></StyledNewsPhoto>
-        <StyledNewsTitle>Система обміну даними з ПФУ для автоматичної обробки та зарахування пенсій в онлайн режимі</StyledNewsTitle>
-        <StyledNewsText>
-          Прискорення процесу обробки реєстрів та виплати пенсій отримувачам.
-          Усунення ризиків, зв’язаних з ручною обробкою реєстрів на виплату.
-          Зменшення вартості на логістику реєстрів.
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={four}></StyledNewsPhoto>
-        <StyledNewsTitle>Well Done Data Migration BARS-MMFO</StyledNewsTitle>
-        <StyledNewsText>
-          After migrations of new regions, we have:
-          39 440 338 — bank accounts (18 959 127 active)
-          11 420 634 — bank clients (8 853 913 active)
-          More then 7 700 — active users
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={five}></StyledNewsPhoto>
-        <StyledNewsTitle>Well Done Data Migration</StyledNewsTitle>
-        <StyledNewsText>
-          05/17 Donetsk
-          9 423 729 accounts
-          2 864 882 bank clients
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={six}></StyledNewsPhoto>
-        <StyledNewsTitle>Новини з НБУ</StyledNewsTitle>
-        <StyledNewsText>
-          В жовтні 2017 року НБУ спільно з UNITY-BARS успішно виконали переведення системи автоматизації банку (САБ) на трирівневу архітектуру,
-          що надає Банку такі переваги: масштабованість, високу надійність, низькі вимоги до каналу зв’язку та високий рівень безпеки.
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-        </StyledGrid>
+    <NewsGrid news={news} />
   </StyledBackground>
 )
 

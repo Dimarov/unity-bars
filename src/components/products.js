@@ -86,6 +86,10 @@ const StyledProduct = styled.div`
   :hover h2 {
     opacity: 1;
     top: 15%;
+
+    @media screen and (max-width: 60rem) {
+      top: 40%;
+    }
   }
 
   :hover p {
