@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
+import { CSSTransitionGroup } from 'react-transition-group'
 
 import logo from "../images/unitybarsheaderlogo.svg"
 
@@ -8,9 +9,9 @@ const StyledHeader = styled.div`
   position: fixed;
   width: 100%;
   height: 4rem;
-  background: rgba(0,0,0,.6);
+  background: rgba(26,26,26,.9);
   z-index: 9000;
-  transition: all .3s ease-in-out;
+
 
   @media screen and (max-width: 60rem) {
     height: ${props => props.isOpened ? '4rem' : 'auto'};
@@ -160,7 +161,11 @@ class Header extends React.Component {
 
   render() {
     return (
-      <StyledHeader isOpened={this.state.isOpened}>
+      <CSSTransitionGroup
+        transitionName="nav"
+        transitionEnterTimeout={300}
+        transitionLeaveTimeout={300}>
+      <StyledHeader isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'}>
         <Container>
           <Navigation>
             <StyledMobileLinkContainer>
@@ -209,6 +214,7 @@ class Header extends React.Component {
           </Navigation>
         </Container>
       </StyledHeader>
+      </CSSTransitionGroup>
     );
   }
 }

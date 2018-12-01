@@ -15,6 +15,7 @@ import electronicarchive from "../images/electronica.png"
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
+  position: relative;
 `
 
 const Container = styled.div`
@@ -90,6 +91,10 @@ const StyledProduct = styled.div`
   :hover p {
     opacity: 1;
     bottom: 5%;
+
+    @media screen and (max-width: 60rem) {
+      opacity: 0;
+    }
   }
 
   @media screen and (max-width: 60rem) {
@@ -135,7 +140,7 @@ const StyledProductImage = styled.img`
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  transition: all .3s ease-in-out;
+  transition: all .0s ease-in-out;
 `
 
 const Products = (props) => (

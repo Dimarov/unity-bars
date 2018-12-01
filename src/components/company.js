@@ -7,6 +7,7 @@ import background from "../images/company.jpg"
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
+  position: relative;
 `
 
 const Container = styled.div`

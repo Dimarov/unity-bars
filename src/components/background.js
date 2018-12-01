@@ -13,6 +13,7 @@ const StyledBackground = styled.div`
   background-size: cover;
   box-shadow: inset 0rem -10rem 10rem rgba(0,0,0,0.8);
   filter: grayscale(.9);
+  position: relative;
 `;
 
 const Container = styled.div`

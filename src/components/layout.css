@@ -624,3 +624,32 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.content-appear {
+  opacity: .95;
+  transform: translateY(-1rem);
+}
+
+.content-appear.content-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .5s ease-in-out;
+}
+
+.nav-enter {
+  opacity: .5;
+}
+
+.nav-enter.nav-enter-active {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.nav-leave {
+  opacity: 1;
+}
+
+.nav-leave.nav-leave-active {
+  opacity: .5;
+  transition: opacity 300ms ease-in;
+}

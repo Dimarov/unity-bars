@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 import Header from './header'
 import Footer from './footer'
@@ -30,7 +31,16 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
-          {children}
+        <CSSTransitionGroup
+          transitionName="content"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}>
+
+            {children}
+
+        </CSSTransitionGroup>
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
