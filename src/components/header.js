@@ -51,12 +51,21 @@ const StyledLogo = styled.img`
 const StyledBurger = styled.div`
   height: 2rem;
   width: 2rem;
-  background: #fff;
   display: none;
 
   @media screen and (max-width: 60rem) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+`
+
+const StyledBurgerPart = styled.div`
+  height: .125rem;
+  border-radius: .125rem;
+  margin: .25rem 0;
+  width: 100%;
+  background: #fff;
 `
 
 const StyledMobileLinkContainer = styled.div`
@@ -150,7 +159,7 @@ class Header extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <StyledHeader isOpened={this.state.isOpened}>
         <Container>
           <Navigation>
@@ -158,7 +167,10 @@ class Header extends React.Component {
               <StyledLink to="/">
                 <StyledLogo src={logo} alt="small-logo"/>
               </StyledLink>
-              <StyledBurger onClick={this.handleClick}/>
+              <StyledBurger onClick={this.handleClick}>
+                <StyledBurgerPart />
+                <StyledBurgerPart />
+              </StyledBurger>
             </StyledMobileLinkContainer>
             <StyledLinkContainer>
               <StyledLink to="/">

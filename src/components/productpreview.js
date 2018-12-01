@@ -15,7 +15,6 @@ const StyledProductPreviews = styled.div`
 const StyledBackground = styled.div`
   width: 100%;
   height: 40rem;
-  margin: .5rem 0;
   background: ${props => props.themeColor || "#000"};
   background-size: cover;
 
