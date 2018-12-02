@@ -80,7 +80,7 @@ const StyledThereIsWillBeImage = styled.h1`
 `
 
 const StyledTestMargin = styled.div`
-  margin-bottom: 6rem;
+  margin-bottom: 7rem;
 `
 
 
