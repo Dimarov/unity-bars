@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import bg from "../images/products.jpg"
+import bg from '../images/products.jpg'
 
-import absbars from "../images/absbars.png"
-import absbarsmmfo from "../images/absbarsmmfo.png"
-import corp2 from "../images/corp2.png"
-import corplight from "../images/corplight.png"
-import creditmodule from "../images/creditmodule.png"
-import datawarehouse from "../images/datawarehouse.png"
-import electronicarchive from "../images/electronica.png"
+import absbars from '../images/absbars.png'
+import absbarsmmfo from '../images/absbarsmmfo.png'
+import corp2 from '../images/corp2.png'
+import corplight from '../images/corplight.png'
+import creditmodule from '../images/creditmodule.png'
+import datawarehouse from '../images/datawarehouse.png'
+import electronicarchive from '../images/electronica.png'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -149,43 +149,50 @@ const Products = (props) => (
     <StyledGrid>
       <StyledProduct>
         <StyledProductTitle>Автоматизована банківська система BARS</StyledProductTitle>
-        <StyledProductSubtitle>Система з комплексним або індивідуальним підходом до клієнта. Автоматизує широкий спектр бізнес-процесів і функцій банку</StyledProductSubtitle>
-        <StyledProductImage src={absbars} />
+        <StyledProductSubtitle>Система з комплексним або індивідуальним підходом до клієнта. Автоматизує широкий спектр
+          бізнес-процесів і функцій банку</StyledProductSubtitle>
+        <StyledProductImage src={absbars}/>
       </StyledProduct>
       <StyledProduct>
         <StyledProductTitle>Автоматизована банківська система BARS MMFO</StyledProductTitle>
         <StyledProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</StyledProductSubtitle>
-        <StyledProductImage src={absbarsmmfo} />
+        <StyledProductImage src={absbarsmmfo}/>
       </StyledProduct>
       <StyledProduct>
         <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
-        <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою на базі Web-технологій</StyledProductSubtitle>
-        <StyledProductImage src={corp2} />
+        <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою
+          на базі Web-технологій</StyledProductSubtitle>
+        <StyledProductImage src={corp2}/>
       </StyledProduct>
       <StyledProduct>
         <StyledProductTitle>Клієнт-банк</StyledProductTitle>
-        <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних осіб</StyledProductSubtitle>
-        <StyledProductImage src={corplight} />
+        <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних
+          осіб</StyledProductSubtitle>
+        <StyledProductImage src={corplight}/>
       </StyledProduct>
       <Link to="/creditmodule">
-      <StyledProduct>
-        <StyledProductTitle>Кредитний модуль</StyledProductTitle>
-        <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом обслуговування клієнтів</StyledProductSubtitle>
-        <StyledProductImage src={creditmodule} />
-      </StyledProduct>
+        <StyledProduct>
+          <StyledProductTitle>Кредитний модуль</StyledProductTitle>
+          <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з
+            повним циклом обслуговування клієнтів</StyledProductSubtitle>
+          <StyledProductImage src={creditmodule}/>
+        </StyledProduct>
       </Link>
       <Link to="/datawarehouse">
-      <StyledProduct>
-        <StyledProductTitle>Електронне сховище</StyledProductTitle>
-        <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
-        <StyledProductImage src={datawarehouse} />
-      </StyledProduct>
+        <StyledProduct>
+          <StyledProductTitle>Електронне сховище</StyledProductTitle>
+          <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
+          <StyledProductImage src={datawarehouse}/>
+        </StyledProduct>
       </Link>
-      <StyledProduct>
-        <StyledProductTitle>Електронний архів</StyledProductTitle>
-        <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному вигляді</StyledProductSubtitle>
-        <StyledProductImage src={electronicarchive} />
-      </StyledProduct>
+      <Link to="/electronicarchive">
+        <StyledProduct>
+          <StyledProductTitle>Електронний архів</StyledProductTitle>
+          <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному
+            вигляді</StyledProductSubtitle>
+          <StyledProductImage src={electronicarchive}/>
+        </StyledProduct>
+      </Link>
     </StyledGrid>
   </StyledBackground>
 )
