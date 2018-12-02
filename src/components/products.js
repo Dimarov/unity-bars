@@ -158,12 +158,14 @@ const Products = (props) => (
         <StyledProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</StyledProductSubtitle>
         <StyledProductImage src={absbarsmmfo}/>
       </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
-        <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою
-          на базі Web-технологій</StyledProductSubtitle>
-        <StyledProductImage src={corp2}/>
-      </StyledProduct>
+      <Link to="/corp2">
+        <StyledProduct>
+          <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
+          <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою
+            на базі Web-технологій</StyledProductSubtitle>
+          <StyledProductImage src={corp2}/>
+        </StyledProduct>
+      </Link>
       <StyledProduct>
         <StyledProductTitle>Клієнт-банк</StyledProductTitle>
         <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних
