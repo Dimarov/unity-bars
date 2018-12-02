@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import bg from "../images/products.jpg"
-import CreditmodulePage from '../pages/creditmodule'
+import bg from '../images/products.jpg'
+// import CreditmodulePage from '../pages/creditmodule'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -40,155 +40,265 @@ const StyledSubtitle = styled.p`
   color: #fff;
 `
 
-const StyledGrid = styled.div`
-  height: auto;
-  margin: 0 auto;
-  max-width: 1440px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding: 1rem;
-
-  @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 1rem;
-  }
-`
-
-const StyledContactTitle = styled.h2`
+const StyledHeaderTitle = styled.div`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1A1A1A;
-  margin: 1rem 2rem;
+  font-size: 2.5rem;
+  color: #000;
+  line-height: 2.5rem;
+  font-weight: 200;
+  margin: 5rem 0 3rem 0;
 `
 
-const StyledContactSubtitle = styled.h3`
+const StyledHeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1A1A1A;
-  margin: 1rem 2rem;
+  font-size: 1.25rem;
+  color: #000;
+  font-weight: 200;
+  margin: 0 0 1.3rem 0;
 `
 
-const StyledContactText = styled.p`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #1A1A1A;
-  margin: .25rem 2rem;
-`
-
-const StyledContact = styled.div`
-  width: 100%;
-  height: 32rem;
-  border-radius: .125rem;
-  background: #fafafa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media screen and (max-width: 60rem) {
-    height: 32rem;
-  }
-`
-
-const StyledContactForm = styled.form`
-  width: 60%;
-  margin-left: 20%;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 60rem) {
-    width: 90%;
-    margin-left: 5%;
-  }
-`
-
-const StyledContactFormTitle = styled.h3`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #1A1A1A;
-  margin: 1rem;
-`
-
-const StyledContactInput = styled.input`
-  outline: none;
-  background: none;
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  margin: .5rem 0;
-  color: #1A1A1A;
-  border: .125rem solid #DDD;
-  border-radius: .25rem;
-  padding: 1rem 1rem;
-`
-
-const StyledContactTextarea = styled.textarea`
-  outline: none;
-  background: none;
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  margin: .5rem 0;
-  color: #1A1A1A;
-  border: .125rem solid #DDD;
-  border-radius: .25rem;
-  padding: 1rem 1rem;
-  resize: none;
-`
-
-const StyledContactSubmit = styled.input`
-  outline: none;
-  background: none;
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  margin: .5rem 0;
-  color: #3EC4E1;
-  border: .125rem solid #3EC4E1;
-  border-radius: .25rem;
-  padding: .5rem 2rem;
-  cursor: pointer;
-  transition: all .1s ease-in;
-
-  :hover {
-    background: #3EC4E1;
-    color: #fff;
-  }
-`
+// const StyledGrid = styled.div`
+//   height: auto;
+//   margin: 0 auto;
+//   max-width: 1440px;
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr;
+//   padding: 1rem;
+//
+//   @media screen and (max-width: 60rem) {
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1fr 1fr;
+//     grid-gap: 1rem;
+//   }
+// `
+//
+// const StyledContactTitle = styled.h2`
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   color: #1A1A1A;
+//   margin: 1rem 2rem;
+// `
+//
+// const StyledContactSubtitle = styled.h3`
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1rem;
+//   font-weight: 600;
+//   color: #1A1A1A;
+//   margin: 1rem 2rem;
+// `
+//
+// const StyledContactText = styled.p`
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+//   color: #1A1A1A;
+//   margin: .25rem 2rem;
+// `
+//
+// const StyledContact = styled.div`
+//   width: 100%;
+//   height: 32rem;
+//   border-radius: .125rem;
+//   background: #fafafa;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//
+//   @media screen and (max-width: 60rem) {
+//     height: 32rem;
+//   }
+// `
+//
+// const StyledContactForm = styled.form`
+//   width: 60%;
+//   margin-left: 20%;
+//   display: flex;
+//   flex-direction: column;
+//
+//   @media screen and (max-width: 60rem) {
+//     width: 90%;
+//     margin-left: 5%;
+//   }
+// `
+//
+// const StyledContactFormTitle = styled.h3`
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1.5rem;
+//   font-weight: 400;
+//   color: #1A1A1A;
+//   margin: 1rem;
+// `
+//
+// const StyledContactInput = styled.input`
+//   outline: none;
+//   background: none;
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+//   margin: .5rem 0;
+//   color: #1A1A1A;
+//   border: .125rem solid #DDD;
+//   border-radius: .25rem;
+//   padding: 1rem 1rem;
+// `
+//
+// const StyledContactTextarea = styled.textarea`
+//   outline: none;
+//   background: none;
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1rem;
+//   font-weight: 400;
+//   margin: .5rem 0;
+//   color: #1A1A1A;
+//   border: .125rem solid #DDD;
+//   border-radius: .25rem;
+//   padding: 1rem 1rem;
+//   resize: none;
+// `
+//
+// const StyledContactSubmit = styled.input`
+//   outline: none;
+//   background: none;
+//   font-family: myriad-pro, sans-serif;
+//   font-size: 1rem;
+//   font-weight: 600;
+//   margin: .5rem 0;
+//   color: #3EC4E1;
+//   border: .125rem solid #3EC4E1;
+//   border-radius: .25rem;
+//   padding: .5rem 2rem;
+//   cursor: pointer;
+//   transition: all .1s ease-in;
+//
+//   :hover {
+//     background: #3EC4E1;
+//     color: #fff;
+//   }
+// `
 
 const Creditmodule = (props) => (
   <StyledBackground>
     <StyledHeader>
       <Container>
-        <StyledTitle>Контакти</StyledTitle>
-        <StyledSubtitle>Зв'яжіться з нами і дізнайтеся, як ми можемо допомогти вашому бізнесу досягти високих результатів
+        <StyledTitle>Creditmodule</StyledTitle>
+        <StyledSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом
+          обслуговування клієнтів
         </StyledSubtitle>
+        <Link>
+          <StyledSubtitle>Завантажити презентацію
+          </StyledSubtitle>
+        </Link>
       </Container>
     </StyledHeader>
-    <StyledGrid>
-      <StyledContact>
-        <StyledContactTitle>Контакти</StyledContactTitle>
-        <StyledContactText>02152, м. Київ, проспект Павла Тичини, 1В, офіс А</StyledContactText>
-        <StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>
-        <StyledContactText>bars@unity-bars.com</StyledContactText>
-      </StyledContact>
-      <StyledContact>
-        <StyledContactForm>
-          <StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>
-          <StyledContactInput placeholder="Ваше Ім'я" />
-          <StyledContactInput placeholder="Ваш Email" />
-          <StyledContactInput placeholder="Ваш Телефон" />
-          <StyledContactTextarea placeholder="Ваше Повідомлення" />
-          <StyledContactSubmit type="submit" value="Надіслати" />
-        </StyledContactForm>
-      </StyledContact>
-    </StyledGrid>
+
+    <Container>
+      <StyledHeaderTitle>Функціонал модуля</StyledHeaderTitle>
+      <StyledHeaderTitleParagraph>
+        Заклад кредитного договору — реєстрація позичальника, параметрів кредитної угоди і забезпечення, побудова ГПК,
+        розрахунок ефективної ставки, формування друкованих форм, авторизація за правилом «двох рук»
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph> Видача коштів — переказ на картковий рахунок, по довільним платіжними реквізитами або
+        видача готівки, викликані
+        здійснених операції
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Обслуговування кредитного договору — нарахування відсотків, пені, винесення на прострочення, автоматичний розбір
+        погашень кредиту і т.д.
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Погашення кредиту — використання рахунку погашення, планове і дострокове погашення, погашення через БПК,
+        перерахування по СЕП, використання терміналів самообслуговування (Ibox, Бнк24 і т.д.)
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Реструктуризація — підтримка багатьох видів реструктуризації (пролонгація, зміна% ставки, суми кредиту і т.д.)
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Погашення кредиту — використання рахунку погашення, планове і дострокове погашення, погашення через БПК,
+        перерахування по СЕП, використання терміналів самообслуговування (Ibox, Бнк24 і т.д.)
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Реструктуризація — підтримка багатьох видів реструктуризації (пролонгація, зміна% ставки, суми кредиту і т.д.)
+      </StyledHeaderTitleParagraph>
+
+
+      <StyledHeaderTitle>ТЕХНОЛОГІЧІ ОСОБЛИВОСТІ</StyledHeaderTitle>
+      <StyledHeaderTitleParagraph>
+        Відображення всіх транзакцій в режимі он-лайн
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Рольовий підхід — в модулі передбачено набір ролей для виконання різних дій (кредитний інспектор, бухгалтер,
+        аналітик і т.д.), розподіл прав доступу відповідно до встановленої ролі
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Параметризація — настройка на базі параметрів довідників кредитних продуктів, бухгалтерської моделі обліку,
+        друкованих шаблонів, операцій
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Розрахунок резерву — «безшовна» інтеграція з модулем розрахунку резерву, автоматичний розрахунок і облік резерву
+        згідно з постановою НБУ №23
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Інтеграція зі сторонніми системами — можливість взаємодії зі сторонніми системами зокрема з програмним
+        забезпеченням з обліку заробітної плати
+      </StyledHeaderTitleParagraph>
+
+
+      <StyledHeaderTitle>МОЖЛИВОСТІ І ПЕРЕВАГИ</StyledHeaderTitle>
+      <StyledHeaderTitleParagraph>
+        Автоматизація процесів виконання запитів до зовнішніх систем (БКІ, МВС і т.п.) ручних перевірок заявок (дзвінок
+        на місце роботи і т.д.), перевірка бізнес правил
+      </StyledHeaderTitleParagraph>
+      <StyledHeaderTitleParagraph>
+        Можливість розміщення пунктів по роботі з клієнтами в будь-якому місці (реалізація призначеного для користувача інтерфейсу на базі Web-технологій)
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Пряма взаємодія з пристроями захоплення зображень
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Адаптація робочого процесу і обробки кредитної заявки до вимог замовника
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Орієнтованість на максимальну швидкість обробки кредитної заявки (видача спожитого кредиту без застави за 20 хвилин)
+      </StyledHeaderTitleParagraph>
+
+      <StyledHeaderTitleParagraph>
+        Мінімізація ризиків шахрайства шляхом автоматизації підбору параметрів і мінімізації мануального введення даних
+      </StyledHeaderTitleParagraph>
+    </Container>
+    {/*<StyledGrid>*/}
+    {/*/!*<StyledContact>*!/*/}
+    {/*/!*<StyledContactTitle>Контакти</StyledContactTitle>*!/*/}
+    {/*/!*<StyledContactText>02152, м. Київ, проспект Павла Тичини, 1В, офіс А</StyledContactText>*!/*/}
+    {/*/!*<StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>*!/*/}
+    {/*/!*<StyledContactText>bars@unity-bars.com</StyledContactText>*!/*/}
+    {/*/!*</StyledContact>*!/*/}
+    {/*<StyledContact>*/}
+    {/*<StyledContactForm>*/}
+    {/*<StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>*/}
+    {/*<StyledContactInput placeholder="Ваше Ім'я"/>*/}
+    {/*<StyledContactInput placeholder="Ваш Email"/>*/}
+    {/*<StyledContactInput placeholder="Ваш Телефон"/>*/}
+    {/*<StyledContactTextarea placeholder="Ваше Повідомлення"/>*/}
+    {/*<StyledContactSubmit type="submit" value="Надіслати"/>*/}
+    {/*</StyledContactForm>*/}
+    {/*</StyledContact>*/}
+    {/*</StyledGrid>*/}
   </StyledBackground>
 )
 
