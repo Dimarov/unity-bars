@@ -9,7 +9,7 @@ import Datawarehouse from '../components/datawarehouse'
 
 const DatawarehousePage = () => (
   <Layout>
-    <Creditmodule />
+    <Datawarehouse />
   </Layout>
 )
 
