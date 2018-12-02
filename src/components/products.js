@@ -153,48 +153,51 @@ const Products = (props) => (
           бізнес-процесів і функцій банку</StyledProductSubtitle>
         <StyledProductImage src={absbars}/>
       </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Автоматизована банківська система BARS MMFO</StyledProductTitle>
-        <StyledProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</StyledProductSubtitle>
-        <StyledProductImage src={absbarsmmfo}/>
-      </StyledProduct>
-      <Link to="/corp2">
+      <Link to="/barsmmfo">
         <StyledProduct>
-          <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
-          <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою
-            на базі Web-технологій</StyledProductSubtitle>
-          <StyledProductImage src={corp2}/>
+          <StyledProductTitle>Автоматизована банківська система BARS MMFO</StyledProductTitle>
+          <StyledProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</StyledProductSubtitle>
+          <StyledProductImage src={absbarsmmfo}/>
         </StyledProduct>
       </Link>
-      <StyledProduct>
-        <StyledProductTitle>Клієнт-банк</StyledProductTitle>
-        <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних
-          осіб</StyledProductSubtitle>
-        <StyledProductImage src={corplight}/>
-      </StyledProduct>
-      <Link to="/creditmodule">
+        <Link to="/corp2">
+          <StyledProduct>
+            <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
+            <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою
+              структурою
+              на базі Web-технологій</StyledProductSubtitle>
+            <StyledProductImage src={corp2}/>
+          </StyledProduct>
+        </Link>
         <StyledProduct>
-          <StyledProductTitle>Кредитний модуль</StyledProductTitle>
-          <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з
-            повним циклом обслуговування клієнтів</StyledProductSubtitle>
-          <StyledProductImage src={creditmodule}/>
+          <StyledProductTitle>Клієнт-банк</StyledProductTitle>
+          <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних
+            осіб</StyledProductSubtitle>
+          <StyledProductImage src={corplight}/>
         </StyledProduct>
-      </Link>
-      <Link to="/datawarehouse">
-        <StyledProduct>
-          <StyledProductTitle>Електронне сховище</StyledProductTitle>
-          <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
-          <StyledProductImage src={datawarehouse}/>
-        </StyledProduct>
-      </Link>
-      <Link to="/electronicarchive">
-        <StyledProduct>
-          <StyledProductTitle>Електронний архів</StyledProductTitle>
-          <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному
-            вигляді</StyledProductSubtitle>
-          <StyledProductImage src={electronicarchive}/>
-        </StyledProduct>
-      </Link>
+        <Link to="/creditmodule">
+          <StyledProduct>
+            <StyledProductTitle>Кредитний модуль</StyledProductTitle>
+            <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з
+              повним циклом обслуговування клієнтів</StyledProductSubtitle>
+            <StyledProductImage src={creditmodule}/>
+          </StyledProduct>
+        </Link>
+        <Link to="/datawarehouse">
+          <StyledProduct>
+            <StyledProductTitle>Електронне сховище</StyledProductTitle>
+            <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
+            <StyledProductImage src={datawarehouse}/>
+          </StyledProduct>
+        </Link>
+        <Link to="/electronicarchive">
+          <StyledProduct>
+            <StyledProductTitle>Електронний архів</StyledProductTitle>
+            <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному
+              вигляді</StyledProductSubtitle>
+            <StyledProductImage src={electronicarchive}/>
+          </StyledProduct>
+        </Link>
     </StyledGrid>
   </StyledBackground>
 )

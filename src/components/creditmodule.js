@@ -183,24 +183,6 @@ const Creditmodule = (props) => (
       </StyledHeaderTitleParagraph>
       <StyledTestMargin />
     </Container>
-    {/*<StyledGrid>*/}
-    {/*/!*<StyledContact>*!/*/}
-    {/*/!*<StyledContactTitle>Контакти</StyledContactTitle>*!/*/}
-    {/*/!*<StyledContactText>02152, м. Київ, проспект Павла Тичини, 1В, офіс А</StyledContactText>*!/*/}
-    {/*/!*<StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>*!/*/}
-    {/*/!*<StyledContactText>bars@unity-bars.com</StyledContactText>*!/*/}
-    {/*/!*</StyledContact>*!/*/}
-    {/*<StyledContact>*/}
-    {/*<StyledContactForm>*/}
-    {/*<StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>*/}
-    {/*<StyledContactInput placeholder="Ваше Ім'я"/>*/}
-    {/*<StyledContactInput placeholder="Ваш Email"/>*/}
-    {/*<StyledContactInput placeholder="Ваш Телефон"/>*/}
-    {/*<StyledContactTextarea placeholder="Ваше Повідомлення"/>*/}
-    {/*<StyledContactSubmit type="submit" value="Надіслати"/>*/}
-    {/*</StyledContactForm>*/}
-    {/*</StyledContact>*/}
-    {/*</StyledGrid>*/}
   </StyledBackground>
 )
 
