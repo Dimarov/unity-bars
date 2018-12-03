@@ -55,7 +55,7 @@ const StyledGrid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 1rem;
   padding: 1rem;
 
@@ -68,7 +68,7 @@ const StyledGrid = styled.div`
 
 const StyledNews = styled.div`
   width: 100%;
-  height: 32rem;
+  height: 40rem;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
@@ -77,8 +77,10 @@ const StyledNews = styled.div`
   transition: all .3s ease-in-out;
   cursor: pointer;
 
-  :hover div {
-    height: 20rem;
+  :hover p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   @media screen and (max-width: 60rem) {
@@ -92,7 +94,7 @@ const StyledNewsPhoto = styled.div`
   filter: grayscale(100);
   border-radius: .125rem;
   width: 100%;
-  height: 16rem;
+  height: 20rem;
   transition: all .3s ease-in-out;
 
   :hover {
@@ -165,9 +167,9 @@ const news = [
     title: 'Новий Трансфер Данних до BARS MMFO',
     text: [
           "Черговий трансфер данних, тепер для регіонів Вінниці та Житомира, всього оновлено:",
-          "46 071 894 – Банкових рахунків (21 451 999 діючих)",
-          "13 526 371 – Клієнтів банку (9 960 526 діючих)",
-          "Більше ніж 8 500 активних користувачів!",
+          "46 071 894 – Банкових рахунків (21 451 999 діючих)\n",
+          "13 526 371 – Клієнтів банку (9 960 526 діючих)\n",
+          "Більше ніж 8 500 активних користувачів!\n",
           "У Львові:",
           "49 266 910 – Банкових рахунків (22 551 403 діючих)",
           "14 766 645 – Клієнтів банку (10 255 043 діючих)",
@@ -186,21 +188,21 @@ const news = [
   },
   {
     id: 4,
-    title: 'З Днем Незалежності, Україно!',
+    title: 'Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO',
     text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
     date: '26.11.2018',
     image: `${four}`,
   },
   {
     id: 5,
-    title: 'З Днем Незалежності, Україно!',
+    title: 'Відсьогодні Донецьк також в BARS-MMFO',
     text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
     date: '26.11.2018',
     image: `${five}`,
   },
   {
     id: 6,
-    title: 'З Днем Незалежності, Україно!',
+    title: 'Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від НБУ спільно з UNITY-BARS',
     text: 'Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою',
     date: '26.11.2018',
     image: `${six}`,

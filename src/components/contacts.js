@@ -179,7 +179,7 @@ const Contacts = (props) => (
         <StyledContactText>bars@unity-bars.com</StyledContactText>
       </StyledContact>
       <StyledContact>
-        <StyledContactForm>
+        <StyledContactForm name="contact" method="POST" netlify-honeypot="bot-field" netlify>
           <StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>
           <StyledContactInput placeholder="Ваше Ім'я" />
           <StyledContactInput placeholder="Ваш Email" />

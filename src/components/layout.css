@@ -627,12 +627,10 @@ pre tt:after {
 
 .content-appear {
   opacity: .95;
-  transform: translateY(-1rem);
 }
 
 .content-appear.content-appear-active {
   opacity: 1;
-  transform: translateY(0);
   transition: all .5s ease-in-out;
 }
 

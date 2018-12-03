@@ -45,16 +45,12 @@ const StyledGrid = styled.div`
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
 
   @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 1rem;
+
   }
 `
 
@@ -62,11 +58,52 @@ const StyledProject = styled.div`
   width: 100%;
   height: 20rem;
   border-radius: .125rem;
-  background: #fafafa;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 
   @media screen and (max-width: 60rem) {
     height: 12rem;
   }
+`
+
+const StyledProjectPhoto = styled.div`
+  height: 16rem;
+  background: red;
+  flex: 0 0 20%;
+  margin: 1rem 0;
+`
+
+ const StyledProjectInfo = styled.div`
+  flex: 0 0 80%;
+  display: flex;
+  flex-direction: column;
+ `
+
+const StyledProjectTitle = styled.a`
+  font-family: myriad-pro, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #3EC4E1;
+  margin: 1rem 2rem 0rem;
+  cursor: pointer;
+`
+
+const StyledProjectSubtitle = styled.h3`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #1A1A1A;
+  margin: .5rem 2rem 1rem;
+`
+
+const StyledProjectText = styled.p`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1A1A1A;
+  margin: .25rem 2rem;
 `
 
 const Projects = (props) => (
@@ -78,7 +115,57 @@ const Projects = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledProject></StyledProject>
+      <StyledProject>
+        <StyledProjectPhoto />
+        <StyledProjectInfo>
+          <StyledProjectTitle>BANKID</StyledProjectTitle>
+          <StyledProjectSubtitle>
+            Спосіб електронної ідентифікації громадян через українські банки для надання адміністративних послуг через Інтернет
+          </StyledProjectSubtitle>
+          <StyledProjectText>
+            Надійна та зручна верифікація користувача через його власний інтернет-банкінг на порталах адміністративних послуг. Станом на сьогодні, на полігоні Ощадбанку, розгорнуто робочий екземпляр системи BankID з повним циклом проходження даних (враховуючи отримання даних по клієнту з банківської бази даних по номеру банківської картки ). Наразі очікується підключення системи до провайдера SMS розсилок (дотепер підключено у тестовому режимі), після чого полігон буде запущено у дослідну експлуатацію на порталі Львівської міської ради Особистий кабінет львів’янина. У інтерфейсі сайту буде доступна кнопка «BankID Ощадбанк», за допомогою якої користувачі матимуть змогу авторизуватися у системі та оформити довідку та звернення з доступного переліку інформації. Також у відкритий доступ на ресурсі GitHub, викладено актуальні схеми та документація по роботі системи BankID з можливістю коментування та редагування.
+          </StyledProjectText>
+        </StyledProjectInfo>
+      </StyledProject>
+      <hr />
+      <StyledProject>
+        <StyledProjectPhoto />
+        <StyledProjectInfo>
+          <StyledProjectTitle>BANKID</StyledProjectTitle>
+          <StyledProjectSubtitle>
+            Спосіб електронної ідентифікації громадян через українські банки для надання адміністративних послуг через Інтернет
+          </StyledProjectSubtitle>
+          <StyledProjectText>
+            Надійна та зручна верифікація користувача через його власний інтернет-банкінг на порталах адміністративних послуг. Станом на сьогодні, на полігоні Ощадбанку, розгорнуто робочий екземпляр системи BankID з повним циклом проходження даних (враховуючи отримання даних по клієнту з банківської бази даних по номеру банківської картки ). Наразі очікується підключення системи до провайдера SMS розсилок (дотепер підключено у тестовому режимі), після чого полігон буде запущено у дослідну експлуатацію на порталі Львівської міської ради Особистий кабінет львів’янина. У інтерфейсі сайту буде доступна кнопка «BankID Ощадбанк», за допомогою якої користувачі матимуть змогу авторизуватися у системі та оформити довідку та звернення з доступного переліку інформації. Також у відкритий доступ на ресурсі GitHub, викладено актуальні схеми та документація по роботі системи BankID з можливістю коментування та редагування.
+          </StyledProjectText>
+        </StyledProjectInfo>
+      </StyledProject>
+      <hr />
+      <StyledProject>
+        <StyledProjectPhoto />
+        <StyledProjectInfo>
+          <StyledProjectTitle>BANKID</StyledProjectTitle>
+          <StyledProjectSubtitle>
+            Спосіб електронної ідентифікації громадян через українські банки для надання адміністративних послуг через Інтернет
+          </StyledProjectSubtitle>
+          <StyledProjectText>
+            Надійна та зручна верифікація користувача через його власний інтернет-банкінг на порталах адміністративних послуг. Станом на сьогодні, на полігоні Ощадбанку, розгорнуто робочий екземпляр системи BankID з повним циклом проходження даних (враховуючи отримання даних по клієнту з банківської бази даних по номеру банківської картки ). Наразі очікується підключення системи до провайдера SMS розсилок (дотепер підключено у тестовому режимі), після чого полігон буде запущено у дослідну експлуатацію на порталі Львівської міської ради Особистий кабінет львів’янина. У інтерфейсі сайту буде доступна кнопка «BankID Ощадбанк», за допомогою якої користувачі матимуть змогу авторизуватися у системі та оформити довідку та звернення з доступного переліку інформації. Також у відкритий доступ на ресурсі GitHub, викладено актуальні схеми та документація по роботі системи BankID з можливістю коментування та редагування.
+          </StyledProjectText>
+        </StyledProjectInfo>
+      </StyledProject>
+      <hr />
+      <StyledProject>
+        <StyledProjectPhoto />
+        <StyledProjectInfo>
+          <StyledProjectTitle>BANKID</StyledProjectTitle>
+          <StyledProjectSubtitle>
+            Спосіб електронної ідентифікації громадян через українські банки для надання адміністративних послуг через Інтернет
+          </StyledProjectSubtitle>
+          <StyledProjectText>
+            Надійна та зручна верифікація користувача через його власний інтернет-банкінг на порталах адміністративних послуг. Станом на сьогодні, на полігоні Ощадбанку, розгорнуто робочий екземпляр системи BankID з повним циклом проходження даних (враховуючи отримання даних по клієнту з банківської бази даних по номеру банківської картки ). Наразі очікується підключення системи до провайдера SMS розсилок (дотепер підключено у тестовому режимі), після чого полігон буде запущено у дослідну експлуатацію на порталі Львівської міської ради Особистий кабінет львів’янина. У інтерфейсі сайту буде доступна кнопка «BankID Ощадбанк», за допомогою якої користувачі матимуть змогу авторизуватися у системі та оформити довідку та звернення з доступного переліку інформації. Також у відкритий доступ на ресурсі GitHub, викладено актуальні схеми та документація по роботі системи BankID з можливістю коментування та редагування.
+          </StyledProjectText>
+        </StyledProjectInfo>
+      </StyledProject>
     </StyledGrid>
   </StyledBackground>
 )
