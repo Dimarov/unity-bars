@@ -27,7 +27,7 @@ const StyledHeader = styled.div`
 
 const StyledTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 400;
   color: #fff;
   
@@ -83,6 +83,14 @@ const StyledTestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
+const StyledHeaderTitle = styled.div`
+font-family: myriad-pro, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  line-height: 30px;
+`
+
 
 const DatawarehousePage = (props) => (
   <StyledBackground>
@@ -90,7 +98,7 @@ const DatawarehousePage = (props) => (
       <Container>
         <StyledTitle>Datawarehouse</StyledTitle>
         <StyledSubtitle>Завантажити презентацію</StyledSubtitle>
-        <StyledTitle>Система класу банківського DWH на платформі і модулях IBM</StyledTitle>
+        <StyledHeaderTitle>Система класу банківського DWH на платформі і модулях IBM</StyledHeaderTitle>
       </Container>
     </StyledHeader>
 

@@ -29,7 +29,7 @@ const StyledHeader = styled.div`
 
 const StyledTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 400;
   color: #fff;
 `
@@ -37,7 +37,8 @@ const StyledTitle = styled.h2`
 const StyledSubtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
-  font-weight: 200;
+  font-weight: 400;
+  line-height: 20px;
   color: #fff;
 `
 
@@ -57,6 +58,7 @@ const StyledHeaderTitle = styled.div`
 const StyledHeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
+  line-height: 30px;
   color: #000;
   font-weight: 400;
   margin: 0 0 1.3rem 0;

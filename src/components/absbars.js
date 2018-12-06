@@ -30,8 +30,6 @@ const StyledTitle = styled.h2`
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
-  
-  
 `
 
 const StyledSubtitle = styled.p`
@@ -94,6 +92,7 @@ const StyledHeaderTitleParagraph = styled.div`
 const StyledHeaderSubTitleHuge = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
+  line-height: 28px;
   // font-weight: 400;
   color: #fff;
   margin-bottom: 2rem;

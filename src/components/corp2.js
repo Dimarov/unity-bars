@@ -78,6 +78,7 @@ const StyledHeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   color: #000;
+  line-height: 30px;
   font-weight: 400;
   margin: 0 0 1.3rem 0;
   
