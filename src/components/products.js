@@ -4,13 +4,13 @@ import styled from "styled-components"
 
 import bg from "../images/products.jpg"
 
-import absbars from "../images/absbars.png"
-import absbarsmmfo from "../images/absbarsmmfo.png"
-import corp2 from "../images/corp2.png"
-import corplight from "../images/corplight.png"
-import creditmodule from "../images/creditmodule.png"
-import datawarehouse from "../images/datawarehouse.png"
-import electronicarchive from "../images/electronica.png"
+import absbars from "../images/products/absbars.png"
+import absbarsmmfo from "../images/products/absbarsmmfo.png"
+import corp2 from "../images/products/corp2.png"
+import corplight from "../images/products/corplight.png"
+import creditmodule from "../images/products/creditmodule.png"
+import datawarehouse from "../images/products/datawarehouse.png"
+import electronicarchive from "../images/products/electronica.png"
 
 const StyledBackground = styled.div`
   width: 100%;

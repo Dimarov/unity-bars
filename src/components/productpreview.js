@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 
-import boneImage from "../images/bone.png"
-import corpImage from "../images/corp.png"
-import forwardImage from "../images/forward.png"
+import boneImage from "../images/mockups/bone-macbook.png"
+import corpImage from "../images/mockups/corplight-iphone.png"
+import forwardImage from "../images/mockups/forward-samsung.png"
 
 const StyledProductPreviews = styled.div`
   width: 100%;
@@ -14,91 +14,129 @@ const StyledProductPreviews = styled.div`
 
 const StyledBackground = styled.div`
   width: 100%;
-  height: 40rem;
+  height: 32rem;
   background: ${props => props.themeColor || "#000"};
   background-size: cover;
 
-  @media screen and (max-width: 60rem) {
-    height: 32rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 40rem;
   }
 `
 
 const StyledContent = styled.div`
   height: 100%;
   width: 100%;
-  padding: 0 8rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 60rem) {
-    padding: 0 1rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 0 8rem;
   }
 `
 
 const StyledInfo = styled.div`
-  flex: 1 1 50%;
-  height: 100%;
-  padding: 3rem 4rem;
+  flex: 0 0 100%;
+  height: 50%;
+  padding: 0;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media screen and (max-width: 60rem) {
-    flex: 0 0 100%;
-    height: 50%;
-    padding: 0;
-    align-items: center;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    flex: 1 1 50%;
+    height: 100%;
+    padding: 3rem 4rem;
+    align-items: flex-start;
   }
 `
 
 const StyledImageContainer = styled.div`
-  flex: 1 1 50%;
-  height: 100%;
+  flex: 0 0 100%;
+  height: 50%;
+  order: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 60rem) {
-    flex: 0 0 100%;
-    height: 50%;
-    order: 2;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    flex: 1 1 50%;
+    height: 100%;
+    order: 0;
   }
 `
 
 const StyledImageBone = styled.img`
-  height: 24rem;
+  height: 16rem;
+  margin: 0;
 
-  @media screen and (max-width: 60rem) {
-    height: 10rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
   }
 `
 
 const StyledImageCorp = styled.img`
-  height: 28rem;
+  height: 16rem;
+  margin: 0;
 
-  @media screen and (max-width: 60rem) {
-    height: 12rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
   }
 `
 
 const StyledImageForward = styled.img`
-  height: 36rem;
+  height: 20rem;
+  margin: 0;
 
-  @media screen and (max-width: 60rem) {
-    height: 14rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
   }
 `
 
-const StyledTitle = styled.h2`
-  font-size: 4rem;
+const StyledTitle = styled.h1`
+  font-size: 2rem;
+  margin: .25rem 0;
   font-weight: 600;
   font-family: myriad-pro, sans-serif;
   color: ${props => props.themeColorSecondary || "#FFF"};
 
-  @media screen and (max-width: 60rem) {
-    font-size: 2rem;
-    margin: .25rem 0;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 4rem;
+    margin: 1rem 0;
   }
 `
 
@@ -106,28 +144,41 @@ const StyledSpan = styled.span`
   color: ${props => props.color || props.themeColorSecondary};
 `
 
-const StyledSubtitle = styled.p`
-  font-size: 2rem;
+const StyledSubtitle = styled.h2`
+  font-size: 1rem;
+  margin: .25rem 0;
+  text-align: center;
   font-weight: 400;
+  opacity: .8;
   line-height: 3alt="bone"rem;
   font-family: myriad-pro, sans-serif;
   color: ${props => props.themeColorSecondary || "#FFF"};
 
-  @media screen and (max-width: 60rem) {
-    font-size: 1rem;
-    margin: .25rem 0;
-    text-align: center;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 300;
+    margin: 1rem 0;
   }
 `
 
 const StyledButtonContainer = styled.div`
   width: 100%;
   display: flex;
-  margin: 1rem 0;
+  margin: .5rem 0;
+  justify-content: space-evenly;
 
-  @media screen and (max-width: 60rem) {
-    margin: .5rem 0;
-    justify-content: space-evenly;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    margin: 1rem 0;
+    justify-content: flex-start;
   }
 `
 
@@ -136,10 +187,10 @@ const StyledButton = styled.button`
   border: .125rem solid ${props => props.themeColorSecondary};
   border-radius: .125rem;
   background: ${props => props.outline ? "none" : props.themeColorSecondary};
-  padding: .4rem 2rem;
-  margin-right: 1rem;
+  padding: .3rem 1.25rem;
+  margin: 0 .5rem;
+  font-size: .65rem;
   font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
   font-weight: 600;
   color: ${props => props.outline ? props.themeColorSecondary : props.themeColor};
   cursor: pointer;
@@ -155,18 +206,22 @@ const StyledButton = styled.button`
     transform: translateY(.0625rem);
   }
 
-  @media screen and (max-width: 60rem) {
-    padding: .3rem 1.25rem;
-    margin: 0 .5rem;
-    font-size: .65rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1rem;
+    margin: 0 1rem 0 0;
+    padding: .4rem 2rem;
   }
 `
 
 const StyledMoreButton = styled(Link)`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin: 1rem 0;
   font-weight: 400;
-  margin: 2rem 0;
   text-decoration: none;
   color: ${props => props.themeColorSecondary};
   transition: all .3s ease-out;
@@ -176,9 +231,13 @@ const StyledMoreButton = styled(Link)`
     filter: contrast(50%);
   }
 
-  @media screen and (max-width: 60rem) {
-    font-size: 1rem;
-    margin: 1rem 0;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1.5rem;
+    margin: 2rem 0;
   }
 `
 
@@ -211,7 +270,7 @@ const ProductPreview = (props) => (
             <StyledButton themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</StyledButton>
             <StyledButton outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</StyledButton>
           </StyledButtonContainer>
-          <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
+          <StyledMoreButton to="/corplight" themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
         </StyledInfo>
         <StyledImageContainer>
           <StyledImageCorp src={corpImage} alt="corplight" />

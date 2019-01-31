@@ -12,7 +12,7 @@ const StyledBackground = styled.div`
   background-image: url(${ub});
   background-size: cover;
   box-shadow: inset 0rem -10rem 10rem rgba(0,0,0,0.8);
-  filter: grayscale(.9);
+  filter: grayscale(.5);
   position: relative;
 `;
 
@@ -21,9 +21,14 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 1rem;
 
-  @media screen and (max-width: 60rem) {
-    padding: 0 1rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 0;
   }
 `;
 
@@ -37,10 +42,14 @@ const StyledContent = styled.div`
 `;
 
 const BackgroundImage = styled.img`
-  width: 32rem;
+  width: 16rem;
 
-  @media screen and (max-width: 60rem) {
-    width: 16rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    width: 32rem;
   }
 `;
 
@@ -49,7 +58,7 @@ const StyledButton = styled.button`
   border: .125rem solid #FFF;
   border-radius: .125rem;
   background: ${props => props.outline ? "none" : "#FFF"};
-  padding: .5rem 3rem;
+  padding: .4rem 2rem;
   margin: 1rem;
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
@@ -68,8 +77,12 @@ const StyledButton = styled.button`
     transform: translateY(.0625rem);
   }
 
-  @media screen and (max-width: 60rem) {
-    padding: .4rem 2rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: .5rem 3rem;
   }
 `;
 
