@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import background from "../images/company.jpg"
 
-const StyledBackground = styled.div`
+const Background = styled.div`
   width: 100%;
   height: auto;
   position: relative;
@@ -15,13 +14,18 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 1rem;
 
-  @media screen and (max-width: 60rem) {
-    padding: 0 1rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 0;
   }
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${background});
@@ -30,69 +34,77 @@ const StyledHeader = styled.div`
   padding-top: 8rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h1`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledTopic = styled.h3`
+const Topic = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
   font-weight: 200;
   margin: 2rem 0;
 `
 
-const StyledGrid = styled.div`
+const Grid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 3rem 1rem;
+  grid-gap: 1rem .5rem;
 
-  @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr 1fr;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 1rem .5rem;
+    grid-gap: 3rem 1rem;
   }
 `
 
-const StyledSecondGrid = styled.div`
+const SecondGrid = styled.div`
   height: 60vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: .125rem;
 
-  @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: .125rem;
   }
 `
 
-const StyledClient = styled.div`
+const Client = styled.div`
   height: 100%;
   width: 100%;
-  background: lightblue;
+  background: lightgrey;
 `
 
-const StyledPartner = styled.div`
+const Partner = styled.div`
   height: 100%;
   width: 100%;
-  background: lightblue;
+  background: lightgrey;
 `
 
-const StyledPerson = styled.div`
+const Person = styled.div`
   width: 100%;
   height: 100%;
   border-radius: .125rem;
@@ -107,53 +119,65 @@ const StyledPerson = styled.div`
   }
 `
 
-const StyledPersonPhoto = styled.div`
+const PersonPhoto = styled.div`
   width: 100%;
-  height: 12rem;
-  background: red;
+  height: 10rem;
+  background: lightgrey;
   border-radius: .125rem;
 
-  @media screen and (max-width: 60rem) {
-    height: 10rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 12rem;
   }
 `
 
-const StyledPersonName = styled.h3`
+const PersonName = styled.h3`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 1rem 0 0;
 
-  @media screen and (max-width: 60rem) {
-    font-size: 1rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1.25rem;
   }
 `
 
-const StyledPersonPosition = styled.h3`
+const PersonPosition = styled.h3`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 200;
   margin: .5rem 0;
   color: #37B3FF;
 
-  @media screen and (max-width: 60rem) {
-    font-size: 1rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1.25rem;
   }
 `
 
 function Employees(props) {
   const person = props.employees.map((employee) =>
-    <StyledPerson key={employee.id}>
-      <StyledPersonPhoto></StyledPersonPhoto>
-      <StyledPersonName>{employee.name}</StyledPersonName>
-      <StyledPersonPosition>{employee.position}</StyledPersonPosition>
-    </StyledPerson>
+    <Person key={employee.id}>
+      <PersonPhoto></PersonPhoto>
+      <PersonName>{employee.name}</PersonName>
+      <PersonPosition>{employee.position}</PersonPosition>
+    </Person>
   );
 
   return (
-    <StyledGrid>
+    <Grid>
       {person}
-    </StyledGrid>
+    </Grid>
   );
 }
 
@@ -179,49 +203,49 @@ const employees = [
 ]
 
 const Company = (props) => (
-  <StyledBackground>
-    <StyledHeader>
+  <Background>
+    <Header>
       <Container>
-        <StyledTitle>Компанія</StyledTitle>
-        <StyledSubtitle>UNITY BARS – провідна українська фінтех компанія, спеціалізована на впровадженні ефективного та сучасного програмного забезпечення для банків та фінансових установ.
-</StyledSubtitle>
+        <Title>Компанія</Title>
+        <Subtitle>UNITY BARS – провідна українська фінтех компанія, спеціалізована на впровадженні ефективного та сучасного програмного забезпечення для банків та фінансових установ.
+</Subtitle>
       </Container>
-    </StyledHeader>
+    </Header>
     <Container>
-      <StyledTopic>Наша Команда</StyledTopic>
+      <Topic>Наша Команда</Topic>
       <hr />
       <Employees employees={employees} />
-      <StyledTopic>Клієнти та партнери</StyledTopic>
+      <Topic>Клієнти та партнери</Topic>
       <hr />
-      <StyledSecondGrid>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-        <StyledClient></StyledClient>
-      </StyledSecondGrid>
+      <SecondGrid>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+        <Client></Client>
+      </SecondGrid>
       <br />
-      <StyledSecondGrid>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-        <StyledPartner></StyledPartner>
-      </StyledSecondGrid>
+      <SecondGrid>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+        <Partner></Partner>
+      </SecondGrid>
       <br />
     </Container>
-  </StyledBackground>
+  </Background>
 )
 
 export default Company

@@ -127,10 +127,10 @@ const LinkContainer = styled.div`
 const NavLink = styled(Link)`
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
   transition: all .3s ease-out;
-  margin: .5rem 0;
+  margin: 1rem 0;
 
   :focus,
   :hover {
@@ -143,6 +143,8 @@ const NavLink = styled(Link)`
 
   @media (min-width: 80rem) {
     margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
   }
 `;
 

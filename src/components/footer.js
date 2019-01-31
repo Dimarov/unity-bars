@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,9 +15,14 @@ const Container = styled.div`
   height: 100%;
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 1rem;
 
-  @media screen and (max-width: 60rem) {
-    padding: 0 1rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 0;
   }
 `;
 

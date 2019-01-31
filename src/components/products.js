@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import bg from "../images/products.jpg"
@@ -12,7 +12,7 @@ import creditmodule from "../images/products/creditmodule.png"
 import datawarehouse from "../images/products/datawarehouse.png"
 import electronicarchive from "../images/products/electronica.png"
 
-const StyledBackground = styled.div`
+const Background = styled.div`
   width: 100%;
   height: auto;
   position: relative;
@@ -25,7 +25,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${bg});
@@ -34,41 +34,45 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h1`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledGrid = styled.div`
+const Grid = styled.div`
   height: auto;
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
   padding: 1rem;
 
-  @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 1rem;
   }
 `
 
-const StyledProduct = styled.div`
+const Product = styled.div`
   width: 100%;
-  height: 20rem;
+  height: 12rem;
   border-radius: .125rem;
   background: #fafafa;
   position: relative;
@@ -85,28 +89,40 @@ const StyledProduct = styled.div`
 
   :hover h2 {
     opacity: 1;
-    top: 15%;
+    top: 35%;
 
-    @media screen and (max-width: 60rem) {
-      top: 35%;
+    @media (min-width: 40rem) {
+
+    }
+
+    @media (min-width: 80rem) {
+      top: 15%;
     }
   }
 
   :hover p {
-    opacity: 1;
+    opacity: 0;
     bottom: 5%;
 
-    @media screen and (max-width: 60rem) {
-      opacity: 0;
+    @media (min-width: 40rem) {
+
+    }
+
+    @media (min-width: 80rem) {
+      opacity: 1;
     }
   }
 
-  @media screen and (max-width: 60rem) {
-    height: 12rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 20rem;
   }
 `
 
-const StyledProductTitle = styled.h2`
+const ProductTitle = styled.h2`
   text-align: center;
   position: absolute;
   left: 50%;
@@ -125,7 +141,7 @@ const StyledProductTitle = styled.h2`
   transition: all .3s ease-in-out;
 `
 
-const StyledProductSubtitle = styled.p`
+const ProductSubtitle = styled.h3`
   text-align: center;
   position: absolute;
   left: 50%;
@@ -140,7 +156,7 @@ const StyledProductSubtitle = styled.p`
   transition: all .3s ease-in-out;
 `
 
-const StyledProductImage = styled.img`
+const ProductImage = styled.img`
   position: absolute;
   left: 50%;
   top: 50%;
@@ -149,51 +165,51 @@ const StyledProductImage = styled.img`
 `
 
 const Products = (props) => (
-  <StyledBackground>
-    <StyledHeader>
+  <Background>
+    <Header>
       <Container>
-        <StyledTitle>Продукти</StyledTitle>
-        <StyledSubtitle>25 років успішної праці у сфері розробки банківського програмного забезпечення</StyledSubtitle>
+        <Title>Продукти</Title>
+        <Subtitle>25 років успішної праці у сфері розробки банківського програмного забезпечення</Subtitle>
       </Container>
-    </StyledHeader>
-    <StyledGrid>
-      <StyledProduct>
-        <StyledProductTitle>Автоматизована банківська система BARS</StyledProductTitle>
-        <StyledProductSubtitle>Система з комплексним або індивідуальним підходом до клієнта. Автоматизує широкий спектр бізнес-процесів і функцій банку</StyledProductSubtitle>
-        <StyledProductImage src={absbars} />
-      </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Автоматизована банківська система BARS MMFO</StyledProductTitle>
-        <StyledProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</StyledProductSubtitle>
-        <StyledProductImage src={absbarsmmfo} />
-      </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Корпоративний клієнт-банк </StyledProductTitle>
-        <StyledProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою на базі Web-технологій</StyledProductSubtitle>
-        <StyledProductImage src={corp2} />
-      </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Клієнт-банк</StyledProductTitle>
-        <StyledProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних осіб</StyledProductSubtitle>
-        <StyledProductImage src={corplight} />
-      </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Кредитний модуль</StyledProductTitle>
-        <StyledProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом обслуговування клієнтів</StyledProductSubtitle>
-        <StyledProductImage src={creditmodule} />
-      </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Електронне сховище</StyledProductTitle>
-        <StyledProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</StyledProductSubtitle>
-        <StyledProductImage src={datawarehouse} />
-      </StyledProduct>
-      <StyledProduct>
-        <StyledProductTitle>Електронний архів</StyledProductTitle>
-        <StyledProductSubtitle>Забезпечує зберігання первинних документів в електронному вигляді</StyledProductSubtitle>
-        <StyledProductImage src={electronicarchive} />
-      </StyledProduct>
-    </StyledGrid>
-  </StyledBackground>
-)
+    </Header>
+    <Grid>
+      <Product>
+        <ProductTitle>Автоматизована банківська система BARS</ProductTitle>
+        <ProductSubtitle>Система з комплексним або індивідуальним підходом до клієнта. Автоматизує широкий спектр бізнес-процесів і функцій банку</ProductSubtitle>
+        <ProductImage src={absbars} />
+      </Product>
+      <Product>
+        <ProductTitle>Автоматизована банківська система BARS MMFO</ProductTitle>
+        <ProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</ProductSubtitle>
+        <ProductImage src={absbarsmmfo} />
+      </Product>
+      <Product>
+        <ProductTitle>Корпоративний клієнт-банк </ProductTitle>
+        <ProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою на базі Web-технологій</ProductSubtitle>
+        <ProductImage src={corp2} />
+      </Product>
+      <Product>
+        <ProductTitle>Клієнт-банк</ProductTitle>
+        <ProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних осіб</ProductSubtitle>
+        <ProductImage src={corplight} />
+      </Product>
+      <Product>
+        <ProductTitle>Кредитний модуль</ProductTitle>
+        <ProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом обслуговування клієнтів</ProductSubtitle>
+        <ProductImage src={creditmodule} />
+      </Product>
+      <Product>
+        <ProductTitle>Електронне сховище</ProductTitle>
+        <ProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</ProductSubtitle>
+        <ProductImage src={datawarehouse} />
+      </Product>
+      <Product>
+        <ProductTitle>Електронний архів</ProductTitle>
+        <ProductSubtitle>Забезпечує зберігання первинних документів в електронному вигляді</ProductSubtitle>
+        <ProductImage src={electronicarchive} />
+      </Product>
+    </Grid>
+    </Background>
+    )
 
-export default Products
+    export default Products

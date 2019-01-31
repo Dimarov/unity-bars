@@ -6,13 +6,7 @@ import boneImage from "../images/mockups/bone-macbook.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
 
-const StyledProductPreviews = styled.div`
-  width: 100%;
-  height: auto;
-  background: #ececec;
-`
-
-const StyledBackground = styled.div`
+const Background = styled.div`
   width: 100%;
   height: 32rem;
   background: ${props => props.themeColor || "#000"};
@@ -27,7 +21,7 @@ const StyledBackground = styled.div`
   }
 `
 
-const StyledContent = styled.div`
+const Content = styled.div`
   height: 100%;
   width: 100%;
   padding: 0 1rem;
@@ -40,11 +34,11 @@ const StyledContent = styled.div`
   }
 
   @media (min-width: 80rem) {
-    padding: 0 8rem;
+    padding: 0 14rem;
   }
 `
 
-const StyledInfo = styled.div`
+const Info = styled.div`
   flex: 0 0 100%;
   height: 50%;
   padding: 0;
@@ -65,7 +59,7 @@ const StyledInfo = styled.div`
   }
 `
 
-const StyledImageContainer = styled.div`
+const ImageContainer = styled.div`
   flex: 0 0 100%;
   height: 50%;
   order: 2;
@@ -84,7 +78,7 @@ const StyledImageContainer = styled.div`
   }
 `
 
-const StyledImageBone = styled.img`
+const ImageBone = styled.img`
   height: 16rem;
   margin: 0;
 
@@ -97,7 +91,7 @@ const StyledImageBone = styled.img`
   }
 `
 
-const StyledImageCorp = styled.img`
+const ImageCorp = styled.img`
   height: 16rem;
   margin: 0;
 
@@ -110,7 +104,7 @@ const StyledImageCorp = styled.img`
   }
 `
 
-const StyledImageForward = styled.img`
+const ImageForward = styled.img`
   height: 20rem;
   margin: 0;
 
@@ -123,7 +117,7 @@ const StyledImageForward = styled.img`
   }
 `
 
-const StyledTitle = styled.h1`
+const Title = styled.h1`
   font-size: 2rem;
   margin: .25rem 0;
   font-weight: 600;
@@ -140,11 +134,11 @@ const StyledTitle = styled.h1`
   }
 `
 
-const StyledSpan = styled.span`
+const Span = styled.span`
   color: ${props => props.color || props.themeColorSecondary};
 `
 
-const StyledSubtitle = styled.h2`
+const Subtitle = styled.h2`
   font-size: 1rem;
   margin: .25rem 0;
   text-align: center;
@@ -166,7 +160,7 @@ const StyledSubtitle = styled.h2`
   }
 `
 
-const StyledButtonContainer = styled.div`
+const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
   margin: .5rem 0;
@@ -182,7 +176,7 @@ const StyledButtonContainer = styled.div`
   }
 `
 
-const StyledButton = styled.button`
+const Button = styled.button`
   outline: none;
   border: .125rem solid ${props => props.themeColorSecondary};
   border-radius: .125rem;
@@ -217,7 +211,7 @@ const StyledButton = styled.button`
   }
 `
 
-const StyledMoreButton = styled(Link)`
+const MoreButton = styled(Link)`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   margin: 1rem 0;
@@ -243,57 +237,57 @@ const StyledMoreButton = styled(Link)`
 
 const ProductPreview = (props) => (
   <div>
-    <StyledBackground themeColor='#000'>
-      <StyledContent>
-        <StyledImageContainer>
-          <StyledImageBone src={boneImage} alt="bone"/>
-        </StyledImageContainer>
-        <StyledInfo>
-          <StyledTitle themeColorSecondary='#FFF'>B.One</StyledTitle>
-          <StyledSubtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та приватних клієнтів</StyledSubtitle>
-          <StyledButtonContainer>
-            <StyledButton themeColor='#000' themeColorSecondary='#FFF'>App Store</StyledButton>
-            <StyledButton themeColor='#000' themeColorSecondary='#FFF'>Google Play</StyledButton>
-            <StyledButton outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</StyledButton>
-          </StyledButtonContainer>
-          <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
-        </StyledInfo>
-      </StyledContent>
-    </StyledBackground>
-    <StyledBackground themeColor='#FEFEFE'>
-      <StyledContent>
-        <StyledInfo>
-          <StyledTitle themeColorSecondary='#303030'>CorpLight <StyledSpan color="#3EC4E1">Ощадбанк</StyledSpan></StyledTitle>
-          <StyledSubtitle themeColorSecondary='#303030'>Онлайн система управління банківськими рахунками та продуктами</StyledSubtitle>
-          <StyledButtonContainer>
-            <StyledButton themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</StyledButton>
-            <StyledButton themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</StyledButton>
-            <StyledButton outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</StyledButton>
-          </StyledButtonContainer>
-          <StyledMoreButton to="/corplight" themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
-        </StyledInfo>
-        <StyledImageContainer>
-          <StyledImageCorp src={corpImage} alt="corplight" />
-        </StyledImageContainer>
-      </StyledContent>
-    </StyledBackground>
-    <StyledBackground themeColor='#FAFAFA'>
-      <StyledContent>
-        <StyledImageContainer>
-          <StyledImageForward src={forwardImage} alt="forward" />
-        </StyledImageContainer>
-        <StyledInfo>
-          <StyledTitle themeColorSecondary='#29333E'><StyledSpan color="#991F3A">Forward</StyledSpan> Online</StyledTitle>
-          <StyledSubtitle themeColorSecondary='#29333E'>24/7 доступ до Ваших банківських сервісів</StyledSubtitle>
-          <StyledButtonContainer>
-            <StyledButton themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</StyledButton>
-            <StyledButton themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</StyledButton>
-            <StyledButton outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</StyledButton>
-          </StyledButtonContainer>
-          <StyledMoreButton themeColorSecondary='#3EC4E1'>Більше</StyledMoreButton>
-        </StyledInfo>
-      </StyledContent>
-    </StyledBackground>
+    <Background themeColor='#000'>
+      <Content>
+        <ImageContainer>
+          <ImageBone src={boneImage} alt="bone"/>
+        </ImageContainer>
+        <Info>
+          <Title themeColorSecondary='#FFF'>B.One</Title>
+          <Subtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та приватних клієнтів</Subtitle>
+          <ButtonContainer>
+            <Button themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
+            <Button themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
+            <Button outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
+          </ButtonContainer>
+          <MoreButton themeColorSecondary='#3EC4E1'>Більше</MoreButton>
+        </Info>
+      </Content>
+    </Background>
+    <Background themeColor='#FEFEFE'>
+      <Content>
+        <Info>
+          <Title themeColorSecondary='#303030'>CorpLight <Span color="#3EC4E1">Ощадбанк</Span></Title>
+          <Subtitle themeColorSecondary='#303030'>Онлайн система управління банківськими рахунками та продуктами</Subtitle>
+          <ButtonContainer>
+            <Button themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
+            <Button themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
+            <Button outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
+          </ButtonContainer>
+          <MoreButton to="/corplight" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
+        </Info>
+        <ImageContainer>
+          <ImageCorp src={corpImage} alt="corplight" />
+        </ImageContainer>
+      </Content>
+    </Background>
+    <Background themeColor='#FAFAFA'>
+      <Content>
+        <ImageContainer>
+          <ImageForward src={forwardImage} alt="forward" />
+        </ImageContainer>
+        <Info>
+          <Title themeColorSecondary='#29333E'><Span color="#991F3A">Forward</Span> Online</Title>
+          <Subtitle themeColorSecondary='#29333E'>24/7 доступ до Ваших банківських сервісів</Subtitle>
+          <ButtonContainer>
+            <Button themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
+            <Button themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
+            <Button outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
+          </ButtonContainer>
+          <MoreButton themeColorSecondary='#3EC4E1'>Більше</MoreButton>
+        </Info>
+      </Content>
+    </Background>
   </div>
 )
 

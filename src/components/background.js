@@ -7,13 +7,21 @@ import ub from '../images/ub-background.jpg'
 
 const StyledBackground = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 48rem;
   background-color: #000;
   background-image: url(${ub});
   background-size: cover;
   box-shadow: inset 0rem -10rem 10rem rgba(0,0,0,0.8);
   filter: grayscale(.5);
   position: relative;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 100vh;
+  }
 `;
 
 const Container = styled.div`
