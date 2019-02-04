@@ -79,14 +79,17 @@ const Product = styled.div`
   transition: all .3s ease-in-out;
   cursor: pointer;
 
+  :focus,
   :hover {
     background: #EEE;
   }
 
+  :focus,
   :hover img {
     filter: brightness(100);
   }
 
+  :focus,
   :hover h2 {
     opacity: 1;
     top: 35%;
@@ -100,6 +103,7 @@ const Product = styled.div`
     }
   }
 
+  :focus,
   :hover p {
     opacity: 0;
     bottom: 5%;
