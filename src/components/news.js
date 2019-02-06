@@ -54,36 +54,37 @@ const StyledGrid = styled.div`
   max-width: 1440px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
-  padding: 1rem;
+  padding: .5rem;
 
-  @media screen and (max-width: 60rem) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
   }
 `
 
 const StyledNews = styled.div`
   width: 100%;
-  height: 48rem;
+  height: auto;
   border-radius: .125rem;
   background: #fafafa;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transition: all .3s ease-in-out;
   cursor: pointer;
 
-  :hover p {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
+  @media (min-width: 40rem) {
+
   }
 
-  @media screen and (max-width: 60rem) {
+  @media (min-width: 80rem) {
     height: 36rem;
   }
 `
@@ -91,14 +92,21 @@ const StyledNewsPhoto = styled.div`
   background-image: url(${props => props.image});
   background-size: cover;
   background-position: center;
-  filter: grayscale(100);
   border-radius: .125rem;
   width: 100%;
   height: 20rem;
   transition: all .3s ease-in-out;
 
-  :hover {
-    filter: grayscale(0);
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    filter: grayscale(100);
+
+    :hover {
+      filter: grayscale(0);
+    }
   }
 `
 
@@ -106,7 +114,7 @@ const StyledNewsTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
-  margin: .5rem 0 1rem 2rem;
+  margin: 1rem;
   color: #3EC4E1;
   transition: all .3s ease-in-out;
 `
@@ -115,25 +123,26 @@ const StyledNewsText = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  margin: .5rem 2rem;
+  margin: 1rem;
   color: #1A1A1A;
-  width: 24rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 18rem;
   transition: all .3s ease-in-out;
 
-  @media screen and (max-width: 60rem) {
-    width: 18rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    width: 24rem;
   }
 `
 
 const StyledNewsDate = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
-  margin: 0 0 1rem 2rem;
   font-weight: 600;
   color: #1A1A1A;
+  margin: 1rem;
   transition: all .3s ease-in-out;
 `
 
@@ -156,16 +165,7 @@ const News = (props) => (
         <StyledNewsPhoto image={two}></StyledNewsPhoto>
         <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
         <StyledNewsText>
-          Черговий трансфер данних, тепер для регіонів Вінниці та Житомира, всього оновлено:<br />
-          46 071 894 – Банкових рахунків (21 451 999 діючих)<br />
-          13 526 371 – Клієнтів банку (9 960 526 діючих)<br />
-          Більше ніж 8 500 активних користувачів!<br />
-          <br />
-          У Львові:
-          49 266 910 – Банкових рахунків (22 551 403 діючих)<br />
-          14 766 645 – Клієнтів банку (10 255 043 діючих)<br />
-          Більше ніж 9 500 активних користувачів!<br />
-          Залишаємось на звязку
+          Черговий трансфер данних, тепер для регіонів Вінниці та Житомира, всього оновлено.
         </StyledNewsText>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>

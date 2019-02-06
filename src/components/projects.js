@@ -27,7 +27,7 @@ const Header = styled.div`
   background-image: url(${bg});
   background-size: cover;
   background-attachment: fixed;
-  padding-top: 8rem;
+  padding: 8rem 1rem;
 `
 
 const Title = styled.h1`
@@ -52,56 +52,84 @@ const Grid = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-
-  @media screen and (max-width: 60rem) {
-
-  }
 `
 
 const Project = styled.div`
   width: 100%;
-  height: 20rem;
+  height: auto;
   border-radius: .125rem;
+  background: #F0F0F0;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0 0 2rem 0;
   margin-bottom: 1.5rem;
 
-  @media screen and (max-width: 60rem) {
-    height: 12rem;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 20rem;
+    padding: 1rem;
   }
 `
 
 const ProjectPhoto = styled.div`
-  height: 16rem;
+  height: 6rem;
   background-image: url(${props => props.image});
   background-position: center;
   background-repeat: no-repeat;
-  flex: 0 0 20%;
+  flex: 0 0 100%;
   margin: 1rem 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 16rem;
+    flex: 0 0 20%;
+  }
 `
 
  const ProjectInfo = styled.div`
-  flex: 0 0 80%;
+  flex: 0 0 100%;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    flex: 0 0 80%;
+  }
  `
 
 const ProjectTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #3EC4E1;
-  margin: 1rem 2rem 0rem;
+  margin: 1rem 2rem .5rem;
   cursor: pointer;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 2rem;
+  }
 `
 
 const ProjectSubtitle = styled.h3`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 500;
   color: #1A1A1A;
-  margin: .5rem 2rem 1rem;
+  opacity: .8;
+  margin: .5rem 2rem .5rem;
 `
 
 const ProjectText = styled.p`
@@ -110,6 +138,7 @@ const ProjectText = styled.p`
   font-weight: 300;
   color: #1A1A1A;
   margin: .25rem 2rem;
+  opacity: .6;
 `
 
 const Projects = (props) => (
@@ -133,7 +162,6 @@ const Projects = (props) => (
           </ProjectText>
         </ProjectInfo>
       </Project>
-      <hr />
       <Project>
         <ProjectPhoto image={prozorro} />
         <ProjectInfo>
@@ -146,7 +174,6 @@ const Projects = (props) => (
           </ProjectText>
         </ProjectInfo>
       </Project>
-      <hr />
       <Project>
         <ProjectPhoto image={edata} />
         <ProjectInfo>
@@ -159,7 +186,6 @@ const Projects = (props) => (
           </ProjectText>
         </ProjectInfo>
       </Project>
-      <hr />
       <Project>
         <ProjectPhoto image={eauction} />
         <ProjectInfo>

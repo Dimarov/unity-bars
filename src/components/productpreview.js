@@ -140,7 +140,7 @@ const Span = styled.span`
 
 const Subtitle = styled.h2`
   font-size: 1rem;
-  margin: .25rem 0;
+  margin: .5rem 0;
   text-align: center;
   font-weight: 400;
   opacity: .8;
@@ -213,9 +213,9 @@ const Button = styled.button`
 
 const MoreButton = styled(Link)`
   font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 1rem 0;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   color: ${props => props.themeColorSecondary};
   transition: all .3s ease-out;

@@ -96,8 +96,8 @@ const Button = styled.button`
   border-radius: .125rem;
   background: ${props => props.outline ? "none" : "#303030"};
   padding: .3rem 1.25rem;
-  margin: 0 .5rem;
-  font-size: .65rem;
+  margin: 0 .25rem;
+  font-size: .75rem;
   font-family: myriad-pro, sans-serif;
   font-weight: 400;
   color: ${props => props.outline ? "#303030" : "#FEFEFE"};
