@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 
-import background from "../images/company.jpg"
+import background from "../../images/company.jpg"
 
 const Background = styled.div`
   width: 100%;
