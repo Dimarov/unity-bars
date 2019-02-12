@@ -206,16 +206,16 @@ const Company = (props) => (
   <Background>
     <Header>
       <Container>
-        <Title>Company</Title>
-        <Subtitle>UNITY BARS – a leading Ukrainian finetech company specializing in the implementation of efficient and up-to-date software for banks and financial institutions.
+        <Title>Компания</Title>
+        <Subtitle>UNITY BARS – ведущая украинская финтех компания, специализированная на внедрении эффективного и современного программного обеспечения для банков и финансовых учреждений.
 </Subtitle>
       </Container>
     </Header>
     <Container>
-      <Topic>Our Team</Topic>
+      <Topic>Наша Команда</Topic>
       <hr />
       <Employees employees={employees} />
-      <Topic>Clients and partners</Topic>
+      <Topic>Клиенты и партнёры</Topic>
       <hr />
       <SecondGrid>
         <Client></Client>

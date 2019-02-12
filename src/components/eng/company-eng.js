@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 
-import background from "../images/company.jpg"
+import background from "../../images/company.jpg"
 
 const Background = styled.div`
   width: 100%;
@@ -206,16 +206,16 @@ const Company = (props) => (
   <Background>
     <Header>
       <Container>
-        <Title>Company</Title>
-        <Subtitle>UNITY BARS – a leading Ukrainian finetech company specializing in the implementation of efficient and up-to-date software for banks and financial institutions.
+        <Title>Компанія</Title>
+        <Subtitle>UNITY BARS – провідна українська фінтех компанія, спеціалізована на впровадженні ефективного та сучасного програмного забезпечення для банків та фінансових установ.
 </Subtitle>
       </Container>
     </Header>
     <Container>
-      <Topic>Our Team</Topic>
+      <Topic>Наша Команда</Topic>
       <hr />
       <Employees employees={employees} />
-      <Topic>Clients and partners</Topic>
+      <Topic>Клієнти та партнери</Topic>
       <hr />
       <SecondGrid>
         <Client></Client>
