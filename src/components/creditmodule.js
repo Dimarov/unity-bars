@@ -41,6 +41,7 @@ const StyledSubtitle = styled.p`
 `
 
 const StyledHeaderTitle = styled.div`
+
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   color: #000;
@@ -50,6 +51,7 @@ const StyledHeaderTitle = styled.div`
   
   @media screen and (max-width: 60rem) {
    margin: 0.5rem;
+   margin-top: 2.5rem;
   }
 `
 
