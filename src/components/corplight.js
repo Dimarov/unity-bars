@@ -4,9 +4,9 @@ import styled from "styled-components"
 import header from "../images/mockups/corplight-pixels.png"
 import about from "../images/mockups/corplight-iphone-2.png"
 
-import banking from "../images/icons/banking.png"
-import functionality from "../images/icons/functionality.png"
-import design from "../images/icons/design.png"
+import banking from "../images/icons/banking.svg"
+import functionality from "../images/icons/functionality.svg"
+import design from "../images/icons/design.svg"
 
 const Background = styled.div`
   width: 100%;

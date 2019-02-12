@@ -74,19 +74,23 @@ const Product = styled.div`
   width: 100%;
   height: 12rem;
   border-radius: .125rem;
-  background: #fafafa;
+  background: #eee;
   position: relative;
   transition: all .3s ease-in-out;
   cursor: pointer;
 
+  img {
+    filter: brightness(.3);
+  }
+
   :focus,
   :hover {
-    background: #EEE;
+    background: #fafafa;
   }
 
   :focus,
   :hover img {
-    filter: brightness(100);
+    filter: brightness(1);
   }
 
   :focus,
