@@ -93,7 +93,7 @@ const StyledHeaderTitleParagraph = styled.div`
 const StyledHeaderSubTitleHuge = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
-  line-height: 28px;
+  line-height: 32px;
   // font-weight: 400;
   color: #fff;
   margin-bottom: 2rem;
@@ -118,11 +118,13 @@ const StyledTestMargin = styled.div`
 `
 
 const AbsImage = styled.img`
-  height: 20rem;
+  margin-top: 2.5rem;
+  height: 16rem;
   width: auto;
+  text-align: center;
   
   @media (min-width: 40rem) {
-
+    
   }
 
   @media (min-width: 80rem) {
