@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
 
+
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
@@ -47,7 +48,7 @@ const StyledParagraphText = styled.div`
   font-family: myriad-pro, sans-serif;
   line-height: 1.5rem;
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 400;
   color: #000;
   
   @media screen and (max-width: 60rem) {

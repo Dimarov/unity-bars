@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
+import abs from "../images/abs_mac.png"
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -116,6 +117,21 @@ const StyledTestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
+const AbsImage = styled.img`
+  height: 20rem;
+  width: auto;
+  
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
 const Absbars = (props) => (
 
   <StyledBackground>
@@ -132,7 +148,8 @@ const Absbars = (props) => (
     </StyledHeader>
 
     <Container>
-      <StyledThereIsWillBeImage/>
+      <AbsImage src={abs} alt="abs-mockup" />
+
       <StyledHeaderTitle>МОЖЛИВОСТІ І ПЕРЕВАГИ</StyledHeaderTitle>
       <StyledHeaderTitleParagraph>
         &#8226; Орієнтація на промислові сервера баз даних Oracle

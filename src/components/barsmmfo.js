@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
-
+import abs from "../images/abs_mac.png"
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
@@ -96,6 +96,7 @@ const StyledHeaderSubTitleHuge = styled.div`
   font-size: 2rem;
   // font-weight: 400;
   color: #fff;
+  line-height: 32px;
   margin-bottom: 2rem;
  
 `
@@ -117,6 +118,23 @@ const StyledTestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
+const AbsImage = styled.img`
+  margin-top: 2.5rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
 const Barsmmfo = (props) => (
   <StyledBackground>
     <StyledHeader>
@@ -132,7 +150,7 @@ const Barsmmfo = (props) => (
     </StyledHeader>
 
     <Container>
-      <StyledThereIsWillBeImage />
+      <AbsImage src={abs} alt="abs-mockup" />
       <StyledHeaderTitle>МОЖЛИВОСТІ І ПЕРЕВАГИ</StyledHeaderTitle>
       <StyledHeaderTitleParagraph>
         &#8226; Відповідність сучасним тенденціям, ринкових позиціях і стратегіям банківських установ
