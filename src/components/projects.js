@@ -106,7 +106,8 @@ const ProjectPhoto = styled.div`
   }
  `
 
-const ProjectTitle = styled.h2`
+const ProjectTitle = styled.a`
+  text-decoration: none;
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -153,7 +154,7 @@ const Projects = (props) => (
       <Project>
         <ProjectPhoto image={bankid} />
         <ProjectInfo>
-          <ProjectTitle>BANKID</ProjectTitle>
+          <ProjectTitle href="https://id.bank.gov.ua/" >BANKID</ProjectTitle>
           <ProjectSubtitle>
             Спосіб електронної ідентифікації громадян через українські банки для надання адміністративних послуг через Інтернет
           </ProjectSubtitle>
@@ -165,7 +166,7 @@ const Projects = (props) => (
       <Project>
         <ProjectPhoto image={prozorro} />
         <ProjectInfo>
-          <ProjectTitle>Prozorro</ProjectTitle>
+          <ProjectTitle href="https://prozorro.gov.ua/">Prozorro</ProjectTitle>
           <ProjectSubtitle>
             Системна реформа тендерного процесу в електронних публічних і державних закупівлях
           </ProjectSubtitle>
@@ -177,7 +178,7 @@ const Projects = (props) => (
       <Project>
         <ProjectPhoto image={edata} />
         <ProjectInfo>
-          <ProjectTitle>E-DATA</ProjectTitle>
+          <ProjectTitle href="https://e-data.gov.ua/">E-DATA</ProjectTitle>
           <ProjectSubtitle>
             Єдиний веб-портал використання публічних коштів є офіційним державним інформаційним ресурсом у мережі Інтернет, на якому оприлюднюється інформація згідно з Законом «Про відкритість використання публічних коштів»
           </ProjectSubtitle>
@@ -189,7 +190,7 @@ const Projects = (props) => (
       <Project>
         <ProjectPhoto image={eauction} />
         <ProjectInfo>
-          <ProjectTitle>EAUCTION</ProjectTitle>
+          <ProjectTitle href="https://www.eauction.idf.solutions/">EAUCTION</ProjectTitle>
           <ProjectSubtitle>
             Автоматизована система проведення електронних аукціонів з оренди та продажу державного майна
           </ProjectSubtitle>

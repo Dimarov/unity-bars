@@ -176,7 +176,9 @@ const ButtonContainer = styled.div`
   }
 `
 
-const Button = styled.button`
+const Button = styled.a`
+  text-align: center;
+  text-decoration: none;
   outline: none;
   border: .125rem solid ${props => props.themeColorSecondary};
   border-radius: .125rem;
@@ -205,7 +207,7 @@ const Button = styled.button`
   }
 
   @media (min-width: 80rem) {
-    font-size: 1rem;
+    font-size: .85rem;
     margin: 0 1rem 0 0;
     padding: .4rem 2rem;
   }
@@ -246,9 +248,9 @@ const ProductPreview = (props) => (
           <Title themeColorSecondary='#FFF'>B.One</Title>
           <Subtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та приватних клієнтів</Subtitle>
           <ButtonContainer>
-            <Button themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
-            <Button themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
-            <Button outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
+            <Button href="https://itunes.apple.com/ru/app/bone-client-bank/id1156928571?mt=8" themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
+            <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
+            <Button href="https://bone.unity-bars.com:2443/auth/logon" outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
           </ButtonContainer>
           <MoreButton themeColorSecondary='#3EC4E1'>Більше</MoreButton>
         </Info>
@@ -260,9 +262,9 @@ const ProductPreview = (props) => (
           <Title themeColorSecondary='#303030'>CorpLight <Span color="#3EC4E1">Ощадбанк</Span></Title>
           <Subtitle themeColorSecondary='#303030'>Онлайн система управління банківськими рахунками та продуктами</Subtitle>
           <ButtonContainer>
-            <Button themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
-            <Button themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
-            <Button outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
+            <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
+            <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
+            <Button href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
           </ButtonContainer>
           <MoreButton to="/corplight" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
         </Info>
@@ -280,11 +282,11 @@ const ProductPreview = (props) => (
           <Title themeColorSecondary='#29333E'><Span color="#991F3A">Forward</Span> Online</Title>
           <Subtitle themeColorSecondary='#29333E'>24/7 доступ до Ваших банківських сервісів</Subtitle>
           <ButtonContainer>
-            <Button themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
-            <Button themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
-            <Button outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
+            <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
+            <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
+            <Button href="https://online.forward-bank.com/dashboard" outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
           </ButtonContainer>
-          <MoreButton themeColorSecondary='#3EC4E1'>Більше</MoreButton>
+          <MoreButton to="/forward" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
         </Info>
       </Content>
     </Background>

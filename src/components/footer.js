@@ -42,7 +42,7 @@ const IconContainer = styled.div`
   opacity: .4;
 
   @media screen and (max-width: 60rem) {
-    flex: 0 0 10%;
+    flex: 0 0 3rem;
   }
 `
 

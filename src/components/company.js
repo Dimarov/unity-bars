@@ -3,6 +3,19 @@ import styled from "styled-components"
 
 import background from "../images/company.jpg"
 
+import one from "../images/clients/1.jpg"
+import two from "../images/clients/2.jpg"
+import three from "../images/clients/3.jpg"
+import four from "../images/clients/4.jpg"
+import five from "../images/clients/5.jpg"
+import six from "../images/clients/6.jpg"
+import seven from "../images/clients/7.jpg"
+import eight from "../images/clients/8.jpg"
+import nine from "../images/clients/9.jpg"
+import ten from "../images/clients/10.jpg"
+import eleven from "../images/clients/11.jpg"
+import twelve from "../images/clients/12.jpg"
+
 const Background = styled.div`
   width: 100%;
   height: auto;
@@ -95,7 +108,14 @@ const SecondGrid = styled.div`
 const Client = styled.div`
   height: 100%;
   width: 100%;
-  background: lightgrey;
+  background: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const Image = styled.img`
+
 `
 
 const Partner = styled.div`
@@ -208,7 +228,7 @@ const Company = (props) => (
       <Container>
         <Title>Компанія</Title>
         <Subtitle>UNITY BARS – провідна українська фінтех компанія, спеціалізована на впровадженні ефективного та сучасного програмного забезпечення для банків та фінансових установ.
-</Subtitle>
+        </Subtitle>
       </Container>
     </Header>
     <Container>
@@ -218,6 +238,9 @@ const Company = (props) => (
       <Topic>Клієнти та партнери</Topic>
       <hr />
       <SecondGrid>
+        <Client>
+          <Image src={one} />
+        </Client>
         <Client></Client>
         <Client></Client>
         <Client></Client>
@@ -228,7 +251,7 @@ const Company = (props) => (
         <Client></Client>
         <Client></Client>
         <Client></Client>
-        <Client></Client>
+      <Client></Client>
       </SecondGrid>
       <br />
       <SecondGrid>

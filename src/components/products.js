@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import bg from "../images/products.jpg"
@@ -7,7 +7,7 @@ import bg from "../images/products.jpg"
 import absbars from "../images/products/absbars.png"
 import absbarsmmfo from "../images/products/absbarsmmfo.png"
 import corp2 from "../images/products/corp2.png"
-import corplight from "../images/products/corplight.png"
+import bone from "../images/products/bone.png"
 import creditmodule from "../images/products/creditmodule.png"
 import datawarehouse from "../images/products/datawarehouse.png"
 import electronicarchive from "../images/products/electronica.png"
@@ -95,8 +95,8 @@ const Product = styled.div`
 
   :focus,
   :hover h2 {
-    opacity: 1;
-    top: 35%;
+    opacity: .6;
+    top: 20%;
 
     @media (min-width: 40rem) {
 
@@ -104,20 +104,6 @@ const Product = styled.div`
 
     @media (min-width: 80rem) {
       top: 15%;
-    }
-  }
-
-  :focus,
-  :hover p {
-    opacity: 0;
-    bottom: 5%;
-
-    @media (min-width: 40rem) {
-
-    }
-
-    @media (min-width: 80rem) {
-      opacity: 1;
     }
   }
 
@@ -140,27 +126,12 @@ const ProductTitle = styled.h2`
   font-size: 1rem;
   font-weight: 600;
   padding: .5rem 1rem;
-  color: #3EC4E1;
-  border: .125rem solid #3EC4E1;
+  color: #000;
+  border: .125rem solid #000;
   border-radius: .125rem;
   opacity: 0;
   margin: 0;
   z-index: 999;
-  transition: all .3s ease-in-out;
-`
-
-const ProductSubtitle = styled.h3`
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%,-50%);
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #1A1A1A;
-  opacity: 0;
-  margin: 0;
   transition: all .3s ease-in-out;
 `
 
@@ -182,38 +153,37 @@ const Products = (props) => (
     </Header>
     <Grid>
       <Product>
-        <ProductTitle>Автоматизована банківська система BARS</ProductTitle>
-        <ProductSubtitle>Система з комплексним або індивідуальним підходом до клієнта. Автоматизує широкий спектр бізнес-процесів і функцій банку</ProductSubtitle>
+        <ProductTitle>АБС BARS</ProductTitle>
         <ProductImage src={absbars} />
       </Product>
       <Product>
-        <ProductTitle>Автоматизована банківська система BARS MMFO</ProductTitle>
-        <ProductSubtitle>Забезпечення роботи декількох МФО в централізованій БД</ProductSubtitle>
+        <ProductTitle>АБС BARS MMFO</ProductTitle>
+
         <ProductImage src={absbarsmmfo} />
       </Product>
       <Product>
         <ProductTitle>Корпоративний клієнт-банк </ProductTitle>
-        <ProductSubtitle>Система дистанційного обслуговування корпоративних клієнтів з багаторівневою структурою на базі Web-технологій</ProductSubtitle>
+
         <ProductImage src={corp2} />
       </Product>
       <Product>
         <ProductTitle>Клієнт-банк</ProductTitle>
-        <ProductSubtitle>Універсальна система дистанційного обслуговування юридичних і фізичних осіб</ProductSubtitle>
-        <ProductImage src={corplight} />
+
+        <ProductImage src={bone} />
       </Product>
       <Product>
         <ProductTitle>Кредитний модуль</ProductTitle>
-        <ProductSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом обслуговування клієнтів</ProductSubtitle>
+
         <ProductImage src={creditmodule} />
       </Product>
       <Product>
         <ProductTitle>Електронне сховище</ProductTitle>
-        <ProductSubtitle>Система класу банківського DWH на платформі і модулях IBM</ProductSubtitle>
+
         <ProductImage src={datawarehouse} />
       </Product>
       <Product>
         <ProductTitle>Електронний архів</ProductTitle>
-        <ProductSubtitle>Забезпечує зберігання первинних документів в електронному вигляді</ProductSubtitle>
+
         <ProductImage src={electronicarchive} />
       </Product>
     </Grid>
