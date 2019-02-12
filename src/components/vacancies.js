@@ -128,7 +128,7 @@ const Vacancies = (props) => (
         <StyledVacancyText>Досвід написання проектної та технічної документації.</StyledVacancyText>
         <StyledVacancyText>Досвід керівництва та координації роботи внутрішніх робочих груп.</StyledVacancyText>
         <StyledVacancyText>Комунікабельність, високий рівень самоорганізації та мотивації, здатність та бажання до самонавчання, стресостійкість.</StyledVacancyText>
-        <StyledVacancyText>Вміння працювати в режимі багатозадачності.</StyledVacancyText>
+        <StyledVacancyText>Вміння працювати в режимі мультизадачності.</StyledVacancyText>
         <StyledVacancySubtitle>Буде перевагою:</StyledVacancySubtitle>
         <StyledVacancyText>Досвід управління проектами з розробки ПЗ у банківському секторі.</StyledVacancyText>
         <StyledVacancyText>Досвід роботи розробником та/або архітектором ПЗ.</StyledVacancyText>
