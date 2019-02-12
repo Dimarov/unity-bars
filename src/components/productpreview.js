@@ -87,7 +87,7 @@ const ImageBone = styled.img`
   }
 
   @media (min-width: 80rem) {
-    height: 32rem;
+    height: 28rem;
   }
 `
 
@@ -252,7 +252,7 @@ const ProductPreview = (props) => (
             <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
             <Button href="https://bone.unity-bars.com:2443/auth/logon" outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
           </ButtonContainer>
-          <MoreButton themeColorSecondary='#3EC4E1'>Більше</MoreButton>
+          <MoreButton to="/bone" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
         </Info>
       </Content>
     </Background>

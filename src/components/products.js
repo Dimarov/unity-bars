@@ -143,6 +143,10 @@ const ProductImage = styled.img`
   transition: all .0s ease-in-out;
 `
 
+const ProductLink = styled(Link)`
+  text-decoration: none;
+`
+
 const Products = (props) => (
   <Background>
     <Header>
@@ -166,11 +170,13 @@ const Products = (props) => (
 
         <ProductImage src={corp2} />
       </Product>
-      <Product>
-        <ProductTitle>Клієнт-банк</ProductTitle>
+      <ProductLink to="bone">
+        <Product>
+          <ProductTitle>Клієнт-банк</ProductTitle>
 
-        <ProductImage src={bone} />
-      </Product>
+          <ProductImage src={bone} />
+        </Product>
+      </ProductLink>
       <Product>
         <ProductTitle>Кредитний модуль</ProductTitle>
 

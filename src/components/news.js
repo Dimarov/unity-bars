@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import bg from "../images/products.jpg"
@@ -74,9 +74,10 @@ const StyledNews = styled.div`
   width: 100%;
   height: auto;
   border-radius: .125rem;
-  background: #fafafa;
+  background: #eee;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   transition: all .3s ease-in-out;
   cursor: pointer;
 
@@ -85,7 +86,13 @@ const StyledNews = styled.div`
   }
 
   @media (min-width: 80rem) {
-    height: 36rem;
+    height: 32rem;
+    filter: grayscale(100);
+
+    :hover {
+      background: #fafafa;
+      filter: grayscale(0);
+    }
   }
 `
 const StyledNewsPhoto = styled.div`
@@ -102,20 +109,16 @@ const StyledNewsPhoto = styled.div`
   }
 
   @media (min-width: 80rem) {
-    filter: grayscale(100);
 
-    :hover {
-      filter: grayscale(0);
-    }
   }
 `
 
 const StyledNewsTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   margin: 1rem;
-  color: #3EC4E1;
+  color: #000;
   transition: all .3s ease-in-out;
 `
 
@@ -146,6 +149,10 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`
+
 const News = (props) => (
   <StyledBackground>
     <StyledHeader>
@@ -155,42 +162,41 @@ const News = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledNews>
-        <StyledNewsPhoto image={one}></StyledNewsPhoto>
-        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
-        <StyledNewsText>Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою</StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
+      <StyledLink to="news-one">
+        <StyledNews>
+          <StyledNewsPhoto image={one}></StyledNewsPhoto>
+          <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
+
+          <StyledNewsDate>12.02.2019</StyledNewsDate>
+        </StyledNews>
+      </StyledLink>
       <StyledNews>
         <StyledNewsPhoto image={two}></StyledNewsPhoto>
-        <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
-        <StyledNewsText>
-          Черговий трансфер данних, тепер для регіонів Вінниці та Житомира, всього оновлено.
-        </StyledNewsText>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
+        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
+
+        <StyledNewsDate>23.08.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto image={three}></StyledNewsPhoto>
-        <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ</StyledNewsTitle>
-        <StyledNewsText>Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою</StyledNewsText>
+        <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
+
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto image={four}></StyledNewsPhoto>
-        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
-        <StyledNewsText>Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою</StyledNewsText>
+        <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ 🎉</StyledNewsTitle>
+
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto image={five}></StyledNewsPhoto>
-        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
-        <StyledNewsText>Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою</StyledNewsText>
+        <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
       <StyledNews>
         <StyledNewsPhoto image={six}></StyledNewsPhoto>
-        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
-        <StyledNewsText>Дружній колектив UNITY BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою</StyledNewsText>
+        <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від
+НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
         <StyledNewsDate>26.11.2018</StyledNewsDate>
       </StyledNews>
     </StyledGrid>
