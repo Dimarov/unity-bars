@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
-// import CreditmodulePage from '../pages/creditmodule'
+
 
 const StyledBackground = styled.div`
   width: 100%;

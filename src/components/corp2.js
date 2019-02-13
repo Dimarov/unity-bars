@@ -3,8 +3,11 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
-// import CreditmodulePage from '../pages/creditmodule'
-// import Corp2Page from '../pages/corp2'
+import corpSignIn from '../images/corp2_sign-in.png'
+import oshad from '../images/oshadbank1_1_corp.png'
+import dksu from '../images/dksy1_1_corp.png'
+import rozrah from '../images/rozrahynkovuicenter1_1_corp.png'
+import corpMac2 from '../images/corp2_mac_can.png'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -105,13 +108,53 @@ const StyledThreeImagesBlock = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   height: 3rem;
-  background-color: red;
-  margin: 4rem;
+  margin: 2.2rem;
   color: #000;
 `
 
 const StyledTestMargin = styled.div`
   margin-bottom: 7rem;
+`
+
+
+const CorpSignInImg = styled.img`
+  margin-top: 2.5rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
+const UsedByCorpServicesOshad = styled.img`
+`
+const UsedByCorpServicesDKSU = styled.img`
+`
+const UsedByCorpServicesRozrah = styled.img`
+`
+const MacImg2 = styled.img`
+  margin-top: 2.5rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
 `
 
 
@@ -128,8 +171,7 @@ const Corp2 = (props) => (
     </StyledHeader>
 
     <Container>
-
-      <StyledThereIsWillBeImage/>
+      <CorpSignInImg src={corpSignIn} alt="corp-mockup-signin"/>
       {/*<StyledHeaderTitle>ФУНКЦІОНАЛ МОДУЛЯ</StyledHeaderTitle>*/}
       {/*<StyledHeaderTitleParagraph>*/}
       {/*&#8226; Заклад кредитного договору — реєстрація позичальника, параметрів кредитної угоди і забезпечення,*/}
@@ -149,9 +191,15 @@ const Corp2 = (props) => (
       <StyledTitleBlack>ВИКОРИСТОВУЄТЬСЯ</StyledTitleBlack>
 
       <ImageContainer>
-        <StyledThreeImagesBlock>IMAGE</StyledThreeImagesBlock>
-        <StyledThreeImagesBlock>IMAGE</StyledThreeImagesBlock>
-        <StyledThreeImagesBlock>IMAGE</StyledThreeImagesBlock>
+        <StyledThreeImagesBlock>
+          <UsedByCorpServicesOshad src={oshad} alt='oshad'/>
+        </StyledThreeImagesBlock>
+        <StyledThreeImagesBlock>
+          <UsedByCorpServicesDKSU src={dksu} alt='oshad'/>
+        </StyledThreeImagesBlock>
+        <StyledThreeImagesBlock>
+          <UsedByCorpServicesRozrah src={rozrah} alt='oshad'/>
+        </StyledThreeImagesBlock>
       </ImageContainer>
 
       <StyledTitleBlack>
@@ -165,7 +213,7 @@ const Corp2 = (props) => (
       <StyledHeaderTitleParagraph>&#8226; Містить 200 000 рахунків та 300 000 — 400 000 документів в
         день</StyledHeaderTitleParagraph>
 
-      <StyledThereIsWillBeImage>IMAGE</StyledThereIsWillBeImage>
+      <MacImg2 src={corpMac2} alt="macImg"/>
 
       <StyledTitleBlack>КАСТОМІЗАЦІЯ ВІЗУВАННЯ</StyledTitleBlack>
 
