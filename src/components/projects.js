@@ -110,7 +110,7 @@ const ProjectTitle = styled.a`
   text-decoration: none;
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #3EC4E1;
   margin: 1rem 2rem .5rem;
   cursor: pointer;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { Link } from 'gatsby'
 
 import header from "../images/mockups/bone-iphones.png"
 import about from "../images/mockups/corplight-iphone-2.png"
@@ -8,6 +9,10 @@ import security from "../images/mockups/corplight-iphone-3.png"
 import banking from "../images/icons/banking.svg"
 import functionality from "../images/icons/functionality.svg"
 import design from "../images/icons/design.svg"
+
+import boneImage from "../images/mockups/bone-macbook.png"
+import corpImage from "../images/mockups/corplight-iphone.png"
+import forwardImage from "../images/mockups/forward-samsung.png"
 
 const Background = styled.div`
   width: 100%;
@@ -134,7 +139,7 @@ const HeaderImage = styled.img`
   position: absolute;
   top: 0rem;
   right: 0;
-  width: 47rem;
+  width: 49rem;
 `
 
 const AboutContainer = styled.div`
@@ -165,7 +170,7 @@ const ImageContainer = styled.div`
   }
 
   @media (min-width: 80rem) {
-    width: 30rem;
+    width: 100%;
     height: 40rem;
   }
 `
@@ -179,7 +184,7 @@ const AboutImage = styled.img`
   }
 
   @media (min-width: 80rem) {
-    width: 20rem;
+    height: 36rem;
     height: auto;
   }
 `
@@ -332,7 +337,7 @@ const FunctionalityTitleSpan = styled.span`
 const FunctionalitySubtitle = styled.h3`
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 300;
   margin: 1rem 0;
   color: #fff;
   opacity: .8;
@@ -511,6 +516,245 @@ const DownloadSubtitle = styled.h3`
   }
 `
 
+const ContainerCase = styled.div`
+  width: 100%;
+  height: auto;
+  padding: 4rem;
+`
+
+const BackgroundCase = styled.div`
+  width: 100%;
+  height: 32rem;
+  margin-bottom: 2rem;
+  background: ${props => props.themeColor || "#000"};
+  background-size: cover;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 40rem;
+  }
+`
+
+const ContentCase = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 0 10rem;
+  }
+`
+
+const InfoCase = styled.div`
+  flex: 0 0 100%;
+  height: 50%;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    flex: 1 1 50%;
+    height: 100%;
+    padding: 3rem 4rem;
+    align-items: flex-start;
+  }
+`
+
+const ImageContainerCase = styled.div`
+  flex: 0 0 100%;
+  height: 50%;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    flex: 1 1 50%;
+    height: 100%;
+    order: 0;
+  }
+`
+
+const ImageBone = styled.img`
+  height: 16rem;
+  margin: 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 28rem;
+  }
+`
+
+const ImageCorp = styled.img`
+  height: 16rem;
+  margin: 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
+  }
+`
+
+const ImageForward = styled.img`
+  height: 20rem;
+  margin: 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
+  }
+`
+
+const TitleCase = styled.h1`
+  font-size: 2rem;
+  margin: .25rem 0;
+  font-weight: 600;
+  font-family: myriad-pro, sans-serif;
+  color: ${props => props.themeColorSecondary || "#FFF"};
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
+`
+
+const SpanCase = styled.span`
+  color: ${props => props.color || props.themeColorSecondary};
+`
+
+const SubtitleCase = styled.h2`
+  font-size: 1rem;
+  margin: .5rem 0;
+  text-align: center;
+  font-weight: 400;
+  opacity: .8;
+  line-height: 3alt="bone"rem;
+  font-family: myriad-pro, sans-serif;
+  color: ${props => props.themeColorSecondary || "#FFF"};
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 300;
+    margin: 1rem 0;
+  }
+`
+
+const ButtonContainerCase = styled.div`
+  width: 100%;
+  display: flex;
+  margin: .5rem 0;
+  justify-content: space-evenly;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    margin: 1rem 0;
+    justify-content: flex-start;
+  }
+`
+
+const ButtonCase = styled.a`
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: .125rem solid ${props => props.themeColorSecondary};
+  border-radius: .125rem;
+  background: ${props => props.outline ? "none" : props.themeColorSecondary};
+  padding: .3rem 1.25rem;
+  margin: 0 .5rem;
+  font-size: .65rem;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 600;
+  color: ${props => props.outline ? props.themeColorSecondary : props.themeColor};
+  cursor: pointer;
+  transition: all .3s ease-out;
+
+  :focus,
+  :hover {
+    background: ${props => props.outline ? props.themeColorSecondary : "none"};
+    color: ${props => props.outline ? props.themeColor : props.themeColorSecondary};
+  }
+
+  :active {
+    transform: translateY(.0625rem);
+  }
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: .85rem;
+    margin: 0 1rem 0 0;
+    padding: .4rem 2rem;
+  }
+`
+
+const MoreButtonCase = styled(Link)`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 300;
+  text-decoration: none;
+  color: ${props => props.themeColorSecondary};
+  transition: all .3s ease-out;
+
+  :focus,
+  :hover {
+    filter: contrast(50%);
+  }
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+  }
+`
+
+
 const Bone = (props) => (
   <Background>
     <Header>
@@ -526,69 +770,77 @@ const Bone = (props) => (
       </Container>
     </Header>
     <Container>
-
       <FunctionalityContainer>
 
-        <FunctionalityTitle>Функціональність <FunctionalityTitleSpan>CorpLight</FunctionalityTitleSpan></FunctionalityTitle>
+        <FunctionalityTitle>З системою B.One Ви можете</FunctionalityTitle>
+        <div>
+          <FunctionalitySubtitle>Отримувати інформацію про цілодобову оплату та платежі.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Створювати платежі.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Створювати звіти.</FunctionalitySubtitle>
+        </div>
+        <ImageContainer>
+          <AboutImage src={boneImage} alt="bone-mockup" />
+        </ImageContainer>
+      </FunctionalityContainer>
+      <FunctionalityContainer>
+
+        <FunctionalityTitle>Функціональність B.One</FunctionalityTitle>
         <div>
           <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
-          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування обліковими записами клієнта.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування виписки по рахункам користувача, відображення виписки (веб, мобільний), механізм отримання останніх операцій
-          користувача по конкретному рахунку, експорт/збереження виписки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з можливістю поповнення(веб, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю погашення.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм отримання та завантаження даних відділень та банкоматів (вхідний xml-файл), визначення поточного місцезнаходження
-          отримання геолокаційних даних про поточне розташування.</FunctionalityParagraph>
-          <FunctionalityParagraph>Автоматичне завантаження інформації щодо поточних курсів обміну валют з АБС, інформування про поточні курси в Системі (веб) з
-          можливістю переходу в окрему екранну форму для відображення історії змін курсу.</FunctionalityParagraph>
-          <FunctionalityParagraph>Реалізація інформування про поточні курси в Системі (веб).</FunctionalityParagraph>
-          <FunctionalityParagraph>Можливість створення та редагування платіжних документів, в залежності від кореспондента, збереження шаблонів платіжних
-          документів.</FunctionalityParagraph>
-          <FunctionalityParagraph>Візування та відправка документів в Банк, накладання електронного цифрового підпису, перевірка на коректність відповідно до вимог
-          Інструкції про безготівкові розрахунки в Україні в національній валюті Національного банку України.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм збереження даних платіжних документів для формування довідника кореспондентів, здійснення запиту та формування звіту
-          відповідно до конкретного Кореспондента.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення заявки на продукт, налаштування списку продуктів та їх параметрів, механізм пропонування нових продуктів через тематичні
-          розділи системи.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність поповнення/зняття депозиту.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність формування платіжних документів на погашення кредиту.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення та збереження регулярного та автоматичного (регулярного) платежу, створення, редагування, призупинення та видалення
-          автоматичних платежів з групуванням згідно календарних днів, інформування користувачів.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Платежі в інозменій валюті</FunctionalitySubtitle>
-          <FunctionalityParagraph>Створення платіжних доручень в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення внутрішніх переказів (в межах одного МФО) в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з можливістю поповнення (веб, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Купівля/продаж/конвертація іноземної валюти.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд інформації по рахункам (валюта) в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування зовнішніх переказів в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Відправка в Банк підтверджуючих документів при формуванні платежів в іноземній валюті, заявок на купівлю іноземної валюти.</FunctionalityParagraph>
-          <FunctionalityParagraph>Імпорт документів.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Зарплатний проект</FunctionalitySubtitle>
-          <FunctionalityParagraph>Формування зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Імпорт відомостей із бухгалтерських програм.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування обов’язкових(податкових) платежів до зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд історії зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд реєстрів працівників.</FunctionalityParagraph>
-          <FunctionalityParagraph>Робота із ЗКП договорами.</FunctionalityParagraph>
-          <FunctionalityParagraph>Друк реєстрів працівників та відомостей.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Функціональність по роботі з корпоративними картками</FunctionalitySubtitle>
-          <FunctionalityParagraph>Функціональність по роботі з картковими рахунками.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність по роботі з корпоративними картками.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд строку дії, залишку коштів по корпоративній картці.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування заявки на випуск корпоративної картки, обробка заявки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування заявки на перевипуск корпоративної картки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Блокування корпоративної картки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд встановлених лімітів по корпоративним карткам.</FunctionalityParagraph>
-          <FunctionalityParagraph>Управління лімітами по корпоративній картці.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування історії операцій по корпоративній картці.</FunctionalityParagraph>
+          <FunctionalityParagraph>Заява оператора зіставлення облікового запису користувача (веб, мобільний), механізм останніх транзакцій на
+          певному обліковому записі користувача, експорт / збереження витягів.</FunctionalityParagraph>
+          <FunctionalityParagraph>Перегляд депозитних продуктів з поповненням (веб, мобільний додаток).</FunctionalityParagraph>
+          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю їх погашення.</FunctionalityParagraph>
+          <FunctionalityParagraph>Отримує і завантажує гілки і банкомати (вхідний xml-файл), визначає поточне місце розташування для отримання
+            геолокаційної інформації про поточне місцезнаходження; Автоматичне завантаження інформації про поточні курси
+            обміну з АБС, інформація про поточні курси в системі (Web) з переходом на окрему екранну форму для відображення
+            історії зміни курсів валют; Реалізація інформації про поточну систему чіпів CorpLight полягає в тому, що користувач
+          може додати авиторізований «співробітник» безпосередньо до мережі.</FunctionalityParagraph>
+          <FunctionalityParagraph>Авторизований користувач може додати «співробітника» безпосередньо до Інтернету.</FunctionalityParagraph>
+          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування клієнтськими рахунками.</FunctionalityParagraph>
+          <FunctionalityParagraph>РЗміна пароля, відновлення пароля, блокування, робота з електронною аутентифікацією в роботі з клієнтом з
+          аутентифікацією маркерів OTP з генерацією клієнта та надсиланням паролів через SMS.</FunctionalityParagraph>
         </div>
       </FunctionalityContainer>
+      <FunctionalityTitle>Продукты, побудовані на B.One</FunctionalityTitle>
+    </Container>
+    <ContainerCase>
+      <BackgroundCase themeColor='#1A1A1A'>
+        <ContentCase>
+          <InfoCase>
+            <TitleCase themeColorSecondary='#fff'>CorpLight <SpanCase color="#3EC4E1">Ощадбанк</SpanCase></TitleCase>
+            <SubtitleCase themeColorSecondary='#fff'>Онлайн система управління банківськими рахунками та продуктами</SubtitleCase>
+            <ButtonContainerCase>
+              <ButtonCase href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
+              <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
+              <ButtonCase href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
+            </ButtonContainerCase>
+            <MoreButtonCase to="/corplight" themeColorSecondary='#3EC4E1'>Більше</MoreButtonCase>
+          </InfoCase>
+          <ImageContainerCase>
+            <ImageCorp src={corpImage} alt="corplight" />
+          </ImageContainerCase>
+        </ContentCase>
+      </BackgroundCase>
+      <BackgroundCase themeColor='#1A1A1A'>
+        <ContentCase>
+          <ImageContainerCase>
+            <ImageForward src={forwardImage} alt="forward" />
+          </ImageContainerCase>
+          <InfoCase>
+            <TitleCase themeColorSecondary='#fff'><SpanCase color="#991F3A">Forward</SpanCase> Online</TitleCase>
+            <SubtitleCase themeColorSecondary='#fff'>24/7 доступ до Ваших банківських сервісів</SubtitleCase>
+            <ButtonContainerCase>
+              <ButtonCase href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#1a1a1a1' themeColorSecondary='#fff'>App Store</ButtonCase>
+              <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
+              <ButtonCase href="https://online.forward-bank.com/dashboard" outline themeColor='#1a1a1a' themeColorSecondary='#1a1a1a'>Web Demo</ButtonCase>
+            </ButtonContainerCase>
+            <MoreButtonCase to="/forward" themeColorSecondary='#3EC4E1'>Більше</MoreButtonCase>
+          </InfoCase>
+        </ContentCase>
+      </BackgroundCase>
+    </ContainerCase>
+    <Container>
       <DownloadContainer>
         <DownloadTitle>Завантажуйте B.one</DownloadTitle>
         <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>

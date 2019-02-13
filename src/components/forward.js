@@ -569,62 +569,19 @@ const Forward = (props) => (
         <FunctionalityTitle>Функціональність <FunctionalityTitleSpan>CorpLight</FunctionalityTitleSpan></FunctionalityTitle>
         <div>
           <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
-          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування обліковими записами клієнта.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування виписки по рахункам користувача, відображення виписки (веб, мобільний), механізм отримання останніх операцій
-          користувача по конкретному рахунку, експорт/збереження виписки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з можливістю поповнення(веб, мобільний додаток).</FunctionalityParagraph>
+          <FunctionalityParagraph>Самореєстрація клієнта в системі, можливість управління обліковими записами клієнта.</FunctionalityParagraph>
+          <FunctionalityParagraph>Перегляд депозитних продуктів (в тому числі і архіву) з можливістю поповнення і відкриття (ВЕБ, мобільний додаток).</FunctionalityParagraph>
+          <FunctionalityParagraph>Формування виписки по рахунках користувача, відображення виписки (ВЕБ, мобільні додатки), механізм отримання останніх операцій користувача по конкретному рахунку, експорт / друк виписки.</FunctionalityParagraph>
+          <FunctionalityParagraph>Створення і відправка в Банк переказів між своїми рахунками, за номером рахунку Клієнтам Банку, за номером телефону користувачам Forward online, збереження шаблонів платіжних документів.</FunctionalityParagraph>
+          <FunctionalityParagraph>Механізм отримання та завантаження даних відділень і банкоматів, визначення поточного місцезнаходження отримання геолокаційні даних про поточний стан.</FunctionalityParagraph>
+          <FunctionalityParagraph>Автоматичне завантаження інформації про поточні курси обміну валют, інформування про поточні курси в Системі (ВЕБ, мобільні додатки).</FunctionalityParagraph>
+          <FunctionalityParagraph>Сервіси для блокування \ розблокування користувача для CRM-системи </FunctionalityParagraph>
+          <FunctionalityParagraph>Установка курсів валют МПС через адміністративну частину і їх відображення в Системі (ВЕБ, мобільний додаток).</FunctionalityParagraph>
+          <FunctionalityParagraph>Сервіси по управлінню картами.</FunctionalityParagraph>
           <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю погашення.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм отримання та завантаження даних відділень та банкоматів (вхідний xml-файл), визначення поточного місцезнаходження
-          отримання геолокаційних даних про поточне розташування.</FunctionalityParagraph>
-          <FunctionalityParagraph>Автоматичне завантаження інформації щодо поточних курсів обміну валют з АБС, інформування про поточні курси в Системі (веб) з
-          можливістю переходу в окрему екранну форму для відображення історії змін курсу.</FunctionalityParagraph>
-          <FunctionalityParagraph>Реалізація інформування про поточні курси в Системі (веб).</FunctionalityParagraph>
-          <FunctionalityParagraph>Можливість створення та редагування платіжних документів, в залежності від кореспондента, збереження шаблонів платіжних
-          документів.</FunctionalityParagraph>
-          <FunctionalityParagraph>Візування та відправка документів в Банк, накладання електронного цифрового підпису, перевірка на коректність відповідно до вимог
-          Інструкції про безготівкові розрахунки в Україні в національній валюті Національного банку України.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм збереження даних платіжних документів для формування довідника кореспондентів, здійснення запиту та формування звіту
-          відповідно до конкретного Кореспондента.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення заявки на продукт, налаштування списку продуктів та їх параметрів, механізм пропонування нових продуктів через тематичні
-          розділи системи.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність поповнення/зняття депозиту.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність формування платіжних документів на погашення кредиту.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення та збереження регулярного та автоматичного (регулярного) платежу, створення, редагування, призупинення та видалення
-          автоматичних платежів з групуванням згідно календарних днів, інформування користувачів.</FunctionalityParagraph>
+          
         </div>
-        <div>
-          <FunctionalitySubtitle>Платежі в інозменій валюті</FunctionalitySubtitle>
-          <FunctionalityParagraph>Створення платіжних доручень в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення внутрішніх переказів (в межах одного МФО) в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з можливістю поповнення (веб, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Купівля/продаж/конвертація іноземної валюти.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд інформації по рахункам (валюта) в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування зовнішніх переказів в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Відправка в Банк підтверджуючих документів при формуванні платежів в іноземній валюті, заявок на купівлю іноземної валюти.</FunctionalityParagraph>
-          <FunctionalityParagraph>Імпорт документів.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Зарплатний проект</FunctionalitySubtitle>
-          <FunctionalityParagraph>Формування зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Імпорт відомостей із бухгалтерських програм.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування обов’язкових(податкових) платежів до зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд історії зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд реєстрів працівників.</FunctionalityParagraph>
-          <FunctionalityParagraph>Робота із ЗКП договорами.</FunctionalityParagraph>
-          <FunctionalityParagraph>Друк реєстрів працівників та відомостей.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Функціональність по роботі з корпоративними картками</FunctionalitySubtitle>
-          <FunctionalityParagraph>Функціональність по роботі з картковими рахунками.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність по роботі з корпоративними картками.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд строку дії, залишку коштів по корпоративній картці.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування заявки на випуск корпоративної картки, обробка заявки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування заявки на перевипуск корпоративної картки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Блокування корпоративної картки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд встановлених лімітів по корпоративним карткам.</FunctionalityParagraph>
-          <FunctionalityParagraph>Управління лімітами по корпоративній картці.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування історії операцій по корпоративній картці.</FunctionalityParagraph>
-        </div>
+
       </FunctionalityContainer>
       <SecurityContainer>
         <SecurityInfoContainer>
