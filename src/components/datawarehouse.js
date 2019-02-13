@@ -3,7 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
-
+import dwhMac from '../images/dwh_mac.png'
+import dwhLogoSVG from '../images/dwh_logo.png'
+import macCanDataware from '../images/dwh_mac_can.png'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -92,6 +94,57 @@ font-family: myriad-pro, sans-serif;
   line-height: 30px;
 `
 
+const DwhMac = styled.img`
+  margin-top: 2.5rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
+const DwhLogo = styled.img`
+  margin-top: 1rem;
+  height: 13rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
+const DwhMacCan = styled.img`
+margin-top: 3.2rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
 
 const DatawarehousePage = (props) => (
   <StyledBackground>
@@ -104,7 +157,7 @@ const DatawarehousePage = (props) => (
     </StyledHeader>
 
     <Container>
-      <StyledThereIsWillBeImage>IMAGE SOON</StyledThereIsWillBeImage>
+      <DwhMac src={dwhMac} alt='dwhMacMockup'/>
       <StyledParagraphText>
         DWH система являє собою спеціально організовану базу даних, для якої забезпечується збір інформації, її
         зберігання і швидкий доступ до предметно-орієнтованим даними за допомогою широкого спектра BI інструментів.
@@ -124,7 +177,7 @@ const DatawarehousePage = (props) => (
       <StyledParagraphText>&#8226;  Схема даних (BarsDWH)</StyledParagraphText>
       <StyledParagraphText>&#8226;  Аналіз даних (Oracle BIEE або BarsDWH)</StyledParagraphText>
       <StyledParagraphText>&#8226;  Координатор процесу (BarsDWH)</StyledParagraphText>
-      <StyledThereIsWillBeImage>IMAGE SOON</StyledThereIsWillBeImage>
+      <DwhLogo src={dwhLogoSVG} alt='logo'/>
       <StyledParagraphText>
         Система «Сховище даних» призначена для консолідації облікових даних, що містяться в територіальних базах даних в
         централізованого сховища інформації для подальшого формування консолідованої звітності та надання даних для
@@ -139,7 +192,7 @@ const DatawarehousePage = (props) => (
       <StyledParagraphText>&#8226;  Гнучка настройка звітів в різних форматах</StyledParagraphText>
 
       <StyledParagraphText>&#8226;  Сучасний інтерфейс і перевірена надійність</StyledParagraphText>
-      <StyledThereIsWillBeImage>IMAGE SOON</StyledThereIsWillBeImage>
+      <DwhMacCan src={macCanDataware} alt='datawareMacMockup'/>
 
       <StyledTitleBlackColor>МОЖЛИВОСТІ СИСТЕМИ</StyledTitleBlackColor>
 
