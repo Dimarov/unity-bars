@@ -15,6 +15,18 @@ import nine from "../images/clients/9.jpg"
 import ten from "../images/clients/10.jpg"
 import eleven from "../images/clients/11.jpg"
 import twelve from "../images/clients/12.jpg"
+import onep from "../images/partners/1.jpg"
+import twop from "../images/partners/2.jpg"
+import threep from "../images/partners/3.jpg"
+import fourp from "../images/partners/4.jpg"
+import fivep from "../images/partners/5.jpg"
+import sixp from "../images/partners/6.jpg"
+import sevenp from "../images/partners/7.jpg"
+import eightp from "../images/partners/8.jpg"
+import ninep from "../images/partners/9.jpg"
+import tenp from "../images/partners/10.jpg"
+import elevenp from "../images/partners/11.jpg"
+import twelvep from "../images/partners/12.jpg"
 
 const Background = styled.div`
   width: 100%;
@@ -112,6 +124,12 @@ const Client = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: brightness(.95);
+  transition: all .2s ease-in;
+
+  :hover {
+    filter: brightness(1);
+  }
 `
 
 const Image = styled.img`
@@ -121,7 +139,16 @@ const Image = styled.img`
 const Partner = styled.div`
   height: 100%;
   width: 100%;
-  background: lightgrey;
+  background: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(.95);
+  transition: all .2s ease-in;
+
+  :hover {
+    filter: brightness(1);
+  }
 `
 
 const Person = styled.div`
@@ -241,30 +268,78 @@ const Company = (props) => (
         <Client>
           <Image src={one} />
         </Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-        <Client></Client>
-      <Client></Client>
+        <Client>
+          <Image src={two} />
+        </Client>
+        <Client>
+          <Image src={three} />
+        </Client>
+        <Client>
+          <Image src={four} />
+        </Client>
+        <Client>
+          <Image src={five} />
+        </Client>
+        <Client>
+          <Image src={six} />
+        </Client>
+        <Client>
+          <Image src={seven} />
+        </Client>
+        <Client>
+          <Image src={eight} />
+        </Client>
+        <Client>
+          <Image src={nine} />
+        </Client>
+        <Client>
+          <Image src={ten} />
+        </Client>
+        <Client>
+          <Image src={eleven} />
+        </Client>
+        <Client>
+          <Image src={twelve} />
+        </Client>
       </SecondGrid>
       <br />
       <SecondGrid>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
-        <Partner></Partner>
+        <Partner>
+          <Image src={onep} />
+        </Partner>
+        <Partner>
+          <Image src={twop} />
+        </Partner>
+        <Partner>
+          <Image src={threep} />
+        </Partner>
+        <Partner>
+          <Image src={fourp} />
+        </Partner>
+        <Partner>
+          <Image src={fivep} />
+        </Partner>
+        <Partner>
+          <Image src={sixp} />
+        </Partner>
+        <Partner>
+          <Image src={sevenp} />
+        </Partner>
+        <Partner>
+          <Image src={eightp} />
+        </Partner>
+        <Partner>
+          <Image src={ninep} />
+        </Partner>
+        <Partner>
+          <Image src={tenp} />
+        </Partner>
+        <Partner>
+          <Image src={elevenp} />
+        </Partner>
+        <Partner>
+          <Image src={twelvep} />
+        </Partner>
       </SecondGrid>
       <br />
     </Container>
