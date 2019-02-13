@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import bg from '../images/products.jpg'
 import ElectronicarchivePage from '../pages/electronicarchive'
 // import CreditmodulePage from '../pages/creditmodule'
+import eaMac from '../images/ea_mac.png'
+import eaModules from '../images/ea_moduls.png'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -83,6 +85,40 @@ const StyledTestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
+const EaMac = styled.img`
+margin-top: 2.5rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
+const EaMacModules = styled.img`
+margin-top: 2.5rem;
+  height: 16rem;
+  width: auto;
+  text-align: center;
+  
+  @media (min-width: 40rem) {
+    
+  }
+
+  @media (min-width: 80rem) {
+    margin-top: 3rem;
+    height: 30rem;
+    text-align: center;
+  }
+`
+
 const Electronicarchive = (props) => (
   <StyledBackground>
     <StyledHeader>
@@ -98,7 +134,7 @@ const Electronicarchive = (props) => (
     </StyledHeader>
 
     <Container>
-      <StyledThereIsWillBeImage>IMAGE SOON</StyledThereIsWillBeImage>
+      <EaMac src={eaMac} alt="eaMac"/>
 
       <StyledHeaderTitle>ФУНКЦІОНАЛ МОДУЛЯ</StyledHeaderTitle>
       <StyledHeaderTitleParagraph>
@@ -132,9 +168,9 @@ const Electronicarchive = (props) => (
         т.д.)
       </StyledHeaderTitleParagraph>
 
-      <StyledThereIsWillBeImage>IMAGE SOON</StyledThereIsWillBeImage>
+      <EaMacModules src={eaModules} alt='modulesOfEa'/>
 
-      <StyledTestMargin />
+      <StyledTestMargin/>
 
     </Container>
     {/*<StyledGrid>*/}
