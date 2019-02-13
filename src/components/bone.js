@@ -519,7 +519,15 @@ const DownloadSubtitle = styled.h3`
 const ContainerCase = styled.div`
   width: 100%;
   height: auto;
-  padding: 4rem;
+  padding: 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 4rem;
+  }
 `
 
 const BackgroundCase = styled.div`
@@ -831,9 +839,9 @@ const Bone = (props) => (
             <TitleCase themeColorSecondary='#fff'><SpanCase color="#991F3A">Forward</SpanCase> Online</TitleCase>
             <SubtitleCase themeColorSecondary='#fff'>24/7 доступ до Ваших банківських сервісів</SubtitleCase>
             <ButtonContainerCase>
-              <ButtonCase href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#1a1a1a1' themeColorSecondary='#fff'>App Store</ButtonCase>
+              <ButtonCase href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
               <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
-              <ButtonCase href="https://online.forward-bank.com/dashboard" outline themeColor='#1a1a1a' themeColorSecondary='#1a1a1a'>Web Demo</ButtonCase>
+              <ButtonCase href="https://online.forward-bank.com/dashboard" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
             </ButtonContainerCase>
             <MoreButtonCase to="/forward" themeColorSecondary='#3EC4E1'>Більше</MoreButtonCase>
           </InfoCase>
