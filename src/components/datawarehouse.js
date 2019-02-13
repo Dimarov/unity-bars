@@ -202,7 +202,7 @@ const DatawarehousePage = (props) => (
       <StyledParagraphText>&#8226;  Завантаження в DWH</StyledParagraphText>
       <StyledParagraphText>&#8226;  Завантаження в DM</StyledParagraphText>
       <StyledParagraphText>&#8226;  Відображення стану завантаження</StyledParagraphText>
-      <StyledTestMargin />
+      <StyledTestMargin/>
     </Container>
   </StyledBackground>
 )

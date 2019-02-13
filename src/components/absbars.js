@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
-import abs from "../images/abs_mac.png"
+import abs from '../images/abs_mac.png'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -135,7 +135,6 @@ const AbsImage = styled.img`
 `
 
 const Absbars = (props) => (
-
   <StyledBackground>
     <StyledHeader>
       <Container>
@@ -150,7 +149,7 @@ const Absbars = (props) => (
     </StyledHeader>
 
     <Container>
-      <AbsImage src={abs} alt="abs-mockup" />
+      <AbsImage src={abs} alt="abs-mockup"/>
 
       <StyledHeaderTitle>МОЖЛИВОСТІ І ПЕРЕВАГИ</StyledHeaderTitle>
       <StyledHeaderTitleParagraph>
@@ -159,7 +158,6 @@ const Absbars = (props) => (
 
       <StyledHeaderTitleParagraph>&#8226; Гнучка система адміністрування
       </StyledHeaderTitleParagraph>
-
 
       <StyledHeaderTitleParagraph>
         &#8226; Багаторівнева система роздільного доступу до фінансових і технічних ресурсів банку

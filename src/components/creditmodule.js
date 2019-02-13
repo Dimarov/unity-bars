@@ -183,7 +183,7 @@ const Creditmodule = (props) => (
         &#8226; Мінімізація ризиків шахрайства шляхом автоматизації підбору параметрів і мінімізації мануального
         введення даних
       </StyledHeaderTitleParagraph>
-      <StyledTestMargin />
+      <StyledTestMargin/>
     </Container>
   </StyledBackground>
 )

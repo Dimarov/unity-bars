@@ -3,7 +3,8 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import bg from '../images/products.jpg'
-import abs from "../images/abs_mac.png"
+import abs from '../images/abs_mac.png'
+
 const StyledBackground = styled.div`
   width: 100%;
   height: auto;
@@ -150,7 +151,7 @@ const Barsmmfo = (props) => (
     </StyledHeader>
 
     <Container>
-      <AbsImage src={abs} alt="abs-mockup" />
+      <AbsImage src={abs} alt="abs-mockup"/>
       <StyledHeaderTitle>МОЖЛИВОСТІ І ПЕРЕВАГИ</StyledHeaderTitle>
       <StyledHeaderTitleParagraph>
         &#8226; Відповідність сучасним тенденціям, ринкових позиціях і стратегіям банківських установ
@@ -158,7 +159,6 @@ const Barsmmfo = (props) => (
 
       <StyledHeaderTitleParagraph>&#8226; Зменшення операційних ризиків і підвищення прозорості
       </StyledHeaderTitleParagraph>
-
 
       <StyledHeaderTitleParagraph>
         &#8226; Централізація функцій, операцій і бізнес-процесів Банку
@@ -190,7 +190,8 @@ const Barsmmfo = (props) => (
 
       <StyledHeaderTitleParagraph>&#8226; Оптимізація організаційної структури Банку</StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>&#8226; Забезпечення онлайн доступу до всього масиву даних в єдиній базі, розмежування доступу
+      <StyledHeaderTitleParagraph>&#8226; Забезпечення онлайн доступу до всього масиву даних в єдиній базі, розмежування
+        доступу
         за рівнями доступу</StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>&#8226; Можливість проведення безвиїзного аудиту</StyledHeaderTitleParagraph>
@@ -198,9 +199,11 @@ const Barsmmfo = (props) => (
       <StyledHeaderTitleParagraph>&#8226; Забезпечення ефективності та прозорості процесу управління
         Банком</StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>&#8226; Скорочення витрат Банку через централізацію процесів</StyledHeaderTitleParagraph>
+      <StyledHeaderTitleParagraph>&#8226; Скорочення витрат Банку через централізацію
+        процесів</StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>&#8226; Консолідація даних і показників по всій системі Банку</StyledHeaderTitleParagraph>
+      <StyledHeaderTitleParagraph>&#8226; Консолідація даних і показників по всій системі
+        Банку</StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>&#8226; Забезпечення ідентичності настройки системи за всіма структурними одиницями
         (ідентичність продуктів, їх параметрів, лімітів та шаблонів і т.д.)</StyledHeaderTitleParagraph>
