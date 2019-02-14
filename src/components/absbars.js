@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 import bg from '../images/fix/products.jpg'
 import abs from '../images/fix/abs_mac.png'
@@ -68,7 +69,7 @@ const StyledSubtitle = styled.p`
 
 `
 
-const StyledDownloadLink = styled(Link)`
+const StyledDownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -185,7 +186,7 @@ const Absbars = (props) => (
         <StyledTitle>ABS BARS | Core Banking System</StyledTitle>
         <StyledHeaderSubTitleHuge>Автоматизована банківська система з комплексним або індивідуальним підходом до клієнта
         </StyledHeaderSubTitleHuge>
-        <StyledDownloadLink>
+        <StyledDownloadLink href={withPrefix('/documents/ABS-BARS.pdf')} download="ABS-BARS.pdf">
           Завантажити Презентацію
         </StyledDownloadLink>
       </Container>

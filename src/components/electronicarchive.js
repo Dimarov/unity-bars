@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 import bg from '../images/fix/products.jpg'
 import eaMac from '../images/fix/ea_mac.png'
@@ -105,7 +106,7 @@ const EaMacModules = styled.img`
   height: 16rem;
   width: auto;
   text-align: center;
-  
+
 
   @media (min-width: 40rem) {
 
@@ -118,7 +119,7 @@ const EaMacModules = styled.img`
   }
 `
 
-const StyledDownloadLink = styled(Link)`
+const StyledDownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -142,7 +143,7 @@ const Electronicarchive = (props) => (
         <StyledTitle>Electronic archive</StyledTitle>
         <StyledSubtitle>Забезпечує зберігання первинних документів в електронному вигляді
         </StyledSubtitle>
-        <StyledDownloadLink>Завантажити Презентацію</StyledDownloadLink>
+        <StyledDownloadLink href={withPrefix('/documents/ELECTRONICARCHIVE.pdf')} download="ELECTRONICARCHIVE.pdf">Завантажити Презентацію</StyledDownloadLink>
       </Container>
     </StyledHeader>
 

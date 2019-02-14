@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 import bg from '../images/fix/products.jpg'
 import dwhMac from '../images/fix/dwh_mac.png'
@@ -145,7 +146,7 @@ margin-top: 3.2rem;
     text-align: center;
   }
 `
-const StyledDownloadLink = styled(Link)`
+const StyledDownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -169,7 +170,7 @@ const DatawarehousePage = (props) => (
         <StyledTitle>Datawarehouse</StyledTitle>
 
         <StyledHeaderTitle>Система класу банківського DWH на платформі і модулях IBM</StyledHeaderTitle>
-        <StyledDownloadLink>Завантажити презентацію</StyledDownloadLink>
+        <StyledDownloadLink href={withPrefix('/documents/DATAWAREHOUSE.pdf')} download="DATAWAREHOUSE.pdf">Завантажити презентацію</StyledDownloadLink>
       </Container>
     </StyledHeader>
 

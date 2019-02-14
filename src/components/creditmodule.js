@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 import bg from '../images/fix/products.jpg'
 
@@ -17,7 +18,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledDownloadLink = styled(Link)`
+const StyledDownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -95,7 +96,7 @@ const Creditmodule = (props) => (
         <StyledSubtitle>Система обслуговування кредитної діяльності та автоматизації кредитної установи з повним циклом
           обслуговування клієнтів
         </StyledSubtitle>
-        <StyledDownloadLink>Завантажити презентацію</StyledDownloadLink>
+        <StyledDownloadLink href={withPrefix('/documents/CREDITMODULE.pdf')} download="CREDITMODULE.pdf">Завантажити презентацію</StyledDownloadLink>
       </Container>
     </StyledHeader>
 

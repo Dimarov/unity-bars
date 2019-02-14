@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import { Link } from 'gatsby'
+import { withPrefix } from 'gatsby'
 
 import header from "../images/mockups/bone-iphones.png"
 import about from "../images/mockups/corplight-iphone-2.png"
@@ -237,24 +238,6 @@ const InfoElement = styled.div`
   height: auto;
   display: flex;
   align-content: center;
-`
-
-const InfoElementDownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #3EC4E1;
-  margin: .5rem 0;
-  padding: 0 0 0 7rem;
-  text-decoration: none;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
 `
 
 const InfoElementIcon = styled.div`
@@ -762,6 +745,23 @@ const MoreButtonCase = styled(Link)`
   }
 `
 
+const InfoElementDownloadLink = styled.a`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #3EC4E1;
+  margin: .5rem 0;
+  padding: 0;
+  text-decoration: none;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1.5rem;
+  }
+`
 
 const Bone = (props) => (
   <Background>
@@ -790,6 +790,7 @@ const Bone = (props) => (
           <FunctionalitySubtitle>Подавати заявку на підключення депозитів банківських продуктів.</FunctionalitySubtitle>
           <FunctionalitySubtitle>Керувати регулярними платежами.</FunctionalitySubtitle>
           <FunctionalitySubtitle>Контролювати доступ для співробітників, підключених до системи.</FunctionalitySubtitle>
+          <InfoElementDownloadLink href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
         </div>
         <ImageContainer>
           <AboutImage src={boneImage} alt="bone-mockup" />

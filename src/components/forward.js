@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { withPrefix } from 'gatsby'
 
 import header from "../images/mockups/forward-samsugs.png"
 import about from "../images/mockups/forward-samsung-2.png"
@@ -559,7 +560,7 @@ const Forward = (props) => (
               </InfoElementDescription>
             </InfoElement>
             <InfoElement>
-              <InfoElementDownloadLink href="static/documents/BONE.pdf" download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
+              <InfoElementDownloadLink href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
             </InfoElement>
           </InfoElementContainer>
         </InfoContainer>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 import bg from '../images/fix/products.jpg'
 import abs from '../images/fix/abs_mac.png'
@@ -162,7 +163,7 @@ const AbsImage = styled.img`
   }
 `
 
-const StyledDownloadLink = styled(Link)`
+const StyledDownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -186,7 +187,7 @@ const Barsmmfo = (props) => (
         <StyledTitle>BARS MMFO | Core Banking System</StyledTitle>
         <StyledHeaderSubTitleHuge>Забезпечення роботи декількох МФО в централізованій БД.
         </StyledHeaderSubTitleHuge>
-        <StyledDownloadLink>Завантажити Презентацію</StyledDownloadLink>
+        <StyledDownloadLink href={withPrefix('/documents/BARS-MMFO.pdf')} download="BARS-MMFO.pdf">Завантажити Презентацію</StyledDownloadLink>
       </Container>
     </StyledHeader>
     <ImageContainer>

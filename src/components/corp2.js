@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { withPrefix } from 'gatsby'
 
 import bg from '../images/fix/products.jpg'
 import corpSignIn from '../images/fix/corp2_sign-in.png'
@@ -46,7 +47,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const StyledDownloadLink = styled(Link)`
+const StyledDownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -218,7 +219,7 @@ const Corp2 = (props) => (
       <Container>
         <StyledTitle>CORP 2</StyledTitle>
         <StyledSubtitleWhite>Корпоративний Online-Banking</StyledSubtitleWhite>
-        <StyledDownloadLink>Завантажити Презентацію</StyledDownloadLink>
+        <StyledDownloadLink href={withPrefix('/documents/CORP2.pdf')} download="CORP2.pdf">Завантажити Презентацію</StyledDownloadLink>
       </Container>
     </StyledHeader>
     <ImageContainer>
