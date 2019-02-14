@@ -134,11 +134,7 @@ const CorpSignInImg = styled.img`
   }
 `
 
-const UsedByCorpServicesOshad = styled.img`
-`
-const UsedByCorpServicesDKSU = styled.img`
-`
-const UsedByCorpServicesRozrah = styled.img`
+const UsedByCorpServices = styled.img`
 `
 const MacImg2 = styled.img`
   margin-top: 2.5rem;
@@ -186,13 +182,13 @@ const Corp2 = (props) => (
 
       <ImageContainer>
         <StyledThreeImagesBlock>
-          <UsedByCorpServicesOshad src={oshad} alt='oshad'/>
+          <UsedByCorpServices src={oshad} alt='oshad'/>
         </StyledThreeImagesBlock>
         <StyledThreeImagesBlock>
-          <UsedByCorpServicesDKSU src={dksu} alt='oshad'/>
+          <UsedByCorpServices src={dksu} alt='oshad'/>
         </StyledThreeImagesBlock>
         <StyledThreeImagesBlock>
-          <UsedByCorpServicesRozrah src={rozrah} alt='oshad'/>
+          <UsedByCorpServices src={rozrah} alt='oshad'/>
         </StyledThreeImagesBlock>
       </ImageContainer>
 
