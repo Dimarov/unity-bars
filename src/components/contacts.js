@@ -178,12 +178,12 @@ const Contacts = (props) => (
         <StyledContactText>bars@unity-bars.com</StyledContactText>
       </StyledContact>
       <StyledContact>
-        <StyledContactForm name="contact" method="POST" netlify-honeypot="bot-field" netlify>
+        <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
           <StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>
-          <StyledContactInput placeholder="Ваше Ім'я" />
-          <StyledContactInput placeholder="Ваш Email" />
-          <StyledContactInput placeholder="Ваш Телефон" />
-          <StyledContactTextarea placeholder="Ваше Повідомлення" />
+          <StyledContactInput placeholder="Ваше Ім'я" type="text" name="Name" id="Name"/>
+          <StyledContactInput placeholder="Ваш Email" type="text" name="Email" id="Email"/>
+          <StyledContactInput placeholder="Ваш Телефон" type="text" name="Phone" id="Phone"/>
+          <StyledContactTextarea placeholder="Ваше Повідомлення" type="text" name="Message" id="Message"/>
           <StyledContactSubmit type="submit" value="Надіслати" />
         </StyledContactForm>
       </StyledContact>
