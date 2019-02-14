@@ -21,12 +21,13 @@ const Container = styled.div`
 
 const StyledHeader = styled.div`
   width: 100%;
-  height: 32rem;
+  height: 24rem;
   background-image: url(${four});
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding: 8rem 1rem;
+  filter: brightness(.4);
 `
 
 

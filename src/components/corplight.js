@@ -559,7 +559,7 @@ const Corplight = (props) => (
               </InfoElementDescription>
             </InfoElement>
             <InfoElement>
-              <InfoElementDownloadLink href={withPrefix('static/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
+              <InfoElementDownloadLink href={withPrefix('static/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
             </InfoElement>
           </InfoElementContainer>
         </InfoContainer>
