@@ -5,7 +5,7 @@ import Company from '../components/company'
 
 const CompanyPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="company" ruLink="company-ru" enLink="company-en" />
     <Company />
   </Layout>
 )

@@ -5,7 +5,7 @@ import Contacts from '../components/contacts'
 
 const ContactsPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="contacts" ruLink="contacts-ru" enLink="contacts-en" />
     <Contacts />
   </Layout>
 )

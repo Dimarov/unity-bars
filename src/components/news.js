@@ -163,54 +163,66 @@ const News = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledLink to="news-1">
-        <StyledNews>
+
+      <StyledNews>
+        <StyledLink to="news-1">
           <StyledNewsPhoto image={one}></StyledNewsPhoto>
           <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
 
           <StyledNewsDate>12.02.2019</StyledNewsDate>
-        </StyledNews>
-      </StyledLink>
-      <StyledLink to="news-2">
-        <StyledNews>
+        </StyledLink>
+      </StyledNews>
+
+
+      <StyledNews>
+        <StyledLink to="news-2">
           <StyledNewsPhoto image={two}></StyledNewsPhoto>
           <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
 
           <StyledNewsDate>23.08.2018</StyledNewsDate>
-        </StyledNews>
-      </StyledLink>
-      <StyledLink to="news-3">
+        </StyledLink>
+      </StyledNews>
 
-        <StyledNews>
+
+
+      <StyledNews>
+        <StyledLink to="news-3">
           <StyledNewsPhoto image={three}></StyledNewsPhoto>
           <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
 
           <StyledNewsDate>16.05.2018</StyledNewsDate>
-        </StyledNews>
-      </StyledLink>
-      <StyledLink to="news-4">
-        <StyledNews>
+        </StyledLink>
+      </StyledNews>
+
+
+      <StyledNews>
+        <StyledLink to="news-4">
           <StyledNewsPhoto image={four}></StyledNewsPhoto>
           <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ 🎉</StyledNewsTitle>
 
           <StyledNewsDate>16.03.2018</StyledNewsDate>
-        </StyledNews>
-      </StyledLink>
-      <StyledLink to="news-5">
-        <StyledNews>
+        </StyledLink>
+      </StyledNews>
+
+
+      <StyledNews>
+        <StyledLink to="news-5">
           <StyledNewsPhoto image={five}></StyledNewsPhoto>
           <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
           <StyledNewsDate>03.03.2018</StyledNewsDate>
-        </StyledNews>
-      </StyledLink>
-      <StyledLink to="news-6">
-        <StyledNews>
+        </StyledLink>
+      </StyledNews>
+
+
+      <StyledNews>
+        <StyledLink to="news-6">
           <StyledNewsPhoto image={six}></StyledNewsPhoto>
           <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від
           НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
           <StyledNewsDate>21.11.2017</StyledNewsDate>
-        </StyledNews>
-      </StyledLink>
+        </StyledLink>
+      </StyledNews>
+
     </StyledGrid>
   </StyledBackground>
 )

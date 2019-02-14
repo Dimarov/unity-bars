@@ -5,7 +5,7 @@ import Corp2 from '../components/corp2'
 
 const Corp2Page = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="corp2" ruLink="corp2-ru" enLink="corp2-en" />
     <Corp2 />
   </Layout>
 )

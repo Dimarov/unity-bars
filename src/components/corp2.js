@@ -189,10 +189,13 @@ const CorpSignInImg = styled.img`
 `
 
 const UsedByCorpServicesOshad = styled.img`
+  height: 6rem;
 `
 const UsedByCorpServicesDKSU = styled.img`
+height: 6rem;
 `
 const UsedByCorpServicesRozrah = styled.img`
+height: 6rem;
 `
 
 const MacImg2 = styled.img`
@@ -234,8 +237,7 @@ const Corp2 = (props) => (
         повного обсягу інформації про стан рахунків. При цьому вся інформація, якою обмінюються Клієнт і Банк, надійно
         захищена системою і недоступна для сторонніх осіб. Система постійно розвивається та вдосконалюється, завдяки
         чому
-        стала основою для наступних продуктів компанії, оновленої системи Corp 3 та Corp
-      Light</StyledHeaderTitleParagraph>
+        стала основою для наступних продуктів компанії, оновленої системи B.One</StyledHeaderTitleParagraph>
 
       <StyledTitleBlack>Використовуеться</StyledTitleBlack>
 

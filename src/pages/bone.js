@@ -5,7 +5,7 @@ import Bone from '../components/bone'
 
 const BonePage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="bone" ruLink="bone-ru" enLink="bone-en" />
     <Bone />
   </Layout>
 )

@@ -5,7 +5,7 @@ import Barsmmfo from '../components/barsmmfo'
 
 const BarsmmfoPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="barsmmfo" ruLink="barsmmfo-ru" enLink="barsmmfo-en" />
     <Barsmmfo />
   </Layout>
 )

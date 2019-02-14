@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-import office from '../images/fix/office2.jpg'
+import office from '../images/fix/office3.jpg'
 import bg from "../images/products.jpg"
 
 const StyledBackground = styled.div`
@@ -22,6 +22,7 @@ const StyledHeader = styled.div`
   background-image: url(${office});
   background-size: cover;
   background-attachment: fixed;
+  background-position: bottom;
   padding: 8rem 1rem;
 `
 

@@ -768,7 +768,7 @@ const Bone = (props) => (
     <Header>
       <Container>
         <HeaderImage src={header} alt="header-mockup" />
-        <Title>B.one</Title>
+        <Title>B.One</Title>
         <Subtitle>Інтернет банкінг для МСБ та фізичних осіб</Subtitle>
         <ButtonContainer>
           <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
@@ -816,7 +816,7 @@ const Bone = (props) => (
           аутентифікацією маркерів OTP з генерацією клієнта та надсиланням паролів через SMS.</FunctionalityParagraph>
         </div>
       </FunctionalityContainer>
-      <FunctionalityTitle>Продукты, побудовані на B.One</FunctionalityTitle>
+      <FunctionalityTitle>Продукти, побудовані на B.One</FunctionalityTitle>
     </Container>
     <ContainerCase>
       <BackgroundCase themeColor='#1A1A1A'>
@@ -856,7 +856,7 @@ const Bone = (props) => (
     </ContainerCase>
     <Container>
       <DownloadContainer>
-        <DownloadTitle>Завантажуйте B.one</DownloadTitle>
+        <DownloadTitle>Завантажуйте B.One</DownloadTitle>
         <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
 
         <ButtonContainer>

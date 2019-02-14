@@ -5,7 +5,7 @@ import Corplight from '../components/corplight'
 
 const CorplightPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="corplight" ruLink="corplight-ru" enLink="corplight-en" />
     <Corplight />
   </Layout>
 )
