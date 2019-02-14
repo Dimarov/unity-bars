@@ -515,7 +515,7 @@ const Forward = (props) => (
       <Container>
         <HeaderImage src={header} alt="header-mockup" />
         <Title>Forward <br /><Span>Online</Span></Title>
-        <Subtitle>Інтернет банкінг для МСБ та приватних клієнтів</Subtitle>
+        <Subtitle>24/7 доступ до Ваших банківських сервісів</Subtitle>
         <ButtonContainer>
           <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
           <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
@@ -529,7 +529,7 @@ const Forward = (props) => (
           <AboutImage src={about} alt="about-mockup" />
         </ImageContainer>
         <InfoContainer>
-          <InfoTitle>Можливості CorpLight</InfoTitle>
+          <InfoTitle>Можливості Forward Online</InfoTitle>
           <InfoElementContainer>
             <InfoElement>
               <InfoElementIcon>
@@ -566,7 +566,7 @@ const Forward = (props) => (
       </AboutContainer>
       <FunctionalityContainer>
 
-        <FunctionalityTitle>Функціональність <FunctionalityTitleSpan>CorpLight</FunctionalityTitleSpan></FunctionalityTitle>
+        <FunctionalityTitle>Функціональність <FunctionalityTitleSpan>Forward Online</FunctionalityTitleSpan></FunctionalityTitle>
         <div>
           <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
           <FunctionalityParagraph>Самореєстрація клієнта в системі, можливість управління обліковими записами клієнта.</FunctionalityParagraph>

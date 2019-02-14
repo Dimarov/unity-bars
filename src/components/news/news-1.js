@@ -3,6 +3,7 @@ import React from 'react'
 import styled from "styled-components"
 
 import one from "../../images/news/news1.jpg"
+import picture from "../../images/fix/news11.png"
 
 
 const StyledBackground = styled.div`
@@ -77,6 +78,10 @@ const StyledNewsText = styled.p`
   }
 `
 
+const StyledNewsImage = styled.img`
+  width: 100%;
+`
+
 const StyledNewsDate = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
@@ -93,7 +98,8 @@ const News1 = (props) => (
     <Container>
       <StyledNews>
         <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
-        <StyledNewsText>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsText>
+        <StyledNewsText></StyledNewsText>
+        <StyledNewsImage src={picture} alt="iso" />
         <StyledNewsDate>12.02.2019</StyledNewsDate>
       </StyledNews>
     </Container>
