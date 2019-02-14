@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Unity-Bars',
   },
+  pathPrefix: `/BONE.pdf`,
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
