@@ -5,7 +5,7 @@ import Electronicarchive from '../components/electronicarchive'
 
 const ElectronicarchivePage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="electronicarchive" ruLink="electronicarchive-ru" enLink="electronicarchive-en" />
     <Electronicarchive />
   </Layout>
 )

@@ -5,7 +5,7 @@ import Vacancies from '../components/vacancies'
 
 const VacanciesPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="vacancies" ruLink="vacancies-ru" enLink="vacancies-en" />
     <Vacancies />
   </Layout>
 )

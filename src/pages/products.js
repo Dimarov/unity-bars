@@ -5,7 +5,7 @@ import Products from '../components/products'
 
 const ProductsPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="products" ruLink="products-ru" enLink="products-en" />
     <Products />
   </Layout>
 )

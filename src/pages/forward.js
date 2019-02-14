@@ -5,7 +5,7 @@ import Forward from '../components/forward'
 
 const ForwardPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="forward" ruLink="forward-ru" enLink="forward-en" />
     <Forward />
   </Layout>
 )

@@ -5,7 +5,7 @@ import Creditmodule from '../components/creditmodule'
 
 const CreditmodulePage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="creditmodule" ruLink="creditmodule-ru" enLink="creditmodule-en" />
     <Creditmodule />
   </Layout>
 )

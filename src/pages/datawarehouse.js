@@ -5,7 +5,7 @@ import Datawarehouse from '../components/datawarehouse'
 
 const DatawarehousePage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="datawarehouse" ruLink="datawarehouse-ru" enLink="datawarehouse-en" />
     <Datawarehouse />
   </Layout>
 )

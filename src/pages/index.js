@@ -6,7 +6,7 @@ import ProductPreview from '../components/productpreview'
 
 const IndexPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="" ruLink="ru" enLink="en" />
     <Background />
     <ProductPreview />
   </Layout>

@@ -5,7 +5,7 @@ import News from '../components/news'
 
 const NewsPage = () => (
   <Layout>
-    <Header ukLink="company" ruLink="products" enLink="news" />
+    <Header ukLink="news" ruLink="news-ru" enLink="news-en" />
     <News />
   </Layout>
 )
