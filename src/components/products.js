@@ -156,20 +156,26 @@ const Products = (props) => (
       </Container>
     </Header>
     <Grid>
-      <Product>
-        <ProductTitle>АБС BARS</ProductTitle>
-        <ProductImage src={absbars} />
-      </Product>
-      <Product>
-        <ProductTitle>АБС BARS MMFO</ProductTitle>
+      <ProductLink to="absbars">
+        <Product>
+          <ProductTitle>АБС BARS</ProductTitle>
+          <ProductImage src={absbars} />
+        </Product>
+      </ProductLink>
+      <ProductLink to="barsmmfo">
+        <Product>
+          <ProductTitle>АБС BARS MMFO</ProductTitle>
 
-        <ProductImage src={absbarsmmfo} />
-      </Product>
-      <Product>
-        <ProductTitle>Корпоративний клієнт-банк </ProductTitle>
+          <ProductImage src={absbarsmmfo} />
+        </Product>
+      </ProductLink>
+      <ProductLink to="corp2">
+        <Product>
+          <ProductTitle>Корпоративний клієнт-банк </ProductTitle>
 
-        <ProductImage src={corp2} />
-      </Product>
+          <ProductImage src={corp2} />
+        </Product>
+      </ProductLink>
       <ProductLink to="bone">
         <Product>
           <ProductTitle>Клієнт-банк</ProductTitle>
@@ -177,21 +183,27 @@ const Products = (props) => (
           <ProductImage src={bone} />
         </Product>
       </ProductLink>
-      <Product>
-        <ProductTitle>Кредитний модуль</ProductTitle>
+      <ProductLink to="creditmodule">
+        <Product>
+          <ProductTitle>Кредитний модуль</ProductTitle>
 
-        <ProductImage src={creditmodule} />
-      </Product>
-      <Product>
-        <ProductTitle>Електронне сховище</ProductTitle>
+          <ProductImage src={creditmodule} />
+        </Product>
+      </ProductLink>
+      <ProductLink to="datawarehouse">
+        <Product>
+          <ProductTitle>Електронне сховище</ProductTitle>
 
-        <ProductImage src={datawarehouse} />
-      </Product>
-      <Product>
-        <ProductTitle>Електронний архів</ProductTitle>
+          <ProductImage src={datawarehouse} />
+        </Product>
+      </ProductLink>
+      <ProductLink to="electronicarchive">
+        <Product>
+          <ProductTitle>Електронний архів</ProductTitle>
 
-        <ProductImage src={electronicarchive} />
-      </Product>
+          <ProductImage src={electronicarchive} />
+        </Product>
+      </ProductLink>
     </Grid>
     </Background>
     )

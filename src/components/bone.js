@@ -347,7 +347,7 @@ const FunctionalitySubtitle = styled.h3`
   }
 
   @media (min-width: 80rem) {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `
 
@@ -769,7 +769,7 @@ const Bone = (props) => (
       <Container>
         <HeaderImage src={header} alt="header-mockup" />
         <Title>B.one</Title>
-        <Subtitle>Інтернет банкінг для МСБ та приватних клієнтів</Subtitle>
+        <Subtitle>Інтернет банкінг для МСБ та фізичних осіб</Subtitle>
         <ButtonContainer>
           <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
           <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
@@ -785,6 +785,11 @@ const Bone = (props) => (
           <FunctionalitySubtitle>Отримувати інформацію про цілодобову оплату та платежі.</FunctionalitySubtitle>
           <FunctionalitySubtitle>Створювати платежі.</FunctionalitySubtitle>
           <FunctionalitySubtitle>Створювати звіти.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Оплачувати кредити.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Контролювати депозити.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Подавати заявку на підключення депозитів банківських продуктів.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Керувати регулярними платежами.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Контролювати доступ для співробітників, підключених до системи.</FunctionalitySubtitle>
         </div>
         <ImageContainer>
           <AboutImage src={boneImage} alt="bone-mockup" />

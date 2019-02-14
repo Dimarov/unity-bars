@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from 'gatsby'
 import styled from "styled-components"
 
-import one from "../../images/news/news1.jpg"
+import six from "../../images/news/news6.jpg"
 
 
 const StyledBackground = styled.div`
@@ -22,7 +22,7 @@ const Container = styled.div`
 const StyledHeader = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${one});
+  background-image: url(${six});
   background-size: cover;
   background-attachment: fixed;
   padding: 8rem 1rem;
@@ -71,7 +71,7 @@ const StyledNewsText = styled.p`
   }
 
   @media (min-width: 80rem) {
-    
+
   }
 `
 
@@ -84,18 +84,20 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
-const NewsOne = (props) => (
+const News6 = (props) => (
   <StyledBackground>
     <StyledHeader>
     </StyledHeader>
     <Container>
       <StyledNews>
-        <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
-        <StyledNewsText>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsText>
-        <StyledNewsDate>12.02.2019</StyledNewsDate>
+        <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
+        <StyledNewsText>
+        В жовтні 2017 року НБУ спільними зуслиллями з UNITY-BARS успішно виконали переведення системи автоматизації банку (САБ) на трирівневу архітектуру, що надає Банку такі переваги: масштабованість, високу надійність, низькі вимоги до каналу зв’язку та високий рівень безпеки.Нагадаємо, що у 2012 році НБУ разом з компанією UNITY-BARS успішно запустили систему Мульти-МФО, а у 2015 році був виконаний перехід на єдине МФО.
+        </StyledNewsText>
+        <StyledNewsDate>21.11.2017</StyledNewsDate>
       </StyledNews>
     </Container>
   </StyledBackground>
 )
 
-export default NewsOne
+export default News6

@@ -579,7 +579,7 @@ const Forward = (props) => (
           <FunctionalityParagraph>Установка курсів валют МПС через адміністративну частину і їх відображення в Системі (ВЕБ, мобільний додаток).</FunctionalityParagraph>
           <FunctionalityParagraph>Сервіси по управлінню картами.</FunctionalityParagraph>
           <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю погашення.</FunctionalityParagraph>
-          
+
         </div>
 
       </FunctionalityContainer>

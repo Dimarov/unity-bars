@@ -9,6 +9,8 @@ import banking from "../images/icons/banking.svg"
 import functionality from "../images/icons/functionality.svg"
 import design from "../images/icons/design.svg"
 
+import { withPrefix } from 'gatsby'
+
 const Background = styled.div`
   width: 100%;
   height: auto;
@@ -557,7 +559,7 @@ const Corplight = (props) => (
               </InfoElementDescription>
             </InfoElement>
             <InfoElement>
-              <InfoElementDownloadLink href="static/documents/BONE.pdf" download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
+              <InfoElementDownloadLink href={withPrefix('static/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
             </InfoElement>
           </InfoElementContainer>
         </InfoContainer>

@@ -99,7 +99,7 @@ const Grid = styled.div`
 `
 
 const SecondGrid = styled.div`
-  height: 60vh;
+  height: 60rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -111,6 +111,7 @@ const SecondGrid = styled.div`
   }
 
   @media (min-width: 80rem) {
+    height: 32rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: .125rem;

@@ -162,7 +162,7 @@ const News = (props) => (
       </Container>
     </StyledHeader>
     <StyledGrid>
-      <StyledLink to="news-one">
+      <StyledLink to="news-1">
         <StyledNews>
           <StyledNewsPhoto image={one}></StyledNewsPhoto>
           <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
@@ -170,35 +170,46 @@ const News = (props) => (
           <StyledNewsDate>12.02.2019</StyledNewsDate>
         </StyledNews>
       </StyledLink>
-      <StyledNews>
-        <StyledNewsPhoto image={two}></StyledNewsPhoto>
-        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
+      <StyledLink to="news-2">
+        <StyledNews>
+          <StyledNewsPhoto image={two}></StyledNewsPhoto>
+          <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
 
-        <StyledNewsDate>23.08.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={three}></StyledNewsPhoto>
-        <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
+          <StyledNewsDate>23.08.2018</StyledNewsDate>
+        </StyledNews>
+      </StyledLink>
+      <StyledLink to="news-3">
 
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={four}></StyledNewsPhoto>
-        <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ 🎉</StyledNewsTitle>
+        <StyledNews>
+          <StyledNewsPhoto image={three}></StyledNewsPhoto>
+          <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
 
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={five}></StyledNewsPhoto>
-        <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
-      <StyledNews>
-        <StyledNewsPhoto image={six}></StyledNewsPhoto>
-        <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від
-НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
-        <StyledNewsDate>26.11.2018</StyledNewsDate>
-      </StyledNews>
+          <StyledNewsDate>16.05.2018</StyledNewsDate>
+        </StyledNews>
+      </StyledLink>
+      <StyledLink to="news-4">
+        <StyledNews>
+          <StyledNewsPhoto image={four}></StyledNewsPhoto>
+          <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ 🎉</StyledNewsTitle>
+
+          <StyledNewsDate>16.03.2018</StyledNewsDate>
+        </StyledNews>
+      </StyledLink>
+      <StyledLink to="news-5">
+        <StyledNews>
+          <StyledNewsPhoto image={five}></StyledNewsPhoto>
+          <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
+          <StyledNewsDate>03.03.2018</StyledNewsDate>
+        </StyledNews>
+      </StyledLink>
+      <StyledLink to="news-6">
+        <StyledNews>
+          <StyledNewsPhoto image={six}></StyledNewsPhoto>
+          <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від
+          НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
+          <StyledNewsDate>21.11.2017</StyledNewsDate>
+        </StyledNews>
+      </StyledLink>
     </StyledGrid>
   </StyledBackground>
 )
