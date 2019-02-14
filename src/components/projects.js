@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 
 import bg from "../images/products.jpg"
-
+import office from '../images/fix/office4.jpg'
 import bankid from "../images/projects/bankid.png"
 import prozorro from "../images/projects/prozorro.png"
 import edata from "../images/projects/edata.png"
@@ -24,7 +24,7 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${bg});
+  background-image: url(${office});
   background-size: cover;
   background-attachment: fixed;
   padding: 8rem 1rem;

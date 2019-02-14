@@ -250,13 +250,13 @@ class Header extends React.Component {
                 </NavLink>
               </LinkContainer>
               <LanguageList>
-                <Link to="/">
+                <Link to={this.props.ukLink}>
                   <LanguageButton selected>UK</LanguageButton>
                 </Link>
-                <Link to="/index-ru">
+                {/* <Link to={this.props.ruLink}>
                   <LanguageButton>RU</LanguageButton>
-                </Link>
-                <Link to="/index-en">
+                </Link> */}
+                <Link to={this.props.enLink}>
                   <LanguageButton>EN</LanguageButton>
                 </Link>
               </LanguageList>

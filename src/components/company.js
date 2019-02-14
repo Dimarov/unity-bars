@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-
+import office from '../images/fix/office4.jpg'
 import background from "../images/company.jpg"
 
 import one from "../images/clients/1.jpg"
@@ -27,6 +27,24 @@ import ninep from "../images/partners/9.jpg"
 import tenp from "../images/partners/10.jpg"
 import elevenp from "../images/partners/11.jpg"
 import twelvep from "../images/partners/12.jpg"
+import onee from "../images/employees/1.jpg"
+import twoe from "../images/employees/2.jpg"
+import threee from "../images/employees/3.jpg"
+import foure from "../images/employees/4.jpg"
+import fivee from "../images/employees/5.jpg"
+import sixe from "../images/employees/6.jpg"
+import sevene from "../images/employees/7.jpg"
+import eighte from "../images/employees/8.jpg"
+import ninee from "../images/employees/9.jpg"
+import tene from "../images/employees/10.jpg"
+import elevene from "../images/employees/11.jpg"
+import twelvee from "../images/employees/12.jpg"
+import thirteene from "../images/employees/13.jpg"
+import fourteene from "../images/employees/14.jpg"
+import fifteene from "../images/employees/15.jpg"
+import sixteene from "../images/employees/16.jpg"
+import seventeene from "../images/employees/17.jpg"
+import eighteene from "../images/employees/18.jpg"
 
 const Background = styled.div`
   width: 100%;
@@ -53,7 +71,7 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${background});
+  background-image: url(${office});
   background-size: cover;
   background-attachment: fixed;
   padding-top: 8rem;
@@ -168,16 +186,19 @@ const Person = styled.div`
 `
 
 const PersonPhoto = styled.div`
-  width: 100%;
+  width: 10rem;
   height: 10rem;
-  background: lightgrey;
-  border-radius: .125rem;
+  border-radius: 50%;
+  background-image: url(${props => props.person});
+  background-size: cover;
+  background-position: center;
 
   @media (min-width: 40rem) {
 
   }
 
   @media (min-width: 80rem) {
+    width: 12rem;
     height: 12rem;
   }
 `
@@ -216,7 +237,7 @@ const PersonPosition = styled.h3`
 function Employees(props) {
   const person = props.employees.map((employee) =>
     <Person key={employee.id}>
-      <PersonPhoto></PersonPhoto>
+      <PersonPhoto person={`${employee.image}`}></PersonPhoto>
       <PersonName>{employee.name}</PersonName>
       <PersonPosition>{employee.position}</PersonPosition>
     </Person>
@@ -230,24 +251,24 @@ function Employees(props) {
 }
 
 const employees = [
-  {id: 1, name: 'Цабеха Яна', position: 'HR Менеджер'},
-  {id: 2, name: 'Ланбіна Ольга', position: 'Директор департаменту проектного менеджменту та бізнес-аналізу'},
-  {id: 3, name: 'Сухова Татяна', position: 'Заступник Генерального директора'},
-  {id: 4, name: 'Суфтін Євген', position: 'Провідний інженер-програміст департаменту впровадження та супроводження ПЗ'},
-  {id: 5, name: 'Сошко Євген', position: 'Директор департаменту впровадження та супроводження ПЗ'},
-  {id: 6, name: 'Кобернюк Ярослав', position: 'Заступник директора департаменту впровадження та супроводження ПЗ'},
-  {id: 7, name: 'Пастушенко Оксана', position: 'Начальник відділу технічної документації'},
-  {id: 8, name: 'Овчарук Анатолій', position: 'Начальник відділу обліку, резервування, фінансової та статистичної звітності'},
-  {id: 9, name: 'Музика Олег', position: 'Заступник директора департаменту розробки та тестування ПЗ'},
-  {id: 10, name: 'Савченко Андрій', position: 'Менеджер з інформації'},
-  {id: 11, name: 'Марценюк Людмила', position: 'Провідний інженер-програміст'},
-  {id: 12, name: 'Малоросіянов Михайло', position: 'Інженер-програміст департаменту впровадження та супроводження ПЗ'},
-  {id: 13, name: 'Коротков Сергій', position: 'Начальник управління системно-технічної підтримки'},
-  {id: 14, name: 'Козачок Віталій', position: 'Провідний інженер-програміст управління проектів ДКСУ'},
-  {id: 15, name: 'Гудима Ігор', position: 'Провідний інженер-програміст управління проектів ДКСУ'},
-  {id: 16, name: 'Вірко Татяна', position: 'Начальник відділу обліку'},
-  {id: 17, name: 'Кадученко Ярослава', position: 'Aдміністративний директор'},
-  {id: 18, name: 'Кондаков Валерій', position: 'Генеральний директор'},
+  {id: 1, name: 'Цабеха Яна', position: 'HR Менеджер', image: `${onee}`},
+  {id: 2, name: 'Ланбіна Ольга', position: 'Директор департаменту проектного менеджменту та бізнес-аналізу', image: `${twoe}`},
+  {id: 3, name: 'Сухова Татяна', position: 'Заступник Генерального директора', image: `${threee}`},
+  {id: 4, name: 'Суфтін Євген', position: 'Провідний інженер-програміст департаменту впровадження та супроводження ПЗ', image: `${foure}`},
+  {id: 5, name: 'Сошко Євген', position: 'Директор департаменту впровадження та супроводження ПЗ', image: `${fivee}`},
+  {id: 6, name: 'Кобернюк Ярослав', position: 'Заступник директора департаменту впровадження та супроводження ПЗ', image: `${sixe}`},
+  {id: 7, name: 'Пастушенко Оксана', position: 'Начальник відділу технічної документації', image: `${sevene}`},
+  {id: 8, name: 'Овчарук Анатолій', position: 'Начальник відділу обліку, резервування, фінансової та статистичної звітності', image: `${eighte}`},
+  {id: 9, name: 'Музика Олег', position: 'Заступник директора департаменту розробки та тестування ПЗ', image: `${ninee}`},
+  {id: 10, name: 'Савченко Андрій', position: 'Менеджер з інформації', image: `${tene}`},
+  {id: 11, name: 'Марценюк Людмила', position: 'Провідний інженер-програміст', image: `${elevene}`},
+  {id: 12, name: 'Малоросіянов Михайло', position: 'Інженер-програміст департаменту впровадження та супроводження ПЗ', image: `${twelvee}`},
+  {id: 13, name: 'Коротков Сергій', position: 'Начальник управління системно-технічної підтримки', image: `${thirteene}`},
+  {id: 14, name: 'Козачок Віталій', position: 'Провідний інженер-програміст управління проектів ДКСУ', image: `${fourteene}`},
+  {id: 15, name: 'Гудима Ігор', position: 'Провідний інженер-програміст управління проектів ДКСУ', image: `${fifteene}`},
+  {id: 16, name: 'Вірко Татяна', position: 'Начальник відділу обліку', image: `${sixteene}`},
+  {id: 17, name: 'Кадученко Ярослава', position: 'Aдміністративний директор', image: `${seventeene}`},
+  {id: 18, name: 'Кондаков Валерій', position: 'Генеральний директор', image: `${eighteene}`},
 ]
 
 const Company = (props) => (

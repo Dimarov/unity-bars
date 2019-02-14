@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { withPrefix } from 'gatsby'
-
+import office from '../images/fix/office.jpg'
 import bg from '../images/fix/products.jpg'
 import dwhMac from '../images/fix/dwh_mac.png'
 import dwhLogoSVG from '../images/fix/dwh_logo.png'
@@ -23,7 +23,7 @@ const Container = styled.div`
 const StyledHeader = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${bg});
+  background-image: url(${office});
   background-size: cover;
   background-attachment: fixed;
   padding: 8rem 1rem;

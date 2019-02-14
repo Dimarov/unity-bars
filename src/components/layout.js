@@ -27,20 +27,14 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Компанія UNITY-BARS успішно працює на ринку 25 років в сфері розробки банківського програмного забезпечення. Більше 90 професійних фахівців різних напрямків.' },
             { name: 'keywords', content: 'IT, FinTech, ПО, банкинг' },
           ]}>
-          <html lang="en" />
+          <html lang="uk" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
+
         <div>
-        <CSSTransitionGroup
-          transitionName="content"
-          transitionAppear={true}
-          transitionAppearTimeout={500}
-          transitionEnter={false}
-          transitionLeave={false}>
+
 
             {children}
 
-        </CSSTransitionGroup>
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>

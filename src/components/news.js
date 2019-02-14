@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import office from '../images/fix/office3.jpg'
 import bg from "../images/products.jpg"
 
 import one from "../images/news/news1.jpg"
@@ -28,7 +28,8 @@ const Container = styled.div`
 const StyledHeader = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${bg});
+  background-image: url(${office});
+  background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
   padding: 8rem 1rem;

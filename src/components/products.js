@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from "styled-components"
 
 import bg from "../images/products.jpg"
-
+import office from '../images/fix/office.jpg'
 import absbars from "../images/products/absbars.png"
 import absbarsmmfo from "../images/products/absbarsmmfo.png"
 import corp2 from "../images/products/corp2.png"
@@ -28,7 +28,7 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${bg});
+  background-image: url(${office});
   background-size: cover;
   background-attachment: fixed;
   padding: 8rem 1rem;
@@ -178,7 +178,7 @@ const Products = (props) => (
       </ProductLink>
       <ProductLink to="bone">
         <Product>
-          <ProductTitle>Клієнт-банк</ProductTitle>
+          <ProductTitle>Інтернет-банкінг система</ProductTitle>
 
           <ProductImage src={bone} />
         </Product>
