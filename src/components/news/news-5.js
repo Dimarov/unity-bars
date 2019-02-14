@@ -24,6 +24,7 @@ const StyledHeader = styled.div`
   height: 32rem;
   background-image: url(${five});
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   padding: 8rem 1rem;
 `
