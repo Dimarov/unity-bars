@@ -1,11 +1,19 @@
-import React from "react"
-import { renderToString } from "react-dom/server"
-import i18n from "./src/i18n"
+import Backend from "i18next-node-fs-backend";
+import { reactI18nextModule } from "react-i18next";
 
-import createStore from "./src/state/createStore"
+import i18n from "./src/i18n";
 
+i18n
+  .use(Backend)
+  .use(reactI18nextModule)
+  .init({
+    preload: ["uk", "en"],
+    backend: {
+      loadPath: "src/locales/{{lng}}/{{ns}}.json"
+    }
+  });
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-  i18n.loadNamespaces(["common"], () => {
-    replaceBodyHTMLString(bodyComponent)
-  })
-}
+  i18n.loadNamespaces(["Header"], () => {
+    replaceBodyHTMLString(bodyComponent);
+  });
+};

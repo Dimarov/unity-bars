@@ -7,7 +7,7 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import LanguageSwitcher from './language-switcher'
 import Header from './header'
 import Footer from './footer'
-
+import i18n from '../i18n'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
 
 
             {children}
-            
+
         </div>
 
         <Footer siteTitle={data.site.siteMetadata.title} />
