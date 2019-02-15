@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import unitybarslogobackground from '../images/unitybarslogobackground.png'
 import ub from '../images/ub-background.jpg'
 
@@ -94,22 +94,29 @@ const StyledButton = styled.button`
   }
 `;
 
-const Background = () => (
-  <StyledBackground>
-    <Container>
-      <StyledContent className="content">
-        <BackgroundImage src={unitybarslogobackground} alt="city-view" />
-        <div>
-          <Link to="/company">
-            <StyledButton>Про Нас</StyledButton>
-          </Link>
-          <Link to="/products">
-            <StyledButton outline>Продукти</StyledButton>
-          </Link>
-        </div>
-      </StyledContent>
-    </Container>
-  </StyledBackground>
-)
+class Background extends React.Component {
 
-export default Background
+  render() {
+    const { t } = this.props
+
+    return(
+      <StyledBackground>
+        <Container>
+          <StyledContent className="content">
+            <BackgroundImage src={unitybarslogobackground} alt="city-view" />
+            <div>
+              <Link to="/company">
+                <StyledButton>{t("About Us")}</StyledButton>
+              </Link>
+              <Link to="/products">
+                <StyledButton outline>{t("Products")}</StyledButton>
+              </Link>
+            </div>
+          </StyledContent>
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("Background")(Background)
