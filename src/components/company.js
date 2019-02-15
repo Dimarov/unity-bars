@@ -146,8 +146,16 @@ const Client = styled.div`
   filter: brightness(.95);
   transition: all .2s ease-in;
 
-  :hover {
-    filter: brightness(1);
+
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    :hover {
+      filter: brightness(1);
+    }
   }
 `
 
@@ -165,8 +173,16 @@ const Partner = styled.div`
   filter: brightness(.95);
   transition: all .2s ease-in;
 
-  :hover {
-    filter: brightness(1);
+
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    :hover {
+      filter: brightness(1);
+    }
   }
 `
 
@@ -180,8 +196,16 @@ const Person = styled.div`
   align-items: baseline;
   transition: all .1s ease-out;
 
-  :hover {
-    transform: translateY(-.125rem);
+
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    :hover {
+      transform: translateY(-.125rem);
+    }
   }
 `
 

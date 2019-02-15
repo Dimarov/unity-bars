@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Unity-Bars',
+    title: 'UNITY-BARS',
   },
   plugins: [
     'gatsby-plugin-styled-components',

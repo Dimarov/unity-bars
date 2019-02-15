@@ -79,40 +79,32 @@ const Product = styled.div`
   transition: all .3s ease-in-out;
   cursor: pointer;
 
-  img {
-    filter: brightness(.3);
-  }
-
-  :focus,
-  :hover {
-    background: #fafafa;
-  }
-
-  :focus,
-  :hover img {
-    filter: brightness(1);
-  }
-
-  :focus,
-  :hover h2 {
-    opacity: .6;
-    top: 20%;
-
-    @media (min-width: 40rem) {
-
-    }
-
-    @media (min-width: 80rem) {
-      top: 15%;
-    }
-  }
-
   @media (min-width: 40rem) {
 
   }
 
   @media (min-width: 80rem) {
     height: 20rem;
+
+    img {
+      filter: brightness(.3);
+    }
+
+    :focus,
+    :hover {
+      background: #fafafa;
+    }
+
+    :focus,
+    :hover img {
+      filter: brightness(1);
+    }
+
+    :focus,
+    :hover h2 {
+      opacity: .6;
+      top: 15%;
+    }
   }
 `
 

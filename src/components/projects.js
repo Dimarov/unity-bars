@@ -147,7 +147,7 @@ const Projects = (props) => (
     <Header>
       <Container>
         <Title>Проекти</Title>
-        <Subtitle>Unity-Bars приймає участь у новітніх проектах України</Subtitle>
+        <Subtitle>UNITY-BARS приймає участь у новітніх проектах України</Subtitle>
       </Container>
     </Header>
     <Grid>

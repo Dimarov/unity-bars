@@ -529,6 +529,23 @@ const BackgroundCase = styled.div`
   }
 `
 
+const BackgroundCaseNew = styled.div`
+  width: 100%;
+  height: 32rem;
+  margin-bottom: 2rem;
+  background: ${props => props.themeColor || "#000"};
+  background-size: cover;
+  filter: brightness(.6);
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 40rem;
+  }
+`
+
 const ContentCase = styled.div`
   height: 100%;
   width: 100%;
@@ -836,7 +853,7 @@ const Bone = (props) => (
           </ImageContainerCase>
         </ContentCase>
       </BackgroundCase>
-      <BackgroundCase themeColor='#1A1A1A'>
+      <BackgroundCase themeColor='#1A1A1A' >
         <ContentCase>
           <ImageContainerCase>
             <ImageForward src={forwardImage} alt="forward" />
@@ -853,6 +870,17 @@ const Bone = (props) => (
           </InfoCase>
         </ContentCase>
       </BackgroundCase>
+      <BackgroundCaseNew themeColor='#1A1A1A'>
+        <ContentCase>
+
+          <InfoCase>
+            <TitleCase themeColorSecondary='#fff'>Система B.One для <SpanCase color="#F90400">УБРР</SpanCase></TitleCase>
+            <SubtitleCase themeColorSecondary='#fff'>Очікуйте новітню розробку в квітні 2019</SubtitleCase>
+
+          </InfoCase>
+        </ContentCase>
+      </BackgroundCaseNew>
+
     </ContainerCase>
     <Container>
       <DownloadContainer>

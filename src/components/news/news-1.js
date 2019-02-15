@@ -97,7 +97,7 @@ const News1 = (props) => (
     </StyledHeader>
     <Container>
       <StyledNews>
-        <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
+        <StyledNewsTitle>2019 Року Компанія UNITY-BARS Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
         <StyledNewsText></StyledNewsText>
         <StyledNewsImage src={picture} alt="iso" />
         <StyledNewsDate>12.02.2019</StyledNewsDate>

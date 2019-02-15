@@ -159,7 +159,7 @@ const News = (props) => (
     <StyledHeader>
       <Container>
         <StyledTitle>Новини</StyledTitle>
-        <StyledSubtitle>Останні новини в Unity-Bars</StyledSubtitle>
+        <StyledSubtitle>Останні новини в UNITY-BARS</StyledSubtitle>
       </Container>
     </StyledHeader>
     <StyledGrid>
@@ -167,7 +167,7 @@ const News = (props) => (
       <StyledNews>
         <StyledLink to="news-1">
           <StyledNewsPhoto image={one}></StyledNewsPhoto>
-          <StyledNewsTitle>2019 Року Компанія Unity-Bars Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
+          <StyledNewsTitle>2019 Року Компанія UNITY-BARS Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
 
           <StyledNewsDate>12.02.2019</StyledNewsDate>
         </StyledLink>
