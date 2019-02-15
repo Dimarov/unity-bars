@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
 
 
             {children}
-            <LanguageSwitcher />
+            
         </div>
 
         <Footer siteTitle={data.site.siteMetadata.title} />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import boneImage from "../images/mockups/bone-macbook.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
@@ -237,60 +237,67 @@ const MoreButton = styled(Link)`
   }
 `
 
-const ProductPreview = (props) => (
-  <div>
-    <Background themeColor='#000'>
-      <Content>
-        <ImageContainer>
-          <ImageBone src={boneImage} alt="bone"/>
-        </ImageContainer>
-        <Info>
-          <Title themeColorSecondary='#FFF'>B.One</Title>
-          <Subtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та фізичних осіб</Subtitle>
-          <ButtonContainer>
-            <Button href="https://itunes.apple.com/ru/app/bone-client-bank/id1156928571?mt=8" themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
-            <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
-            <Button href="https://bone.unity-bars.com:2443/auth/logon" outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
-          </ButtonContainer>
-          <MoreButton to="/bone" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
-        </Info>
-      </Content>
-    </Background>
-    <Background themeColor='#FEFEFE'>
-      <Content>
-        <Info>
-          <Title themeColorSecondary='#303030'>CorpLight <Span color="#3EC4E1">Ощадбанк</Span></Title>
-          <Subtitle themeColorSecondary='#303030'>Онлайн система управління банківськими рахунками та продуктами</Subtitle>
-          <ButtonContainer>
-            <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
-            <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
-            <Button href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
-          </ButtonContainer>
-          <MoreButton to="/corplight" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
-        </Info>
-        <ImageContainer>
-          <ImageCorp src={corpImage} alt="corplight" />
-        </ImageContainer>
-      </Content>
-    </Background>
-    <Background themeColor='#FAFAFA'>
-      <Content>
-        <ImageContainer>
-          <ImageForward src={forwardImage} alt="forward" />
-        </ImageContainer>
-        <Info>
-          <Title themeColorSecondary='#29333E'><Span color="#991F3A">Forward</Span> Online</Title>
-          <Subtitle themeColorSecondary='#29333E'>24/7 доступ до Ваших банківських сервісів</Subtitle>
-          <ButtonContainer>
-            <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
-            <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
-            <Button href="https://online.forward-bank.com/dashboard" outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
-          </ButtonContainer>
-          <MoreButton to="/forward" themeColorSecondary='#3EC4E1'>Більше</MoreButton>
-        </Info>
-      </Content>
-    </Background>
-  </div>
-)
+class ProductPreview extends React.Component {
 
-export default ProductPreview
+  render() {
+    const { t } = this.props
+
+    return(
+      <div>
+        <Background themeColor='#000'>
+          <Content>
+            <ImageContainer>
+              <ImageBone src={boneImage} alt="bone"/>
+            </ImageContainer>
+            <Info>
+              <Title themeColorSecondary='#FFF'>B.One</Title>
+              <Subtitle themeColorSecondary='#FFF'>{t("Internet banking for SME and individuals")}</Subtitle>
+              <ButtonContainer>
+                <Button href="https://itunes.apple.com/ru/app/bone-client-bank/id1156928571?mt=8" themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
+                <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
+                <Button href="https://bone.unity-bars.com:2443/auth/logon" outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
+              </ButtonContainer>
+              <MoreButton to="/bone" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButton>
+            </Info>
+          </Content>
+        </Background>
+        <Background themeColor='#FEFEFE'>
+          <Content>
+            <Info>
+              <Title themeColorSecondary='#303030'>CorpLight <Span color="#3EC4E1">{t("Oschadbank")}</Span></Title>
+              <Subtitle themeColorSecondary='#303030'>{t("Online banking products and services control system")}</Subtitle>
+              <ButtonContainer>
+                <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
+                <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
+                <Button href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
+              </ButtonContainer>
+              <MoreButton to="/corplight" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButton>
+            </Info>
+            <ImageContainer>
+              <ImageCorp src={corpImage} alt="corplight" />
+            </ImageContainer>
+          </Content>
+        </Background>
+        <Background themeColor='#FAFAFA'>
+          <Content>
+            <ImageContainer>
+              <ImageForward src={forwardImage} alt="forward" />
+            </ImageContainer>
+            <Info>
+              <Title themeColorSecondary='#29333E'><Span color="#991F3A">Forward</Span> Online</Title>
+              <Subtitle themeColorSecondary='#29333E'>{t("24/7 access to your banking services")}</Subtitle>
+              <ButtonContainer>
+                <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
+                <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
+                <Button href="https://online.forward-bank.com/dashboard" outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
+              </ButtonContainer>
+              <MoreButton to="/forward" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButton>
+            </Info>
+          </Content>
+        </Background>
+      </div>
+    )
+  }
+}
+
+export default translate("ProductPreview")(ProductPreview)
