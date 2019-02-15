@@ -145,7 +145,7 @@ const Client = styled.div`
   align-items: center;
   filter: brightness(.95);
   transition: all .2s ease-in;
-
+  object-fit: cover;
 
 
   @media (min-width: 40rem) {
@@ -172,7 +172,7 @@ const Partner = styled.div`
   align-items: center;
   filter: brightness(.95);
   transition: all .2s ease-in;
-
+  object-fit: cover;
 
 
   @media (min-width: 40rem) {
