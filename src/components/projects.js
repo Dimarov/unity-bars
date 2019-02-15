@@ -189,6 +189,7 @@ class Projects extends React.Component {
               </ProjectSubtitle>
               <ProjectText>
                 {t("ThirdDescription")}
+              </ProjectText>
             </ProjectInfo>
           </Project>
           <Project>
