@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from "styled-components"
 import office from '../images/fix/office3.jpg'
 import bg from "../images/products.jpg"
-
+import { translate } from 'react-i18next'
 import one from "../images/news/news1.jpg"
 import two from "../images/news/news2.jpg"
 import three from "../images/news/news3.jpg"
@@ -154,77 +154,84 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-const News = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-      <Container>
-        <StyledTitle>Новини</StyledTitle>
-        <StyledSubtitle>Останні новини в UNITY-BARS</StyledSubtitle>
-      </Container>
-    </StyledHeader>
-    <StyledGrid>
+class News extends React.Component {
 
-      <StyledNews>
-        <StyledLink to="news-1">
-          <StyledNewsPhoto image={one}></StyledNewsPhoto>
-          <StyledNewsTitle>2019 Року Компанія UNITY-BARS Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
+  render() {
+    const { t } = this.props
 
-          <StyledNewsDate>12.02.2019</StyledNewsDate>
-        </StyledLink>
-      </StyledNews>
+    return(
+      <StyledBackground>
+        <StyledHeader>
+          <Container>
+            <StyledTitle>Новини</StyledTitle>
+            <StyledSubtitle>Останні новини в UNITY-BARS</StyledSubtitle>
+          </Container>
+        </StyledHeader>
+        <StyledGrid>
 
+          <StyledNews>
+            <StyledLink to="news-1">
+              <StyledNewsPhoto image={one}></StyledNewsPhoto>
+              <StyledNewsTitle>2019 Року Компанія UNITY-BARS Розпочинає Підготовку Впровадження Міжнародних Стандартів</StyledNewsTitle>
 
-      <StyledNews>
-        <StyledLink to="news-2">
-          <StyledNewsPhoto image={two}></StyledNewsPhoto>
-          <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
-
-          <StyledNewsDate>23.08.2018</StyledNewsDate>
-        </StyledLink>
-      </StyledNews>
+              <StyledNewsDate>12.02.2019</StyledNewsDate>
+            </StyledLink>
+          </StyledNews>
 
 
+          <StyledNews>
+            <StyledLink to="news-2">
+              <StyledNewsPhoto image={two}></StyledNewsPhoto>
+              <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
 
-      <StyledNews>
-        <StyledLink to="news-3">
-          <StyledNewsPhoto image={three}></StyledNewsPhoto>
-          <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
-
-          <StyledNewsDate>16.05.2018</StyledNewsDate>
-        </StyledLink>
-      </StyledNews>
-
-
-      <StyledNews>
-        <StyledLink to="news-4">
-          <StyledNewsPhoto image={four}></StyledNewsPhoto>
-          <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ 🎉</StyledNewsTitle>
-
-          <StyledNewsDate>16.03.2018</StyledNewsDate>
-        </StyledLink>
-      </StyledNews>
+              <StyledNewsDate>23.08.2018</StyledNewsDate>
+            </StyledLink>
+          </StyledNews>
 
 
-      <StyledNews>
-        <StyledLink to="news-5">
-          <StyledNewsPhoto image={five}></StyledNewsPhoto>
-          <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
-          <StyledNewsDate>03.03.2018</StyledNewsDate>
-        </StyledLink>
-      </StyledNews>
+
+          <StyledNews>
+            <StyledLink to="news-3">
+              <StyledNewsPhoto image={three}></StyledNewsPhoto>
+              <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
+
+              <StyledNewsDate>16.05.2018</StyledNewsDate>
+            </StyledLink>
+          </StyledNews>
 
 
-      <StyledNews>
-        <StyledLink to="news-6">
-          <StyledNewsPhoto image={six}></StyledNewsPhoto>
-          <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від
-          НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
-          <StyledNewsDate>21.11.2017</StyledNewsDate>
-        </StyledLink>
-      </StyledNews>
+          <StyledNews>
+            <StyledLink to="news-4">
+              <StyledNewsPhoto image={four}></StyledNewsPhoto>
+              <StyledNewsTitle>Відтепер, отримання пенсї стає ще зручнішим та безпечнішим, завдяки нашій Системі Обміну Данними з ПФУ 🎉</StyledNewsTitle>
 
-    </StyledGrid>
-  </StyledBackground>
-)
+              <StyledNewsDate>16.03.2018</StyledNewsDate>
+            </StyledLink>
+          </StyledNews>
 
-export default News
+
+          <StyledNews>
+            <StyledLink to="news-5">
+              <StyledNewsPhoto image={five}></StyledNewsPhoto>
+              <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
+              <StyledNewsDate>03.03.2018</StyledNewsDate>
+            </StyledLink>
+          </StyledNews>
+
+
+          <StyledNews>
+            <StyledLink to="news-6">
+              <StyledNewsPhoto image={six}></StyledNewsPhoto>
+              <StyledNewsTitle>Успішне переведення Системи Автоматизації Банку на трирівневу архітектуру від
+              НБУ спільно з UNITY-BARS 🚀</StyledNewsTitle>
+              <StyledNewsDate>21.11.2017</StyledNewsDate>
+            </StyledLink>
+          </StyledNews>
+
+        </StyledGrid>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("News")(News)
