@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from "styled-components"
 import { Link } from 'gatsby'
-import { withPrefix } from 'gatsby'
+
+
+import DownloadForm from './download-form'
 
 import header from "../images/mockups/bone-iphones.png"
 import about from "../images/mockups/corplight-iphone-2.png"
@@ -807,7 +809,7 @@ const Bone = (props) => (
           <FunctionalitySubtitle>Подавати заявку на підключення депозитів банківських продуктів.</FunctionalitySubtitle>
           <FunctionalitySubtitle>Керувати регулярними платежами.</FunctionalitySubtitle>
           <FunctionalitySubtitle>Контролювати доступ для співробітників, підключених до системи.</FunctionalitySubtitle>
-          <InfoElementDownloadLink href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
+          <DownloadForm />
         </div>
         <ImageContainer>
           <AboutImage src={boneImage} alt="bone-mockup" />

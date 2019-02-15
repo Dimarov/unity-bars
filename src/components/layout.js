@@ -4,8 +4,10 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { CSSTransitionGroup } from 'react-transition-group'
 
+import LanguageSwitcher from './language-switcher'
 import Header from './header'
 import Footer from './footer'
+import i18n from './i18'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -30,12 +32,15 @@ const Layout = ({ children }) => (
           <html lang="uk" />
         </Helmet>
         <script src="//instant.page/1.1.0" type="module" integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp"></script>
+        <Header siteTitle={data.site.siteMetadata.title}/>
+
         <div>
 
 
             {children}
 
         </div>
+        <LanguageSwitcher />
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}

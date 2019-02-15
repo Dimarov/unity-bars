@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 import { CSSTransitionGroup } from 'react-transition-group'
-
 import logo from "../images/unitybarsheaderlogo.svg"
+import { translate } from 'react-i18next'
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -130,7 +130,7 @@ const NavLink = styled(Link)`
   font-size: 1.5rem;
   font-weight: 300;
   transition: all .3s ease-out;
-  margin: 1rem 0;
+  padding: 1rem 2rem;
 
   :focus,
   :hover {
@@ -143,6 +143,7 @@ const NavLink = styled(Link)`
 
   @media (min-width: 80rem) {
     margin: 0;
+    padding: 0;
     font-size: 1rem;
     font-weight: 400;
   }
@@ -209,6 +210,8 @@ class Header extends React.Component {
   }
 
   render() {
+    const { t } = this.props
+
     return (
       <CSSTransitionGroup
         transitionName="nav"
@@ -228,7 +231,7 @@ class Header extends React.Component {
               </MobileLinkContainer>
               <LinkContainer>
                 <NavLink to="/">
-                  Головна
+                  {t("link")}
                 </NavLink>
                 <NavLink to="/company">
                   Компанія
@@ -268,4 +271,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+export default translate("Header")(Header)

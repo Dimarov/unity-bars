@@ -246,7 +246,7 @@ const ProductPreview = (props) => (
         </ImageContainer>
         <Info>
           <Title themeColorSecondary='#FFF'>B.One</Title>
-          <Subtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та приватних клієнтів</Subtitle>
+          <Subtitle themeColorSecondary='#FFF'>Інтернет банкінг для МСБ та фізичних осіб</Subtitle>
           <ButtonContainer>
             <Button href="https://itunes.apple.com/ru/app/bone-client-bank/id1156928571?mt=8" themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
             <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>

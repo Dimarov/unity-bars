@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from "react"
+import { renderToString } from "react-dom/server"
+import i18n from "./src/i18n"
 
-// You can delete this file if you're not using it
+import createStore from "./src/state/createStore"
+
+const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
+  i18n.loadNamespaces(["common"], () => {
+    replaceBodyHTMLString(bodyComponent)
+  })
+}
+
+export default replaceRenderer

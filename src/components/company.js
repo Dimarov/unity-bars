@@ -305,7 +305,7 @@ const Company = (props) => (
       </Container>
     </Header>
     <Container>
-      <Topic>Наша Команда</Topic>
+      <Topic>Наша команда</Topic>
       <hr />
       <Employees employees={employees} />
       <Topic>Клієнти та партнери</Topic>
