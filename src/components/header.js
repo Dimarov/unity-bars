@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { CSSTransitionGroup } from 'react-transition-group'
 import logo from "../images/unitybarsheaderlogo.svg"
 import { translate } from 'react-i18next'
+import LanguageSwitcher from './language-switcher'
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -173,28 +174,6 @@ const LanguageList = styled.div`
   }
 `;
 
-const LanguageButton = styled.button`
-  height: 1.75rem;
-  width: 1.75rem;
-  padding: 0;
-  margin: 0 .5rem;
-  background: ${props => props.selected ? "#FFF" : "none"};
-  color: ${props => props.selected ? "#1A1A1A" : "#FFF"};
-  border: 2px solid #fff;
-  border-radius: .5rem;
-  font-size: .625rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all .3s ease-out;
-
-  :focus,
-  :hover {
-    border: 2px solid #a1a1a1;
-    background: ${props => props.selected ? "#a1a1a1" : "none"};
-    color: ${props => props.selected ? "#1A1A1A" : "#a1a1a1"};
-  }
-`;
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -231,37 +210,30 @@ class Header extends React.Component {
               </MobileLinkContainer>
               <LinkContainer>
                 <NavLink to="/">
-                  {t("link")}
+                  {t("home")}
                 </NavLink>
                 <NavLink to="/company">
-                  Компанія
+                  {t("company")}
                 </NavLink>
                 <NavLink to="/products">
-                  Продукти
+                  {t("products")}
                 </NavLink>
                 <NavLink to="/projects">
-                  Проекти
+                  {t("projects")}
                 </NavLink>
                 <NavLink to="/news">
-                  Новини
+                  {t("news")}
                 </NavLink>
                 <NavLink to="/vacancies">
-                  Вакансії
+                  {t("vacancies")}
                 </NavLink>
                 <NavLink to="/contacts">
-                  Контакти
+                  {t("contacts")}
                 </NavLink>
               </LinkContainer>
               <LanguageList>
-                <Link to={this.props.ukLink}>
-                  <LanguageButton selected>UK</LanguageButton>
-                </Link>
-                {/* <Link to={this.props.ruLink}>
-                  <LanguageButton>RU</LanguageButton>
-                </Link> */}
-                <Link to={this.props.enLink}>
-                  <LanguageButton>EN</LanguageButton>
-                </Link>
+
+                <LanguageSwitcher />
               </LanguageList>
             </Navigation>
           </Container>

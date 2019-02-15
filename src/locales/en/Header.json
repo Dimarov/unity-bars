@@ -1,9 +1,9 @@
 {
-  "link": "Home",
-  "link-2": "Company",
-  "link-3": "Products",
-  "link-4": "Projects",
-  "link-5": "News",
-  "link-6": "Vacancies",
-  "link-7": "Contacts"
+  "home": "Home",
+  "company": "Company",
+  "products": "Products",
+  "projects": "Projects",
+  "news": "News",
+  "vacancies": "Vacancies",
+  "contacts": "Contacts"
 }
