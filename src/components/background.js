@@ -106,7 +106,7 @@ class Background extends React.Component {
             <BackgroundImage src={unitybarslogobackground} alt="city-view" />
             <div>
               <Link to="/company">
-                <StyledButton>{t("About")}</StyledButton>
+                <StyledButton>{t("About Us")}</StyledButton>
               </Link>
               <Link to="/products">
                 <StyledButton outline>{t("Products")}</StyledButton>
