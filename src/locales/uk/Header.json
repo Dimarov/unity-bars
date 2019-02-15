@@ -1,9 +1,9 @@
 {
-  "home": "Головна",
-  "company": "Компанія",
-  "products": "Продукти",
-  "projects": "Проекти",
-  "news": "Новини",
-  "vacancies": "Вакансії",
-  "contacts": "Контакти"
+  "Home": "Головна",
+  "Company": "Компанія",
+  "Products": "Продукти",
+  "Projects": "Проекти",
+  "News": "Новини",
+  "Vacancies": "Вакансії",
+  "Contacts": "Контакти"
 }

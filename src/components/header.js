@@ -210,25 +210,25 @@ class Header extends React.Component {
               </MobileLinkContainer>
               <LinkContainer>
                 <NavLink to="/">
-                  {t("home")}
+                  {t("Home")}
                 </NavLink>
                 <NavLink to="/company">
-                  {t("company")}
+                  {t("Company")}
                 </NavLink>
                 <NavLink to="/products">
-                  {t("products")}
+                  {t("Products")}
                 </NavLink>
                 <NavLink to="/projects">
-                  {t("projects")}
+                  {t("Projects")}
                 </NavLink>
                 <NavLink to="/news">
-                  {t("news")}
+                  {t("News")}
                 </NavLink>
                 <NavLink to="/vacancies">
-                  {t("vacancies")}
+                  {t("Vacancies")}
                 </NavLink>
                 <NavLink to="/contacts">
-                  {t("contacts")}
+                  {t("Contacts")}
                 </NavLink>
               </LinkContainer>
               <LanguageList>

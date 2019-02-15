@@ -1,9 +1,9 @@
 {
-  "home": "Home",
-  "company": "Company",
-  "products": "Products",
-  "projects": "Projects",
-  "news": "News",
-  "vacancies": "Vacancies",
-  "contacts": "Contacts"
+  "Home": "Home",
+  "Company": "Company",
+  "Products": "Products",
+  "Projects": "Projects",
+  "News": "News",
+  "Vacancies": "Vacancies",
+  "Contacts": "Contacts"
 }
