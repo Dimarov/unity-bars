@@ -113,4 +113,4 @@ class News1 extends React.Component {
   }
 }
 
-export default translate("News")(News1)
+export default translate("News1")(News1)
