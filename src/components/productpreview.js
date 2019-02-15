@@ -21,6 +21,22 @@ const Background = styled.div`
   }
 `
 
+const BackgroundNew = styled.div`
+  width: 100%;
+  height: 32rem;
+  background: ${props => props.themeColor || "#000"};
+  background-size: cover;
+  filter: brightness(.6);
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 40rem;
+  }
+`
+
 const Content = styled.div`
   height: 100%;
   width: 100%;
@@ -295,6 +311,14 @@ class ProductPreview extends React.Component {
             </Info>
           </Content>
         </Background>
+        <BackgroundNew themeColor='#1a1a1a'>
+          <Content>
+            <Info>
+              <Title themeColorSecondary='#FFF'>{t("B.One system for")} <Span color="#F90400">{t("UBRR")}</Span></Title>
+              <Subtitle themeColorSecondary='#FFF'>{t("Expect the latest development in April 2019")}</Subtitle>
+            </Info>
+          </Content>
+        </BackgroundNew>
       </div>
     )
   }

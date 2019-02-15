@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
+import { translate } from 'react-i18next'
+
 import office from '../images/fix/office4.jpg'
 import background from "../images/company.jpg"
 
@@ -295,101 +297,109 @@ const employees = [
   {id: 18, name: 'Кондаков Валерій', position: 'Генеральний директор', image: `${eighteene}`},
 ]
 
-const Company = (props) => (
-  <Background>
-    <Header>
-      <Container>
-        <Title>Компанія</Title>
-        <Subtitle>UNITY BARS – провідна українська фінтех компанія, яка спеціалізується на впровадженні ефективного та сучасного програмного забезпечення для банків та фінансових установ.
-        </Subtitle>
-      </Container>
-    </Header>
-    <Container>
-      <Topic>Наша команда</Topic>
-      <hr />
-      <Employees employees={employees} />
-      <Topic>Клієнти та партнери</Topic>
-      <hr />
-      <SecondGrid>
-        <Client>
-          <Image src={one} />
-        </Client>
-        <Client>
-          <Image src={two} />
-        </Client>
-        <Client>
-          <Image src={three} />
-        </Client>
-        <Client>
-          <Image src={four} />
-        </Client>
-        <Client>
-          <Image src={five} />
-        </Client>
-        <Client>
-          <Image src={six} />
-        </Client>
-        <Client>
-          <Image src={seven} />
-        </Client>
-        <Client>
-          <Image src={eight} />
-        </Client>
-        <Client>
-          <Image src={nine} />
-        </Client>
-        <Client>
-          <Image src={ten} />
-        </Client>
-        <Client>
-          <Image src={eleven} />
-        </Client>
-        <Client>
-          <Image src={twelve} />
-        </Client>
-      </SecondGrid>
-      <br />
-      <SecondGrid>
-        <Partner>
-          <Image src={onep} />
-        </Partner>
-        <Partner>
-          <Image src={twop} />
-        </Partner>
-        <Partner>
-          <Image src={threep} />
-        </Partner>
-        <Partner>
-          <Image src={fourp} />
-        </Partner>
-        <Partner>
-          <Image src={fivep} />
-        </Partner>
-        <Partner>
-          <Image src={sixp} />
-        </Partner>
-        <Partner>
-          <Image src={sevenp} />
-        </Partner>
-        <Partner>
-          <Image src={eightp} />
-        </Partner>
-        <Partner>
-          <Image src={ninep} />
-        </Partner>
-        <Partner>
-          <Image src={tenp} />
-        </Partner>
-        <Partner>
-          <Image src={elevenp} />
-        </Partner>
-        <Partner>
-          <Image src={twelvep} />
-        </Partner>
-      </SecondGrid>
-      <br />
-    </Container>
-  </Background>
-)
+class Company extends React.Component {
 
-export default Company
+  render() {
+    const { t } = this.props
+
+    return(
+      <Background>
+        <Header>
+          <Container>
+            <Title>{t("Company")}</Title>
+            <Subtitle>
+              {t("UNITY BARS is a leading Ukrainian company specializing in the implementation of efficient and up-to-date software for banks and financial institutions")}
+            </Subtitle>
+          </Container>
+        </Header>
+        <Container>
+          <Topic>{t("Our Team")}</Topic>
+          <hr />
+          <Employees employees={employees} />
+          <Topic>{t("Clients and partners")}</Topic>
+          <hr />
+          <SecondGrid>
+            <Client>
+              <Image src={one} />
+            </Client>
+            <Client>
+              <Image src={two} />
+            </Client>
+            <Client>
+              <Image src={three} />
+            </Client>
+            <Client>
+              <Image src={four} />
+            </Client>
+            <Client>
+              <Image src={five} />
+            </Client>
+            <Client>
+              <Image src={six} />
+            </Client>
+            <Client>
+              <Image src={seven} />
+            </Client>
+            <Client>
+              <Image src={eight} />
+            </Client>
+            <Client>
+              <Image src={nine} />
+            </Client>
+            <Client>
+              <Image src={ten} />
+            </Client>
+            <Client>
+              <Image src={eleven} />
+            </Client>
+            <Client>
+              <Image src={twelve} />
+            </Client>
+          </SecondGrid>
+          <br />
+          <SecondGrid>
+            <Partner>
+              <Image src={onep} />
+            </Partner>
+            <Partner>
+              <Image src={twop} />
+            </Partner>
+            <Partner>
+              <Image src={threep} />
+            </Partner>
+            <Partner>
+              <Image src={fourp} />
+            </Partner>
+            <Partner>
+              <Image src={fivep} />
+            </Partner>
+            <Partner>
+              <Image src={sixp} />
+            </Partner>
+            <Partner>
+              <Image src={sevenp} />
+            </Partner>
+            <Partner>
+              <Image src={eightp} />
+            </Partner>
+            <Partner>
+              <Image src={ninep} />
+            </Partner>
+            <Partner>
+              <Image src={tenp} />
+            </Partner>
+            <Partner>
+              <Image src={elevenp} />
+            </Partner>
+            <Partner>
+              <Image src={twelvep} />
+            </Partner>
+          </SecondGrid>
+          <br />
+        </Container>
+      </Background>
+    )
+  }
+}
+
+export default translate("Company")(Company)
