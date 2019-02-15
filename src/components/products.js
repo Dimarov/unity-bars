@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import bg from "../images/products.jpg"
 import office from '../images/fix/office.jpg'
 import absbars from "../images/products/absbars.png"
@@ -139,65 +139,72 @@ const ProductLink = styled(Link)`
   text-decoration: none;
 `
 
-const Products = (props) => (
-  <Background>
-    <Header>
-      <Container>
-        <Title>Продукти</Title>
-        <Subtitle>25 років успішної праці у сфері розробки банківського програмного забезпечення</Subtitle>
-      </Container>
-    </Header>
-    <Grid>
-      <ProductLink to="absbars">
-        <Product>
-          <ProductTitle>АБС BARS</ProductTitle>
-          <ProductImage src={absbars} />
-        </Product>
-      </ProductLink>
-      <ProductLink to="barsmmfo">
-        <Product>
-          <ProductTitle>АБС BARS MMFO</ProductTitle>
+class Products extends React.Component {
 
-          <ProductImage src={absbarsmmfo} />
-        </Product>
-      </ProductLink>
-      <ProductLink to="corp2">
-        <Product>
-          <ProductTitle>Корпоративний клієнт-банк </ProductTitle>
+  render() {
+    const { t } = this.props
 
-          <ProductImage src={corp2} />
-        </Product>
-      </ProductLink>
-      <ProductLink to="bone">
-        <Product>
-          <ProductTitle>Інтернет-банкінг система</ProductTitle>
+    return(
+    <Background>
+      <Header>
+        <Container>
+          <Title>{t("Products")}</Title>
+          <Subtitle>{t("25 years of successful work in the field of development of banking software")}</Subtitle>
+        </Container>
+      </Header>
+      <Grid>
+        <ProductLink to="absbars">
+          <Product>
+            <ProductTitle>{t("ABS BARS")}</ProductTitle>
+            <ProductImage src={absbars} />
+          </Product>
+        </ProductLink>
+        <ProductLink to="barsmmfo">
+          <Product>
+            <ProductTitle>{t("ABS BARS MMFO")}</ProductTitle>
 
-          <ProductImage src={bone} />
-        </Product>
-      </ProductLink>
-      <ProductLink to="creditmodule">
-        <Product>
-          <ProductTitle>Кредитний модуль</ProductTitle>
+            <ProductImage src={absbarsmmfo} />
+          </Product>
+        </ProductLink>
+        <ProductLink to="corp2">
+          <Product>
+            <ProductTitle>{t("Corporate bank-client")}</ProductTitle>
 
-          <ProductImage src={creditmodule} />
-        </Product>
-      </ProductLink>
-      <ProductLink to="datawarehouse">
-        <Product>
-          <ProductTitle>Електронне сховище</ProductTitle>
+            <ProductImage src={corp2} />
+          </Product>
+        </ProductLink>
+        <ProductLink to="bone">
+          <Product>
+            <ProductTitle>{t("Internet-banking system")}</ProductTitle>
 
-          <ProductImage src={datawarehouse} />
-        </Product>
-      </ProductLink>
-      <ProductLink to="electronicarchive">
-        <Product>
-          <ProductTitle>Електронний архів</ProductTitle>
+            <ProductImage src={bone} />
+          </Product>
+        </ProductLink>
+        <ProductLink to="creditmodule">
+          <Product>
+            <ProductTitle>{t("Creditmodule")}</ProductTitle>
 
-          <ProductImage src={electronicarchive} />
-        </Product>
-      </ProductLink>
-    </Grid>
-    </Background>
+            <ProductImage src={creditmodule} />
+          </Product>
+        </ProductLink>
+        <ProductLink to="datawarehouse">
+          <Product>
+            <ProductTitle>{t("Datawarehouse")}</ProductTitle>
+
+            <ProductImage src={datawarehouse} />
+          </Product>
+        </ProductLink>
+        <ProductLink to="electronicarchive">
+          <Product>
+            <ProductTitle>{t("Electronicarchive")}</ProductTitle>
+
+            <ProductImage src={electronicarchive} />
+          </Product>
+        </ProductLink>
+      </Grid>
+      </Background>
     )
+  }
+}
 
-    export default Products
+export default translate("Products")(Products)
