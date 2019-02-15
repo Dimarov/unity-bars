@@ -47,13 +47,13 @@ class LanguageSwitcher extends Component {
   renderLanguageChoice({ code, label }) {
 
     return (
-      <button
+      <LanguageButton
         key={code}
 
         onClick={() => this.handleChangeLanguage(code)}
       >
         {label}
-      </button>
+      </LanguageButton>
     )
   }
 
