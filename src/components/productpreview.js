@@ -314,7 +314,7 @@ class ProductPreview extends React.Component {
         <BackgroundNew themeColor='#1a1a1a'>
           <Content>
             <Info>
-              <Title themeColorSecondary='#FFF'>{t("B.One system for")} <Span color="#F90400">{t("UBRR")}</Span></Title>
+              <Title themeColorSecondary='#FFF'>{t("BOne system for")} <Span color="#F90400">{t("UBRR")}</Span></Title>
               <Subtitle themeColorSecondary='#FFF'>{t("Expect the latest development in April 2019")}</Subtitle>
             </Info>
           </Content>
