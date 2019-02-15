@@ -239,7 +239,7 @@ const Corp2 = (props) => (
         чому
         стала основою для наступних продуктів компанії, оновленої системи B.One</StyledHeaderTitleParagraph>
 
-      <StyledTitleBlack>Використовуеться</StyledTitleBlack>
+      <StyledTitleBlack>Використовується</StyledTitleBlack>
 
       <ImageContainers>
         <StyledThreeImagesBlock>
@@ -254,7 +254,7 @@ const Corp2 = (props) => (
       </ImageContainers>
 
       <StyledTitleBlack>
-        Можливості та Досягнення Системи
+        Можливості та досягнення Системи
       </StyledTitleBlack>
 
       <StyledHeaderTitleParagraph>&#8226; Витримує навантаження в час пік 2000 — 3000 одночасно працюючих
@@ -270,7 +270,7 @@ const Corp2 = (props) => (
     </ImageContainer>
     <Container>
 
-      <StyledTitleBlack>Кастомізація Візування</StyledTitleBlack>
+      <StyledTitleBlack>Кастомізація візування</StyledTitleBlack>
 
       <StyledHeaderTitleParagraph>&#8226; Єдина віза (використовується за фізичних осіб та
         СПД)
@@ -290,7 +290,7 @@ const Corp2 = (props) => (
         документові.
       </StyledHeaderTitleParagraph>
 
-      <StyledTitleBlack>Багаторівненва Аутентифікація</StyledTitleBlack>
+      <StyledTitleBlack>Багаторівненва аутентифікація</StyledTitleBlack>
 
       <StyledHeaderTitleParagraph>Кожен тип входу можна окремо дозволити чи заборонити. Підтримуються різноманітні носії
         таємного ключа (токен, смарт-карта, та ін.). Можливість додатково шифрування каналу власним таємним ключем (за

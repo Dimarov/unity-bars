@@ -801,14 +801,14 @@ const Bone = (props) => (
 
         <FunctionalityTitle>З системою B.One Ви можете</FunctionalityTitle>
         <div>
-          <FunctionalitySubtitle>Отримувати інформацію про цілодобову оплату та платежі.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Створювати платежі.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Створювати звіти.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Оплачувати кредити.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Контролювати депозити.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Подавати заявку на підключення депозитів банківських продуктів.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Керувати регулярними платежами.</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Контролювати доступ для співробітників, підключених до системи.</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Отримувати інформацію про цілодобову оплату та платежі</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Створювати платежі</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Створювати звіти</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Оплачувати кредити</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Контролювати депозити</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Подавати заявку на підключення депозитів банківських продуктів</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Керувати регулярними платежами</FunctionalitySubtitle>
+          <FunctionalitySubtitle>Контролювати доступ для співробітників, підключених до системи</FunctionalitySubtitle>
           <DownloadForm />
         </div>
         <ImageContainer>
@@ -821,18 +821,18 @@ const Bone = (props) => (
         <div>
           <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
           <FunctionalityParagraph>Заява оператора зіставлення облікового запису користувача (веб, мобільний), механізм останніх транзакцій на
-          певному обліковому записі користувача, експорт / збереження витягів.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з поповненням (веб, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю їх погашення.</FunctionalityParagraph>
+          певному обліковому записі користувача, експорт / збереження витягів</FunctionalityParagraph>
+          <FunctionalityParagraph>Перегляд депозитних продуктів з поповненням (веб, мобільний додаток)</FunctionalityParagraph>
+          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю їх погашення</FunctionalityParagraph>
           <FunctionalityParagraph>Отримує і завантажує гілки і банкомати (вхідний xml-файл), визначає поточне місце розташування для отримання
             геолокаційної інформації про поточне місцезнаходження; Автоматичне завантаження інформації про поточні курси
             обміну з АБС, інформація про поточні курси в системі (Web) з переходом на окрему екранну форму для відображення
             історії зміни курсів валют; Реалізація інформації про поточну систему чіпів CorpLight полягає в тому, що користувач
-          може додати авиторізований «співробітник» безпосередньо до мережі.</FunctionalityParagraph>
-          <FunctionalityParagraph>Авторизований користувач може додати «співробітника» безпосередньо до Інтернету.</FunctionalityParagraph>
-          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування клієнтськими рахунками.</FunctionalityParagraph>
+          може додати авиторізований «співробітник» безпосередньо до мережі</FunctionalityParagraph>
+          <FunctionalityParagraph>Авторизований користувач може додати «співробітника» безпосередньо до Інтернету</FunctionalityParagraph>
+          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування клієнтськими рахунками</FunctionalityParagraph>
           <FunctionalityParagraph>РЗміна пароля, відновлення пароля, блокування, робота з електронною аутентифікацією в роботі з клієнтом з
-          аутентифікацією маркерів OTP з генерацією клієнта та надсиланням паролів через SMS.</FunctionalityParagraph>
+          аутентифікацією маркерів OTP з генерацією клієнта та надсиланням паролів через SMS</FunctionalityParagraph>
         </div>
       </FunctionalityContainer>
       <FunctionalityTitle>Продукти, побудовані на B.One</FunctionalityTitle>
