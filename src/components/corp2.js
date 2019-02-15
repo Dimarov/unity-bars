@@ -254,7 +254,7 @@ const Corp2 = (props) => (
       </ImageContainers>
 
       <StyledTitleBlack>
-        Можливотсі та Досягнення Системи
+        Можливості та Досягнення Системи
       </StyledTitleBlack>
 
       <StyledHeaderTitleParagraph>&#8226; Витримує навантаження в час пік 2000 — 3000 одночасно працюючих

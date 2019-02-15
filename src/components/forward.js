@@ -599,7 +599,7 @@ const Forward = (props) => (
         </ImageContainer>
       </SecurityContainer>
       <DownloadContainer>
-        <DownloadTitle>Завантажуйте CorpLight</DownloadTitle>
+        <DownloadTitle>Завантажуйте Forward Online</DownloadTitle>
         <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
 
         <ButtonContainer>
