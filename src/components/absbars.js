@@ -221,6 +221,7 @@ const StyledTableColumn = styled.td`
   border: .0625rem solid #000;
   padding: .5rem;
   text-align: center;
+  background: ${props => props.heading ? "#e1e1e1" : "none"};
 
   @media (min-width: 40rem) {
 
@@ -253,31 +254,31 @@ const Absbars = (props) => (
 
       <StyledHeaderTitle>Можливості та Переваги</StyledHeaderTitle>
       <StyledHeaderTitleParagraph>
-        Орієнтація на промислові сервера баз даних Oracle
+        &#8226; Орієнтація на промислові сервера баз даних Oracle
       </StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>
-        Гнучка система адміністрування
+        &#8226; Гнучка система адміністрування
       </StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>
-        Багаторівнева система роздільного доступу до фінансових і технічних ресурсів банку
+        &#8226; Багаторівнева система роздільного доступу до фінансових і технічних ресурсів банку
       </StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>
-        Швидка інтеграція із іншими системи за рахунок використання SAOP
+        &#8226; Швидка інтеграція із іншими системи за рахунок використання SAOP
       </StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>
-        Сучасні засоби розробки
+        &#8226; Сучасні засоби розробки
       </StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>
-        Багаторівнева система візування
+        &#8226; Багаторівнева система візування
       </StyledHeaderTitleParagraph>
 
       <StyledHeaderTitleParagraph>
-        Web інтерфейс
+        &#8226; Web інтерфейс
       </StyledHeaderTitleParagraph>
       <br />
       <br />
@@ -315,7 +316,7 @@ const Absbars = (props) => (
             <StyledTableColumn>Опис</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Основні"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Основні"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>KRN</StyledTableColumn>
@@ -362,7 +363,7 @@ const Absbars = (props) => (
             <StyledTableColumn>Модуль запезпечує накладання ЕЦП (VEGA)</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Бізнес"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Бізнес"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>CCK</StyledTableColumn>
@@ -609,7 +610,7 @@ const Absbars = (props) => (
             Ведення та відображення в системі податкового обліку даних фінансового обліку</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Звітність"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Звітність"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>NBUR</StyledTableColumn>
@@ -666,7 +667,7 @@ const Absbars = (props) => (
             Підрахунок загальних доходів-витрат банку в результаті роботи з клієнтами</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Інтеграційні"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Інтеграційні"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>MGR</StyledTableColumn>
@@ -892,7 +893,7 @@ const Absbars = (props) => (
             <StyledTableColumn>ЦРВ (центральний реєстр вкладників СССР)</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Управління/Моніторинг/Контроль"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Управління/Моніторинг/Контроль"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>KST</StyledTableColumn>
@@ -966,10 +967,10 @@ const Absbars = (props) => (
         Логічна організація функціоналу здійснюється за принципом модульності, що дозволяє використання тільки необхідних функційАБС здійснює автоматизацію повного спектра функціоналу банку всіх напрямків:
       </StyledHeaderTitleParagraph>
       <StyledHeaderTitleParagraph>
-        - фронт і бек-офісів
+        &#8226; фронт і бек-офісів
       </StyledHeaderTitleParagraph>
       <StyledHeaderTitleParagraph>
-        - РБ, МСБ та КБ, казначейство, бухгалтерія
+        &#8226; РБ, МСБ та КБ, казначейство, бухгалтерія
       </StyledHeaderTitleParagraph>
       <StyledTestMargin />
     </Container>

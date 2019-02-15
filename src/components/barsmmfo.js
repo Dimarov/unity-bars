@@ -222,6 +222,7 @@ const StyledTableColumn = styled.td`
   border: .0625rem solid #000;
   padding: .5rem;
   text-align: center;
+  background: ${props => props.heading ? "#e1e1e1" : "none"};
 
   @media (min-width: 40rem) {
 
@@ -315,7 +316,7 @@ const Barsmmfo = (props) => (
             <StyledTableColumn>Опис</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Основні"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Основні"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>KRN</StyledTableColumn>
@@ -362,7 +363,7 @@ const Barsmmfo = (props) => (
             <StyledTableColumn>Модуль запезпечує накладання ЕЦП (VEGA)</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Бізнес"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Бізнес"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>CCK</StyledTableColumn>
@@ -609,7 +610,7 @@ const Barsmmfo = (props) => (
             Ведення та відображення в системі податкового обліку даних фінансового обліку</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Звітність"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Звітність"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>NBUR</StyledTableColumn>
@@ -666,7 +667,7 @@ const Barsmmfo = (props) => (
             Підрахунок загальних доходів-витрат банку в результаті роботи з клієнтами</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Інтеграційні"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Інтеграційні"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>MGR</StyledTableColumn>
@@ -892,7 +893,7 @@ const Barsmmfo = (props) => (
             <StyledTableColumn>ЦРВ (центральний реєстр вкладників СССР)</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableColumn colspan="3">Група модулів "Управління/Моніторинг/Контроль"</StyledTableColumn>
+            <StyledTableColumn heading colspan="3">Група модулів "Управління/Моніторинг/Контроль"</StyledTableColumn>
           </StyledTableRow>
           <StyledTableRow>
             <StyledTableColumn>KST</StyledTableColumn>

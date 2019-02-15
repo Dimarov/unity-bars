@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { CSSTransitionGroup } from 'react-transition-group'
 
-
+import LanguageSwitcher from './language-switcher'
 import Header from './header'
 import Footer from './footer'
 
@@ -38,7 +38,7 @@ const Layout = ({ children }) => (
 
 
             {children}
-
+            <LanguageSwitcher />
         </div>
 
         <Footer siteTitle={data.site.siteMetadata.title} />
