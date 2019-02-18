@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
 import { Link } from 'gatsby'
-
+import { translate } from 'react-i18next'
 
 import DownloadForm from './download-form'
 
@@ -782,121 +782,123 @@ const InfoElementDownloadLink = styled.a`
   }
 `
 
-const Bone = (props) => (
-  <Background>
-    <Header>
-      <Container>
-        <HeaderImage src={header} alt="header-mockup" />
-        <Title>B.One</Title>
-        <Subtitle>Інтернет банкінг для МСБ та фізичних осіб</Subtitle>
-        <ButtonContainer>
-          <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-          <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-          <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
-        </ButtonContainer>
-      </Container>
-    </Header>
-    <Container>
-      <FunctionalityContainer>
+class Bone extends React.Component {
 
-        <FunctionalityTitle>З системою B.One Ви можете</FunctionalityTitle>
-        <div>
-          <FunctionalitySubtitle>Отримувати інформацію про цілодобову оплату та платежі</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Створювати платежі</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Створювати звіти</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Оплачувати кредити</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Контролювати депозити</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Подавати заявку на підключення депозитів банківських продуктів</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Керувати регулярними платежами</FunctionalitySubtitle>
-          <FunctionalitySubtitle>Контролювати доступ для співробітників, підключених до системи</FunctionalitySubtitle>
-          <DownloadForm />
-        </div>
-        <ImageContainer>
-          <AboutImage src={boneImage} alt="bone-mockup" />
-        </ImageContainer>
-      </FunctionalityContainer>
-      <FunctionalityContainer>
+  render() {
+    const { t } = this.props
 
-        <FunctionalityTitle>Функціональність B.One</FunctionalityTitle>
-        <div>
-          <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
-          <FunctionalityParagraph>Заява оператора зіставлення облікового запису користувача (веб, мобільний), механізм останніх транзакцій на
-          певному обліковому записі користувача, експорт / збереження витягів</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з поповненням (веб, мобільний додаток)</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю їх погашення</FunctionalityParagraph>
-          <FunctionalityParagraph>Отримує і завантажує гілки і банкомати (вхідний xml-файл), визначає поточне місце розташування для отримання
-            геолокаційної інформації про поточне місцезнаходження; Автоматичне завантаження інформації про поточні курси
-            обміну з АБС, інформація про поточні курси в системі (Web) з переходом на окрему екранну форму для відображення
-            історії зміни курсів валют; Реалізація інформації про поточну систему чіпів CorpLight полягає в тому, що користувач
-          може додати авиторізований «співробітник» безпосередньо до мережі</FunctionalityParagraph>
-          <FunctionalityParagraph>Авторизований користувач може додати «співробітника» безпосередньо до Інтернету</FunctionalityParagraph>
-          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування клієнтськими рахунками</FunctionalityParagraph>
-          <FunctionalityParagraph>РЗміна пароля, відновлення пароля, блокування, робота з електронною аутентифікацією в роботі з клієнтом з
-          аутентифікацією маркерів OTP з генерацією клієнта та надсиланням паролів через SMS</FunctionalityParagraph>
-        </div>
-      </FunctionalityContainer>
-      <FunctionalityTitle>Продукти, побудовані на B.One</FunctionalityTitle>
-    </Container>
-    <ContainerCase>
-      <BackgroundCase themeColor='#1A1A1A'>
-        <ContentCase>
-          <InfoCase>
-            <TitleCase themeColorSecondary='#fff'>CorpLight <SpanCase color="#3EC4E1">Ощадбанк</SpanCase></TitleCase>
-            <SubtitleCase themeColorSecondary='#fff'>Онлайн система управління банківськими рахунками та продуктами</SubtitleCase>
-            <ButtonContainerCase>
-              <ButtonCase href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
-              <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
-              <ButtonCase href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
-            </ButtonContainerCase>
-            <MoreButtonCase to="/corplight" themeColorSecondary='#3EC4E1'>Більше</MoreButtonCase>
-          </InfoCase>
-          <ImageContainerCase>
-            <ImageCorp src={corpImage} alt="corplight" />
-          </ImageContainerCase>
-        </ContentCase>
-      </BackgroundCase>
-      <BackgroundCase themeColor='#1A1A1A' >
-        <ContentCase>
-          <ImageContainerCase>
-            <ImageForward src={forwardImage} alt="forward" />
-          </ImageContainerCase>
-          <InfoCase>
-            <TitleCase themeColorSecondary='#fff'><SpanCase color="#991F3A">Forward</SpanCase> Online</TitleCase>
-            <SubtitleCase themeColorSecondary='#fff'>24/7 доступ до Ваших банківських сервісів</SubtitleCase>
-            <ButtonContainerCase>
-              <ButtonCase href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
-              <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
-              <ButtonCase href="https://online.forward-bank.com/dashboard" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
-            </ButtonContainerCase>
-            <MoreButtonCase to="/forward" themeColorSecondary='#3EC4E1'>Більше</MoreButtonCase>
-          </InfoCase>
-        </ContentCase>
-      </BackgroundCase>
-      <BackgroundCaseNew themeColor='#1A1A1A'>
-        <ContentCase>
+    return(
+      <Background>
+        <Header>
+          <Container>
+            <HeaderImage src={header} alt="header-mockup" />
+            <Title>B.One</Title>
+            <Subtitle>{t("Internet banking for SME and individuals")}</Subtitle>
+            <ButtonContainer>
+              <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
+              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+            </ButtonContainer>
+          </Container>
+        </Header>
+        <Container>
+          <FunctionalityContainer>
 
-          <InfoCase>
-            <TitleCase themeColorSecondary='#fff'>Система B.One для <SpanCase color="#F90400">УБРР</SpanCase></TitleCase>
-            <SubtitleCase themeColorSecondary='#fff'>Очікуйте новітню розробку в квітні 2019</SubtitleCase>
+            <FunctionalityTitle>{t("Capabilities.Title")}</FunctionalityTitle>
+            <div>
+              <FunctionalitySubtitle>{t("Capabilities.Line1")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line2")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line3")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line4")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line5")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line6")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line7")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Capabilities.Line8")}</FunctionalitySubtitle>
+              <DownloadForm />
+            </div>
+            <ImageContainer>
+              <AboutImage src={boneImage} alt="bone-mockup" />
+            </ImageContainer>
+          </FunctionalityContainer>
+          <FunctionalityContainer>
 
-          </InfoCase>
-        </ContentCase>
-      </BackgroundCaseNew>
+            <FunctionalityTitle>{t("Functionality.Title")}</FunctionalityTitle>
+            <div>
+              <FunctionalitySubtitle>{t("Functionality.Subtitle")}</FunctionalitySubtitle>
+              <FunctionalityParagraph>{t("Functionality.Line1")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line2")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line3")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line4")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line5")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line6")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line7")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line8")}</FunctionalityParagraph>
+            </div>
+          </FunctionalityContainer>
+          <FunctionalityTitle>{t("Products")}</FunctionalityTitle>
+        </Container>
+        <ContainerCase>
+          <BackgroundCase themeColor='#1A1A1A'>
+            <ContentCase>
+              <InfoCase>
+                <TitleCase themeColorSecondary='#fff'>CorpLight <SpanCase color="#3EC4E1">{t("Oschadbank")}</SpanCase></TitleCase>
+                <SubtitleCase themeColorSecondary='#fff'>{t("Online banking products and services control system")}</SubtitleCase>
+                <ButtonContainerCase>
+                  <ButtonCase href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
+                  <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
+                  <ButtonCase href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
+                </ButtonContainerCase>
+                <MoreButtonCase to="/corplight" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButtonCase>
+              </InfoCase>
+              <ImageContainerCase>
+                <ImageCorp src={corpImage} alt="corplight" />
+              </ImageContainerCase>
+            </ContentCase>
+          </BackgroundCase>
+          <BackgroundCase themeColor='#1A1A1A' >
+            <ContentCase>
+              <ImageContainerCase>
+                <ImageForward src={forwardImage} alt="forward" />
+              </ImageContainerCase>
+              <InfoCase>
+                <TitleCase themeColorSecondary='#fff'><SpanCase color="#991F3A">Forward</SpanCase> Online</TitleCase>
+                <SubtitleCase themeColorSecondary='#fff'>{t("24/7 access to your banking services")}</SubtitleCase>
+                <ButtonContainerCase>
+                  <ButtonCase href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
+                  <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
+                  <ButtonCase href="https://online.forward-bank.com/dashboard" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
+                </ButtonContainerCase>
+                <MoreButtonCase to="/forward" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButtonCase>
+              </InfoCase>
+            </ContentCase>
+          </BackgroundCase>
+          <BackgroundCaseNew themeColor='#1A1A1A'>
+            <ContentCase>
 
-    </ContainerCase>
-    <Container>
-      <DownloadContainer>
-        <DownloadTitle>Завантажуйте B.One</DownloadTitle>
-        <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
+              <InfoCase>
+                <TitleCase themeColorSecondary='#fff'>{t("BOne system for")} <SpanCase color="#F90400">{t("UBRR")}</SpanCase></TitleCase>
+                <SubtitleCase themeColorSecondary='#fff'>{t("Expect the latest development in April 2019")}</SubtitleCase>
 
-        <ButtonContainer>
-          <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-          <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-          <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
-        </ButtonContainer>
-      </DownloadContainer>
-    </Container>
-  </Background>
-)
+              </InfoCase>
+            </ContentCase>
+          </BackgroundCaseNew>
 
-export default Bone
+        </ContainerCase>
+        <Container>
+          <DownloadContainer>
+            <DownloadTitle>{t("Download")}</DownloadTitle>
+            <DownloadSubtitle>{t("Try Web")}</DownloadSubtitle>
+
+            <ButtonContainer>
+              <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
+              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+            </ButtonContainer>
+          </DownloadContainer>
+        </Container>
+      </Background>
+    )
+  }
+}
+
+export default translate("Bone")(Bone)
