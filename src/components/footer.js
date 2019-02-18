@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
