@@ -1,7 +1,7 @@
 {
   "Internet banking for SME and individuals": "Online banking for SMEs and individuals",
   "Capabilities": {
-    "Title": "With system B. One You can",
+    "Title": "With system B.One You can",
     "Line1": "To obtain information about-fees and payments",
     "Line2": "Generate payments",
     "Line3": "Create reports",
@@ -13,8 +13,8 @@
   },
   "Download Presentation": "Download Presentation",
   "Functionality": {
-    "Title": "Functionality B. One",
-    "Subtitle": "Basic funzionalit",
+    "Title": "Functionality B.One",
+    "Subtitle": "Basic functionality",
     "Line1": "The statement of the operator mapping of a user account (web, mobile), the mechanism of the most recent transactions on a particular account user, export / save extracts",
     "Line2": "Viewing Deposit products with replenishment (web, mobile app)",
     "Line3": "Viewing loan products with possibility of their repayment",
@@ -24,7 +24,7 @@
     "Line7": "The client connection to the system, the ability to manage client accounts",
     "Line8": "Change password, password recovery, lock, electronic authentication in the client authentication token OTP generating client and sending passwords via SMS"
   },
-  "Products": "Products based on B. One",
+  "Products": "Products based on B.One",
   "Oschadbank": "Oschadbank",
   "Online banking products and services control system": "Online system of managing Bank accounts and products",
   "24/7 access to your banking services": "24/7 access to Your banking services",
