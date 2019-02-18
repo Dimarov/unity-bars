@@ -59,22 +59,27 @@ const Title = styled.h2`
   }
 `
 
-const Footer = ({ siteTitle }) => (
-  <StyledFooter>
-    <Container>
-      <FooterContent>
-        <Title>Copyright © 2018 {siteTitle}. All Rights Reserved.</Title>
-        <IconContainer>
-          <a href="https://www.facebook.com/unitybars/">
-            <FontAwesomeIcon icon={faFacebook} size="lg" color="#fff"/>
-          </a>
-          <a href="https://www.instagram.com/unitybars/">
-            <FontAwesomeIcon icon={faInstagram} size="lg" color="#fff"/>
-          </a>
-        </IconContainer>
-        </FooterContent>
-    </Container>
-  </StyledFooter>
-)
+class Footer extends React.Component {
 
-export default Footer
+  render() {
+    const { t } = this.props
+
+    return(
+      <StyledFooter>
+        <Container>
+          <FooterContent>
+            <Title>{t("Copyright")}</Title>
+            <IconContainer>
+              <a href="https://www.facebook.com/unitybars/">
+                <FontAwesomeIcon icon={faFacebook} size="lg" color="#fff"/>
+              </a>
+              <a href="https://www.instagram.com/unitybars/">
+                <FontAwesomeIcon icon={faInstagram} size="lg" color="#fff"/>
+              </a>
+            </IconContainer>
+            </FooterContent>
+        </Container>
+      </StyledFooter>
+    )
+
+export default translate("Footer")(Footer)
