@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import office from '../images/fix/office3.jpg'
 import bg from "../images/products.jpg"
+import { translate } from 'react-i18next'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -162,34 +163,40 @@ const StyledContactSubmit = styled.input`
   }
 `
 
-const Contacts = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-      <Container>
-        <StyledTitle>Контакти</StyledTitle>
-        <StyledSubtitle>Зв'яжіться з нами і дізнайтеся, як ми можемо допомогти вашому бізнесу досягти високих результатів
-        </StyledSubtitle>
-      </Container>
-    </StyledHeader>
-    <StyledGrid>
-      <StyledContact>
-        <StyledContactTitle>Контакти</StyledContactTitle>
-        <StyledContactText>02152, м. Київ, проспект Павла Тичини, 1В, офіс А</StyledContactText>
-        <StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>
-        <StyledContactText>bars@unity-bars.com</StyledContactText>
-      </StyledContact>
-      <StyledContact>
-        <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
-          <StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>
-          <StyledContactInput placeholder="Ваше Ім'я" type="text" name="Name" id="Name"/>
-          <StyledContactInput placeholder="Ваш Email" type="text" name="Email" id="Email"/>
-          <StyledContactInput placeholder="Ваш Телефон" type="text" name="Phone" id="Phone"/>
-          <StyledContactTextarea placeholder="Ваше Повідомлення" type="text" name="Message" id="Message"/>
-          <StyledContactSubmit type="submit" value="Надіслати" />
-        </StyledContactForm>
-      </StyledContact>
-    </StyledGrid>
-  </StyledBackground>
-)
+class Contacts extends React.Component {
 
-export default Contacts
+  render() {
+    const { t } = this.props
+
+    return(
+      <StyledBackground>
+        <StyledHeader>
+          <Container>
+            <StyledTitle>{t("Contacts")}</StyledTitle>
+            <StyledSubtitle>
+              {t("Contact us and find out how we can help your business achieve high results")}
+            </StyledSubtitle>
+          </Container>
+        </StyledHeader>
+        <StyledGrid>
+          <StyledContact>
+            <StyledContactTitle>{t("Contacts")}</StyledContactTitle>
+            <StyledContactText>{t("Adress")}</StyledContactText>
+            <StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>
+            <StyledContactText>bars@unity-bars.com</StyledContactText>
+          </StyledContact>
+          <StyledContact>
+            <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
+              <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
+              <StyledContactInput placeholder="{t("Form.Name")}" type="text" name="Name" id="Name"/>
+              <StyledContactInput placeholder="{t("Form.Email")}" type="text" name="Email" id="Email"/>
+              <StyledContactInput placeholder="{t("Form.Number")}" type="text" name="Phone" id="Phone"/>
+              <StyledContactTextarea placeholder="{t("Form.Message")}" type="text" name="Message" id="Message"/>
+              <StyledContactSubmit type="submit" value="{t("Form.Send")}" />
+            </StyledContactForm>
+          </StyledContact>
+        </StyledGrid>
+      </StyledBackground>
+    )
+
+export default translate("Contacts")(Contacts)
