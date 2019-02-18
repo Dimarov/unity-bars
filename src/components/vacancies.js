@@ -179,5 +179,7 @@ class Vacancies extends React.Component {
         </StyledGrid>
       </StyledBackground>
     )
+  }
+}
 
 export default translate("Vacancies")(Vacancies)

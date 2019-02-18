@@ -81,5 +81,7 @@ class Footer extends React.Component {
         </Container>
       </StyledFooter>
     )
+  }
+}
 
 export default translate("Footer")(Footer)
