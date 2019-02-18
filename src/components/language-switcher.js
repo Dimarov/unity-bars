@@ -49,7 +49,7 @@ class LanguageSwitcher extends Component {
     return (
       <LanguageButton
         key={code}
-
+        selected={this.state.language === code}
         onClick={() => this.handleChangeLanguage(code)}
       >
         {label}
