@@ -44,41 +44,6 @@ const StyledSubtitle = styled.p`
   
 `
 
-const StyledParagraphText = styled.div`
-  font-family: myriad-pro, sans-serif;
-  line-height: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #000;
-  
-  @media screen and (max-width: 60rem) {
-    margin: 1.3rem;
-  }
-`
-
-const StyledTitleBlackColor = styled.div`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
-  // font-weight: 400;
-  line-height: 2.5rem;
-  color: #000;
-  margin: 4rem 0 3rem 0;
-  
-  @media screen and (max-width: 60rem) {
-   margin: 0.5rem;
-  }
-`
-
-const StyledThereIsWillBeImage = styled.h1`
-  font-family: myriad-pro, sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  background-color: red;
-  height: 32rem;
-  // font-weight: 400;
-  color: #000;
-  margin: 4rem 0 3rem 0;
-`
 
 const StyledHeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;

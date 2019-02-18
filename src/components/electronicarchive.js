@@ -70,17 +70,6 @@ const StyledHeaderTitleParagraph = styled.div`
   }
 `
 
-const StyledThereIsWillBeImage = styled.h1`
-  font-family: myriad-pro, sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  background-color: red;
-  height: 32rem;
-  // font-weight: 400;
-  color: #000;
-  margin: 4rem 0 3rem 0;
-`
-
 const StyledTestMargin = styled.div`
   margin-bottom: 7rem;
 `

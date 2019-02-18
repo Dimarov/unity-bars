@@ -102,6 +102,7 @@ const StyledThereIsWillBeImage = styled.h1`
 
 const ImageContainer = styled.div`
   display: flex;
+  margin: 1rem;
 `
 
 const StyledThreeImagesBlock = styled.div`
@@ -134,7 +135,9 @@ const CorpSignInImg = styled.img`
   }
 `
 
-const UsedByCorpServices = styled.img`
+const UsedByCorpServicesImages = styled.img`
+  
+
 `
 const MacImg2 = styled.img`
   margin-top: 2.5rem;
@@ -182,13 +185,13 @@ const Corp2 = (props) => (
 
       <ImageContainer>
         <StyledThreeImagesBlock>
-          <UsedByCorpServices src={oshad} alt='oshad'/>
+          <UsedByCorpServicesImages src={oshad} alt='oshad'/>
         </StyledThreeImagesBlock>
         <StyledThreeImagesBlock>
-          <UsedByCorpServices src={dksu} alt='oshad'/>
+          <UsedByCorpServicesImages src={dksu} alt='oshad'/>
         </StyledThreeImagesBlock>
         <StyledThreeImagesBlock>
-          <UsedByCorpServices src={rozrah} alt='oshad'/>
+          <UsedByCorpServicesImages src={rozrah} alt='oshad'/>
         </StyledThreeImagesBlock>
       </ImageContainer>
 
