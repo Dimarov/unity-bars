@@ -162,7 +162,16 @@ const Client = styled.div`
 `
 
 const Image = styled.img`
+  max-width: 100%;
+  height: 4rem;
 
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 6rem;
+  }
 `
 
 const Partner = styled.div`
@@ -174,7 +183,6 @@ const Partner = styled.div`
   align-items: center;
   filter: brightness(.95);
   transition: all .2s ease-in;
-  object-fit: cover;
 
 
   @media (min-width: 40rem) {
