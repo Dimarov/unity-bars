@@ -188,15 +188,17 @@ class Contacts extends React.Component {
           <StyledContact>
             <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
-              <StyledContactInput placeholder="{t("Form.Name")}" type="text" name="Name" id="Name"/>
-              <StyledContactInput placeholder="{t("Form.Email")}" type="text" name="Email" id="Email"/>
-              <StyledContactInput placeholder="{t("Form.Number")}" type="text" name="Phone" id="Phone"/>
-              <StyledContactTextarea placeholder="{t("Form.Message")}" type="text" name="Message" id="Message"/>
-              <StyledContactSubmit type="submit" value="{t("Form.Send")}" />
+              <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
+              <StyledContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
+              <StyledContactInput placeholder={t("Form.Number")} type="text" name="Phone" id="Phone"/>
+              <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="Message" id="Message"/>
+              <StyledContactSubmit type="submit" value={t("Form.Send")} />
             </StyledContactForm>
           </StyledContact>
         </StyledGrid>
       </StyledBackground>
     )
+  }
+}
 
 export default translate("Contacts")(Contacts)
