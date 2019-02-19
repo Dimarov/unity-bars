@@ -2,6 +2,7 @@
   "Vacancies": "Projects",
   "Needed": "Needed",
   "Would be an advantage": "Would be an advantage",
+  "We offer": "We offer",
   "Responsibilities": "Responsibilities",
   "QA": {
     "line1": "Knowledge of test theory, methodologies and techniques",
@@ -54,5 +55,19 @@
     "line7": "Experience with PL/SQL",
     "line8": "Experience in the financial-banking sector",
     "line9": "Certifications or proficiency with Oracle DBMS"
+  },
+  "Business Analyst": {
+    "line1": "Knowledge of the normative base for the compilation of statistical reporting by the NBU (Resolution, Methodology of the NBU)",
+    "line2": "Knowledge of accounting principles in banking institutions",
+    "line3": "Experience in the field of compilation of statistical reporting by the NBU (knowledge of the XML format)",
+    "line4": "Ability to analyze customer requirements and problem statement for developers",
+    "line5": "Communicativeness (communication with the customer)",
+    "line6": "Knowledge of PL/SQL",
+    "line7": "Official employment",
+    "line8": "Повний соціальний пакет;",
+    "line9": "Full social package",
+    "line10": "Modern office",
+    "line11": "Medical Insurance",
+    "line12": "English courses."
   }
 }

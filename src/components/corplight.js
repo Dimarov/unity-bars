@@ -8,8 +8,11 @@ import security from "../images/mockups/corplight-iphone-3.png"
 import banking from "../images/icons/banking.svg"
 import functionality from "../images/icons/functionality.svg"
 import design from "../images/icons/design.svg"
+import { translate } from 'react-i18next'
 
 import { withPrefix } from 'gatsby'
+
+import DownloadForm from './download-form'
 
 const Background = styled.div`
   width: 100%;
@@ -509,149 +512,148 @@ const DownloadSubtitle = styled.h3`
   }
 `
 
-const Corplight = (props) => (
-  <Background>
-    <Header>
-      <Container>
-        <HeaderImage src={header} alt="header-mockup" />
-        <Title>CorpLight <Span>Ощадбанк</Span></Title>
-        <Subtitle>Інтернет банкінг для МСБ та приватних клієнтів</Subtitle>
-        <ButtonContainer>
-          <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-          <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-          <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
-        </ButtonContainer>
-      </Container>
-    </Header>
-    <Container>
-      <AboutContainer>
-        <ImageContainer>
-          <AboutImage src={about} alt="about-mockup" />
-        </ImageContainer>
-        <InfoContainer>
-          <InfoTitle>Можливості CorpLight</InfoTitle>
-          <InfoElementContainer>
-            <InfoElement>
-              <InfoElementIcon>
-                <InfoElementIconImage src={banking} alt="banking-icon" />
-              </InfoElementIcon>
-              <InfoElementDescription>
-                <InfoElementDescriptionTitle>Онлайн банкінг</InfoElementDescriptionTitle>
-                <InfoElementDescriptionText>Доступ до банківських продуктів та послуг будь-де та будь-коли.</InfoElementDescriptionText>
-              </InfoElementDescription>
-            </InfoElement>
-            <InfoElement>
-              <InfoElementIcon>
-                <InfoElementIconImage src={functionality} alt="functionality-icon" />
-              </InfoElementIcon>
-              <InfoElementDescription>
-                <InfoElementDescriptionTitle>Функціональність</InfoElementDescriptionTitle>
-                <InfoElementDescriptionText>Функціональність, що відповідає сучасним вимогам клієнтів.</InfoElementDescriptionText>
-              </InfoElementDescription>
-            </InfoElement>
-            <InfoElement>
-              <InfoElementIcon>
-                <InfoElementIconImage src={design} alt="design-icon" />
-              </InfoElementIcon>
-              <InfoElementDescription>
-                <InfoElementDescriptionTitle>Дизайн</InfoElementDescriptionTitle>
-                <InfoElementDescriptionText>Дизайн системи побудований на базі інтуїтивних вподобань користувача. Згідно стандартів Material design Android та IOS Human Interface Guidelines.</InfoElementDescriptionText>
-              </InfoElementDescription>
-            </InfoElement>
-            <InfoElement>
-              <InfoElementDownloadLink href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
-            </InfoElement>
-          </InfoElementContainer>
-        </InfoContainer>
-      </AboutContainer>
-      <FunctionalityContainer>
+class Corplight extends React.Component {
 
-        <FunctionalityTitle>Функціональність <FunctionalityTitleSpan>CorpLight</FunctionalityTitleSpan></FunctionalityTitle>
-        <div>
-          <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
-          <FunctionalityParagraph>Підключення клієнта до системи, можливість керування обліковими записами клієнта.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування виписки по рахункам користувача, відображення виписки (веб, мобільний), механізм отримання останніх операцій
-          користувача по конкретному рахунку, експорт/збереження виписки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з можливістю поповнення(веб, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю погашення.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм отримання та завантаження даних відділень та банкоматів (вхідний xml-файл), визначення поточного місцезнаходження
-          отримання геолокаційних даних про поточне розташування.</FunctionalityParagraph>
-          <FunctionalityParagraph>Автоматичне завантаження інформації щодо поточних курсів обміну валют з АБС, інформування про поточні курси в Системі (веб) з
-          можливістю переходу в окрему екранну форму для відображення історії змін курсу.</FunctionalityParagraph>
-          <FunctionalityParagraph>Реалізація інформування про поточні курси в Системі (веб).</FunctionalityParagraph>
-          <FunctionalityParagraph>Можливість створення та редагування платіжних документів, в залежності від кореспондента, збереження шаблонів платіжних
-          документів.</FunctionalityParagraph>
-          <FunctionalityParagraph>Візування та відправка документів в Банк, накладання електронного цифрового підпису, перевірка на коректність відповідно до вимог
-          Інструкції про безготівкові розрахунки в Україні в національній валюті Національного банку України.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм збереження даних платіжних документів для формування довідника кореспондентів, здійснення запиту та формування звіту
-          відповідно до конкретного Кореспондента.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення заявки на продукт, налаштування списку продуктів та їх параметрів, механізм пропонування нових продуктів через тематичні
-          розділи системи.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність поповнення/зняття депозиту.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність формування платіжних документів на погашення кредиту.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення та збереження регулярного та автоматичного (регулярного) платежу, створення, редагування, призупинення та видалення
-          автоматичних платежів з групуванням згідно календарних днів, інформування користувачів.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Платежі в інозменій валюті</FunctionalitySubtitle>
-          <FunctionalityParagraph>Створення платіжних доручень в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення внутрішніх переказів (в межах одного МФО) в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів з можливістю поповнення (веб, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Купівля/продаж/конвертація іноземної валюти.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд інформації по рахункам (валюта) в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування зовнішніх переказів в іноземній валюті.</FunctionalityParagraph>
-          <FunctionalityParagraph>Відправка в Банк підтверджуючих документів при формуванні платежів в іноземній валюті, заявок на купівлю іноземної валюти.</FunctionalityParagraph>
-          <FunctionalityParagraph>Імпорт документів.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Зарплатний проект</FunctionalitySubtitle>
-          <FunctionalityParagraph>Формування зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Імпорт відомостей із бухгалтерських програм.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування обов’язкових(податкових) платежів до зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд історії зарплатних відомостей.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд реєстрів працівників.</FunctionalityParagraph>
-          <FunctionalityParagraph>Робота із ЗКП договорами.</FunctionalityParagraph>
-          <FunctionalityParagraph>Друк реєстрів працівників та відомостей.</FunctionalityParagraph>
-        </div>
-        <div>
-          <FunctionalitySubtitle>Функціональність по роботі з корпоративними картками</FunctionalitySubtitle>
-          <FunctionalityParagraph>Функціональність по роботі з картковими рахунками.</FunctionalityParagraph>
-          <FunctionalityParagraph>Функціональність по роботі з корпоративними картками.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд строку дії, залишку коштів по корпоративній картці.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування заявки на випуск корпоративної картки, обробка заявки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування заявки на перевипуск корпоративної картки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Блокування корпоративної картки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд встановлених лімітів по корпоративним карткам.</FunctionalityParagraph>
-          <FunctionalityParagraph>Управління лімітами по корпоративній картці.</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування історії операцій по корпоративній картці.</FunctionalityParagraph>
-        </div>
-      </FunctionalityContainer>
-      <SecurityContainer>
-        <SecurityInfoContainer>
-          <SecurityInfoTitle>Безпека Системи</SecurityInfoTitle>
-          <SecurityInfoParagraph>Аутентифікація: логін та пароль, за відбитком пальцю, OTP by SMS, ЕЦП</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Залежність доступного функціоналу системи від способу аутентифікації</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Контроль і перевірка статусу сертифікатів користувача</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Розподіл доступу адміністраторів / технологів / користувачів банку згідно наданих ролей</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Підтримка різних систем криптографії та токенів (RSA, ДСТУ)</SecurityInfoParagraph>
-        </SecurityInfoContainer>
+  render() {
+    const { t } = this.props
 
-        <ImageContainer>
-          <SecurityImage src={security} alt="security-mockup" />
-        </ImageContainer>
-      </SecurityContainer>
-      <DownloadContainer>
-        <DownloadTitle>Завантажуйте CorpLight</DownloadTitle>
-        <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
+    return (
+      <Background>
+        <Header>
+          <Container>
+            <HeaderImage src={header} alt="header-mockup" />
+            <Title>CorpLight <Span>{t("Oschadbank")}</Span></Title>
+            <Subtitle>{t("Online banking products and services control system")}</Subtitle>
+            <ButtonContainer>
+              <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
+              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+            </ButtonContainer>
+          </Container>
+        </Header>
+        <Container>
+          <AboutContainer>
+            <ImageContainer>
+              <AboutImage src={about} alt="about-mockup" />
+            </ImageContainer>
+            <InfoContainer>
+              <InfoTitle>{t("Capabilities.Title")}</InfoTitle>
+              <InfoElementContainer>
+                <InfoElement>
+                  <InfoElementIcon>
+                    <InfoElementIconImage src={banking} alt="banking-icon" />
+                  </InfoElementIcon>
+                  <InfoElementDescription>
+                    <InfoElementDescriptionTitle>{t("Capabilities.Line1")}</InfoElementDescriptionTitle>
+                    <InfoElementDescriptionText>{t("Capabilities.Line2")}</InfoElementDescriptionText>
+                  </InfoElementDescription>
+                </InfoElement>
+                <InfoElement>
+                  <InfoElementIcon>
+                    <InfoElementIconImage src={functionality} alt="functionality-icon" />
+                  </InfoElementIcon>
+                  <InfoElementDescription>
+                    <InfoElementDescriptionTitle>{t("Capabilities.Line3")}</InfoElementDescriptionTitle>
+                    <InfoElementDescriptionText>{t("Capabilities.Line4")}</InfoElementDescriptionText>
+                  </InfoElementDescription>
+                </InfoElement>
+                <InfoElement>
+                  <InfoElementIcon>
+                    <InfoElementIconImage src={design} alt="design-icon" />
+                  </InfoElementIcon>
+                  <InfoElementDescription>
+                    <InfoElementDescriptionTitle>{t("Capabilities.Line5")}</InfoElementDescriptionTitle>
+                    <InfoElementDescriptionText>{t("Capabilities.Line6")}</InfoElementDescriptionText>
+                  </InfoElementDescription>
+                </InfoElement>
+                <InfoElement>
+                  <DownloadForm />
+                </InfoElement>
+              </InfoElementContainer>
+            </InfoContainer>
+          </AboutContainer>
+          <FunctionalityContainer>
 
-        <ButtonContainer>
-          <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-          <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-          <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
-        </ButtonContainer>
-      </DownloadContainer>
-    </Container>
-  </Background>
-)
+            <FunctionalityTitle>{t("Functionality.Title")} <FunctionalityTitleSpan>CorpLight</FunctionalityTitleSpan></FunctionalityTitle>
+            <div>
+              <FunctionalitySubtitle>{t("Functionalty.Subtitle")}</FunctionalitySubtitle>
+              <FunctionalityParagraph>{t("Functionality.Line1")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line2")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line3")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line4")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line5")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line6")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line7")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line8")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line9")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line10")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line11")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line12")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line13")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line14")}</FunctionalityParagraph>
+            </div>
+            <div>
+              <FunctionalitySubtitle>{t("Functionalty.Subtitle"2)}</FunctionalitySubtitle>
+              <FunctionalityParagraph>{t("Functionality.Line15")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line16")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line17")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line18")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line19")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line20")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line21")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line22")}</FunctionalityParagraph>
+            </div>
+            <div>
+              <FunctionalitySubtitle>{t("Functionalty.Subtitle3")}</FunctionalitySubtitle>
+              <FunctionalityParagraph>{t("Functionality.Line23")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line24")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line25")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line26")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line27")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line28")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line29")}</FunctionalityParagraph>
+            </div>
+            <div>
+              <FunctionalitySubtitle>{t("Functionalty.Subtitle4")}</FunctionalitySubtitle>
+              <FunctionalityParagraph>{t("Functionality.Line30")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line31")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line32")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line33")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line34")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line35")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line36")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line37")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line38")}</FunctionalityParagraph>
+            </div>
+          </FunctionalityContainer>
+          <SecurityContainer>
+            <SecurityInfoContainer>
+              <SecurityInfoTitle>{t("Security.Title")}</SecurityInfoTitle>
+              <SecurityInfoParagraph>{t("Security.Line1")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line2")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line3")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line4")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line5")}</SecurityInfoParagraph>
+            </SecurityInfoContainer>
 
-export default Corplight
+            <ImageContainer>
+              <SecurityImage src={security} alt="security-mockup" />
+            </ImageContainer>
+          </SecurityContainer>
+          <DownloadContainer>
+            <DownloadTitle>{t("Download")}</DownloadTitle>
+            <DownloadSubtitle>{t("Try Web")}</DownloadSubtitle>
+
+            <ButtonContainer>
+              <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
+              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+            </ButtonContainer>
+          </DownloadContainer>
+        </Container>
+      </Background>
+    )
+  }
+}
+
+export default translate("Corplight")(Corplight)

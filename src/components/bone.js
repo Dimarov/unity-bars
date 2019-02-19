@@ -528,6 +528,7 @@ const BackgroundCase = styled.div`
 
   @media (min-width: 80rem) {
     height: 40rem;
+    transition: all .3s ease-in-out;
   }
 `
 
