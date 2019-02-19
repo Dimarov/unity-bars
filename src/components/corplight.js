@@ -568,9 +568,9 @@ class Corplight extends React.Component {
                     <InfoElementDescriptionText>{t("Capabilities.Line6")}</InfoElementDescriptionText>
                   </InfoElementDescription>
                 </InfoElement>
-                <DownloadForm />
-               
-                
+                <InfoElement>
+                  <DownloadForm />
+                </InfoElement>
               </InfoElementContainer>
             </InfoContainer>
             
