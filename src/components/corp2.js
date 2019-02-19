@@ -9,6 +9,8 @@ import oshad from '../images/fix/oshadbank1_1_corp.png'
 import dksu from '../images/fix/dksy1_1_corp.png'
 import rozrah from '../images/fix/rozrahynkovuicenter1_1_corp.png'
 import corpMac2 from '../images/fix/corp2_mac_can.png'
+import DownloadForm from './download-form'
+import { translate } from 'react-i18next'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -216,100 +218,89 @@ const MacImg2 = styled.img`
 `
 
 
-const Corp2 = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-      <Container>
-        <StyledTitle>CORP 2</StyledTitle>
-        <StyledSubtitleWhite>Корпоративний Online-Banking</StyledSubtitleWhite>
-        <StyledDownloadLink href={withPrefix('/documents/CORP2.pdf')} download="CORP2.pdf">Завантажити Презентацію</StyledDownloadLink>
-      </Container>
-    </StyledHeader>
-    <ImageContainer>
-      <CorpSignInImg src={corpSignIn} alt="corp-mockup-signin"/>
-    </ImageContainer>
-    <Container>
+class Corp2 extends React.Component {
+
+  render() {
+    const { t } = this.props
+
+    return (
+      <StyledBackground>
+        <StyledHeader>
+          <Container>
+            <StyledTitle>CORP 2</StyledTitle>
+            <StyledSubtitleWhite>{t("Corporate Online Banking")}</StyledSubtitleWhite>
+          </Container>
+        </StyledHeader>
+        <ImageContainer>
+          <CorpSignInImg src={corpSignIn} alt="corp-mockup-signin"/>
+        </ImageContainer>
+        <Container>
 
 
-      <StyledHeaderTitleParagraph>Corp 2 — надійна і перевірена часом система дистанційного обслуговування з широким
-        переліком функціональних можливостей, що дозволяє клієнтам банку цілодобово управляти власними рахунками, не
-        виходячи з офісу. За допомогою системи Клієнти мають можливість постійного доступу та оперативного отримання
-        повного обсягу інформації про стан рахунків. При цьому вся інформація, якою обмінюються Клієнт і Банк, надійно
-        захищена системою і недоступна для сторонніх осіб. Система постійно розвивається та вдосконалюється, завдяки
-        чому
-        стала основою для наступних продуктів компанії, оновленої системи B.One</StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Description")}</StyledHeaderTitleParagraph>
+          <DownloadForm />
 
-      <StyledTitleBlack>Використовується</StyledTitleBlack>
+          <StyledTitleBlack>{t("Used")}</StyledTitleBlack>
 
-      <ImageContainers>
-        <StyledThreeImagesBlock>
-          <UsedByCorpServicesOshad src={oshad} alt='oshad'/>
-        </StyledThreeImagesBlock>
-        <StyledThreeImagesBlock>
-          <UsedByCorpServicesDKSU src={dksu} alt='oshad'/>
-        </StyledThreeImagesBlock>
-        <StyledThreeImagesBlock>
-          <UsedByCorpServicesRozrah src={rozrah} alt='oshad'/>
-        </StyledThreeImagesBlock>
-      </ImageContainers>
+          <ImageContainers>
+            <StyledThreeImagesBlock>
+              <UsedByCorpServicesOshad src={oshad} alt='oshad'/>
+            </StyledThreeImagesBlock>
+            <StyledThreeImagesBlock>
+              <UsedByCorpServicesDKSU src={dksu} alt='oshad'/>
+            </StyledThreeImagesBlock>
+            <StyledThreeImagesBlock>
+              <UsedByCorpServicesRozrah src={rozrah} alt='oshad'/>
+            </StyledThreeImagesBlock>
+          </ImageContainers>
 
-      <StyledTitleBlack>
-        Можливості та досягнення Системи
-      </StyledTitleBlack>
+          <StyledTitleBlack>
+            {t("Capabilities.Title")}
+          </StyledTitleBlack>
 
-      <StyledHeaderTitleParagraph>&#8226; Витримує навантаження в час пік 2000 — 3000 одночасно працюючих
-      користувачів</StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Корпоративний клієнт-банк має більше ніж 46 000
-      користувачів</StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Містить 200 000 рахунків та 300 000 — 400 000 документів в
-      день</StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Capabilities.Line1")}</StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Capabilities.Line2")}</StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Capabilities.Line3")}</StyledHeaderTitleParagraph>
 
-    </Container>
-    <ImageContainer>
-      <MacImg2 src={corpMac2} alt="macImg"/>
-    </ImageContainer>
-    <Container>
+        </Container>
+        <ImageContainer>
+          <MacImg2 src={corpMac2} alt="macImg"/>
+        </ImageContainer>
+        <Container>
 
-      <StyledTitleBlack>Кастомізація візування</StyledTitleBlack>
+          <StyledTitleBlack>{t("Customization.Title")}</StyledTitleBlack>
 
-      <StyledHeaderTitleParagraph>&#8226; Єдина віза (використовується за фізичних осіб та
-        СПД)
-      </StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Подвійна віза (стандартно для юридичних осіб (бухгалтер,
-        директор)
-      </StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Потрійна віза (використовується для корпоративного контролю (бухгалтер,
-        директор, контролер)
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Customization.Line1")}</StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Customization.Line2")}</StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>{t("Customization.Line3")}</StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>Віза Контролера у потрійній візі позначається як “послідовна”. Це означає, що вона
-        може бути накладена тільки після віз Бухгалтера та Директора. На відміну, візи Бухгалтера та Директора можуть
-        накладатися у довільному порядку. Загальна кількість віз може бути збільшена до 10 з установкою порядку та
-        пріорітету. Також підтримують умовні візи – згідно вказаного правила (наприклад при перевищені певної суми, чи
-        на певний номер рахунку\отримувача\банк тощо) – лише при виконанні умови віза буде присвоєна
-        документові.
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Customization.Line4")}
+          </StyledHeaderTitleParagraph>
 
-      <StyledTitleBlack>Багаторівненва аутентифікація</StyledTitleBlack>
+          <StyledTitleBlack>{t("Authentification.Title")}</StyledTitleBlack>
 
-      <StyledHeaderTitleParagraph>Кожен тип входу можна окремо дозволити чи заборонити. Підтримуються різноманітні носії
-        таємного ключа (токен, смарт-карта, та ін.). Можливість додатково шифрування каналу власним таємним ключем (за
-        допомогою крипто-шлюзу Bars Gataway)
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Authentification.Line1")}
+          </StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>&#8226; Логін користувача та звичайний пароль
-      </StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Токен для генерації одноразового паролю (додатково для багаторазового)
-      </StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Одноразовий пароль по SMS, згенерований віртуальним токеном (додатково до
-        багаторазового)
-      </StyledHeaderTitleParagraph>
-      <StyledHeaderTitleParagraph>&#8226; Електронно-цифровий ключ для використання у криптографічних перетвореннях
-        (вхід по ключу). Цим же ключем відбувається накладення ЕЦП на документи
-      </StyledHeaderTitleParagraph>
-      <StyledTestMargin/>
-    </Container>
-  </StyledBackground>
-)
+          <StyledHeaderTitleParagraph>
+            {t("Authentification.Line2")}
+          </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Authentification.Line3")}
+          </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Authentification.Line4")}
+          </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Authentification.Line5")}
+          </StyledHeaderTitleParagraph>
+          <StyledTestMargin/>
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
 
-export default Corp2
+export default translate("Corp2")(Corp2)
