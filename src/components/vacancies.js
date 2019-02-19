@@ -102,6 +102,28 @@ class Vacancies extends React.Component {
         </StyledHeader>
         <StyledGrid>
           <StyledVacancy>
+            <StyledVacancyTitle>Business analyst</StyledVacancyTitle>
+            <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
+            <StyledVacancyText>{t("Business Analyst.line1")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line2")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line3")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line4")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line5")}</StyledVacancyText>
+
+
+            <StyledVacancySubtitle>{t("Would be an advantage")}:</StyledVacancySubtitle>
+
+            <StyledVacancyText>{t("Business Analyst.line6")}</StyledVacancyText>
+
+            <StyledVacancySubtitle>{t("We offer")}:</StyledVacancySubtitle>
+            <StyledVacancyText>{t("Business Analyst.line7")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line8")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line9")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line10")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line11")}</StyledVacancyText>
+            <StyledVacancyText>{t("Business Analyst.line12")}</StyledVacancyText>
+          </StyledVacancy>
+          <StyledVacancy>
             <StyledVacancyTitle>QA</StyledVacancyTitle>
             <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
             <StyledVacancyText>{t("QA.line1")}</StyledVacancyText>
@@ -176,28 +198,7 @@ class Vacancies extends React.Component {
 
 
           </StyledVacancy>
-          <StyledVacancy>
-            <StyledVacancyTitle>Business analyst</StyledVacancyTitle>
-            <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("Business Analyst.line1")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line2")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line3")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line4")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line5")}</StyledVacancyText>
-  
 
-            <StyledVacancySubtitle>{t("Would be an advantage")}:</StyledVacancySubtitle>
-
-            <StyledVacancyText>{t("Business Analyst.line6")}</StyledVacancyText>
-
-            <StyledVacancySubtitle>{t("We offer")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("Business Analyst.line7")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line8")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line9")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line10")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line11")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line12")}</StyledVacancyText>
-          </StyledVacancy>
           
         </StyledGrid>
       </StyledBackground>

@@ -77,6 +77,8 @@ const Subtitle = styled.p`
   @media (min-width: 80rem) {
     font-size: 2rem;
     margin: 4rem 0;
+    width: 32rem;
+    line-height: 2rem;
   }
 `
 
@@ -199,7 +201,7 @@ const InfoContainer = styled.div`
 
   @media (min-width: 80rem) {
     width: 36rem;
-    height: 40rem;
+    height: auto;
     padding: 0 0 0 2rem;
   }
 `
@@ -566,17 +568,19 @@ class Corplight extends React.Component {
                     <InfoElementDescriptionText>{t("Capabilities.Line6")}</InfoElementDescriptionText>
                   </InfoElementDescription>
                 </InfoElement>
-                <InfoElement>
-                  <DownloadForm />
-                </InfoElement>
+                <DownloadForm />
+               
+                
               </InfoElementContainer>
             </InfoContainer>
+            
           </AboutContainer>
+          
           <FunctionalityContainer>
 
             <FunctionalityTitle>{t("Functionality.Title")} <FunctionalityTitleSpan>CorpLight</FunctionalityTitleSpan></FunctionalityTitle>
             <div>
-              <FunctionalitySubtitle>{t("Functionalty.Subtitle")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Functionality.Subtitle")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line1")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line2")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line3")}</FunctionalityParagraph>
@@ -593,7 +597,7 @@ class Corplight extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line14")}</FunctionalityParagraph>
             </div>
             <div>
-              <FunctionalitySubtitle>{t("Functionalty.Subtitle2")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Functionality.Subtitle2")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line15")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line16")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line17")}</FunctionalityParagraph>
@@ -604,7 +608,7 @@ class Corplight extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line22")}</FunctionalityParagraph>
             </div>
             <div>
-              <FunctionalitySubtitle>{t("Functionalty.Subtitle3")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Functionality.Subtitle3")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line23")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line24")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line25")}</FunctionalityParagraph>
@@ -614,7 +618,7 @@ class Corplight extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line29")}</FunctionalityParagraph>
             </div>
             <div>
-              <FunctionalitySubtitle>{t("Functionalty.Subtitle4")}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Functionality.Subtitle4")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line30")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line31")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line32")}</FunctionalityParagraph>
