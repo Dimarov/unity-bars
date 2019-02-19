@@ -268,43 +268,6 @@ const PersonPosition = styled.h3`
   }
 `
 
-function Employees(props) {
-  const person = props.employees.map((employee) =>
-    <Person key={employee.id}>
-      <PersonPhoto person={`${employee.image}`}></PersonPhoto>
-      <PersonName>{employee.name}</PersonName>
-      <PersonPosition>{employee.position}</PersonPosition>
-    </Person>
-  );
-
-  return (
-    <Grid>
-      {person}
-    </Grid>
-  );
-}
-
-const employees = [
-  {id: 1, name: 'Цабеха Яна', position: 'HR Менеджер', image: `${onee}`},
-  {id: 2, name: 'Ланбіна Ольга', position: 'Директор департаменту проектного менеджменту та бізнес-аналізу', image: `${twoe}`},
-  {id: 3, name: 'Сухова Татяна', position: 'Заступник Генерального директора', image: `${threee}`},
-  {id: 4, name: 'Суфтін Євген', position: 'Провідний інженер-програміст департаменту впровадження та супроводження ПЗ', image: `${foure}`},
-  {id: 5, name: 'Сошко Євген', position: 'Директор департаменту впровадження та супроводження ПЗ', image: `${fivee}`},
-  {id: 6, name: 'Кобернюк Ярослав', position: 'Заступник директора департаменту впровадження та супроводження ПЗ', image: `${sixe}`},
-  {id: 7, name: 'Пастушенко Оксана', position: 'Начальник відділу технічної документації', image: `${sevene}`},
-  {id: 8, name: 'Овчарук Анатолій', position: 'Начальник відділу обліку, резервування, фінансової та статистичної звітності', image: `${eighte}`},
-  {id: 9, name: 'Музика Олег', position: 'Заступник директора департаменту розробки та тестування ПЗ', image: `${ninee}`},
-  {id: 10, name: 'Савченко Андрій', position: 'Менеджер з інформації', image: `${tene}`},
-  {id: 11, name: 'Марценюк Людмила', position: 'Провідний інженер-програміст', image: `${elevene}`},
-  {id: 12, name: 'Малоросіянов Михайло', position: 'Інженер-програміст департаменту впровадження та супроводження ПЗ', image: `${twelvee}`},
-  {id: 13, name: 'Коротков Сергій', position: 'Начальник управління системно-технічної підтримки', image: `${thirteene}`},
-  {id: 14, name: 'Козачок Віталій', position: 'Провідний інженер-програміст управління проектів ДКСУ', image: `${fourteene}`},
-  {id: 15, name: 'Гудима Ігор', position: 'Провідний інженер-програміст управління проектів ДКСУ', image: `${fifteene}`},
-  {id: 16, name: 'Вірко Татяна', position: 'Начальник відділу обліку', image: `${sixteene}`},
-  {id: 17, name: 'Кадученко Ярослава', position: 'Aдміністративний директор', image: `${seventeene}`},
-  {id: 18, name: 'Кондаков Валерій', position: 'Генеральний директор', image: `${eighteene}`},
-]
-
 class Company extends React.Component {
 
   render() {
@@ -323,7 +286,98 @@ class Company extends React.Component {
         <Container>
           <Topic>{t("Our Team")}</Topic>
           <hr />
-          <Employees employees={employees} />
+          <Grid>
+            <Person>
+              <PersonPhoto person={onee}></PersonPhoto>
+              <PersonName>{t("Team.Name1")}</PersonName>
+              <PersonPosition>{t("Team.Position1")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twoe}></PersonPhoto>
+              <PersonName>{t("Team.Name2")}</PersonName>
+              <PersonPosition>{t("Team.Position2")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={three}></PersonPhoto>
+              <PersonName>{t("Team.Name3")}</PersonName>
+              <PersonPosition>{t("Team.Position3")}</PersonPosition>
+            </Person>
+                        <Person>
+              <PersonPhoto person={foure}></PersonPhoto>
+              <PersonName>{t("Team.Name4")}</PersonName>
+              <PersonPosition>{t("Team.Position4")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={fivee}></PersonPhoto>
+              <PersonName>{t("Team.Name5")}</PersonName>
+              <PersonPosition>{t("Team.Position5")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={sixe}></PersonPhoto>
+              <PersonName>{t("Team.Name6")}</PersonName>
+              <PersonPosition>{t("Team.Position6")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={sevene}></PersonPhoto>
+              <PersonName>{t("Team.Name7")}</PersonName>
+              <PersonPosition>{t("Team.Position7")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={eighte}></PersonPhoto>
+              <PersonName>{t("Team.Name8")}</PersonName>
+              <PersonPosition>{t("Team.Position8")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={ninee}></PersonPhoto>
+              <PersonName>{t("Team.Name9")}</PersonName>
+              <PersonPosition>{t("Team.Position9")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={tene}></PersonPhoto>
+              <PersonName>{t("Team.Name10")}</PersonName>
+              <PersonPosition>{t("Team.Position10")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={elevene}></PersonPhoto>
+              <PersonName>{t("Team.Name11")}</PersonName>
+              <PersonPosition>{t("Team.Position11")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twelvee}></PersonPhoto>
+              <PersonName>{t("Team.Name12")}</PersonName>
+              <PersonPosition>{t("Team.Position12")}</PersonPosition>
+            </Person>
+                        <Person>
+              <PersonPhoto person={thirteene}></PersonPhoto>
+              <PersonName>{t("Team.Name13")}</PersonName>
+              <PersonPosition>{t("Team.Position13")}</PersonPosition>
+            </Person>
+                        <Person>
+              <PersonPhoto person={fourteene}></PersonPhoto>
+              <PersonName>{t("Team.Name14")}</PersonName>
+              <PersonPosition>{t("Team.Position14")}</PersonPosition>
+            </Person>
+                        <Person>
+              <PersonPhoto person={fifteene}></PersonPhoto>
+              <PersonName>{t("Team.Name15")}</PersonName>
+              <PersonPosition>{t("Team.Position15")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={sixteene}></PersonPhoto>
+              <PersonName>{t("Team.Name16")}</PersonName>
+              <PersonPosition>{t("Team.Position16")}</PersonPosition>
+            </Person>
+                        <Person>
+              <PersonPhoto person={seventeene}></PersonPhoto>
+              <PersonName>{t("Team.Name17")}</PersonName>
+              <PersonPosition>{t("Team.Position17")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={eighteene}></PersonPhoto>
+              <PersonName>{t("Team.Name18")}</PersonName>
+              <PersonPosition>{t("Team.Position18")}</PersonPosition>
+            </Person>
+          </Grid>
           <Topic>{t("Clients and partners")}</Topic>
           <hr />
           <SecondGrid>
