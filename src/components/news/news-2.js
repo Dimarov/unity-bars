@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import two from "../../images/news/news2.jpg"
 
 
@@ -86,18 +86,25 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
-const News2 = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-    </StyledHeader>
-    <Container>
-      <StyledNews>
-        <StyledNewsTitle>З Днем Незалежності, Україно!</StyledNewsTitle>
-        <StyledNewsText>Дружній колектив UNITY-BARS вітає всіх клієнтів з Днем Незалежності. Разом ми робимо нашу країну сильнішою. ✊🇺🇦</StyledNewsText>
-        <StyledNewsDate>23.08.2018</StyledNewsDate>
-      </StyledNews>
-    </Container>
-  </StyledBackground>
-)
+class News2 extends React.Component {
 
-export default News2
+  render() {
+    const { t } = this.props
+
+    return (
+      <StyledBackground>
+        <StyledHeader>
+        </StyledHeader>
+        <Container>
+          <StyledNews>
+            <StyledNewsTitle>{t("SecondPostTitle")}</StyledNewsTitle>
+            <StyledNewsText>{t("Second.Line1")}</StyledNewsText>
+            <StyledNewsDate>23.08.2018</StyledNewsDate>
+          </StyledNews>
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("News")(News2)

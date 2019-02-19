@@ -189,7 +189,7 @@ const InfoContainer = styled.div`
   width: 100%;
   padding: 0rem;
   box-sizing: border-box;
-  height: 40rem;
+  height: auto;
   margin: 4rem 0;
 
   @media (min-width: 40rem) {
@@ -198,7 +198,7 @@ const InfoContainer = styled.div`
 
   @media (min-width: 80rem) {
     width: 36rem;
-    height: 40rem;
+    height: auto;
     padding: 0 0 0 2rem;
   }
 `
@@ -603,8 +603,8 @@ class Forward extends React.Component {
             </ImageContainer>
           </SecurityContainer>
           <DownloadContainer>
-            <DownloadTitle>Завантажуйте Forward Online</DownloadTitle>
-            <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
+            <DownloadTitle>{t("Download")}</DownloadTitle>
+            <DownloadSubtitle>{t("Try Web")}</DownloadSubtitle>
 
             <ButtonContainer>
               <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>

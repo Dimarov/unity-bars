@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import three from "../../images/news/news3.jpg"
 
 
@@ -86,29 +86,36 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
-const News3 = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-    </StyledHeader>
-    <Container>
-      <StyledNews>
-        <StyledNewsTitle>Новий Трансфер Данних до BARS MMFO</StyledNewsTitle>
-        <StyledNewsText>
-          Черговий трансфер данних, тепер для регіонів Вінниці та Житомира, всього оновлено:<br />
-            46 071 894 – Банкових рахунків (21 451 999 діючих)<br />
-            13 526 371 – Клієнтів банку (9 960 526 діючих)<br />
-            Більше ніж 8 500 активних користувачів!<br />
-            <br />
-            У Львові:<br />
-            49 266 910 – Банкових рахунків (22 551 403 діючих)<br />
-            14 766 645 – Клієнтів банку (10 255 043 діючих)<br />
-            Більше ніж 9 500 активних користувачів!<br />
-            Залишаємось на звязку ✌️
-        </StyledNewsText>
-        <StyledNewsDate>16.05.2018</StyledNewsDate>
-      </StyledNews>
-    </Container>
-  </StyledBackground>
-)
+class News3 extends React.Component {
 
-export default News3
+  render() {
+    const { t } = this.props
+
+    return (
+      <StyledBackground>
+        <StyledHeader>
+        </StyledHeader>
+        <Container>
+          <StyledNews>
+            <StyledNewsTitle>{t("ThirdPostTitle")}</StyledNewsTitle>
+            <StyledNewsText>
+              {t("Third.Line1")}<br />
+              {t("Third.Line2")}<br />
+              {t("Third.Line3")}<br />
+              {t("Third.Line4")}<br />
+              <br />
+              {t("Third.Line5")}<br />
+              {t("Third.Line6")}<br />
+              {t("Third.Line7")}<br />
+              {t("Third.Line8")}<br />
+              {t("Third.Line9")}<br />
+            </StyledNewsText>
+            <StyledNewsDate>23.08.2018</StyledNewsDate>
+          </StyledNews>
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("News")(News3)

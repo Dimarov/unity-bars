@@ -1,10 +1,48 @@
 {
   "News": "News",
-  "Latest news in UNITY-BARS": "Latest news in UNITY-BARS",
-  "FirstPostTitle": "UNITY-BARS launches Preparation for the implementation of International Standards",
-  "SecondPostTitle": "Happy Independence Day, Ukraine!",
-  "ThirdPostTitle": "New Data Migration to BARS-MMFO",
-  "FourthPostTitle": "From now on, getting a pension is even more convenient and safer, thanks to our Data Exchange System with PFU",
-  "FifthPostTitle": "Congratulations to Kherson and Chernihiv region in BARS-MMFO",
-  "SixthPostTitle": "Successful transfer of the Bank Automation System to the three-tier architecture from the NBU in conjunction with UNITY-BARS"
+  "Latest news in UNITY-BARS": "The latest news at UNITY-BARS",
+  "FirstPostTitle": "2019 the Company UNITY-BARS Begins the Preparation for the Implementation of International Standards",
+  "SecondPostTitle": "On Independence Day, Ukraine!",
+  "ThirdPostTitle": "New Data to the BARS MMFO",
+  "FourthPostTitle": "Henceforth, a pension is becoming even easier and safer, thanks to our System of Data Exchange with PFC",
+  "FifthPostTitle": "Congratulations and Chengsi the Kherson region, in BARS-MMFO",
+  "SixthPostTitle": "The successful interpretation of the Automation System of the Bank on a three-tier architecture of the NBU together with the UNITY-BARS",
+  "First": {
+    "Line1": ""
+  },
+  "Second": {
+    "Line1": "Friendly team UNITY-BARS wishes everyone a happy Independence Day. Together we make our country stronger."
+  },
+  "Third": {
+    "Line1": "Once the transfer data for the regions of Vinnytsia and Zhytomyr, just updated:",
+    "Line2": "46 071 894 – Bank accounts (21 451 999 active)",
+    "Line3": "13 526 371 – Bank Customers (9 960 526 active)",
+    "Line4": "More than 8 500 active users!",
+    "Line5": "In Lviv:",
+    "Line6": "49 266 910 – Bank accounts (22 551 403 active)",
+    "Line7": "14 766 645 – Bank Customers (10 255 043 active)",
+    "Line8": "More than 9 500 active users!",
+    "Line9": "Keep in touch!"
+  },
+  "Fourth": {
+    "Line1": "What does it mean? ",
+    "Line2": "- Accelerating the processing of registers and the payment of pensions recipients",
+    "Line3": "- Addressing the risks associated with manual handling of registers for the payment",
+    "Line4": "- Reducing the cost of logistics registers",
+    "Line5": "- Optimization of the process of obtaining registers of pensioners and transfer back the status of funds transfer to current accounts in online mode ",
+    "Line6": "How our system works? ",
+    "Line7": "1. Using web services the Bank receives from the PFC registers of pensioners to pension accrual at the Bank.",
+    "Line8": "2. After the verification registry level TSA using web services is to verify the sufficiency of funds in the appropriate accounts RU to pay for the registry. ",
+    "Line9": "3. In case of sufficiency of means, means, force is debit debit is accounts RU, with the subsequent transfer of funds to accounts of recipients.",
+    "Line10": "4. In fact crediting of pensions, the Bank shall report to the PFC by sending execution Report of the consolidated registry"
+  },
+  "Fifth": {
+    "Line1": "The Data included",
+    "Line2": "39 440 338 – Bank accounts (18 959 127 active) ",
+    "Line3": "11 420 634 – Bank Customers (8 853 913 active) ",
+    "Line4": "More than 7 700 active users!"
+  },
+  "Sixth": {
+    "Line1": "In October 2017 NBU joint salillari with UNITY-BARS successfully completed the translation of the automation system of the Bank (SAB) for a three-tier architecture that provides the Bank with the following benefits: scalability, high reliability, low requirements for communication channel and a high level of security.Recall that in 2012, the NBU together with the company UNITY-BARS successfully launched a system of Multi-MFIs, and in 2015 was go to a single MFI."
+  }
 }

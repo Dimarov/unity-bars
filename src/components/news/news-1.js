@@ -103,7 +103,7 @@ class News1 extends React.Component {
         <Container>
           <StyledNews>
             <StyledNewsTitle>{t("FirstPostTitle")}</StyledNewsTitle>
-            <StyledNewsText>{t("ThirdPostText")}</StyledNewsText>
+            <StyledNewsText>{t("First.Line1")}</StyledNewsText>
             <StyledNewsImage src={picture} alt="iso" />
             <StyledNewsDate>12.02.2019</StyledNewsDate>
           </StyledNews>
@@ -113,4 +113,4 @@ class News1 extends React.Component {
   }
 }
 
-export default translate("News1")(News1)
+export default translate("News")(News1)

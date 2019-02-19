@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from 'gatsby'
 import styled from "styled-components"
-
+import { translate } from 'react-i18next'
 import five from "../../images/news/news5.jpg"
 
 
@@ -86,22 +86,30 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
-const News5 = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-    </StyledHeader>
-    <Container>
-      <StyledNews>
-        <StyledNewsTitle>Вітаємо Херсонський та Чернігівський регіон в BARS-MMFO</StyledNewsTitle>
-        <StyledNewsText>Трансфер Данних включив в себе <br />
-          39 440 338 – Банкових рахунків (18 959 127 діючих) <br />
-          11 420 634 – Клієнтів банку (8 853 913 діючих) <br />
-          Більше ніж 7 700 активних користувачів!
-        </StyledNewsText>
-        <StyledNewsDate>03.03.2018</StyledNewsDate>
-      </StyledNews>
-    </Container>
-  </StyledBackground>
-)
+class News5 extends React.Component {
 
-export default News5
+  render() {
+    const { t } = this.props
+
+    return (
+      <StyledBackground>
+        <StyledHeader>
+        </StyledHeader>
+        <Container>
+          <StyledNews>
+            <StyledNewsTitle>{t("FifthPostTitle")}</StyledNewsTitle>
+            <StyledNewsText>
+              {t("Fifth.Line1")} <br />
+              {t("Fifth.Line2")} <br />
+              {t("Fifth.Line3")} <br />
+              {t("Fifth.Line4")} ifth>
+            </StyledNewsText>
+            <StyledNewsDate>23.08.2018</StyledNewsDate>
+          </StyledNews>
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("News")(News5)
