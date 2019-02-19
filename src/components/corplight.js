@@ -593,7 +593,7 @@ class Corplight extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line14")}</FunctionalityParagraph>
             </div>
             <div>
-              <FunctionalitySubtitle>{t("Functionalty.Subtitle"2)}</FunctionalitySubtitle>
+              <FunctionalitySubtitle>{t("Functionalty.Subtitle2")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line15")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line16")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line17")}</FunctionalityParagraph>
