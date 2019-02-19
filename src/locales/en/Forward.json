@@ -1,0 +1,35 @@
+{
+    "24\/7 access to your banking services": "24\/7 access to Your banking services",
+    "Capabilities": {
+        "Title": "Forward Opportunities Online",
+        "Line1": "Online banking",
+        "Line2": "Access to banking products and services anywhere and at any time.",
+        "Line3": "Functionality",
+        "Line4": "Functionality meets modern requirements of customers.",
+        "Line5": "Design",
+        "Line6": "The system design is built on the basis of the intuitive preferences of the user. According to the standards of Material design of Android and IOS Human Interface Guidelines."
+    },
+    "Functionality": {
+        "Title": "Functionality",
+        "Subtitle": "Basic funzionalit",
+        "Line1": "Self-registration in the system, the ability of the account management client.",
+        "Line2": "Viewing Deposit products (including the files) with possibility of replenishment and open (WEB, mobile app).",
+        "Line3": "The formation of statements of accounts of the user, display account statements (WEB, mobile, apps), the mechanism of the latest operations of the user-specific account, export \/ print statements.",
+        "Line4": "Create and send Bank transfers between your accounts, by account number to the Bank's Clients, by phone number to Forward online users, saving templates of payment documents.",
+        "Line5": "A mechanism for receiving and loading data of branches and ATMs (input xml file), determining the current location of the receive location data about your current location.",
+        "Line6": "Automatic download of current exchange rates from the ABS, information on the current rates in the System (web) with possibility of transition to a separate screen to display the change history of course.",
+        "Line7": "Services for locking and unlocking a user for CRM system ",
+        "Line8": "Setting currency exchange rates MPs through the administrative part and their reflection in the System (WEB, mobile app).",
+        "Line9": "Services for card management."
+    },
+    "Security": {
+        "Title": "Security System",
+        "Line1": "Authentication: username and password, fingerprint, OTP by SMS, digital signature",
+        "Line2": "The dependence of the available functionality of the system from the authentication method",
+        "Line3": "Control and check the status of user certificates",
+        "Line4": "Distribution of administrators \/ engineers \/ users of the Bank according to the provided roles",
+        "Line5": "Support various systems of cryptography and tokens (RSA, GOST)"
+    },
+    "Download": "Download Forward Online",
+    "Try Web": "Or try the web version"
+}

@@ -523,7 +523,7 @@ class Forward extends React.Component {
           <Container>
             <HeaderImage src={header} alt="header-mockup" />
             <Title>Forward <br /><Span>Online</Span></Title>
-            <Subtitle>24/7 доступ до Ваших банківських сервісів</Subtitle>
+            <Subtitle>{t("24/7 access to your banking services")}</Subtitle>
             <ButtonContainer>
               <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
               <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
