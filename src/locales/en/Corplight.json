@@ -7,7 +7,7 @@
     "Line3": "Control and check the status of user certificates",
     "Line4": "Distribution of administrators / engineers / users of the Bank according to the provided roles",
     "Line5": "Support various systems of cryptography and tokens (RSA, GOST)",
-    "Title": "Security System"
+    "Title": "System Security"
   },
   "Oschadbank": "Oschadbank",
   "Capabilities": {
@@ -59,7 +59,7 @@
     "Line36": "Revision of the established limits on corporate cards.",
     "Line37": "Control limits for corporate card.",
     "Line38": "The formation history of operations on a corporate card.",
-    "Subtitle": "Basic funzionalit",
+    "Subtitle": "Basic functionality",
     "Subtitle4": "The functionality of corporate cards",
     "Subtitle2": "Payments nsmenu currency",
     "Subtitle3": "Salary project"

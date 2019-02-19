@@ -1,5 +1,5 @@
 {
-    "24\/7 access to your banking services": "24\/7 access to Your banking services",
+    "24\/7 access to your banking services": "24/7 access to Your banking services",
     "Capabilities": {
         "Title": "Forward Online Capabilities",
         "Line1": "Online banking",
@@ -23,7 +23,7 @@
         "Line9": "Services for card management."
     },
     "Security": {
-        "Title": "Security System",
+        "Title": "System Security",
         "Line1": "Authentication: username and password, fingerprint, OTP by SMS, digital signature",
         "Line2": "The dependence of the available functionality of the system from the authentication method",
         "Line3": "Control and check the status of user certificates",

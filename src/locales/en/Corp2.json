@@ -3,20 +3,20 @@
     "Description": "Corp 2 is a reliable and time-tested system of remote service with a wide range of functionality that enables the Bank's clients to manage their accounts without leaving the office. Using the system Customers have a constant access to, and timely provision of full information on the accounts. This means that all information exchanged between the Client and the Bank, the system is protected and inaccessible for unauthorized persons. the System is constantly evolving and improving, so was the basis for the company's products, the updated system B. One",
     "Used": "Used",
     "Capabilities": {
-        "Title": "Opportunities and achievements System",
+        "Title": "System capabilities and achievements",
         "Line1": "• Can withstand the load at rush hour 2000 — 3000 concurrent users",
         "Line2": "• Corporate client Bank has more than 46 000 people",
         "Line3": "• Contains 200 000 accounts and 300 000 — 400 000 of documents per day"
     },
     "Customization": {
-        "Title": "Customization of sight",
+        "Title": "Approval customization",
         "Line1": "• A single-entry visa (can be used with individuals and SPD)",
         "Line2": "• Double visa (standard for legal persons (accountant, Director)",
         "Line3": "• Triple visa (used for corporate control (accountant, Director, controller)",
         "Line4": "Visa Controller at triple visa is denoted as “sequential”. This means that it can be imposed only after a visa Accountant and Director. In contrast, the Accountant and the Director can overlap in an arbitrary order. The total number of visas can be increased to 10 with the installation of order and priority. Also support conditional visas – according to specified rules (e.g. when exceeding a certain sum on a certain account number\/beneficiary\/Bank etc) – only if the visa will be assigned to the document."
     },
     "Authentification": {
-        "Title": "Bagaturov authentication",
+        "Title": "Multilevel authentication",
         "Line1": "Each entry type you can separately allow or deny. It supports various media secret key (token, smart card, etc.). The opportunity to further encrypt the channel secret private key (using the crypto-gateway Bars Gataway)",
         "Line2": "• User login and password",
         "Line3": "• A token for generating one-time passwords (in addition to reusable)",
