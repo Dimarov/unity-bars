@@ -124,9 +124,16 @@ const StyledContactInput = styled.input`
   font-weight: 400;
   margin: .5rem 0;
   color: #1A1A1A;
-  border: .125rem solid #DDD;
+  border: .125rem solid #1a1a1a;
+  opacity: .4;
   border-radius: .25rem;
   padding: 1rem 1rem;
+  transition: all .1s ease-in;
+
+  :focus,
+  :active {
+    opacity: .6;
+  }
 `
 
 const StyledContactTextarea = styled.textarea`
@@ -137,10 +144,17 @@ const StyledContactTextarea = styled.textarea`
   font-weight: 400;
   margin: .5rem 0;
   color: #1A1A1A;
-  border: .125rem solid #DDD;
+  opacity: .4;
+  border: .125rem solid #1a1a1a;
   border-radius: .25rem;
   padding: 1rem 1rem;
   resize: none;
+  transition: all .1s ease-in;
+
+  :focus,
+  :active {
+    opacity: .6;
+  }
 `
 
 const StyledContactSubmit = styled.input`
