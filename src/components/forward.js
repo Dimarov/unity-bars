@@ -9,6 +9,8 @@ import security from "../images/mockups/forward-samsung-3.png"
 import banking from "../images/icons/banking.svg"
 import functionality from "../images/icons/functionality.svg"
 import design from "../images/icons/design.svg"
+import DownloadForm from './download-form'
+import { translate } from 'react-i18next'
 
 const Background = styled.div`
   width: 100%;
@@ -510,106 +512,110 @@ const DownloadSubtitle = styled.h3`
   }
 `
 
-const Forward = (props) => (
-  <Background>
-    <Header>
-      <Container>
-        <HeaderImage src={header} alt="header-mockup" />
-        <Title>Forward <br /><Span>Online</Span></Title>
-        <Subtitle>24/7 доступ до Ваших банківських сервісів</Subtitle>
-        <ButtonContainer>
-          <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
-          <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
-          <Button href="https://online.forward-bank.com/dashboard"  outline >Web Demo</Button>
-        </ButtonContainer>
-      </Container>
-    </Header>
-    <Container>
-      <AboutContainer>
-        <ImageContainer>
-          <AboutImage src={about} alt="about-mockup" />
-        </ImageContainer>
-        <InfoContainer>
-          <InfoTitle>Можливості Forward Online</InfoTitle>
-          <InfoElementContainer>
-            <InfoElement>
-              <InfoElementIcon>
-                <InfoElementIconImage src={banking} alt="banking-icon" />
-              </InfoElementIcon>
-              <InfoElementDescription>
-                <InfoElementDescriptionTitle>Онлайн банкінг</InfoElementDescriptionTitle>
-                <InfoElementDescriptionText>Доступ до банківських продуктів та послуг будь-де та будь-коли.</InfoElementDescriptionText>
-              </InfoElementDescription>
-            </InfoElement>
-            <InfoElement>
-              <InfoElementIcon>
-                <InfoElementIconImage src={functionality} alt="functionality-icon" />
-              </InfoElementIcon>
-              <InfoElementDescription>
-                <InfoElementDescriptionTitle>Функціональність</InfoElementDescriptionTitle>
-                <InfoElementDescriptionText>Функціональність, що відповідає сучасним вимогам клієнтів.</InfoElementDescriptionText>
-              </InfoElementDescription>
-            </InfoElement>
-            <InfoElement>
-              <InfoElementIcon>
-                <InfoElementIconImage src={design} alt="design-icon" />
-              </InfoElementIcon>
-              <InfoElementDescription>
-                <InfoElementDescriptionTitle>Дизайн</InfoElementDescriptionTitle>
-                <InfoElementDescriptionText>Дизайн системи побудований на базі інтуїтивних вподобань користувача. Згідно стандартів Material design Android та IOS Human Interface Guidelines.</InfoElementDescriptionText>
-              </InfoElementDescription>
-            </InfoElement>
-            <InfoElement>
-              <InfoElementDownloadLink href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">Завантажити Презентацію</InfoElementDownloadLink>
-            </InfoElement>
-          </InfoElementContainer>
-        </InfoContainer>
-      </AboutContainer>
-      <FunctionalityContainer>
+class Forward extends React.Component {
 
-        <FunctionalityTitle>Функціональність <FunctionalityTitleSpan>Forward Online</FunctionalityTitleSpan></FunctionalityTitle>
-        <div>
-          <FunctionalitySubtitle>Базова фунціональність</FunctionalitySubtitle>
-          <FunctionalityParagraph>Самореєстрація клієнта в системі, можливість управління обліковими записами клієнта.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд депозитних продуктів (в тому числі і архіву) з можливістю поповнення і відкриття (ВЕБ, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Формування виписки по рахунках користувача, відображення виписки (ВЕБ, мобільні додатки), механізм отримання останніх операцій користувача по конкретному рахунку, експорт / друк виписки.</FunctionalityParagraph>
-          <FunctionalityParagraph>Створення і відправка в Банк переказів між своїми рахунками, за номером рахунку Клієнтам Банку, за номером телефону користувачам Forward online, збереження шаблонів платіжних документів.</FunctionalityParagraph>
-          <FunctionalityParagraph>Механізм отримання та завантаження даних відділень і банкоматів, визначення поточного місцезнаходження отримання геолокаційні даних про поточний стан.</FunctionalityParagraph>
-          <FunctionalityParagraph>Автоматичне завантаження інформації про поточні курси обміну валют, інформування про поточні курси в Системі (ВЕБ, мобільні додатки).</FunctionalityParagraph>
-          <FunctionalityParagraph>Сервіси для блокування \ розблокування користувача для CRM-системи </FunctionalityParagraph>
-          <FunctionalityParagraph>Установка курсів валют МПС через адміністративну частину і їх відображення в Системі (ВЕБ, мобільний додаток).</FunctionalityParagraph>
-          <FunctionalityParagraph>Сервіси по управлінню картами.</FunctionalityParagraph>
-          <FunctionalityParagraph>Перегляд кредитних продуктів з можливістю погашення.</FunctionalityParagraph>
+  render() {
+    const { t } = this.props
 
-        </div>
+    return (
+      <Background>
+        <Header>
+          <Container>
+            <HeaderImage src={header} alt="header-mockup" />
+            <Title>Forward <br /><Span>Online</Span></Title>
+            <Subtitle>24/7 доступ до Ваших банківських сервісів</Subtitle>
+            <ButtonContainer>
+              <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
+              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
+              <Button href="https://online.forward-bank.com/dashboard"  outline >Web Demo</Button>
+            </ButtonContainer>
+          </Container>
+        </Header>
+        <Container>
+          <AboutContainer>
+            <ImageContainer>
+              <AboutImage src={about} alt="about-mockup" />
+            </ImageContainer>
+            <InfoContainer>
+              <InfoTitle>{t("Capabilities.Title")}</InfoTitle>
+              <InfoElementContainer>
+                <InfoElement>
+                  <InfoElementIcon>
+                    <InfoElementIconImage src={banking} alt="banking-icon" />
+                  </InfoElementIcon>
+                  <InfoElementDescription>
+                    <InfoElementDescriptionTitle>{t("Capabilities.Line1")}</InfoElementDescriptionTitle>
+                    <InfoElementDescriptionText>{t("Capabilities.Line2")}</InfoElementDescriptionText>
+                  </InfoElementDescription>
+                </InfoElement>
+                <InfoElement>
+                  <InfoElementIcon>
+                    <InfoElementIconImage src={functionality} alt="functionality-icon" />
+                  </InfoElementIcon>
+                  <InfoElementDescription>
+                    <InfoElementDescriptionTitle>{t("Capabilities.Line3")}</InfoElementDescriptionTitle>
+                    <InfoElementDescriptionText>{t("Capabilities.Line4")}</InfoElementDescriptionText>
+                  </InfoElementDescription>
+                </InfoElement>
+                <InfoElement>
+                  <InfoElementIcon>
+                    <InfoElementIconImage src={design} alt="design-icon" />
+                  </InfoElementIcon>
+                  <InfoElementDescription>
+                    <InfoElementDescriptionTitle>{t("Capabilities.Line5")}</InfoElementDescriptionTitle>
+                    <InfoElementDescriptionText>{t("Capabilities.Line6")}</InfoElementDescriptionText>
+                  </InfoElementDescription>
+                </InfoElement>
+                <InfoElement>
+                  <DownloadForm />
+                </InfoElement>
+              </InfoElementContainer>
+            </InfoContainer>
+          </AboutContainer>
+          <FunctionalityContainer>
 
-      </FunctionalityContainer>
-      <SecurityContainer>
-        <SecurityInfoContainer>
-          <SecurityInfoTitle>Безпека Системи</SecurityInfoTitle>
-          <SecurityInfoParagraph>Аутентифікація: логін та пароль, за відбитком пальцю, OTP by SMS, ЕЦП</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Залежність доступного функціоналу системи від способу аутентифікації</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Контроль і перевірка статусу сертифікатів користувача</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Розподіл доступу адміністраторів / технологів / користувачів банку згідно наданих ролей</SecurityInfoParagraph>
-          <SecurityInfoParagraph>Підтримка різних систем криптографії та токенів (RSA, ДСТУ)</SecurityInfoParagraph>
-        </SecurityInfoContainer>
+            <FunctionalityTitle>{t("Functionality.Title")} <FunctionalityTitleSpan>Forward</FunctionalityTitleSpan></FunctionalityTitle>
+            <div>
+              <FunctionalitySubtitle>{t("Functionality.Subtitle")}</FunctionalitySubtitle>
+              <FunctionalityParagraph>{t("Functionality.Line1")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line2")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line3")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line4")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line5")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line6")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line7")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line8")}</FunctionalityParagraph>
+            </div>
 
-        <ImageContainer>
-          <SecurityImage src={security} alt="security-mockup" />
-        </ImageContainer>
-      </SecurityContainer>
-      <DownloadContainer>
-        <DownloadTitle>Завантажуйте Forward Online</DownloadTitle>
-        <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
+          </FunctionalityContainer>
+          <SecurityContainer>
+            <SecurityInfoContainer>
+              <SecurityInfoTitle>{t("Security.Title")}</SecurityInfoTitle>
+              <SecurityInfoParagraph>{t("Security.Line1")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line2")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line3")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line4")}</SecurityInfoParagraph>
+              <SecurityInfoParagraph>{t("Security.Line5")}</SecurityInfoParagraph>
+            </SecurityInfoContainer>
 
-        <ButtonContainer>
-          <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
-          <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
-          <Button href="https://online.forward-bank.com/dashboard" outline >Web Demo</Button>
-        </ButtonContainer>
-      </DownloadContainer>
-    </Container>
-  </Background>
-)
+            <ImageContainer>
+              <SecurityImage src={security} alt="security-mockup" />
+            </ImageContainer>
+          </SecurityContainer>
+          <DownloadContainer>
+            <DownloadTitle>Завантажуйте Forward Online</DownloadTitle>
+            <DownloadSubtitle>Або спробуйте веб-версію</DownloadSubtitle>
 
-export default Forward
+            <ButtonContainer>
+              <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
+              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
+              <Button href="https://online.forward-bank.com/dashboard" outline >Web Demo</Button>
+            </ButtonContainer>
+          </DownloadContainer>
+        </Container>
+      </Background>
+    )
+  }
+}
+
+export default translate("Forward")(Forward)

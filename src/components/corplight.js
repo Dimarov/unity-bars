@@ -192,7 +192,7 @@ const InfoContainer = styled.div`
   width: 100%;
   padding: 0rem;
   box-sizing: border-box;
-  height: 40rem;
+  height: auto;
   margin: 4rem 0;
 
   @media (min-width: 40rem) {
