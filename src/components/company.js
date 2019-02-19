@@ -298,7 +298,7 @@ class Company extends React.Component {
               <PersonPosition>{t("Team.Position2")}</PersonPosition>
             </Person>
             <Person>
-              <PersonPhoto person={three}></PersonPhoto>
+              <PersonPhoto person={threee}></PersonPhoto>
               <PersonName>{t("Team.Name3")}</PersonName>
               <PersonPosition>{t("Team.Position3")}</PersonPosition>
             </Person>
