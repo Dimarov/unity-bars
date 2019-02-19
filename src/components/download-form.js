@@ -48,8 +48,8 @@ const StyledContactInput = styled.input`
   font-size: 1rem;
   font-weight: 400;
   margin: .5rem 0;
-  color: #fff;
-  border: .125rem solid #fff;
+  color: ${props => props.themeDark ? "#fff" : "#000"};
+  border: ${props => props.themeDark ? ".125rem solid #fff" : ".125rem solid #000"};
   opacity: .6;
   border-radius: .125rem;
   padding: 1rem 1rem;
@@ -63,13 +63,13 @@ const StyledContactInput = styled.input`
 
 const StyledContactSubmit = styled.input`
   outline: none;
-  background: #fff;
+  background: ${props => props.themeDark ? "#fff" : "#000"};
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin: .5rem 0;
-  color: #000;
-  border: .125rem solid #fff;
+  color: ${props => props.themeDark ? "#000" : "#fff"};
+  border: ${props => props.themeDark ? ".125rem solid #fff" : ".125rem solid #000"};
   border-radius: .25rem;
   padding: 1rem 2rem;
   cursor: pointer;
@@ -77,7 +77,7 @@ const StyledContactSubmit = styled.input`
 
   :hover {
     background: none;
-    color: #fff;
+    color: ${props => props.themeDark ? "#fff" : "#000"};
   }
 `
 
@@ -101,11 +101,11 @@ class DownloadForm extends React.Component {
     return (
       <div>
         <InfoElementDownloadLink onClick={this.handleClick} >{t("Download")}</InfoElementDownloadLink>
-        <StyledContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
-          <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
-          <StyledContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
+        <StyledContactForm themeDark={this.props.dark} isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
+          <StyledContactInput themeDark={this.props.dark} placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
+          <StyledContactInput themeDark={this.props.dark} placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
 
-          <StyledContactSubmit type="submit" value={t("Form.Download")} />
+          <StyledContactSubmit themeDark={this.props.dark} type="submit" value={t("Form.Download")} />
 
         </StyledContactForm>
       </div>
