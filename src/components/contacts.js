@@ -196,7 +196,7 @@ class Contacts extends React.Component {
       message: this.state.message
     }
 
-    axios.post('API_URI', data)
+    axios.post('https://nodejs-express-92d5p660v.now.sh/', data)
       .then(res => {
         this.setState({ sent: true }, this.resetForm())
       })
