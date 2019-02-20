@@ -1,0 +1,28 @@
+{
+    "Description": "Service system lending activities and automation of credit institutions with the full cycle of customer service",
+    "Capabilities": {
+        "Title": "Features and Benefits of",
+        "Line1": "• Automate the execution of queries to external systems (credit Bureau, interior Ministry, etc.) manual checks of applications (call to the place of work, etc.), check business rules",
+        "Line2": " The possibility of locating points on work with clients anywhere (implementation of the user interface based on Web-technologies)",
+        "Line3": "• Direct interaction with the image capture devices",
+        "Line4": "• Adaptation of workflow and processing the credit application the customer requirements",
+        "Line5": "• Focus on maximum speed of processing credit applications (results of the consumed loan without collateral in 20 minutes)",
+        "Line6": "• Minimize the risk of fraud by automating the selection of parameters and minimization of manual data entry"
+    },
+    "Specialties": {
+        "Title": "Technological Features",
+        "Line1": "• Display all transactions online",
+        "Line2": "• Role — based approach- this module provides a set of roles to perform various actions (surveyor, accountant, analyst, etc.), distribution of access rights in accordance with the established role",
+        "Line3": "• Parameterization — configuration on the basis of parameters of the reference loan products, accounting models, printed patterns, operations",
+        "Line4": "• The calculation of provisions is a seamless integration with the module of calculation of the reserve, automatic calculation and accounting of the reserve in accordance with the NBU resolution №23",
+        "Line5": "• Integration with third party systems — ability to interact with third party systems in particular software for payroll accounting"
+    },
+    "Functionality": {
+        "Title": "• The Functionality Of The Module",
+        "Line1": "• Establishment of the credit agreement — registration of the borrower and the parameters of the credit transaction and ensure that the construction of GIC, the calculation of the effective rate, the formation of printed forms, authorization by the rule of \"two hands\"",
+        "Line2": "• Grant funds — transfer to your card account, in the optional payment details or cash advance caused operations",
+        "Line3": "• Maintenance of the loan agreement, the accrual of interest, penalties, carrying out on delay, automatic analysis, loan repayment, etc.",
+        "Line4": "• Loan repayment — use of the account maturity, scheduled and early repayment, the repayment through the BOD, listed by EPA, the use of self-service terminals (Ibox, Бнк24, etc.)",
+        "Line5": "• Restructuring — support many types of restructuring (renewal, change of% rate, loan amount, etc.)"
+    }
+}
