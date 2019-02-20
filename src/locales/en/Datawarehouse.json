@@ -1,0 +1,29 @@
+{
+    "Description": "Class banking system DWH platform and modules IBM",
+    "Line1": "DWH system is a specially organized database that provides for the collection of information, its storage and quick access object-oriented data using a wide range of BI tools.",
+    "Line2": "When data is placed in a vault as is their transformation, aggregation, and elimination of contradictions, which allows the use of different DWH users as a single source of reliable information.",
+    "Components": {
+        "Title": "Components",
+        "Line1": "• Data sources (files, databases, web services)",
+        "Line2": "• Load Transformation (Oracle Data Integrator ETL or Bars)",
+        "Line3": "• Data warehouse (Oracle RDBMS EE)",
+        "Line4": "• Data schema (BarsDWH)",
+        "Line5": "• Data analysis (Oracle BIEE or BarsDWH)",
+        "Line6": "• Coordinator of the process (BarsDWH)",
+        "Line7": "System, the data Warehouse is designed to consolidate the accounting data contained in the territorial databases centralized storage of information for subsequent formation of the consolidated reporting and provision of data to third party systems using the appropriate services",
+        "Line8": "• Integration with ABS online",
+        "Line9": "• Multi — centralize the reporting of information for all managers of Ukraine",
+        "Line10": "• Setting limits on accounts, users, templates limits",
+        "Line11": "• Customizable reports in different formats",
+        "Line12": "• Modern interface and proven reliability"
+    },
+    "Capabilities": {
+        "Title": "The Capabilities Of The System",
+        "Line1": "• Reporting",
+        "Line2": "• Access to information 24\/7",
+        "Line3": "• Automatic data upload",
+        "Line4": "• Upload to the DWH",
+        "Line5": "• Loading in DM",
+        "Line6": "• Display of download status"
+    }
+}

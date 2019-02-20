@@ -7,6 +7,8 @@ import bg from '../images/fix/products.jpg'
 import dwhMac from '../images/fix/dwh_mac.png'
 import dwhLogoSVG from '../images/fix/dwh_logo.png'
 import macCanDataware from '../images/fix/dwh_mac_can.png'
+import DownloadForm from './download-form'
+import { translate } from 'react-i18next'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -50,8 +52,9 @@ const StyledSubtitle = styled.p`
 const StyledParagraphText = styled.div`
   font-family: myriad-pro, sans-serif;
   line-height: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 400;
+  opacity: .8;
   color: #000;
 
   @media screen and (max-width: 60rem) {
@@ -62,7 +65,7 @@ const StyledParagraphText = styled.div`
 const StyledTitleBlackColor = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
-  // font-weight: 400;
+  font-weight: 400;
   line-height: 2.5rem;
   color: #000;
   margin: 4rem 0 3rem 0;
@@ -163,66 +166,66 @@ const StyledDownloadLink = styled.a`
   }
 `
 
-const DatawarehousePage = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-      <Container>
-        <StyledTitle>Datawarehouse</StyledTitle>
+class Datawarehouse extends React.Component {
 
-        <StyledHeaderTitle>Система класу банківського DWH на платформі і модулях IBM</StyledHeaderTitle>
-        <StyledDownloadLink href={withPrefix('/documents/DATAWAREHOUSE.pdf')} download="DATAWAREHOUSE.pdf">Завантажити презентацію</StyledDownloadLink>
-      </Container>
-    </StyledHeader>
+  render() {
+    const { t } = this.props
 
-    <Container>
-      <DwhMac src={dwhMac} alt='dwhMacMockup'/>
-      <StyledParagraphText>
-        DWH система являє собою спеціально організовану базу даних, для якої забезпечується збір інформації, її
-        зберігання і швидкий доступ до предметно-орієнтованим даними за допомогою широкого спектра BI інструментів.
-      </StyledParagraphText>
-      <br/>
-      <StyledParagraphText>
-        При приміщенні даних у сховище так само відбувається їх трансформація, агрегація і усунення протиріч, що
-        дозволяє використовувати DWH різним користувачам в якості єдиного джерела достовірної інформації.
-      </StyledParagraphText>
+    return (
+      <StyledBackground>
+        <StyledHeader>
+          <Container>
+            <StyledTitle>Datawarehouse</StyledTitle>
 
-      <StyledTitleBlackColor>Компоненти</StyledTitleBlackColor>
+            <StyledHeaderTitle>{t("Description")}</StyledHeaderTitle>
+          </Container>
+        </StyledHeader>
 
-      <StyledParagraphText>&#8226;  Джерела даних (файли, СУБД, веб-сервіси)</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Завантаження, Трансформація (Oracle Data Integrator або Bars
-      ETL)</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Сховище даних (Oracle RDBMS EE)</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Схема даних (BarsDWH)</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Аналіз даних (Oracle BIEE або BarsDWH)</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Координатор процесу (BarsDWH)</StyledParagraphText>
-      <DwhLogo src={dwhLogoSVG} alt='logo'/>
-      <StyledParagraphText>
-        Система «Сховище даних» призначена для консолідації облікових даних, що містяться в територіальних базах даних в
-        централізованого сховища інформації для подальшого формування консолідованої звітності та надання даних для
-        сторонніх систем через відповідні сервіси
-      </StyledParagraphText>
-      <br/>
-      <StyledParagraphText>&#8226;  Інтеграція з АБС в онлайн режимі</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Багатовекторність — централізація звітної інформації по всім розпорядникам
-      України</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Налаштування лімітів по рахунках, по користувачах, шаблони
-      лімітів</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Гнучка настройка звітів в різних форматах</StyledParagraphText>
+        <Container>
+          <DwhMac src={dwhMac} alt='dwhMacMockup'/>
+          <StyledParagraphText>
+            {t("Line1")}
+          </StyledParagraphText>
+          <br/>
+          <StyledParagraphText>
+            {t("Line2")}
+          </StyledParagraphText>
+          <DownloadForm />
 
-      <StyledParagraphText>&#8226;  Сучасний інтерфейс і перевірена надійність</StyledParagraphText>
-      <DwhMacCan src={macCanDataware} alt='datawareMacMockup'/>
+          <StyledTitleBlackColor>{t("Components.Title")}</StyledTitleBlackColor>
 
-      <StyledTitleBlackColor>Можливості Системи</StyledTitleBlackColor>
+          <StyledParagraphText>{t("Components.Line1")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line2")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line3")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line4")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line5")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line6")}</StyledParagraphText>
+          <DwhLogo src={dwhLogoSVG} alt='logo'/>
+          <StyledParagraphText>
+            {t("Components.Line7")}
+          </StyledParagraphText>
+          <br/>
+          <StyledParagraphText>{t("Components.Line8")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line9")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line10")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line11")}</StyledParagraphText>
+          <StyledParagraphText>{t("Components.Line12")}</StyledParagraphText>
 
-      <StyledParagraphText>&#8226;  Формування звітності</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Доступ до інформації 24/7</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Автоматична вивантаження даних</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Завантаження в DWH</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Завантаження в DM</StyledParagraphText>
-      <StyledParagraphText>&#8226;  Відображення стану завантаження</StyledParagraphText>
-      <StyledTestMargin/>
-    </Container>
-  </StyledBackground>
-)
+          <DwhMacCan src={macCanDataware} alt='datawareMacMockup'/>
 
-export default DatawarehousePage
+          <StyledTitleBlackColor>{t("Capabilities.Title")}</StyledTitleBlackColor>
+
+          <StyledParagraphText>{t("Capabilities.Line1")}</StyledParagraphText>
+          <StyledParagraphText>{t("Capabilities.Line2")}</StyledParagraphText>
+          <StyledParagraphText>{t("Capabilities.Line3")}</StyledParagraphText>
+          <StyledParagraphText>{t("Capabilities.Line4")}</StyledParagraphText>
+          <StyledParagraphText>{t("Capabilities.Line5")}</StyledParagraphText>
+          <StyledParagraphText>{t("Capabilities.Line6")}</StyledParagraphText>
+          <StyledTestMargin/>
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("Datawarehouse")(Datawarehouse)
