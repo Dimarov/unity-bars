@@ -3,7 +3,6 @@ import styled from "styled-components"
 import office from '../images/fix/office3.jpg'
 import bg from "../images/products.jpg"
 import { translate } from 'react-i18next'
-import axios from 'axios';
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -51,7 +50,6 @@ const StyledGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding: 1rem;
-
   @media screen and (max-width: 60rem) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -91,7 +89,6 @@ const StyledContact = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   @media screen and (max-width: 60rem) {
     height: 32rem;
   }
@@ -102,7 +99,6 @@ const StyledContactForm = styled.form`
   margin-left: 20%;
   display: flex;
   flex-direction: column;
-
   @media screen and (max-width: 60rem) {
     width: 90%;
     margin-left: 5%;
@@ -130,7 +126,6 @@ const StyledContactInput = styled.input`
   border-radius: .25rem;
   padding: 1rem 1rem;
   transition: all .1s ease-in;
-
   :focus,
   :active {
     opacity: .6;
@@ -151,14 +146,13 @@ const StyledContactTextarea = styled.textarea`
   padding: 1rem 1rem;
   resize: none;
   transition: all .1s ease-in;
-
   :focus,
   :active {
     opacity: .6;
   }
 `
 
-const StyledContactSubmit = styled.button`
+const StyledContactSubmit = styled.input`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -171,7 +165,6 @@ const StyledContactSubmit = styled.button`
   padding: .5rem 2rem;
   cursor: pointer;
   transition: all .1s ease-in;
-
   :hover {
     background: #3EC4E1;
     color: #fff;
@@ -180,44 +173,10 @@ const StyledContactSubmit = styled.button`
 
 class Contacts extends React.Component {
 
-  state = {
-    name: '',
-    message: '',
-    email: '',
-    sent: false
-  }
-
-  formSubmit = (e) => {
-    e.preventDefault()
-
-    let data = {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    }
-
-    axios.post('https://nodejs-express-92d5p660v.now.sh/', data)
-      .then(res => {
-        this.setState({ sent: true }, this.resetForm())
-      })
-      .catch(() => {
-        console.log('Message not sent')
-      })
-  }
-
-  resetForm = () => {
-    this.setState({
-      name: '',
-      message: '',
-      email: '',
-      buttonText: 'Message Sent'
-    })
-  }
-
   render() {
     const { t } = this.props
 
-    return(
+    return (
       <StyledBackground>
         <StyledHeader>
           <Container>
@@ -235,12 +194,12 @@ class Contacts extends React.Component {
             <StyledContactText>bars@unity-bars.com</StyledContactText>
           </StyledContact>
           <StyledContact>
-            <StyledContactForm name="contact" onSubmit={(e) => this.formSubmit(e)}>
+            <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
-              <StyledContactInput onChange={e => this.setState({ name: e.target.value })} placeholder={t("Form.Name")} type="text" name="Name" id="Name" value={this.state.name}/>
-              <StyledContactInput onChange={(e) => this.setState({ email: e.target.value })} placeholder={t("Form.Email")} type="text" name="Email" id="Email" value={this.state.email}/>
-              <StyledContactInput onChange={e => this.setState({ phone: e.target.value })} placeholder={t("Form.Number")} type="text" name="Phone" id="Phone" value={this.state.number}/>
-              <StyledContactTextarea onChange={e => this.setState({ message: e.target.value })} placeholder={t("Form.Message")} type="text" name="Message" id="Message" value={this.state.message}/>
+              <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name" />
+              <StyledContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email" />
+              <StyledContactInput placeholder={t("Form.Number")} type="text" name="Phone" id="Phone" />
+              <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="Message" id="Message" />
               <StyledContactSubmit type="submit" value={t("Form.Send")} />
             </StyledContactForm>
           </StyledContact>
