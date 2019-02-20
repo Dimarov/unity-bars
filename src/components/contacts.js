@@ -3,6 +3,7 @@ import styled from "styled-components"
 import office from '../images/fix/office3.jpg'
 import bg from "../images/products.jpg"
 import { translate } from 'react-i18next'
+import axios from 'axios';
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -157,7 +158,7 @@ const StyledContactTextarea = styled.textarea`
   }
 `
 
-const StyledContactSubmit = styled.input`
+const StyledContactSubmit = styled.button`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -178,6 +179,40 @@ const StyledContactSubmit = styled.input`
 `
 
 class Contacts extends React.Component {
+
+  state = {
+    name: '',
+    message: '',
+    email: '',
+    sent: false
+  }
+
+  formSubmit = (e) => {
+    e.preventDefault()
+
+    let data = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    }
+
+    axios.post('API_URI', data)
+      .then(res => {
+        this.setState({ sent: true }, this.resetForm())
+      })
+      .catch(() => {
+        console.log('Message not sent')
+      })
+  }
+
+  resetForm = () => {
+    this.setState({
+      name: '',
+      message: '',
+      email: '',
+      buttonText: 'Message Sent'
+    })
+  }
 
   render() {
     const { t } = this.props
@@ -200,12 +235,12 @@ class Contacts extends React.Component {
             <StyledContactText>bars@unity-bars.com</StyledContactText>
           </StyledContact>
           <StyledContact>
-            <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
+            <StyledContactForm name="contact" onSubmit={(e) => this.formSubmit(e)}>
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
-              <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
-              <StyledContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
-              <StyledContactInput placeholder={t("Form.Number")} type="text" name="Phone" id="Phone"/>
-              <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="Message" id="Message"/>
+              <StyledContactInput onChange={e => this.setState({ name: e.target.value })} placeholder={t("Form.Name")} type="text" name="Name" id="Name" value={this.state.name}/>
+              <StyledContactInput onChange={(e) => this.setState({ email: e.target.value })} placeholder={t("Form.Email")} type="text" name="Email" id="Email" value={this.state.email}/>
+              <StyledContactInput onChange={e => this.setState({ phone: e.target.value })} placeholder={t("Form.Number")} type="text" name="Phone" id="Phone" value={this.state.number}/>
+              <StyledContactTextarea onChange={e => this.setState({ message: e.target.value })} placeholder={t("Form.Message")} type="text" name="Message" id="Message" value={this.state.message}/>
               <StyledContactSubmit type="submit" value={t("Form.Send")} />
             </StyledContactForm>
           </StyledContact>
