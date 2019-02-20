@@ -6,6 +6,8 @@ import office from '../images/fix/office.jpg'
 import bg from '../images/fix/products.jpg'
 import eaMac from '../images/fix/ea_mac.png'
 import eaModules from '../images/fix/ea_moduls.png'
+import DownloadForm from './download-form'
+import { translate } from 'react-i18next'
 
 const StyledBackground = styled.div`
   width: 100%;
@@ -48,7 +50,7 @@ const StyledHeaderTitle = styled.div`
   font-size: 2.5rem;
   color: #000;
   line-height: 2.5rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 5rem 0 3rem 0;
 
   @media screen and (max-width: 60rem) {
@@ -61,6 +63,7 @@ const StyledHeaderTitleParagraph = styled.div`
   font-size: 1.25rem;
   line-height: 30px;
   color: #000;
+  opacity: .8;
   font-weight: 400;
   margin: 0 0 1.3rem 0;
 
@@ -136,76 +139,63 @@ const StyledDownloadLink = styled.a`
   }
 `
 
-const Electronicarchive = (props) => (
-  <StyledBackground>
-    <StyledHeader>
-      <Container>
-        <StyledTitle>Electronic archive</StyledTitle>
-        <StyledSubtitle>Забезпечує зберігання первинних документів в електронному вигляді
-        </StyledSubtitle>
-        <StyledDownloadLink href={withPrefix('/documents/ELECTRONICARCHIVE.pdf')} download="ELECTRONICARCHIVE.pdf">Завантажити Презентацію</StyledDownloadLink>
-      </Container>
-    </StyledHeader>
+class Electronicarchive extends React.Component {
 
-    <Container>
-      <EaMac src={eaMac} alt="eaMac"/>
+  render() {
+    const { t } = this.props
 
-      <StyledHeaderTitle>Функціонал Модуля</StyledHeaderTitle>
-      <StyledHeaderTitleParagraph>
-        &#8226; Виконання операцій над файлами в рамках певного технологічного процесу: перегляд, перевірка, розміщення
-        файлів в пакети різних типів і інші)
-      </StyledHeaderTitleParagraph>
-      {/**/}
-      <StyledHeaderTitleParagraph>&#8226; Формування, редагування, видалення пакетів файлів
-      </StyledHeaderTitleParagraph>
+    return (
+      <StyledBackground>
+        <StyledHeader>
+          <Container>
+            <StyledTitle>Electronic archive</StyledTitle>
+            <StyledSubtitle>
+              {t("Description")}
+            </StyledSubtitle>
+          </Container>
+        </StyledHeader>
 
-      <StyledHeaderTitleParagraph>
-        &#8226; Підтримка ЕЦП файлів і пакетів файлів
-      </StyledHeaderTitleParagraph>
+        <Container>
+          <EaMac src={eaMac} alt="eaMac"/>
 
-      <StyledHeaderTitleParagraph>
-        &#8226; Створення нових папок; редагування і видалення існуючих папок; угруповання документів у папки
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitle>{t("Functionality.Title")}</StyledHeaderTitle>
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line1")}
+          </StyledHeaderTitleParagraph>
+          {/**/}
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line2")}
+          </StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>
-        &#8226; Веб-сервіс прийому документів (файлів) з зовнішніх джерел — АБС і віртуального принтера —
-        BarsPrintProcessor
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line3")}
+          </StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>
-        &#8226; Погашення кредиту — використання рахунку погашення, планове і дострокове погашення, погашення через БПК,
-        перерахування по СЕП, використання терміналів самообслуговування (Ibox, Бнк24 і т.д.)
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line4")}
+          </StyledHeaderTitleParagraph>
 
-      <StyledHeaderTitleParagraph>
-        &#8226; Реструктуризація — підтримка багатьох видів реструктуризації (пролонгація, зміна% ставки, суми кредиту і
-        т.д.)
-      </StyledHeaderTitleParagraph>
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line5")}
+          </StyledHeaderTitleParagraph>
 
-      <EaMacModules src={eaModules} alt='modulesOfEa'/>
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line6")}
+          </StyledHeaderTitleParagraph>
 
-      <StyledTestMargin/>
+          <StyledHeaderTitleParagraph>
+            {t("Functionality.Line7")}
+          </StyledHeaderTitleParagraph>
+          <DownloadForm />
 
-    </Container>
-    {/*<StyledGrid>*/}
-    {/*/!*<StyledContact>*!/*/}
-    {/*/!*<StyledContactTitle>Контакти</StyledContactTitle>*!/*/}
-    {/*/!*<StyledContactText>02152, м. Київ, проспект Павла Тичини, 1В, офіс А</StyledContactText>*!/*/}
-    {/*/!*<StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>*!/*/}
-    {/*/!*<StyledContactText>bars@unity-bars.com</StyledContactText>*!/*/}
-    {/*/!*</StyledContact>*!/*/}
-    {/*<StyledContact>*/}
-    {/*<StyledContactForm>*/}
-    {/*<StyledContactFormTitle>Відправити повідомлення</StyledContactFormTitle>*/}
-    {/*<StyledContactInput placeholder="Ваше Ім'я"/>*/}
-    {/*<StyledContactInput placeholder="Ваш Email"/>*/}
-    {/*<StyledContactInput placeholder="Ваш Телефон"/>*/}
-    {/*<StyledContactTextarea placeholder="Ваше Повідомлення"/>*/}
-    {/*<StyledContactSubmit type="submit" value="Надіслати"/>*/}
-    {/*</StyledContactForm>*/}
-    {/*</StyledContact>*/}
-    {/*</StyledGrid>*/}
-  </StyledBackground>
-)
+          <EaMacModules src={eaModules} alt='modulesOfEa'/>
 
-export default Electronicarchive
+          <StyledTestMargin/>
+
+        </Container>
+      </StyledBackground>
+    )
+  }
+}
+
+export default translate("Electronicarchive")(Electronicarchive)

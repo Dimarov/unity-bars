@@ -1,0 +1,13 @@
+{
+    "Description": "Provides storage of source documents in electronic form",
+    "Functionality": {
+        "Title": "The Functionality Of The Module",
+        "Line1": "• Perform operations on files within a certain technological process: see, check, the placement of files in packages of different types and others)",
+        "Line2": "• Creating, editing, deleting batches of files",
+        "Line3": "• Support EDS files and file packages",
+        "Line4": "• Create new folders; edit and delete existing folders; the grouping of documents into folders",
+        "Line5": "• A web service of reception of documents (files) from external sources — ABS and virtual printer BarsPrintProcessor",
+        "Line6": "• Loan repayment — use of the account maturity, scheduled and early repayment, the repayment through the BOD, listed by EPA, the use of self-service terminals (Ibox, Бнк24, etc.)",
+        "Line7": "• Restructuring — support many types of restructuring (renewal, change of% rate, loan amount, etc.)"
+    }
+}
