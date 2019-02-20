@@ -1,0 +1,22 @@
+{
+    "Description": "Automated banking system with an integrated or individual approach to the client",
+    "Capabilities": {
+        "Title": "Features and Benefits",
+        "Line1": "• Focus on commercial server Oracle database",
+        "Line2": "• Flexible system administration",
+        "Line3": "• Multi-tiered system of separate access to financial and technical resources of the Bank",
+        "Line4": "• Quick integration with other systems through the use SAOP",
+        "Line5": "• Modern development tools",
+        "Line6": "• Multi-level system-of-sight",
+        "Line7": "• Web interface",
+        "Line8": "- Easy integration with government agencies that use our product UNITY-BARS (NBU, State Treasury Service of Ukraine, Customs-clearing center (the all-Ukrainian Depository of securities))",
+        "Line9": "- III — tier architecture model",
+        "Line10": "- Working with large volumes of data (15 million customers, 25 million accounts, 10 million of the users; processes daily more than 600 thousand documents)",
+        "Line11": "- The user interface is based on web technologies, provides over slow communication channels",
+        "Line12": "- According to the modern requirements of information security",
+        "Line13": "- Use of modern development tools (ASP.NET,ANGULAR, KENDO). Oracle"
+    },
+    "Line1": "Logical organization of functionality is based on the principle of modularity that allows the use of only the required funkcias performs automation of the full range of functionality the Bank in all directions:",
+    "Line2": "• front and back offices",
+    "Line3": "• RB, MSB and CB, Treasury, accounting"
+}
