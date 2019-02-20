@@ -6,13 +6,6 @@ import { translate } from 'react-i18next'
 import DownloadForm from './download-form'
 
 import header from "../images/mockups/bone-iphones.png"
-import about from "../images/mockups/corplight-iphone-2.png"
-import security from "../images/mockups/corplight-iphone-3.png"
-
-import banking from "../images/icons/banking.svg"
-import functionality from "../images/icons/functionality.svg"
-import design from "../images/icons/design.svg"
-
 import boneImage from "../images/mockups/bone-macbook.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
@@ -60,10 +53,6 @@ const Title = styled.h1`
   @media (min-width: 80rem) {
     font-size: 8rem;
   }
-`
-
-const Span = styled.span`
-  color: #3EC4E1;
 `
 
 const Subtitle = styled.p`
@@ -145,23 +134,6 @@ const HeaderImage = styled.img`
   width: 49rem;
 `
 
-const AboutContainer = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-`
-
 const ImageContainer = styled.div`
   width: 100%;
   height: 24rem;
@@ -192,106 +164,6 @@ const AboutImage = styled.img`
   }
 `
 
-const InfoContainer = styled.div`
-  width: 100%;
-  padding: 0rem;
-  box-sizing: border-box;
-  height: 40rem;
-  margin: 4rem 0;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    width: 36rem;
-    height: 40rem;
-    padding: 0 0 0 2rem;
-  }
-`
-
-const InfoTitle = styled.h2`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #000;
-  padding: 1rem 2rem;
-  background: #fff;
-  width: 100%;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 3rem;
-  }
-`
-
-const InfoElementContainer = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-`
-
-const InfoElement = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-content: center;
-`
-
-const InfoElementIcon = styled.div`
-  flex: 0 0 6rem;
-  height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const InfoElementIconImage = styled.img`
-
-`
-
-const InfoElementDescription = styled.div`
-  height: auto;
-  margin-left: 1rem;
-`
-
-const InfoElementDescriptionTitle = styled.h3`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #29333E;
-  margin: .5rem 0;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
-
-const InfoElementDescriptionText = styled.p`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 2rem;
-  color: #fff;
-  opacity: .8;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
-
 const FunctionalityContainer = styled.div`
   width: 100%;
   display: flex;
@@ -313,10 +185,6 @@ const FunctionalityTitle = styled.h3`
     font-size: 3rem;
     margin: 2rem 0;
   }
-`
-
-const FunctionalityTitleSpan = styled.span`
-  color: #3EC4E1;
 `
 
 const FunctionalitySubtitle = styled.h3`
@@ -357,101 +225,6 @@ const FunctionalityParagraph = styled.p `
   @media (min-width: 80rem) {
     margin: 1rem 0;
     padding-bottom: 1rem;
-  }
-`
-
-const SecurityContainer = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-`
-
-const SecurityInfoContainer = styled.div`
-  margin: 4rem 0;
-  width: 100%;
-  padding: 0;
-  box-sizing: border-box;
-  height: auto;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    width: 36rem;
-    height: 40rem;
-    padding: 0;
-  }
-`
-
-const SecurityInfoTitle = styled.h2`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #fff;
-  padding: 1rem 2rem;
-  background: #3EC4E1;
-  width: 100%;
-  text-align: center;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 3rem;
-  }
-`
-
-const SecurityInfoParagraph = styled.p `
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  margin: .5rem 0;
-  color: #303030;
-  opacity: .8;
-  padding-bottom: .5rem;
-  border-bottom: .0625rem solid #303030;
-
-  :last-of-type {
-    border: none;
-  }
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-`
-
-const SecurityImage = styled.img`
-  height: 20rem;
-  width: auto;
-  position: absolute;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    height: 40rem;
   }
 `
 
@@ -606,19 +379,6 @@ const ImageContainerCase = styled.div`
   }
 `
 
-const ImageBone = styled.img`
-  height: 16rem;
-  margin: 0;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    height: 28rem;
-  }
-`
-
 const ImageCorp = styled.img`
   height: 16rem;
   margin: 0;
@@ -762,24 +522,6 @@ const MoreButtonCase = styled(Link)`
   @media (min-width: 80rem) {
     font-size: 1.5rem;
     margin: 2rem 0;
-  }
-`
-
-const InfoElementDownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #3EC4E1;
-  margin: .5rem 0;
-  padding: 0;
-  text-decoration: none;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
   }
 `
 

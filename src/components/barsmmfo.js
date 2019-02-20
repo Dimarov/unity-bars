@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
-import office from '../images/fix/office.jpg'
-import bg from '../images/fix/products.jpg'
-import abs from '../images/fix/abs_mac.png'
-import DownloadForm from './download-form'
 import { translate } from 'react-i18next'
+import DownloadForm from './download-form'
 
-const StyledBackground = styled.div`
+import office from '../images/fix/office.jpg'
+import abs from '../images/fix/abs_mac.png'
+
+
+const Background = styled.div`
   width: 100%;
   height: auto;
 `
@@ -45,7 +44,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${office});
@@ -54,7 +53,7 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
@@ -63,16 +62,7 @@ const StyledTitle = styled.h2`
 
 `
 
-const StyledSubtitle = styled.p`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 200;
-  color: #fff;
-
-
-`
-
-const StyledParagraphText = styled.div`
+const ParagraphText = styled.div`
   font-family: myriad-pro, sans-serif;
   line-height: 1.5rem;
   font-size: 1.2rem;
@@ -84,7 +74,7 @@ const StyledParagraphText = styled.div`
   }
 `
 
-const StyledTitleBlackColor = styled.div`
+const TitleBlackColor = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   // font-weight: 400;
@@ -97,7 +87,7 @@ const StyledTitleBlackColor = styled.div`
   }
 `
 
-const StyledThereIsWillBeImage = styled.h1`
+const ThereIsWillBeImage = styled.h1`
   font-family: myriad-pro, sans-serif;
   font-size: 4rem;
   text-align: center;
@@ -108,7 +98,7 @@ const StyledThereIsWillBeImage = styled.h1`
   margin: 4rem 0 3rem 0;
 `
 
-const StyledHeaderTitleParagraph = styled.div`
+const HeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   color: #000;
@@ -121,7 +111,7 @@ const StyledHeaderTitleParagraph = styled.div`
   }
 `
 
-const StyledHeaderSubTitleHuge = styled.div`
+const HeaderSubTitleHuge = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
   font-weight: 300;
@@ -131,7 +121,7 @@ const StyledHeaderSubTitleHuge = styled.div`
 
 `
 
-const StyledHeaderTitle = styled.div`
+const HeaderTitle = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   color: #000;
@@ -144,7 +134,7 @@ const StyledHeaderTitle = styled.div`
   }
 `
 
-const StyledTestMargin = styled.div`
+const TestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
@@ -165,24 +155,7 @@ const AbsImage = styled.img`
   }
 `
 
-const StyledDownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #3EC4E1;
-  margin: .5rem 0;
-  text-decoration: none;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
-
-const StyledTable = styled.table`
+const Table = styled.table`
   width: 100%;
   border: .0625rem solid #000;
   padding: .5rem;
@@ -197,11 +170,11 @@ const StyledTable = styled.table`
   }
 `
 
-const StyledTableBody = styled.tbody`
+const TableBody = styled.tbody`
   width: 100%;
 `
 
-const StyledTableRow = styled.tr`
+const TableRow = styled.tr`
   font-family: myriad-pro, sans-serif;
   font-size: .75rem;
   color: #000;
@@ -221,7 +194,7 @@ const StyledTableRow = styled.tr`
   }
 `
 
-const StyledTableColumn = styled.td`
+const TableColumn = styled.td`
   border: .0625rem solid #000;
   padding: .5rem;
   text-align: center;
@@ -243,155 +216,155 @@ class Barsmmfo extends React.Component {
     const { t } = this.props
 
     return (
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>BARS MMFO | Core Banking System</StyledTitle>
-            <StyledHeaderSubTitleHuge>
+            <Title>BARS MMFO | Core Banking System</Title>
+            <HeaderSubTitleHuge>
               {t("Description")}
-            </StyledHeaderSubTitleHuge>
+            </HeaderSubTitleHuge>
           </Container>
-        </StyledHeader>
+        </Header>
         <ImageContainer>
           <AbsImage src={abs} alt="abs-mockup"/>
         </ImageContainer>
         <Container>
 
-          <StyledHeaderTitle>{t("Capabilities.Title")}</StyledHeaderTitle>
-          <StyledHeaderTitleParagraph>
+          <HeaderTitle>{t("Capabilities.Title")}</HeaderTitle>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line1")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line2")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line3")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line4")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line5")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line6")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line7")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line8")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line9")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
           
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line10")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line11")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line12")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line13")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line14")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line15")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line16")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line17")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line18")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
           <DownloadForm />
-          <StyledTable>
-            <StyledTableBody>
-              <StyledTableRow>
-                <StyledTableColumn>Код</StyledTableColumn>
-                <StyledTableColumn>Назва</StyledTableColumn>
-                <StyledTableColumn>Опис</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn heading colspan="3">Група модулів "Основні"</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>KRN</StyledTableColumn>
-                <StyledTableColumn>Ядро системи</StyledTableColumn>
-                <StyledTableColumn>Модуль забезпечує базову функціональність "платформу", до якої відносяться внутрішні системні механізми та утіліти, адміністрування користувачів та підрозділів організації тощо</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CAC</StyledTableColumn>
-                <StyledTableColumn>Облік клієнтів</StyledTableColumn>
-                <StyledTableColumn>Модуль здійснює облік клієнтів (ФО, ЮО), пов'язаних осіб.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>GL</StyledTableColumn>
-                <StyledTableColumn>Головна книга</StyledTableColumn>
-                <StyledTableColumn>Модуль забезпечує облік рахунків, документів, операцій.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CASH</StyledTableColumn>
-                <StyledTableColumn>Управління роботою кас</StyledTableColumn>
-                <StyledTableColumn>Модуль забезпечує оперативну роботу каси</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>ARCH</StyledTableColumn>
-                <StyledTableColumn>Архівація оперативних даних</StyledTableColumn>
-                <StyledTableColumn>ARC – Архівація та перенесення даних з оперативної до архівної схеми
+          <Table>
+            <TableBody>
+              <TableRow>
+                <TableColumn>Код</TableColumn>
+                <TableColumn>Назва</TableColumn>
+                <TableColumn>Опис</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn heading colspan="3">Група модулів "Основні"</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>KRN</TableColumn>
+                <TableColumn>Ядро системи</TableColumn>
+                <TableColumn>Модуль забезпечує базову функціональність "платформу", до якої відносяться внутрішні системні механізми та утіліти, адміністрування користувачів та підрозділів організації тощо</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CAC</TableColumn>
+                <TableColumn>Облік клієнтів</TableColumn>
+                <TableColumn>Модуль здійснює облік клієнтів (ФО, ЮО), пов'язаних осіб.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>GL</TableColumn>
+                <TableColumn>Головна книга</TableColumn>
+                <TableColumn>Модуль забезпечує облік рахунків, документів, операцій.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CASH</TableColumn>
+                <TableColumn>Управління роботою кас</TableColumn>
+                <TableColumn>Модуль забезпечує оперативну роботу каси</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>ARCH</TableColumn>
+                <TableColumn>Архівація оперативних даних</TableColumn>
+                <TableColumn>ARC – Архівація та перенесення даних з оперативної до архівної схеми
 
                   Архівація – це винесення застарілих даних до архівного табличного простору, а також можливість винесення файлів даних таких табличних просторів на менш потужніші носії.
 
-                Архівацію можна виконати для партиційованої таблиці, виносячі архівні партиції в окремі таблиці в окремі табличні простори.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INFO</StyledTableColumn>
-                <StyledTableColumn>СМС та E-mail інформування</StyledTableColumn>
-                <StyledTableColumn>Модуль забезпечує СМС та Email інформування клієнтів за встановленими подіями.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DEALS</StyledTableColumn>
-                <StyledTableColumn>Облік угод</StyledTableColumn>
-                <StyledTableColumn>DEALS – єдиний модуль обліку угод всіх типів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>VEGA2</StyledTableColumn>
-                <StyledTableColumn>ЕЦП (VEGA2)</StyledTableColumn>
-                <StyledTableColumn>Модуль запезпечує накладання ЕЦП (VEGA)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn heading colspan="3">Група модулів "Бізнес"</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CCK</StyledTableColumn>
-                <StyledTableColumn>Кредитний портфель фізичних та юридичних осіб</StyledTableColumn>
-                <StyledTableColumn>CCK – Обслуговування кредитних договорів ФО та ЮО, Інвентаризація КП ФО
+                Архівацію можна виконати для партиційованої таблиці, виносячі архівні партиції в окремі таблиці в окремі табличні простори.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INFO</TableColumn>
+                <TableColumn>СМС та E-mail інформування</TableColumn>
+                <TableColumn>Модуль забезпечує СМС та Email інформування клієнтів за встановленими подіями.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DEALS</TableColumn>
+                <TableColumn>Облік угод</TableColumn>
+                <TableColumn>DEALS – єдиний модуль обліку угод всіх типів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>VEGA2</TableColumn>
+                <TableColumn>ЕЦП (VEGA2)</TableColumn>
+                <TableColumn>Модуль запезпечує накладання ЕЦП (VEGA)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn heading colspan="3">Група модулів "Бізнес"</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CCK</TableColumn>
+                <TableColumn>Кредитний портфель фізичних та юридичних осіб</TableColumn>
+                <TableColumn>CCK – Обслуговування кредитних договорів ФО та ЮО, Інвентаризація КП ФО
 
                   Включає в себе
 
@@ -401,19 +374,19 @@ class Barsmmfo extends React.Component {
 
                   ARJK - АРЖК
 
-                Спеціальний функціонал контролю для частин (пулів) кредитного портфелю облік яких ведеться на балансі банку, але ресурс для яких надано іншою фінансовою установою</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>OVR</StyledTableColumn>
-                <StyledTableColumn>Овердрафт Банки, ЮО, ФО</StyledTableColumn>
-                <StyledTableColumn>OVR – Овердрафт Банки, ЮО, ФО
+                Спеціальний функціонал контролю для частин (пулів) кредитного портфелю облік яких ведеться на балансі банку, але ресурс для яких надано іншою фінансовою установою</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>OVR</TableColumn>
+                <TableColumn>Овердрафт Банки, ЮО, ФО</TableColumn>
+                <TableColumn>OVR – Овердрафт Банки, ЮО, ФО
 
-                Автоматизація роботи з договорами овердрафтів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>MBDK</StyledTableColumn>
-                <StyledTableColumn>Міжбанківські кредити, депозити</StyledTableColumn>
-                <StyledTableColumn>MBDK – Міжбанківські кредити, депозити
+                Автоматизація роботи з договорами овердрафтів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>MBDK</TableColumn>
+                <TableColumn>Міжбанківські кредити, депозити</TableColumn>
+                <TableColumn>MBDK – Міжбанківські кредити, депозити
 
                   Введення угод МБДК;
 
@@ -421,12 +394,12 @@ class Barsmmfo extends React.Component {
 
                   - Угоди з фінансовими інститутами
 
-                Ведення 4 видів угод: Залучення кредитів; Залучення депозитів; Розміщення кредитів; Розміщення депозитів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CRSOUR</StyledTableColumn>
-                <StyledTableColumn>Кредитні ресурси</StyledTableColumn>
-                <StyledTableColumn>CRSOUR – обслуговування угод на обмін грошовими ресурсами між ЦА та РУ
+                Ведення 4 видів угод: Залучення кредитів; Залучення депозитів; Розміщення кредитів; Розміщення депозитів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CRSOUR</TableColumn>
+                <TableColumn>Кредитні ресурси</TableColumn>
+                <TableColumn>CRSOUR – обслуговування угод на обмін грошовими ресурсами між ЦА та РУ
 
                   Прийом заявок на виконання операцій по угодам Кредитних ресурсів від Аллегро;
 
@@ -434,19 +407,19 @@ class Barsmmfo extends React.Component {
 
                   Передача даних до АБС;
 
-                Налаштування зв’язку ЦБД Кредитних ресурсів з АБС.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>WCS</StyledTableColumn>
-                <StyledTableColumn>Докредитне обслуговування</StyledTableColumn>
-                <StyledTableColumn>WCS – Докредитне обслуговуання
+                Налаштування зв’язку ЦБД Кредитних ресурсів з АБС.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>WCS</TableColumn>
+                <TableColumn>Докредитне обслуговування</TableColumn>
+                <TableColumn>WCS – Докредитне обслуговуання
 
-                Вибір умов кредитування; введення даних; автоматичні операції; розгляд службами РУ, ЦА; реєстрація неавторизованого договору у КП АБС; підписання договорів; видача кредиту</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FXS</StyledTableColumn>
-                <StyledTableColumn>FOREX - угоди</StyledTableColumn>
-                <StyledTableColumn>FOREX – угоди
+                Вибір умов кредитування; введення даних; автоматичні операції; розгляд службами РУ, ЦА; реєстрація неавторизованого договору у КП АБС; підписання договорів; видача кредиту</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FXS</TableColumn>
+                <TableColumn>FOREX - угоди</TableColumn>
+                <TableColumn>FOREX – угоди
 
                   Автоматизація угод по покупці-продажу валюти на міжбанківському ринку
 
@@ -462,67 +435,67 @@ class Barsmmfo extends React.Component {
 
                   перегляд архіву FOREX–угод
 
-                перегляд Неттінгу FOREX-угод</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CP</StyledTableColumn>
-                <StyledTableColumn>Цінні папери</StyledTableColumn>
-                <StyledTableColumn>CP – Облік різноманітних видів операцій з пакетами ЦП</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FCT</StyledTableColumn>
-                <StyledTableColumn>Факторінг</StyledTableColumn>
-                <StyledTableColumn>FCT – Факторинг
+                перегляд Неттінгу FOREX-угод</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CP</TableColumn>
+                <TableColumn>Цінні папери</TableColumn>
+                <TableColumn>CP – Облік різноманітних видів операцій з пакетами ЦП</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FCT</TableColumn>
+                <TableColumn>Факторінг</TableColumn>
+                <TableColumn>FCT – Факторинг
 
-                Ведення портфелю факторингових договорів з клієнтами</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>REZ</StyledTableColumn>
-                <StyledTableColumn>Формування резервного фонду</StyledTableColumn>
-                <StyledTableColumn>REZ – Резервний фонд
+                Ведення портфелю факторингових договорів з клієнтами</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>REZ</TableColumn>
+                <TableColumn>Формування резервного фонду</TableColumn>
+                <TableColumn>REZ – Резервний фонд
 
-                Автоматизація розрахунку суми резервного фонду банку; автоматичне формування проводок</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FCH</StyledTableColumn>
-                <StyledTableColumn>Ф'ючерси</StyledTableColumn>
-                <StyledTableColumn>робота з ф'ючерсами</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>GRN</StyledTableColumn>
-                <StyledTableColumn>Документарні операції, гарантії, акредитиви</StyledTableColumn>
-                <StyledTableColumn>GRN – Документарні операції, гарантії, акредитиви
+                Автоматизація розрахунку суми резервного фонду банку; автоматичне формування проводок</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FCH</TableColumn>
+                <TableColumn>Ф'ючерси</TableColumn>
+                <TableColumn>робота з ф'ючерсами</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>GRN</TableColumn>
+                <TableColumn>Документарні операції, гарантії, акредитиви</TableColumn>
+                <TableColumn>GRN – Документарні операції, гарантії, акредитиви
 
-                Модуль дає можливість відслідковувати стан Договорів наданих гарантий (ДГ), які знаходяться в Портфелях банку (ПГ),  ЮО, ФО і банків-партнерів окремо</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INS</StyledTableColumn>
-                <StyledTableColumn>Страхування</StyledTableColumn>
-                <StyledTableColumn>INS – Страхування
+                Модуль дає можливість відслідковувати стан Договорів наданих гарантий (ДГ), які знаходяться в Портфелях банку (ПГ),  ЮО, ФО і банків-партнерів окремо</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INS</TableColumn>
+                <TableColumn>Страхування</TableColumn>
+                <TableColumn>INS – Страхування
 
-                Контроль страхування заставного майна; автоматизація розрахунку комісійної винагороди; контроль лімітів по партнерах - страхових компаніях.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FINST</StyledTableColumn>
-                <StyledTableColumn>Розрахунок фін. стану клієнта ЮО</StyledTableColumn>
-                <StyledTableColumn>FINST – Розрахунок фін. стану клієнта ЮО
+                Контроль страхування заставного майна; автоматизація розрахунку комісійної винагороди; контроль лімітів по партнерах - страхових компаніях.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FINST</TableColumn>
+                <TableColumn>Розрахунок фін. стану клієнта ЮО</TableColumn>
+                <TableColumn>FINST – Розрахунок фін. стану клієнта ЮО
 
-                Розрахунок та аналіз фінансового стану клієнта на основі даних офіційної звітності клієнта.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FINP</StyledTableColumn>
-                <StyledTableColumn>Розрахунок фін. стану клієнта ФО</StyledTableColumn>
-                <StyledTableColumn>FINP – Розрахунок фін. стану клієнта ФО</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>PAWN</StyledTableColumn>
-                <StyledTableColumn>Облік забезпечення</StyledTableColumn>
-                <StyledTableColumn>Облік забезпечення, що отримане банком</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DPT</StyledTableColumn>
-                <StyledTableColumn>Депозити ФО</StyledTableColumn>
-                <StyledTableColumn>DPT – Депозитний портфель ФО
+                Розрахунок та аналіз фінансового стану клієнта на основі даних офіційної звітності клієнта.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FINP</TableColumn>
+                <TableColumn>Розрахунок фін. стану клієнта ФО</TableColumn>
+                <TableColumn>FINP – Розрахунок фін. стану клієнта ФО</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>PAWN</TableColumn>
+                <TableColumn>Облік забезпечення</TableColumn>
+                <TableColumn>Облік забезпечення, що отримане банком</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DPT</TableColumn>
+                <TableColumn>Депозити ФО</TableColumn>
+                <TableColumn>DPT – Депозитний портфель ФО
 
                   заведення депозитів
 
@@ -534,29 +507,29 @@ class Barsmmfo extends React.Component {
 
                   CRNV – Облік нерухомих вкладів
 
-                Робота з депозитними договорами клієнтів ФО.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DPU</StyledTableColumn>
-                <StyledTableColumn>Депозити ЮО</StyledTableColumn>
-                <StyledTableColumn>DPU – Депозити ЮО
+                Робота з депозитними договорами клієнтів ФО.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DPU</TableColumn>
+                <TableColumn>Депозити ЮО</TableColumn>
+                <TableColumn>DPU – Депозити ЮО
 
-                Робота з депозитними договорами клієнтів ЮО.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>SKN</StyledTableColumn>
-                <StyledTableColumn>Депозитні скриньки</StyledTableColumn>
-                <StyledTableColumn>Облік параметрів депозитних сейфів.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>ZAY</StyledTableColumn>
-                <StyledTableColumn>Біржові операції</StyledTableColumn>
-                <StyledTableColumn>Робота за заявками клієнтів на купівлю/продаж/конверсію іноземних валют</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>RKO</StyledTableColumn>
-                <StyledTableColumn>Розрахунково-касове обслуговування та абонплата</StyledTableColumn>
-                <StyledTableColumn>RKO – Розрахунково-касове обслуговування
+                Робота з депозитними договорами клієнтів ЮО.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>SKN</TableColumn>
+                <TableColumn>Депозитні скриньки</TableColumn>
+                <TableColumn>Облік параметрів депозитних сейфів.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>ZAY</TableColumn>
+                <TableColumn>Біржові операції</TableColumn>
+                <TableColumn>Робота за заявками клієнтів на купівлю/продаж/конверсію іноземних валют</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>RKO</TableColumn>
+                <TableColumn>Розрахунково-касове обслуговування та абонплата</TableColumn>
+                <TableColumn>RKO – Розрахунково-касове обслуговування
 
                   ELT – Угоди електронних послуг.
 
@@ -568,54 +541,54 @@ class Barsmmfo extends React.Component {
 
                   Розрахунок сум плати (комісії), яку стягує банк з клієнтів за РКО і автоматичне формування необхідних проводок.
 
-                Одноразові комісії</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>LOM</StyledTableColumn>
-                <StyledTableColumn>Скупка лому дорогоцінних металів</StyledTableColumn>
-                <StyledTableColumn>LOM – Скупка лому дорогоцінних металів
+                Одноразові комісії</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>LOM</TableColumn>
+                <TableColumn>Скупка лому дорогоцінних металів</TableColumn>
+                <TableColumn>LOM – Скупка лому дорогоцінних металів
 
                   Введення  поточних операцій по скупці та по прийому на експертизу для оцінки виробів із дорогоцінних металів;
 
                   Автоматичне відображення проводками в бухгалтерському обліку банківської установи.
 
-                  <em> </em></StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>BRO</StyledTableColumn>
-                <StyledTableColumn>Бронювання коштів на рахунках господарюючих органів</StyledTableColumn>
-                <StyledTableColumn>BRO – Бронювання коштів на рахунках господарюючих органів
+                  <em> </em></TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>BRO</TableColumn>
+                <TableColumn>Бронювання коштів на рахунках господарюючих органів</TableColumn>
+                <TableColumn>BRO – Бронювання коштів на рахунках господарюючих органів
 
-                Ведення договорів клієнтів на тимчасове незниження залишків на поточних рахунках</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>STO</StyledTableColumn>
-                <StyledTableColumn>Регулярні платежі</StyledTableColumn>
-                <StyledTableColumn>Автоматичне формування платежів при настанні дат.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>NOS</StyledTableColumn>
-                <StyledTableColumn>Корр.рахунки ЛОРО та НОСТРО</StyledTableColumn>
-                <StyledTableColumn>Портфель ностро договорів
+                Ведення договорів клієнтів на тимчасове незниження залишків на поточних рахунках</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>STO</TableColumn>
+                <TableColumn>Регулярні платежі</TableColumn>
+                <TableColumn>Автоматичне формування платежів при настанні дат.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>NOS</TableColumn>
+                <TableColumn>Корр.рахунки ЛОРО та НОСТРО</TableColumn>
+                <TableColumn>Портфель ностро договорів
 
-                Робота позиціонера</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>MT</StyledTableColumn>
-                <StyledTableColumn>Внутрішньо-банківські, міжбанківські та міжнародні перекази</StyledTableColumn>
-                <StyledTableColumn>Модуль «Перекази» дозволяє виконувати переказ готівкових грошових коштів у національній валюті у внутрішній єдиній автоматизованій банківській системі.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CH_1</StyledTableColumn>
-                <StyledTableColumn>Дорожні чеки</StyledTableColumn>
-                <StyledTableColumn>Збір з підлеглих у станов, формування, відпрака, контроль посилок в інобанки, покриття та розрахунки
+                Робота позиціонера</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>MT</TableColumn>
+                <TableColumn>Внутрішньо-банківські, міжбанківські та міжнародні перекази</TableColumn>
+                <TableColumn>Модуль «Перекази» дозволяє виконувати переказ готівкових грошових коштів у національній валюті у внутрішній єдиній автоматизованій банківській системі.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CH_1</TableColumn>
+                <TableColumn>Дорожні чеки</TableColumn>
+                <TableColumn>Збір з підлеглих у станов, формування, відпрака, контроль посилок в інобанки, покриття та розрахунки
 
-                Прийняття чеків на ІНКАССО: РУ відправляє в ЦА, ЦА консолідує та одним пакетом відправляє в банк-емітент.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>EXCL</StyledTableColumn>
-                <StyledTableColumn>Спец функціонал</StyledTableColumn>
-                <StyledTableColumn>1) Енерго-ринок
+                Прийняття чеків на ІНКАССО: РУ відправляє в ЦА, ЦА консолідує та одним пакетом відправляє в банк-емітент.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>EXCL</TableColumn>
+                <TableColumn>Спец функціонал</TableColumn>
+                <TableColumn>1) Енерго-ринок
 
                   2) Виплата коштів волонтерам Корпуса Миру
 
@@ -623,22 +596,22 @@ class Barsmmfo extends React.Component {
 
                   4) LOT – Фронт-операції, Розрахунки, Звітність по розповсюдженню лотерей
 
-                5) AVKAS – Сервіс оплати документів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>NU</StyledTableColumn>
-                <StyledTableColumn>Податковий облік</StyledTableColumn>
-                <StyledTableColumn>NU – Податковий облік
+                5) AVKAS – Сервіс оплати документів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>NU</TableColumn>
+                <TableColumn>Податковий облік</TableColumn>
+                <TableColumn>NU – Податковий облік
 
-                Ведення та відображення в системі податкового обліку даних фінансового обліку</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn heading colspan="3">Група модулів "Звітність"</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>NBUR</StyledTableColumn>
-                <StyledTableColumn>Звітність НБУ</StyledTableColumn>
-                <StyledTableColumn>NSI – Ведення класифікаторів звітності НБУ
+                Ведення та відображення в системі податкового обліку даних фінансового обліку</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn heading colspan="3">Група модулів "Звітність"</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>NBUR</TableColumn>
+                <TableColumn>Звітність НБУ</TableColumn>
+                <TableColumn>NSI – Ведення класифікаторів звітності НБУ
 
                   Довідники, класифікатори та кодифікатори НБУ та внутрішні довідники для потреб звітності. Надано можливість перегляду та редагування даних в ручному режимі, а також .Доступна функція "Редагування синхронізованих таблиць", що дозволяє завантажувати оновлені довідники в пакетному режимі чи окремо по кожному довіднику, попередньо переглянувши перелік змінених записів.
 
@@ -648,26 +621,26 @@ class Barsmmfo extends React.Component {
 
                   AUD – Аудит спецпараметрів НБУ
 
-                Функція перевірки параметрів рахунків та клієнтів . Перевіряється  правильність заповнення (чи проставлені значення для обов'язкових параметрів та відповідність цих значень класифікаторам та кодифікаторам НБУ) та узгодженість параметрів між собою.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_DPA</StyledTableColumn>
-                <StyledTableColumn>Звітність до органів</StyledTableColumn>
-                <StyledTableColumn>@F – Звітність до ДПА по відкритих рахунках
+                Функція перевірки параметрів рахунків та клієнтів . Перевіряється  правильність заповнення (чи проставлені значення для обов'язкових параметрів та відповідність цих значень класифікаторам та кодифікаторам НБУ) та узгодженість параметрів між собою.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_DPA</TableColumn>
+                <TableColumn>Звітність до органів</TableColumn>
+                <TableColumn>@F – Звітність до ДПА по відкритих рахунках
 
                   Обмін файлами (формування файлів, прийом квитанцій) з ДПА.
 
-                NU – Податковий облік КБ. Звітність до ДПА</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DELOIT</StyledTableColumn>
-                <StyledTableColumn>Звіти для аудиторів (з АБС)</StyledTableColumn>
-                <StyledTableColumn></StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>ANI</StyledTableColumn>
-                <StyledTableColumn>Аналітичні звіти</StyledTableColumn>
-                <StyledTableColumn>1) Аналіз балансу
+                NU – Податковий облік КБ. Звітність до ДПА</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DELOIT</TableColumn>
+                <TableColumn>Звіти для аудиторів (з АБС)</TableColumn>
+                <TableColumn></TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>ANI</TableColumn>
+                <TableColumn>Аналітичні звіти</TableColumn>
+                <TableColumn>1) Аналіз балансу
 
                   2) Концентрація ресурсів
 
@@ -687,37 +660,37 @@ class Barsmmfo extends React.Component {
 
                   Відстеження роботи клієнтів по ряду статистичних показників, що розраховуються
 
-                Підрахунок загальних доходів-витрат банку в результаті роботи з клієнтами</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn heading colspan="3">Група модулів "Інтеграційні"</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>MGR</StyledTableColumn>
-                <StyledTableColumn>Міграція даних з інших систем</StyledTableColumn>
-                <StyledTableColumn>Міграція даних з інших систем</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DEBREG</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з "Реєстром боржників"</StyledTableColumn>
-                <StyledTableColumn>Моніторинг/поставка інформації по просрочених процентних активах, загальна сума яких по одному клієнту-боржнику перевищує 10 000.00 грн в еквіваленті, на задану дату.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>NSM</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з НСМЕП</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з НСМЕП</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CIG</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з ПВБКІ (Реєстр позичальників)</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з ПВБКІ
+                Підрахунок загальних доходів-витрат банку в результаті роботи з клієнтами</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn heading colspan="3">Група модулів "Інтеграційні"</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>MGR</TableColumn>
+                <TableColumn>Міграція даних з інших систем</TableColumn>
+                <TableColumn>Міграція даних з інших систем</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DEBREG</TableColumn>
+                <TableColumn>Інтерфейс з "Реєстром боржників"</TableColumn>
+                <TableColumn>Моніторинг/поставка інформації по просрочених процентних активах, загальна сума яких по одному клієнту-боржнику перевищує 10 000.00 грн в еквіваленті, на задану дату.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>NSM</TableColumn>
+                <TableColumn>Інтерфейс з НСМЕП</TableColumn>
+                <TableColumn>Інтерфейс з НСМЕП</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CIG</TableColumn>
+                <TableColumn>Інтерфейс з ПВБКІ (Реєстр позичальників)</TableColumn>
+                <TableColumn>Інтерфейс з ПВБКІ
 
-                Забезпечення можливості взаємодії АБС «БАРС» з системою ПВБКІ. Предмет взаємодії – дані позичальників банку: фізичних та юридичних осіб (в форматі ПВБКІ).</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>SWT</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з системою SWIFT</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з системою SWIFT
+                Забезпечення можливості взаємодії АБС «БАРС» з системою ПВБКІ. Предмет взаємодії – дані позичальників банку: фізичних та юридичних осіб (в форматі ПВБКІ).</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>SWT</TableColumn>
+                <TableColumn>Інтерфейс з системою SWIFT</TableColumn>
+                <TableColumn>Інтерфейс з системою SWIFT
 
                   Обробка вихідних повідомлень:
 
@@ -745,103 +718,103 @@ class Barsmmfo extends React.Component {
 
                   Обробка виписок
 
-                Імпорт довідника учасників</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>SSV</StyledTableColumn>
-                <StyledTableColumn>Взаємодія СЕП-СВІФТ-ВПС</StyledTableColumn>
-                <StyledTableColumn>Автоматичне розпізнавання РУ отримувача вхідного СВИФТ-повідомлення. Накопичення фільтрів розпізнавання.
+                Імпорт довідника учасників</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>SSV</TableColumn>
+                <TableColumn>Взаємодія СЕП-СВІФТ-ВПС</TableColumn>
+                <TableColumn>Автоматичне розпізнавання РУ отримувача вхідного СВИФТ-повідомлення. Накопичення фільтрів розпізнавання.
 
                   Переформатування платіжних документів різних транспортних систем СЕП-СВІФТ-ВПС-АБС(внутр).
 
-                Лоро-рахунки.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>VMD</StyledTableColumn>
-                <StyledTableColumn>Приймання ВМД (валютно-митних декларацій)</StyledTableColumn>
-                <StyledTableColumn>Приймання ВМД (валютно-митних декларацій)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>IBOX</StyledTableColumn>
-                <StyledTableColumn>Взаємодія з платіжними терміналами</StyledTableColumn>
-                <StyledTableColumn>Взаємодія з платіжними терміналами</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DCPN</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з депозитарієм ЦП (НБУ)</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з депозитарієм ЦП (НБУ)
+                Лоро-рахунки.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>VMD</TableColumn>
+                <TableColumn>Приймання ВМД (валютно-митних декларацій)</TableColumn>
+                <TableColumn>Приймання ВМД (валютно-митних декларацій)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>IBOX</TableColumn>
+                <TableColumn>Взаємодія з платіжними терміналами</TableColumn>
+                <TableColumn>Взаємодія з платіжними терміналами</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DCPN</TableColumn>
+                <TableColumn>Інтеграція з депозитарієм ЦП (НБУ)</TableColumn>
+                <TableColumn>Інтеграція з депозитарієм ЦП (НБУ)
 
-                  <em> </em></StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>RBNBU</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з розрахунковим банком (НБУ)</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з розрахунковим банком (НБУ)
+                  <em> </em></TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>RBNBU</TableColumn>
+                <TableColumn>Інтеграція з розрахунковим банком (НБУ)</TableColumn>
+                <TableColumn>Інтеграція з розрахунковим банком (НБУ)
 
-                  <em> </em></StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>RI</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з реєстром інсайдерів</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з реєстром інсайдерів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_EA</StyledTableColumn>
-                <StyledTableColumn>Інтеграція АБС з електронним архівом</StyledTableColumn>
-                <StyledTableColumn>Синхронізація з електронним архівом, передача інформації по клієнтам та рахункам депозитного модулю (ФО/ЮО)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_GMSU</StyledTableColumn>
-                <StyledTableColumn>Інтеграція АБС і GMSU</StyledTableColumn>
-                <StyledTableColumn>Інтеграція АБС - GMSU. Надсилання sms-повідомлень клієнтам про зміни станів рахунків.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DCP</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з депозитарієм цінних паперів</StyledTableColumn>
-                <StyledTableColumn>Інтерфейс з депозитарієм цінних паперів
+                  <em> </em></TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>RI</TableColumn>
+                <TableColumn>Інтерфейс з реєстром інсайдерів</TableColumn>
+                <TableColumn>Інтерфейс з реєстром інсайдерів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_EA</TableColumn>
+                <TableColumn>Інтеграція АБС з електронним архівом</TableColumn>
+                <TableColumn>Синхронізація з електронним архівом, передача інформації по клієнтам та рахункам депозитного модулю (ФО/ЮО)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_GMSU</TableColumn>
+                <TableColumn>Інтеграція АБС і GMSU</TableColumn>
+                <TableColumn>Інтеграція АБС - GMSU. Надсилання sms-повідомлень клієнтам про зміни станів рахунків.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DCP</TableColumn>
+                <TableColumn>Інтерфейс з депозитарієм цінних паперів</TableColumn>
+                <TableColumn>Інтерфейс з депозитарієм цінних паперів
 
-                Імпорт файлів з ДЦП, формування платежів.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_WB</StyledTableColumn>
-                <StyledTableColumn>Інтеграція  WAY4 web banking</StyledTableColumn>
-                <StyledTableColumn>Взаємодія АБС "БАРС Millennium" з системою Персонального Банкінгу WAY4.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>NDRCRM</StyledTableColumn>
-                <StyledTableColumn>Взаємодія з CRM BPMNOnline</StyledTableColumn>
-                <StyledTableColumn>Реєстрація клієнта, кредитної угоди в CRM системі BPMOnline з подальшою передачею даних, реєстрацією клієнта, кредитної угоди в АБС БАРС
+                Імпорт файлів з ДЦП, формування платежів.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_WB</TableColumn>
+                <TableColumn>Інтеграція  WAY4 web banking</TableColumn>
+                <TableColumn>Взаємодія АБС "БАРС Millennium" з системою Персонального Банкінгу WAY4.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>NDRCRM</TableColumn>
+                <TableColumn>Взаємодія з CRM BPMNOnline</TableColumn>
+                <TableColumn>Реєстрація клієнта, кредитної угоди в CRM системі BPMOnline з подальшою передачею даних, реєстрацією клієнта, кредитної угоди в АБС БАРС
 
-                  <em> </em></StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn></StyledTableColumn>
-                <StyledTableColumn>Взаємодія з Microsoft CRM</StyledTableColumn>
-                <StyledTableColumn>Вивантаження даних з АБС у CRM систему на рівні файлового обміну</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>BPK</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з ПЦ Way4</StyledTableColumn>
-                <StyledTableColumn>Реєстрація договорів БПК
+                  <em> </em></TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn></TableColumn>
+                <TableColumn>Взаємодія з Microsoft CRM</TableColumn>
+                <TableColumn>Вивантаження даних з АБС у CRM систему на рівні файлового обміну</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>BPK</TableColumn>
+                <TableColumn>Інтеграція з ПЦ Way4</TableColumn>
+                <TableColumn>Реєстрація договорів БПК
 
                   Взаємодія з системою CardMake (синхронізація продуктів Way4, угод БПК)
 
-                Взаємодія з ПЦ Way4 (обмін файлами по зарахуванню/списанню коштів, балансу карткових рахунків)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CARD</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з ПЦ УкрКард (УПБ)</StyledTableColumn>
-                <StyledTableColumn>Інтеграція з ПЦ УкрКард (УПБ)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FGV</StyledTableColumn>
-                <StyledTableColumn>Взаємодія з фондом гарантування вкладів</StyledTableColumn>
-                <StyledTableColumn>Взаємодія з фондом гарантування вкладів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>SEP+VPS</StyledTableColumn>
-                <StyledTableColumn>Підтримка СЕП НБУ та Внутрішня платіжна система банку(за наявності)</StyledTableColumn>
-                <StyledTableColumn>cистема термінових переказів (СТП)
+                Взаємодія з ПЦ Way4 (обмін файлами по зарахуванню/списанню коштів, балансу карткових рахунків)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CARD</TableColumn>
+                <TableColumn>Інтеграція з ПЦ УкрКард (УПБ)</TableColumn>
+                <TableColumn>Інтеграція з ПЦ УкрКард (УПБ)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FGV</TableColumn>
+                <TableColumn>Взаємодія з фондом гарантування вкладів</TableColumn>
+                <TableColumn>Взаємодія з фондом гарантування вкладів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>SEP+VPS</TableColumn>
+                <TableColumn>Підтримка СЕП НБУ та Внутрішня платіжна система банку(за наявності)</TableColumn>
+                <TableColumn>cистема термінових переказів (СТП)
 
                   управління СЕП/ВПС  платежами
 
@@ -861,102 +834,102 @@ class Barsmmfo extends React.Component {
 
                   зарахування на рахунки  по майбутній даті
 
-                зарахування на рахунки  по альтернативному рахунку 3720</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CORP2</StyledTableColumn>
-                <StyledTableColumn>Корпоративний Клієнт-Банк</StyledTableColumn>
-                <StyledTableColumn>CORP-2 – Корпоративний Клієнт-Банк
+                зарахування на рахунки  по альтернативному рахунку 3720</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CORP2</TableColumn>
+                <TableColumn>Корпоративний Клієнт-Банк</TableColumn>
+                <TableColumn>CORP-2 – Корпоративний Клієнт-Банк
 
-                  CORP-2 – система з широким переліком функціональних можливостей, що дозволяє Клієнтам банку цілодобово управляти рахунками, не виходячи з офісу. В системі виконуються: внутрішні та зовнішні перекази; поповнення рахунків; платежі у SWIFT; заявки на купівлю/продаж валюти; зарплатний проект.<em> </em></StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DWHEXP</StyledTableColumn>
-                <StyledTableColumn>Вивантаження даних у Сховище даних (DWH)</StyledTableColumn>
-                <StyledTableColumn>Вивантаження даних у Сховище даних (DWH)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CLIM</StyledTableColumn>
-                <StyledTableColumn>Моніторинг касових лімітів і залишків</StyledTableColumn>
-                <StyledTableColumn>Моніторинг касових лімітів і залишків в касі по географії всього банку з центрального офісу, та можливість встановлювати допустимі ліміти на зберігання готівки у касі та оповіщення при їх порушенні</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CDM(CORP)</StyledTableColumn>
-                <StyledTableColumn>Інтегрція з Єдиною базою клієнтів</StyledTableColumn>
-                <StyledTableColumn>Інтегрція з Єдиною базою клієнтів</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>KFILE</StyledTableColumn>
-                <StyledTableColumn>Консолідація К-файлів</StyledTableColumn>
-                <StyledTableColumn>Модуль призначений для формування консолідованих файлів звітності та банківських технічних виписок на основі прийнятих від банківських установ файлів К з даними про рух коштів по рахункам корпоративних клієнтів банку.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CRCA</StyledTableColumn>
-                <StyledTableColumn>Централізований реєстр компенсаційних рахунків (ЦРКР)</StyledTableColumn>
-                <StyledTableColumn>Централізований реєстр компенсаційних рахунків (ЦРКР)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>BICF</StyledTableColumn>
-                <StyledTableColumn>Інтеграція ПЗ АБС "БАРС" та модулю Card Managegement "Кредитна фабрика"</StyledTableColumn>
-                <StyledTableColumn>Інтеграція ПЗ АБС "БАРС" та модулю Card Managegement "Кредитна фабрика"</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_CRNV</StyledTableColumn>
-                <StyledTableColumn>ЦРНВ (нерухомі вклади)</StyledTableColumn>
-                <StyledTableColumn>нерухомі вклади</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_RRODB</StyledTableColumn>
-                <StyledTableColumn>Реєстр вкладників Родовід банку</StyledTableColumn>
-                <StyledTableColumn>Реєстр вкладників Родовід банку</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>INTG_CRV</StyledTableColumn>
-                <StyledTableColumn>ЦРВ (центральний реєстр вкладників СССР)</StyledTableColumn>
-                <StyledTableColumn>ЦРВ (центральний реєстр вкладників СССР)</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn heading colspan="3">Група модулів "Управління/Моніторинг/Контроль"</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>KST</StyledTableColumn>
-                <StyledTableColumn>Кошторис</StyledTableColumn>
-                <StyledTableColumn>KST – Кошторис
+                  CORP-2 – система з широким переліком функціональних можливостей, що дозволяє Клієнтам банку цілодобово управляти рахунками, не виходячи з офісу. В системі виконуються: внутрішні та зовнішні перекази; поповнення рахунків; платежі у SWIFT; заявки на купівлю/продаж валюти; зарплатний проект.<em> </em></TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DWHEXP</TableColumn>
+                <TableColumn>Вивантаження даних у Сховище даних (DWH)</TableColumn>
+                <TableColumn>Вивантаження даних у Сховище даних (DWH)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CLIM</TableColumn>
+                <TableColumn>Моніторинг касових лімітів і залишків</TableColumn>
+                <TableColumn>Моніторинг касових лімітів і залишків в касі по географії всього банку з центрального офісу, та можливість встановлювати допустимі ліміти на зберігання готівки у касі та оповіщення при їх порушенні</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CDM(CORP)</TableColumn>
+                <TableColumn>Інтегрція з Єдиною базою клієнтів</TableColumn>
+                <TableColumn>Інтегрція з Єдиною базою клієнтів</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>KFILE</TableColumn>
+                <TableColumn>Консолідація К-файлів</TableColumn>
+                <TableColumn>Модуль призначений для формування консолідованих файлів звітності та банківських технічних виписок на основі прийнятих від банківських установ файлів К з даними про рух коштів по рахункам корпоративних клієнтів банку.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CRCA</TableColumn>
+                <TableColumn>Централізований реєстр компенсаційних рахунків (ЦРКР)</TableColumn>
+                <TableColumn>Централізований реєстр компенсаційних рахунків (ЦРКР)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>BICF</TableColumn>
+                <TableColumn>Інтеграція ПЗ АБС "БАРС" та модулю Card Managegement "Кредитна фабрика"</TableColumn>
+                <TableColumn>Інтеграція ПЗ АБС "БАРС" та модулю Card Managegement "Кредитна фабрика"</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_CRNV</TableColumn>
+                <TableColumn>ЦРНВ (нерухомі вклади)</TableColumn>
+                <TableColumn>нерухомі вклади</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_RRODB</TableColumn>
+                <TableColumn>Реєстр вкладників Родовід банку</TableColumn>
+                <TableColumn>Реєстр вкладників Родовід банку</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>INTG_CRV</TableColumn>
+                <TableColumn>ЦРВ (центральний реєстр вкладників СССР)</TableColumn>
+                <TableColumn>ЦРВ (центральний реєстр вкладників СССР)</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn heading colspan="3">Група модулів "Управління/Моніторинг/Контроль"</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>KST</TableColumn>
+                <TableColumn>Кошторис</TableColumn>
+                <TableColumn>KST – Кошторис
 
-                Передавання та приймання даних за проводками по рахункам, необхідних для контролю виконня кошторису.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>BUDG</StyledTableColumn>
-                <StyledTableColumn>Бюджетування. План-факт</StyledTableColumn>
-                <StyledTableColumn>В розрізі символів (що визначено банком-замовником) та Бранчів-2.
+                Передавання та приймання даних за проводками по рахункам, необхідних для контролю виконня кошторису.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>BUDG</TableColumn>
+                <TableColumn>Бюджетування. План-факт</TableColumn>
+                <TableColumn>В розрізі символів (що визначено банком-замовником) та Бранчів-2.
 
                   Функції моделювання та вводу позицій "План" .
 
-                Розрахунок позицій "Факт" та "Відхилення" за різні звітні періоди. Динаміка.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>CIM</StyledTableColumn>
-                <StyledTableColumn>Валютний контроль</StyledTableColumn>
-                <StyledTableColumn>CIM – Валютний контроль
+                Розрахунок позицій "Факт" та "Відхилення" за різні звітні періоди. Динаміка.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>CIM</TableColumn>
+                <TableColumn>Валютний контроль</TableColumn>
+                <TableColumn>CIM – Валютний контроль
 
-                Ведення контрактів по експортним і імпортним операціям в розрізі клієнтів, валют контрактів, типів контрактів.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>DBT</StyledTableColumn>
-                <StyledTableColumn>Господарська дебіторка</StyledTableColumn>
-                <StyledTableColumn>XOZ – Автоматичне відслідковування фактів дебетування окремо визначених котлових рахунків (тип XOZ). Контроль за їх своєчасним та коректним закриттям . Розрахунок резерву на звітну дату згідно 23 постанови НБУ.</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>LCS</StyledTableColumn>
-                <StyledTableColumn>Контроль валютообмінних операцій</StyledTableColumn>
-                <StyledTableColumn>LCS – Контроль за валютообміннимим операціями
+                Ведення контрактів по експортним і імпортним операціям в розрізі клієнтів, валют контрактів, типів контрактів.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>DBT</TableColumn>
+                <TableColumn>Господарська дебіторка</TableColumn>
+                <TableColumn>XOZ – Автоматичне відслідковування фактів дебетування окремо визначених котлових рахунків (тип XOZ). Контроль за їх своєчасним та коректним закриттям . Розрахунок резерву на звітну дату згідно 23 постанови НБУ.</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>LCS</TableColumn>
+                <TableColumn>Контроль валютообмінних операцій</TableColumn>
+                <TableColumn>LCS – Контроль за валютообміннимим операціями
 
-                Контроль за переказами іноземної валюти, що здійснюються за дорученням ФО</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>FINMON</StyledTableColumn>
-                <StyledTableColumn>Фінансовий моніторинг - реєстр</StyledTableColumn>
-                <StyledTableColumn>1. Реєстр – Обслуговування реєстру операцій, щодо яких здійснюється повідомлення органів СДФМ
+                Контроль за переказами іноземної валюти, що здійснюються за дорученням ФО</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>FINMON</TableColumn>
+                <TableColumn>Фінансовий моніторинг - реєстр</TableColumn>
+                <TableColumn>1. Реєстр – Обслуговування реєстру операцій, щодо яких здійснюється повідомлення органів СДФМ
 
                   2. Анкети:
 
@@ -966,25 +939,25 @@ class Barsmmfo extends React.Component {
 
                   автоматичне формування електронних анкет клієнтів.
 
-                3. Блокування операцій - Ведення реєстру осіб, пов'язаних з тероризмом; здійснення             призупинення та повідмлення про операції, що є підозрілими для ФМ</StyledTableColumn>
-              </StyledTableRow>
-              <StyledTableRow>
-                <StyledTableColumn>MTV</StyledTableColumn>
-                <StyledTableColumn>Система мотивації персоналу банку</StyledTableColumn>
-                <StyledTableColumn>Довідник "операцій банку" з поділом на:
+                3. Блокування операцій - Ведення реєстру осіб, пов'язаних з тероризмом; здійснення             призупинення та повідмлення про операції, що є підозрілими для ФМ</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>MTV</TableColumn>
+                <TableColumn>Система мотивації персоналу банку</TableColumn>
+                <TableColumn>Довідник "операцій банку" з поділом на:
 
                   Автоматичні (такі, що можна вичленити з АБС)
 
                   Ручні (не можна вичленити з АБС, інформація про них вноситься вручну)
 
-                Бальна система оцінки операцій різних типів. Набір звітів про кількість різних операцій та їх бальна оцінка за період в розборі календарних днів та Бранчів-3</StyledTableColumn>
-              </StyledTableRow>
-            </StyledTableBody>
-          </StyledTable>
+                Бальна система оцінки операцій різних типів. Набір звітів про кількість різних операцій та їх бальна оцінка за період в розборі календарних днів та Бранчів-3</TableColumn>
+              </TableRow>
+            </TableBody>
+          </Table>
 
-          <StyledTestMargin/>
+          <TestMargin/>
         </Container>
-      </StyledBackground>
+      </Background>
     )
   }
 }

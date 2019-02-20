@@ -1,16 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
+import { translate } from 'react-i18next'
+
+import DownloadForm from './download-form'
+
 import office from '../images/fix/office.jpg'
-import bg from '../images/fix/products.jpg'
 import dwhMac from '../images/fix/dwh_mac.png'
 import dwhLogoSVG from '../images/fix/dwh_logo.png'
 import macCanDataware from '../images/fix/dwh_mac_can.png'
-import DownloadForm from './download-form'
-import { translate } from 'react-i18next'
 
-const StyledBackground = styled.div`
+
+const Background = styled.div`
   width: 100%;
   height: auto;
 `
@@ -22,7 +22,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${office});
@@ -31,7 +31,7 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.8rem;
   font-weight: 400;
@@ -40,7 +40,7 @@ const StyledTitle = styled.h2`
 
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
@@ -49,7 +49,7 @@ const StyledSubtitle = styled.p`
 
 `
 
-const StyledParagraphText = styled.div`
+const ParagraphText = styled.div`
   font-family: myriad-pro, sans-serif;
   line-height: 1.5rem;
   font-size: 1.25rem;
@@ -62,7 +62,7 @@ const StyledParagraphText = styled.div`
   }
 `
 
-const StyledTitleBlackColor = styled.div`
+const TitleBlackColor = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
@@ -75,7 +75,7 @@ const StyledTitleBlackColor = styled.div`
   }
 `
 
-const StyledThereIsWillBeImage = styled.h1`
+const ThereIsWillBeImage = styled.h1`
   font-family: myriad-pro, sans-serif;
   font-size: 4rem;
   text-align: center;
@@ -86,11 +86,11 @@ const StyledThereIsWillBeImage = styled.h1`
   margin: 4rem 0 3rem 0;
 `
 
-const StyledTestMargin = styled.div`
+const TestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
-const StyledHeaderTitle = styled.div`
+const HeaderTitle = styled.div`
 font-family: myriad-pro, sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -149,7 +149,7 @@ margin-top: 3.2rem;
     text-align: center;
   }
 `
-const StyledDownloadLink = styled.a`
+const DownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -172,58 +172,58 @@ class Datawarehouse extends React.Component {
     const { t } = this.props
 
     return (
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>Datawarehouse</StyledTitle>
+            <Title>Datawarehouse</Title>
 
-            <StyledHeaderTitle>{t("Description")}</StyledHeaderTitle>
+            <HeaderTitle>{t("Description")}</HeaderTitle>
           </Container>
-        </StyledHeader>
+        </Header>
 
         <Container>
           <DwhMac src={dwhMac} alt='dwhMacMockup'/>
-          <StyledParagraphText>
+          <ParagraphText>
             {t("Line1")}
-          </StyledParagraphText>
+          </ParagraphText>
           <br/>
-          <StyledParagraphText>
+          <ParagraphText>
             {t("Line2")}
-          </StyledParagraphText>
+          </ParagraphText>
           <DownloadForm />
 
-          <StyledTitleBlackColor>{t("Components.Title")}</StyledTitleBlackColor>
+          <TitleBlackColor>{t("Components.Title")}</TitleBlackColor>
 
-          <StyledParagraphText>{t("Components.Line1")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line2")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line3")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line4")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line5")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line6")}</StyledParagraphText>
+          <ParagraphText>{t("Components.Line1")}</ParagraphText>
+          <ParagraphText>{t("Components.Line2")}</ParagraphText>
+          <ParagraphText>{t("Components.Line3")}</ParagraphText>
+          <ParagraphText>{t("Components.Line4")}</ParagraphText>
+          <ParagraphText>{t("Components.Line5")}</ParagraphText>
+          <ParagraphText>{t("Components.Line6")}</ParagraphText>
           <DwhLogo src={dwhLogoSVG} alt='logo'/>
-          <StyledParagraphText>
+          <ParagraphText>
             {t("Components.Line7")}
-          </StyledParagraphText>
+          </ParagraphText>
           <br/>
-          <StyledParagraphText>{t("Components.Line8")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line9")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line10")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line11")}</StyledParagraphText>
-          <StyledParagraphText>{t("Components.Line12")}</StyledParagraphText>
+          <ParagraphText>{t("Components.Line8")}</ParagraphText>
+          <ParagraphText>{t("Components.Line9")}</ParagraphText>
+          <ParagraphText>{t("Components.Line10")}</ParagraphText>
+          <ParagraphText>{t("Components.Line11")}</ParagraphText>
+          <ParagraphText>{t("Components.Line12")}</ParagraphText>
 
           <DwhMacCan src={macCanDataware} alt='datawareMacMockup'/>
 
-          <StyledTitleBlackColor>{t("Capabilities.Title")}</StyledTitleBlackColor>
+          <TitleBlackColor>{t("Capabilities.Title")}</TitleBlackColor>
 
-          <StyledParagraphText>{t("Capabilities.Line1")}</StyledParagraphText>
-          <StyledParagraphText>{t("Capabilities.Line2")}</StyledParagraphText>
-          <StyledParagraphText>{t("Capabilities.Line3")}</StyledParagraphText>
-          <StyledParagraphText>{t("Capabilities.Line4")}</StyledParagraphText>
-          <StyledParagraphText>{t("Capabilities.Line5")}</StyledParagraphText>
-          <StyledParagraphText>{t("Capabilities.Line6")}</StyledParagraphText>
-          <StyledTestMargin/>
+          <ParagraphText>{t("Capabilities.Line1")}</ParagraphText>
+          <ParagraphText>{t("Capabilities.Line2")}</ParagraphText>
+          <ParagraphText>{t("Capabilities.Line3")}</ParagraphText>
+          <ParagraphText>{t("Capabilities.Line4")}</ParagraphText>
+          <ParagraphText>{t("Capabilities.Line5")}</ParagraphText>
+          <ParagraphText>{t("Capabilities.Line6")}</ParagraphText>
+          <TestMargin/>
         </Container>
-      </StyledBackground>
+      </Background>
     )
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-import office from '../images/fix/office3.jpg'
-import bg from "../images/products.jpg"
 import { translate } from 'react-i18next'
+
+import office from '../images/fix/office3.jpg'
 
 const StyledBackground = styled.div`
   width: 100%;

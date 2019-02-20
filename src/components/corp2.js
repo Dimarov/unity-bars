@@ -1,18 +1,18 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
+import { translate } from 'react-i18next'
+
+import DownloadForm from './download-form'
+
 import office from '../images/fix/office.jpg'
-import bg from '../images/fix/products.jpg'
 import corpSignIn from '../images/fix/corp2_sign-in.png'
 import oshad from '../images/fix/oshadbank1_1_corp.png'
 import dksu from '../images/fix/dksy1_1_corp.png'
 import rozrah from '../images/fix/rozrahynkovuicenter1_1_corp.png'
 import corpMac2 from '../images/fix/corp2_mac_can.png'
-import DownloadForm from './download-form'
-import { translate } from 'react-i18next'
 
-const StyledBackground = styled.div`
+
+const Background = styled.div`
   width: 100%;
   height: auto;
 `
@@ -49,7 +49,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const StyledDownloadLink = styled.a`
+const DownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -66,7 +66,7 @@ const StyledDownloadLink = styled.a`
   }
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${office});
@@ -75,14 +75,14 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledTitleBlack = styled.h2`
+const TitleBlack = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -94,14 +94,14 @@ const StyledTitleBlack = styled.h2`
   }
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledSubtitleWhite = styled.div`
+const SubtitleWhite = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 300;
@@ -110,7 +110,7 @@ const StyledSubtitleWhite = styled.div`
   margin: 3rem 0 3rem 0;
 `
 
-const StyledHeaderTitle = styled.div`
+const HeaderTitle = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   color: #000;
@@ -123,7 +123,7 @@ const StyledHeaderTitle = styled.div`
   }
 `
 
-const StyledHeaderTitleParagraph = styled.div`
+const HeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   color: #000;
@@ -137,7 +137,7 @@ const StyledHeaderTitleParagraph = styled.div`
   }
 `
 
-const StyledThereIsWillBeImage = styled.h1`
+const ThereIsWillBeImage = styled.h1`
   font-family: myriad-pro, sans-serif;
   font-size: 4rem;
   text-align: center;
@@ -160,7 +160,7 @@ const ImageContainers = styled.div`
   }
 `
 
-const StyledThreeImagesBlock = styled.div`
+const ThreeImagesBlock = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   height: 3rem;
@@ -168,7 +168,7 @@ const StyledThreeImagesBlock = styled.div`
   color: #000;
 `
 
-const StyledTestMargin = styled.div`
+const TestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
@@ -224,43 +224,43 @@ class Corp2 extends React.Component {
     const { t } = this.props
 
     return (
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>CORP 2</StyledTitle>
-            <StyledSubtitleWhite>{t("Corporate Online Banking")}</StyledSubtitleWhite>
+            <Title>CORP 2</Title>
+            <SubtitleWhite>{t("Corporate Online Banking")}</SubtitleWhite>
           </Container>
-        </StyledHeader>
+        </Header>
         <ImageContainer>
           <CorpSignInImg src={corpSignIn} alt="corp-mockup-signin"/>
         </ImageContainer>
         <Container>
 
 
-          <StyledHeaderTitleParagraph>{t("Description")}</StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Description")}</HeaderTitleParagraph>
           <DownloadForm />
 
-          <StyledTitleBlack>{t("Used")}</StyledTitleBlack>
+          <TitleBlack>{t("Used")}</TitleBlack>
 
           <ImageContainers>
-            <StyledThreeImagesBlock>
+            <ThreeImagesBlock>
               <UsedByCorpServicesOshad src={oshad} alt='oshad'/>
-            </StyledThreeImagesBlock>
-            <StyledThreeImagesBlock>
+            </ThreeImagesBlock>
+            <ThreeImagesBlock>
               <UsedByCorpServicesDKSU src={dksu} alt='oshad'/>
-            </StyledThreeImagesBlock>
-            <StyledThreeImagesBlock>
+            </ThreeImagesBlock>
+            <ThreeImagesBlock>
               <UsedByCorpServicesRozrah src={rozrah} alt='oshad'/>
-            </StyledThreeImagesBlock>
+            </ThreeImagesBlock>
           </ImageContainers>
 
-          <StyledTitleBlack>
+          <TitleBlack>
             {t("Capabilities.Title")}
-          </StyledTitleBlack>
+          </TitleBlack>
 
-          <StyledHeaderTitleParagraph>{t("Capabilities.Line1")}</StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>{t("Capabilities.Line2")}</StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>{t("Capabilities.Line3")}</StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Capabilities.Line1")}</HeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Capabilities.Line2")}</HeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Capabilities.Line3")}</HeaderTitleParagraph>
 
         </Container>
         <ImageContainer>
@@ -268,37 +268,37 @@ class Corp2 extends React.Component {
         </ImageContainer>
         <Container>
 
-          <StyledTitleBlack>{t("Customization.Title")}</StyledTitleBlack>
+          <TitleBlack>{t("Customization.Title")}</TitleBlack>
 
-          <StyledHeaderTitleParagraph>{t("Customization.Line1")}</StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>{t("Customization.Line2")}</StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>{t("Customization.Line3")}</StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Customization.Line1")}</HeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Customization.Line2")}</HeaderTitleParagraph>
+          <HeaderTitleParagraph>{t("Customization.Line3")}</HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Customization.Line4")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledTitleBlack>{t("Authentification.Title")}</StyledTitleBlack>
+          <TitleBlack>{t("Authentification.Title")}</TitleBlack>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Authentification.Line1")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Authentification.Line2")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Authentification.Line3")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Authentification.Line4")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Authentification.Line5")}
-          </StyledHeaderTitleParagraph>
-          <StyledTestMargin/>
+          </HeaderTitleParagraph>
+          <TestMargin/>
         </Container>
-      </StyledBackground>
+      </Background>
     )
   }
 }

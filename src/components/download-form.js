@@ -1,11 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from "styled-components"
-import { CSSTransitionGroup } from 'react-transition-group'
-import { withPrefix } from 'gatsby'
 import { translate } from "react-i18next"
 
-import logo from "../images/unitybarsheaderlogo.svg"
 
 const InfoElementDownloadLink = styled.button`
   font-family: myriad-pro, sans-serif;
@@ -29,7 +25,7 @@ const InfoElementDownloadLink = styled.button`
   }
 `
 
-const StyledContactForm = styled.form`
+const ContactForm = styled.form`
   display: ${props => props.isOpened ? 'none' : 'flex'};
   width: 20rem;
   flex-direction: column;
@@ -41,7 +37,7 @@ const StyledContactForm = styled.form`
   }
 `
 
-const StyledContactInput = styled.input`
+const ContactInput = styled.input`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -61,7 +57,7 @@ const StyledContactInput = styled.input`
   }
 `
 
-const StyledContactSubmit = styled.input`
+const ContactSubmit = styled.input`
   outline: none;
   background: ${props => props.themeDark ? "#fff" : "#000"};
   font-family: myriad-pro, sans-serif;
@@ -101,13 +97,13 @@ class DownloadForm extends React.Component {
     return (
       <div>
         <InfoElementDownloadLink onClick={this.handleClick} >{t("Download")}</InfoElementDownloadLink>
-        <StyledContactForm themeDark={this.props.dark} isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
-          <StyledContactInput themeDark={this.props.dark} placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
-          <StyledContactInput themeDark={this.props.dark} placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
+        <ContactForm themeDark={this.props.dark} isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
+          <ContactInput themeDark={this.props.dark} placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
+          <ContactInput themeDark={this.props.dark} placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
 
-          <StyledContactSubmit themeDark={this.props.dark} type="submit" value={t("Form.Download")} />
+          <ContactSubmit themeDark={this.props.dark} type="submit" value={t("Form.Download")} />
 
-        </StyledContactForm>
+        </ContactForm>
       </div>
     );
   }

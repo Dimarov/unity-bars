@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from "styled-components"
 import { translate } from 'react-i18next'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-const StyledFooter = styled.div`
+const FooterBlock = styled.div`
   width: 100%;
   height: 6rem;
   background: rgba(0,0,0,1);
@@ -65,7 +66,7 @@ class Footer extends React.Component {
     const { t } = this.props
 
     return(
-      <StyledFooter>
+      <FooterBlock>
         <Container>
           <FooterContent>
             <Title>{t("Copyright")}</Title>
@@ -79,7 +80,7 @@ class Footer extends React.Component {
             </IconContainer>
             </FooterContent>
         </Container>
-      </StyledFooter>
+      </FooterBlock>
     )
   }
 }

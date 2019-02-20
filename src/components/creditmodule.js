@@ -1,14 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
-import office from '../images/fix/office.jpg'
-import bg from '../images/fix/products.jpg'
-import DownloadForm from './download-form'
 import { translate } from 'react-i18next'
 
+import DownloadForm from './download-form'
 
-const StyledBackground = styled.div`
+import office from '../images/fix/office.jpg'
+
+const Background = styled.div`
   width: 100%;
   height: auto;
 `
@@ -20,7 +18,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledDownloadLink = styled.a`
+const DownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -37,7 +35,7 @@ const StyledDownloadLink = styled.a`
   }
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${office});
@@ -46,21 +44,21 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledHeaderTitle = styled.div`
+const HeaderTitle = styled.div`
 
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
@@ -75,7 +73,7 @@ const StyledHeaderTitle = styled.div`
   }
 `
 
-const StyledHeaderTitleParagraph = styled.div`
+const HeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   color: #000;
@@ -87,7 +85,7 @@ const StyledHeaderTitleParagraph = styled.div`
     margin: 1.3rem;
   }
 `
-const StyledTestMargin = styled.div`
+const TestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
@@ -97,75 +95,75 @@ class Creditmodule extends React.Component {
     const { t } = this.props
 
     return (
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>Creditmodule</StyledTitle>
-            <StyledSubtitle>
+            <Title>Creditmodule</Title>
+            <Subtitle>
               {t("Description")}
-            </StyledSubtitle>
+            </Subtitle>
           </Container>
-        </StyledHeader>
+        </Header>
 
         <Container>
-          <StyledHeaderTitle>{t("Functionality.Title")}</StyledHeaderTitle>
-          <StyledHeaderTitleParagraph>
+          <HeaderTitle>{t("Functionality.Title")}</HeaderTitle>
+          <HeaderTitleParagraph>
             {t("Functionality.Line1")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line2")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line3")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line4")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line5")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
           <DownloadForm />
 
-          <StyledHeaderTitle>{t("Specialties.Title")}</StyledHeaderTitle>
-          <StyledHeaderTitleParagraph>
+          <HeaderTitle>{t("Specialties.Title")}</HeaderTitle>
+          <HeaderTitleParagraph>
             {t("Specialties.Line1")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Specialties.Line2")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Specialties.Line3")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Specialties.Line4")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Specialties.Line5")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
 
-          <StyledHeaderTitle>{t("Capabilities.Title")}</StyledHeaderTitle>
-          <StyledHeaderTitleParagraph>
+          <HeaderTitle>{t("Capabilities.Title")}</HeaderTitle>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line1")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line2")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line3")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line4")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line5")}
-          </StyledHeaderTitleParagraph>
-          <StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Capabilities.Line6")}
-          </StyledHeaderTitleParagraph>
-          <StyledTestMargin/>
+          </HeaderTitleParagraph>
+          <TestMargin/>
         </Container>
-      </StyledBackground>
+      </Background>
     )
   } 
 }

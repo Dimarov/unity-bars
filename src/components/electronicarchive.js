@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { withPrefix } from 'gatsby'
-import office from '../images/fix/office.jpg'
-import bg from '../images/fix/products.jpg'
-import eaMac from '../images/fix/ea_mac.png'
-import eaModules from '../images/fix/ea_moduls.png'
-import DownloadForm from './download-form'
 import { translate } from 'react-i18next'
 
-const StyledBackground = styled.div`
+import DownloadForm from './download-form'
+
+import office from '../images/fix/office.jpg'
+import eaMac from '../images/fix/ea_mac.png'
+import eaModules from '../images/fix/ea_moduls.png'
+
+const Background = styled.div`
   width: 100%;
   height: auto;
 `
@@ -21,7 +20,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${office});
@@ -30,14 +29,14 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 3rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
@@ -45,7 +44,7 @@ const StyledSubtitle = styled.p`
   color: #fff;
 `
 
-const StyledHeaderTitle = styled.div`
+const HeaderTitle = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   color: #000;
@@ -58,7 +57,7 @@ const StyledHeaderTitle = styled.div`
   }
 `
 
-const StyledHeaderTitleParagraph = styled.div`
+const HeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   line-height: 30px;
@@ -72,7 +71,7 @@ const StyledHeaderTitleParagraph = styled.div`
   }
 `
 
-const StyledThereIsWillBeImage = styled.h1`
+const ThereIsWillBeImage = styled.h1`
   font-family: myriad-pro, sans-serif;
   font-size: 4rem;
   text-align: center;
@@ -83,7 +82,7 @@ const StyledThereIsWillBeImage = styled.h1`
   margin: 4rem 0 3rem 0;
 `
 
-const StyledTestMargin = styled.div`
+const TestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
@@ -122,7 +121,7 @@ const EaMacModules = styled.img`
   }
 `
 
-const StyledDownloadLink = styled.a`
+const DownloadLink = styled.a`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -145,55 +144,55 @@ class Electronicarchive extends React.Component {
     const { t } = this.props
 
     return (
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>Electronic archive</StyledTitle>
-            <StyledSubtitle>
+            <Title>Electronic archive</Title>
+            <Subtitle>
               {t("Description")}
-            </StyledSubtitle>
+            </Subtitle>
           </Container>
-        </StyledHeader>
+        </Header>
 
         <Container>
           <EaMac src={eaMac} alt="eaMac"/>
 
-          <StyledHeaderTitle>{t("Functionality.Title")}</StyledHeaderTitle>
-          <StyledHeaderTitleParagraph>
+          <HeaderTitle>{t("Functionality.Title")}</HeaderTitle>
+          <HeaderTitleParagraph>
             {t("Functionality.Line1")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
           {/**/}
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line2")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line3")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line4")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line5")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line6")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
 
-          <StyledHeaderTitleParagraph>
+          <HeaderTitleParagraph>
             {t("Functionality.Line7")}
-          </StyledHeaderTitleParagraph>
+          </HeaderTitleParagraph>
           <DownloadForm />
 
           <EaMacModules src={eaModules} alt='modulesOfEa'/>
 
-          <StyledTestMargin/>
+          <TestMargin/>
 
         </Container>
-      </StyledBackground>
+      </Background>
     )
   }
 }

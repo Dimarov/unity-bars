@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { translate } from 'react-i18next'
 
 import office from '../images/fix/office4.jpg'
-import background from "../images/company.jpg"
 
 import one from "../images/clients/1.jpg"
 import two from "../images/clients/2.jpg"

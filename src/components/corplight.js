@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from "styled-components"
+import { translate } from 'react-i18next'
+
+import DownloadForm from './download-form'
+
 
 import header from "../images/mockups/corplight-pixels.png"
 import about from "../images/mockups/corplight-iphone-2.png"
 import security from "../images/mockups/corplight-iphone-3.png"
-
 import banking from "../images/icons/banking.svg"
 import functionality from "../images/icons/functionality.svg"
 import design from "../images/icons/design.svg"
-import { translate } from 'react-i18next'
-
-import { withPrefix } from 'gatsby'
-
-import DownloadForm from './download-form'
 
 const Background = styled.div`
   width: 100%;
