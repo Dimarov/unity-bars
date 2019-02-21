@@ -123,7 +123,7 @@ const DownloadLink = styled.a`
 const Span = styled.span`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   color: #000;
 `
 
@@ -135,11 +135,15 @@ class DownloadForm extends React.Component {
   };
 
   onOpenModal = () => {
-    this.setState({ open: true });
+    this.setState({ open: true }, () => {
+      localStorage.setItem('open', JSON.stringify(this.state.enabled))
+    });
   };
 
   onCloseModal = () => {
-    this.setState({ open: false });
+    this.setState({ open: false }, () => {
+      localStorage.setItem('open', JSON.stringify(this.state.enabled))
+    });
   };
 
   enableLink = () => {
@@ -160,7 +164,7 @@ class DownloadForm extends React.Component {
         error = `${t("Form.Required")}`
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
         error = `${t("Form.InvalidName")}`;
-      } else error = 'Pass';
+      } else error = 'OK';
       return error;
     }
 
@@ -170,7 +174,7 @@ class DownloadForm extends React.Component {
         error = 'Хеллоу папа';
       } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
         error = `${t("Form.InvalidEmail")}`
-      } else error = 'Pass';
+      } else error = 'OK';
       return error;
     }
 
@@ -185,12 +189,12 @@ class DownloadForm extends React.Component {
             }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="/">
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="/bone">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
-                {errors.username && touched.username && <Span>{errors.username}</Span>}
+                {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
-                {errors.email && touched.email && <Span>{errors.email}</Span>}
-                <ContactSubmit disabled={(errors.email != 'Pass' || errors.username != 'Pass')} type="submit" value={t("Form.Download")} onClick={(errors.email != 'Pass' || errors.username != 'Pass') ? null : this.enableLink} />
+                {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
+                <ContactSubmit disabled={(errors.email != 'OK' || errors.username != 'OK')} type="submit" value={t("Form.Download")} onClick={(errors.email != 'OK' || errors.username != 'OK') ? null : this.enableLink} />
                 <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
                   {t("Download")}
                 </DownloadLink>
