@@ -147,9 +147,9 @@ class DownloadForm extends React.Component {
             <ContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
             <ContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
 
-            
+            <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
             <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
-              <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
+              {t("Download")}
             </DownloadLink>
           </ContactForm>
         </FormModal>
