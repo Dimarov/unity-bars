@@ -163,7 +163,7 @@ class DownloadForm extends React.Component {
       if (!value) {
         error = `${t("Form.Required")}`;
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-        error = `${t("Form.InvalidName")}`;
+        error = `${t("Form.InvalidEmail")}`;
       } else error = 'OK';
       return error;
     }
@@ -173,7 +173,7 @@ class DownloadForm extends React.Component {
       if (!value) {
         error = `${t("Form.Required")}`;
       } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
-        error = `${t("Form.InvalidEmail")}`
+        error = `${t("Form.InvalidName")}`
       } else error = 'OK';
       return error;
     }
@@ -196,7 +196,7 @@ class DownloadForm extends React.Component {
                 {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
                 <ContactSubmit disabled={(errors.email != 'OK' || errors.username != 'OK')} type="submit" value={t("Form.Download")} onClick={(errors.email != 'OK' || errors.username != 'OK') ? null : this.enableLink} />
                 <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
-                  {t("Download")}
+                  {t("Link")}
                 </DownloadLink>
               </ContactForm>
             )}
