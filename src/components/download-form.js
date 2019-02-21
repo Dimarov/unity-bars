@@ -113,7 +113,7 @@ const DownloadLink = styled.a`
   }
 `
 
-const Error = styled.p`
+const Span = styled.span`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -182,9 +182,9 @@ class DownloadForm extends React.Component {
             {({ errors, touched, validateField, validateForm }) => (
               <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
-                {errors.username && touched.username && <Error>{errors.username ? `${t('InvalidName')}` : 'dfsfdsdff'}</Error>}
+                {errors.username && touched.username && <div>{errors.username ? <Span>{t("InvalidName")}</Span> : 'dfsfdsdff'}</div>}
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email" validate={validateEmail} />
-                {errors.email && touched.email && <Error>{errors.email ? `${t('InvalidEmail')}` : 'dfsfdsdff'}</Error>}
+                {errors.email && touched.email && <div>{errors.email ? `${t("InvalidEmail")}` : 'dfsfdsdff'}</div>}
                 <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
                 <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
                   {t("Download")}
