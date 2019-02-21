@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components"
-import { withPrefix } from 'gatsby'
 
 import header from "../images/mockups/forward-samsugs.png"
 import about from "../images/mockups/forward-samsung-2.png"
