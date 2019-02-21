@@ -8,7 +8,7 @@ import { Formik, Form, Field } from 'formik';
 
 const InfoElementDownloadLink = styled.button`
   font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #3EC4E1;
   margin: .5rem 0;
@@ -81,6 +81,11 @@ const ContactSubmit = styled.input`
     background: none;
     color: ${props => props.themeDark ? "#fff" : "#000"};
   }
+
+  :disabled {
+    background: none;
+    color: ${props => props.themeDark ? "#fff" : "#000"};
+  }
 `
 
 const FormModal = styled(Modal)`
@@ -92,12 +97,11 @@ const ModalContainer = styled.div`
 
 
 const DownloadLink = styled.a`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
   width: 100%;
   text-align: center;
-  margin: 0 auto;
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
   color: #3EC4E1;
   margin: 2rem 0 1rem;
   padding: 0;
@@ -132,12 +136,10 @@ class DownloadForm extends React.Component {
 
   onOpenModal = () => {
     this.setState({ open: true });
-    localStorage.setItem('open', JSON.stringify(this.state.enabled))
   };
 
   onCloseModal = () => {
     this.setState({ open: false });
-    localStorage.setItem('open', JSON.stringify(this.state.enabled))
   };
 
   enableLink = () => {
@@ -164,7 +166,7 @@ class DownloadForm extends React.Component {
 
     function validateUsername(value) {
       let error;
-      if (value === 'Валерий') {
+      if (!value) {
         error = 'Хеллоу папа';
       } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
         error = 'Invalid name';
@@ -183,18 +185,19 @@ class DownloadForm extends React.Component {
             }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="https://www.briskforms.com/go/6062b6f7e378b93bd4cd199109bab088">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <Span>{errors.username ? `${t("Form.InvalidName")}` : ''}</Span>}
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email" validate={validateEmail} />
                 {errors.email && touched.email && <Span>{errors.email ? `${t("Form.InvalidEmail")}` : ''}</Span>}
-                <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
+                <ContactSubmit disabled={(errors.email || errors.username)} type="submit" value={t("Form.Download")} onClick={(errors.email || errors.username) ? null : this.enableLink} />
                 <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
                   {t("Download")}
                 </DownloadLink>
               </ContactForm>
             )}
           </Formik>
+
         </FormModal>
         
       </ModalContainer>
