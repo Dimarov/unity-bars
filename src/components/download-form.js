@@ -30,13 +30,16 @@ const InfoElementDownloadLink = styled.button`
 
 const ContactForm = styled(Form)`
   display: ${props => props.isOpened ? 'none' : 'flex'};
-  width: 20rem;
+  width: 14rem;
   flex-direction: column;
   margin-top: 2rem;
 
-  @media screen and (max-width: 60rem) {
-    width: 90%;
-    margin-left: 5%;
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    width: 32rem;
   }
 `
 
@@ -103,7 +106,7 @@ const DownloadLink = styled.a`
   box-shadow: none;
   text-decoration: none;
   cursor: pointer;
-  display: ${props => props.enabled ? "static" : "static"};
+  display: ${props => props.enabled ? "static" : "none"};
 
   @media (min-width: 40rem) {
   }
@@ -124,7 +127,7 @@ class DownloadForm extends React.Component {
 
   state = {
     open: false,
-    enabled: false
+    enabled: localStorage.getItem('enabled') || 0
   };
 
   onOpenModal = () => {
@@ -136,7 +139,9 @@ class DownloadForm extends React.Component {
   };
 
   enableLink = () => {
-    this.setState({ enabled: true })
+    this.setState({ enabled: true }, () => {
+      localStorage.setItem('enabled', JSON.stringify(this.state.enabled))
+    });
   }
 
   render() {
@@ -174,16 +179,11 @@ class DownloadForm extends React.Component {
               username: '',
               email: '',
             }}
-            onSubmit={values => {
-              // same shape as initial values
-              console.log(values);
-            }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <Span>{errors.username ? `${t("Form.InvalidName")}` : ''}</Span>}
-                <Span>{t("InvalidName")}</Span>
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email" validate={validateEmail} />
                 {errors.email && touched.email && <Span>{errors.email ? `${t("Form.InvalidEmail")}` : ''}</Span>}
                 <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
