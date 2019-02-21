@@ -126,16 +126,18 @@ const Span = styled.span`
 class DownloadForm extends React.Component {
 
   state = {
-    open: false,
+    open: localStorage.getItem('open') || 0,
     enabled: localStorage.getItem('enabled') || 0
   };
 
   onOpenModal = () => {
     this.setState({ open: true });
+    localStorage.setItem('open', JSON.stringify(this.state.enabled))
   };
 
   onCloseModal = () => {
     this.setState({ open: false });
+    localStorage.setItem('open', JSON.stringify(this.state.enabled))
   };
 
   enableLink = () => {
