@@ -183,6 +183,7 @@ class DownloadForm extends React.Component {
               <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <div>{errors.username ? <Span>{t("InvalidName")}</Span> : 'dfsfdsdff'}</div>}
+                <Span>{t("InvalidName")}</Span>
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email" validate={validateEmail} />
                 {errors.email && touched.email && <div>{errors.email ? `${t("InvalidEmail")}` : 'dfsfdsdff'}</div>}
                 <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
