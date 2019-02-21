@@ -161,7 +161,7 @@ class DownloadForm extends React.Component {
     function validateEmail(value) {
       let error;
       if (!value) {
-        error = `${t("Form.Required")}`
+        error = `${t("Form.Required")}`;
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
         error = `${t("Form.InvalidName")}`;
       } else error = 'OK';
@@ -171,7 +171,7 @@ class DownloadForm extends React.Component {
     function validateUsername(value) {
       let error;
       if (!value) {
-        error = 'Хеллоу папа';
+        error = `${t("Form.Required")}`;
       } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
         error = `${t("Form.InvalidEmail")}`
       } else error = 'OK';
