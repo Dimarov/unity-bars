@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Modal from 'react-responsive-modal';
 import { translate } from "react-i18next"
 import { withPrefix } from 'gatsby'
+import { Formik, Form, Field } from 'formik';
 
 
 const InfoElementDownloadLink = styled.button`
@@ -27,7 +28,7 @@ const InfoElementDownloadLink = styled.button`
   }
 `
 
-const ContactForm = styled.form`
+const ContactForm = styled(Form)`
   display: ${props => props.isOpened ? 'none' : 'flex'};
   width: 20rem;
   flex-direction: column;
@@ -39,7 +40,7 @@ const ContactForm = styled.form`
   }
 `
 
-const ContactInput = styled.input`
+const ContactInput = styled(Field)`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -89,12 +90,13 @@ const ModalContainer = styled.div`
 
 const DownloadLink = styled.a`
   width: 100%;
+  text-align: center;
   margin: 0 auto;
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color: #3EC4E1;
-  margin: .5rem 0;
+  margin: 2rem 0 1rem;
   padding: 0;
   background: none;
   border: none;
@@ -111,6 +113,12 @@ const DownloadLink = styled.a`
   }
 `
 
+const Error = styled.p`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000;
+`
 
 class DownloadForm extends React.Component {
 
@@ -137,20 +145,55 @@ class DownloadForm extends React.Component {
     const { open } = this.state;
     const { enabled } = this.state;
 
+    function validateEmail(value) {
+      let error;
+      if (!value) {
+        error = 'Required';
+      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+        error = 'Invalid email address';
+      }
+      return error;
+    }
+
+    function validateUsername(value) {
+      let error;
+      if (value === 'Валерий') {
+        error = 'Хеллоу папа';
+      } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
+        error = 'Invalid name';
+      }
+      return error;
+    }
+
     return (
       <ModalContainer>
         <InfoElementDownloadLink onClick={this.onOpenModal} >{t("Download")}</InfoElementDownloadLink>
         <FormModal open={open} onClose={this.onCloseModal} center showCloseIcon={false}>
-          <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
-            <ContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name"/>
-            <ContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email"/>
-
-            <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
-            <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
-              {t("Download")}
-            </DownloadLink>
-          </ContactForm>
+          <Formik
+            initialValues={{
+              username: '',
+              email: '',
+            }}
+            onSubmit={values => {
+              // same shape as initial values
+              console.log(values);
+            }}
+          >
+            {({ errors, touched, validateField, validateForm }) => (
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post">
+                <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
+                {errors.username && touched.username && <Error>{errors.username ? `${t('InvalidName')}` : 'dfsfdsdff'}</Error>}
+                <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email" validate={validateEmail} />
+                {errors.email && touched.email && <Error>{errors.email ? `${t('InvalidEmail')}` : 'dfsfdsdff'}</Error>}
+                <ContactSubmit type="submit" value={t("Form.Download")} onClick={this.enableLink} />
+                <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
+                  {t("Download")}
+                </DownloadLink>
+              </ContactForm>
+            )}
+          </Formik>
         </FormModal>
+        
       </ModalContainer>
     );
   }

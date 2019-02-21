@@ -3,6 +3,9 @@
   "Form": {
     "Name": "Ваше Ім'я",
     "Email": "Ваш Email",
-    "Download": "Завантажити"
+    "Download": "Завантажити",
+    "InvalidEmail": "Введіть дійсний Email",
+    "InvalidName": "Введіть своє справжнє ім'я",
+    "Required": "Обов'язково"
   }
 }

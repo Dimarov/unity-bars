@@ -3,6 +3,9 @@
   "Form": {
     "Name": "Your Name",
     "Email": "Your Email",
-    "Download": "Download"
+    "Download": "Download",
+    "InvalidEmail": "Enter valid Email",
+    "InvalidName": "Enter valid name",
+    "Required": "Required"
   }
 }
