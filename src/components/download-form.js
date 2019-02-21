@@ -28,7 +28,7 @@ const InfoElementDownloadLink = styled.button`
   }
 `
 
-const ContactForm = styled(Form)`
+const ContactForm = styled.form`
   display: ${props => props.isOpened ? 'none' : 'flex'};
   width: 14rem;
   flex-direction: column;
