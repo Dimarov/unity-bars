@@ -157,10 +157,10 @@ class DownloadForm extends React.Component {
     function validateEmail(value) {
       let error;
       if (!value) {
-        error = 'Required';
+        error = `${t("Form.Required")}`
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-        error = 'Invalid email address';
-      }
+        error = `${t("Form.InvalidName")}`;
+      } else error = 'Pass';
       return error;
     }
 
@@ -169,8 +169,8 @@ class DownloadForm extends React.Component {
       if (!value) {
         error = 'Хеллоу папа';
       } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
-        error = 'Invalid name';
-      }
+        error = `${t("Form.InvalidEmail")}`
+      } else error = 'Pass';
       return error;
     }
 
@@ -185,12 +185,12 @@ class DownloadForm extends React.Component {
             }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="https://www.briskforms.com/go/6062b6f7e378b93bd4cd199109bab088">
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="/">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
-                {errors.username && touched.username && <Span>{errors.username ? `${t("Form.InvalidName")}` : ''}</Span>}
-                <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email" validate={validateEmail} />
-                {errors.email && touched.email && <Span>{errors.email ? `${t("Form.InvalidEmail")}` : ''}</Span>}
-                <ContactSubmit disabled={(errors.email || errors.username)} type="submit" value={t("Form.Download")} onClick={(errors.email || errors.username) ? null : this.enableLink} />
+                {errors.username && touched.username && <Span>{errors.username}</Span>}
+                <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
+                {errors.email && touched.email && <Span>{errors.email}</Span>}
+                <ContactSubmit disabled={(errors.email != 'Pass' || errors.username != 'Pass')} type="submit" value={t("Form.Download")} onClick={(errors.email != 'Pass' || errors.username != 'Pass') ? null : this.enableLink} />
                 <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
                   {t("Download")}
                 </DownloadLink>
