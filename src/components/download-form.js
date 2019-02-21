@@ -80,8 +80,6 @@ const ContactSubmit = styled.input`
 `
 
 const FormModal = styled(Modal)`
-  padding: 6rem 10rem;
-  background: red;
 `
 
 const ModalContainer = styled.div`
