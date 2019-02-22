@@ -171,7 +171,7 @@ class DownloadForm extends React.Component {
     const form = e.target;
     fetch("/", {
       method: "POST",
-      action: `${withPrefix(`${this.props.pdfURL}`)}`,
+      action: `${this.props.fileURL}`,
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
@@ -227,7 +227,7 @@ class DownloadForm extends React.Component {
               <ContactForm 
                 name="download" 
                 method="POST" 
-                action={withPrefix(`${this.props.pdfURL}`)}
+                onSubmit={this.handleSubmit}
               >
                 <ContactInput 
                   type="hidden" 
