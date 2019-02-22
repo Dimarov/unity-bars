@@ -28,7 +28,7 @@ const InfoElementDownloadLink = styled.button`
   }
 `
 
-const ContactForm = styled(Form)`
+const ContactForm = styled.form`
   display: flex;
   width: 14rem;
   flex-direction: column;
@@ -174,10 +174,10 @@ class DownloadForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...this.initialValues
+        ...this.state
       })
     })
-      .then(() => alert("Success"))
+      .then(() => alert(JSON.stringify(this.state)))
       .catch(error => alert(error));
   };
 
