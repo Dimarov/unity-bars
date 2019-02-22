@@ -567,7 +567,7 @@ class Corplight extends React.Component {
                   </InfoElementDescription>
                 </InfoElement>
                 <InfoElement>
-                  <DownloadForm />
+                  <DownloadForm pdfFile="CORPLIGHT.pdf" pdfURL="/documents/CORPLIGHT.pdf" />
                 </InfoElement>
               </InfoElementContainer>
             </InfoContainer>

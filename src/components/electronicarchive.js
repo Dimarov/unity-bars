@@ -185,7 +185,7 @@ class Electronicarchive extends React.Component {
           <HeaderTitleParagraph>
             {t("Functionality.Line7")}
           </HeaderTitleParagraph>
-          <DownloadForm />
+          <DownloadForm pdfFile="ELECTRONICARCHIVE.pdf" pdfURL="/documents/ELECTRONICARCHIVE.pdf" />
 
           <EaMacModules src={eaModules} alt='modulesOfEa'/>
 

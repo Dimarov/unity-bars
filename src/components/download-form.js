@@ -195,13 +195,13 @@ class DownloadForm extends React.Component {
             }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="post" action="/bone">
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="POST" data-netlify="true">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
                 {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
                 <ContactSubmit disabled={(errors.email != 'OK' || errors.username != 'OK')} type="submit" value={t("Form.Download")} onClick={(errors.email != 'OK' || errors.username != 'OK') ? null : this.enableLink} />
-                <DownloadLink onClick={this.disableLink} enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
+                <DownloadLink onClick={this.disableLink} enabled={enabled} href={withPrefix(`${this.props.pdfURL}`)} download={this.props.pdfFile}>
                   {t("Link")}
                 </DownloadLink>
               </ContactForm>

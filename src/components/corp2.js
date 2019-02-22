@@ -238,7 +238,7 @@ class Corp2 extends React.Component {
 
 
           <HeaderTitleParagraph>{t("Description")}</HeaderTitleParagraph>
-          <DownloadForm />
+          <DownloadForm pdfFile="CORP2.pdf" pdfURL="/documents/CORP2.pdf" />
 
           <TitleBlack>{t("Used")}</TitleBlack>
 
