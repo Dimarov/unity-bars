@@ -168,7 +168,6 @@ class DownloadForm extends React.Component {
 
   handleSubmit = (e, values, { props = this.props, setSubmitting }) => {
 
-    e.preventDefault();
     const form = e.target;
     fetch("/", {
       method: "POST",
@@ -227,7 +226,6 @@ class DownloadForm extends React.Component {
               <ContactForm 
                 name="download" 
                 method="POST" 
-                netlify="true" 
                 onSubmit={this.handleSubmit}
               >
                 <ContactInput 
