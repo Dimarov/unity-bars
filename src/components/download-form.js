@@ -136,25 +136,25 @@ class DownloadForm extends React.Component {
 
   onOpenModal = () => {
     this.setState({ open: true }, () => {
-      localStorage.setItem('open', JSON.stringify(this.state.open))
+      localStorage.setItem('open', this.state.open)
     });
   };
 
   onCloseModal = () => {
     this.setState({ open: false }, () => {
-      localStorage.setItem('open', JSON.stringify(this.state.open))
+      localStorage.removeItem('open')
     });
   };
 
   enableLink = () => {
     this.setState({ enabled: true }, () => {
-      localStorage.setItem('enabled', JSON.stringify(this.state.enabled))
+      localStorage.setItem('enabled', this.state.enabled)
     });
   }
 
   disableLink = () => {
     this.setState({ enabled: false }, () => {
-      localStorage.setItem('enabled', JSON.stringify(this.state.enabled))
+      localStorage.removeItem('enabled');
     });
   }
 
