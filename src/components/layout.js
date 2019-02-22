@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'description', content: 'Компанія UNITY-BARS успішно працює на ринку 25 років в сфері розробки банківського програмного забезпечення. Більше 90 професійних фахівців різних напрямків.' },
-            { name: 'keywords', content: 'IT, FinTech, ПО, банкинг' },
+            { name: 'keywords', content: 'IT, FinTech, ПЗ, банкінг' },
           ]}>
           <html lang="uk" />
         </Helmet>
