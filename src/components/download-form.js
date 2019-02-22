@@ -219,6 +219,7 @@ class DownloadForm extends React.Component {
             initialValues={{
               name: '',
               email: '',
+              product: `${this.props.pdfFile}`
             }}
             onSubmit={this.handleSubmit}
           >
@@ -233,6 +234,11 @@ class DownloadForm extends React.Component {
                   type="hidden" 
                   name="form-name" 
                   value="download" 
+                />
+                <ContactInput
+                  type="hidden"
+                  name="product"
+                  value={this.props.pdfFile}
                 />
                 <ContactInput 
                   placeholder={t("Form.Name")} 

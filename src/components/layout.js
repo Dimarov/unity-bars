@@ -36,6 +36,7 @@ const Layout = ({ children }) => (
         <form name="download" data-netlify="true" hidden>
           <input type="text" name="name" />
           <input type="text" name="email" />
+          <input type="hidden" name="product" />
         </form>
         <form name="contact" data-netlify="true" hidden>
           <input type="text" name="username" />
