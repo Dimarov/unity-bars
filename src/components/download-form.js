@@ -29,7 +29,7 @@ const InfoElementDownloadLink = styled.button`
 `
 
 const ContactForm = styled(Form)`
-  display: ${props => props.isOpened ? 'none' : 'flex'};
+  display: flex;
   width: 14rem;
   flex-direction: column;
   margin-top: 2rem;
@@ -136,12 +136,11 @@ function encode(data) {
 class DownloadForm extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      open: localStorage.getItem('open') || 0,
+      enabled: localStorage.getItem('enabled') || 0
+    };
   }
-
-  state = {
-    open: localStorage.getItem('open') || 0,
-    enabled: localStorage.getItem('enabled') || 0
-  };
 
   onOpenModal = () => {
     this.setState({ open: true }, () => {
@@ -167,63 +166,84 @@ class DownloadForm extends React.Component {
     });
   }
 
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.initialValues
+      })
+    })
+      .then(() => alert("Success"))
+      .catch(error => alert(error));
+  };
+
+  validateEmail = (value) => {
+    let error;
+    if (!value) {
+      error = `${this.props.t("Form.Required")}`;
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = `${this.props.t("Form.InvalidEmail")}`;
+    } else error = 'OK';
+
+    return error;
+  }
+
+  validateUsername = (value) => {
+    let error;
+    if (!value) {
+      error = `${this.props.t("Form.Required")}`;
+    } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
+      error = `${this.props.t("Form.InvalidName")}`
+    } else error = 'OK';
+
+    return error;
+  }
+
   render() {
     
     const { t } = this.props;
-    const { open } = this.state;
-    const { enabled } = this.state;
-
-    function validateEmail(value) {
-      let error;
-      if (!value) {
-        error = `${t("Form.Required")}`;
-      } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-        error = `${t("Form.InvalidEmail")}`;
-      } else error = 'OK';
-      return error;
-    }
-
-    function validateUsername(value) {
-      let error;
-      if (!value) {
-        error = `${t("Form.Required")}`;
-      } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
-        error = `${t("Form.InvalidName")}`
-      } else error = 'OK';
-      return error;
-    }
-
-    function handleSubmit(e) {
-        e.preventDefault();
-        const form = e.target;
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({
-            "form-name": form.getAttribute("name"),
-            ...this.state
-          })
-        })
-          .then(() => console.log("Success"))
-          .catch(error => alert(error));
-    };
 
     return (
       <ModalContainer>
         <InfoElementDownloadLink onClick={this.onOpenModal} >{t("Download")}</InfoElementDownloadLink>
-        <FormModal className="modal" open={open} onClose={this.onCloseModal} center showCloseIcon={false}>
+        <FormModal className="modal" open={this.state.open} onClose={this.onCloseModal} center showCloseIcon={false}>
           <Formik
             initialValues={{
               username: '',
               email: '',
             }}
           >
-            {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="download" method="POST" netlify="true" onSubmit={handleSubmit}>
-                <ContactInput type="hidden" name="form-name" value="download" />
-                <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
+            {({ errors, touched }) => (
+              <ContactForm 
+                name="download" method="POST" 
+                netlify="true" 
+                onSubmit={this.handleSubmit}
+              >
+                <ContactInput 
+                  type="hidden" 
+                  name="form-name" 
+                  value="download" 
+                />
+                <ContactInput 
+                  placeholder={t("Form.Name")} 
+                  type="text" 
+                  name="username" 
+                  id="Name" 
+                  validate={this.validateUsername}
+                />
                 {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
-                <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
+
+                <ContactInput 
+                  placeholder={t("Form.Email")} 
+                  type="text"
+                  name="email" 
+                  id="Email"  
+                  validate={this.validateEmail}
+                />
                 {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
                 <ContactSubmit 
                   disabled={(errors.email != 'OK' || errors.username != 'OK')} 
@@ -231,7 +251,7 @@ class DownloadForm extends React.Component {
                   onClick={(errors.email != 'OK' || errors.username != 'OK') ? null : this.enableLink}>
                     {t("Form.Download")}
                 </ContactSubmit>
-                <DownloadLink onClick={this.disableLink} enabled={enabled} href={withPrefix(`${this.props.pdfURL}`)} download={this.props.pdfFile}>
+                <DownloadLink onClick={this.disableLink} enabled={this.state.enabled} href={withPrefix(`${this.props.pdfURL}`)} download={this.props.pdfFile}>
                   {t("Link")}
                 </DownloadLink>
               </ContactForm>
