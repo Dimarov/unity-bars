@@ -189,7 +189,7 @@ class DownloadForm extends React.Component {
     let error;
     if (!value) {
       error = `${this.props.t("Form.Required")}`;
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,8}$/i.test(value)) {
       error = `${this.props.t("Form.InvalidEmail")}`;
     } else error = 'OK';
 
@@ -226,6 +226,7 @@ class DownloadForm extends React.Component {
               <ContactForm 
                 name="download" 
                 method="POST" 
+                action={this.props.pageURL}
                 onSubmit={this.handleSubmit}
               >
                 <ContactInput 
