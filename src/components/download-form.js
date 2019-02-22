@@ -136,18 +136,24 @@ class DownloadForm extends React.Component {
 
   onOpenModal = () => {
     this.setState({ open: true }, () => {
-      localStorage.setItem('open', JSON.stringify(this.state.enabled))
+      localStorage.setItem('open', JSON.stringify(this.state.open))
     });
   };
 
   onCloseModal = () => {
     this.setState({ open: false }, () => {
-      localStorage.setItem('open', JSON.stringify(this.state.enabled))
+      localStorage.setItem('open', JSON.stringify(this.state.open))
     });
   };
 
   enableLink = () => {
     this.setState({ enabled: true }, () => {
+      localStorage.setItem('enabled', JSON.stringify(this.state.enabled))
+    });
+  }
+
+  disableLink = () => {
+    this.setState({ enabled: false }, () => {
       localStorage.setItem('enabled', JSON.stringify(this.state.enabled))
     });
   }
@@ -195,7 +201,7 @@ class DownloadForm extends React.Component {
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
                 {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
                 <ContactSubmit disabled={(errors.email != 'OK' || errors.username != 'OK')} type="submit" value={t("Form.Download")} onClick={(errors.email != 'OK' || errors.username != 'OK') ? null : this.enableLink} />
-                <DownloadLink enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
+                <DownloadLink onClick={this.disableLink} enabled={enabled} href={withPrefix('/documents/BONE.pdf')} download="BONE.pdf">
                   {t("Link")}
                 </DownloadLink>
               </ContactForm>
