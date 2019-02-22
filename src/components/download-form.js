@@ -196,7 +196,7 @@ class DownloadForm extends React.Component {
           >
             {({ errors, touched, validateField, validateForm }) => (
               <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="download" method="POST" netlify>
-                <input type="hidden" name="download-form" value="download" />
+                <input type="hidden" name="form-name" value="download" />
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
