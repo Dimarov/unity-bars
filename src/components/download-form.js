@@ -28,7 +28,7 @@ const InfoElementDownloadLink = styled.button`
   }
 `
 
-const ContactForm = styled.form`
+const ContactForm = styled(Form)`
   display: ${props => props.isOpened ? 'none' : 'flex'};
   width: 14rem;
   flex-direction: column;
@@ -127,7 +127,16 @@ const Span = styled.span`
   color: #000;
 `
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 class DownloadForm extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   state = {
     open: localStorage.getItem('open') || 0,
@@ -184,10 +193,25 @@ class DownloadForm extends React.Component {
       return error;
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": form.getAttribute("name"),
+            ...this.state
+          })
+        })
+          .then(() => console.log("Succes"))
+          .catch(error => alert(error));
+    };
+
     return (
       <ModalContainer>
         <InfoElementDownloadLink onClick={this.onOpenModal} >{t("Download")}</InfoElementDownloadLink>
-        <FormModal open={open} onClose={this.onCloseModal} center showCloseIcon={false}>
+        <FormModal className="modal" open={open} onClose={this.onCloseModal} center showCloseIcon={false}>
           <Formik
             initialValues={{
               username: '',
@@ -195,7 +219,7 @@ class DownloadForm extends React.Component {
             }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="download" method="POST" netlify>
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="download" method="POST" netlify="true" onSubmit={this.handleSubmit}>
                 <input type="hidden" name="form-name" value="download" />
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
