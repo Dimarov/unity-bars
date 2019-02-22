@@ -166,7 +166,8 @@ class DownloadForm extends React.Component {
     });
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e, values, { props = this.props, setSubmitting }) => {
+
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -174,12 +175,16 @@ class DownloadForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...this.state
+        ...values
       })
     })
-      .then(() => alert(JSON.stringify(this.state)))
+      .then(() => console.log(JSON.stringify(values)))
       .catch(error => alert(error));
-  };
+
+    setSubmitting(false);
+
+    return;
+  }
 
   validateEmail = (value) => {
     let error;
@@ -216,10 +221,12 @@ class DownloadForm extends React.Component {
               username: '',
               email: '',
             }}
+            onSubmit={this.handleSubmit}
           >
             {({ errors, touched }) => (
               <ContactForm 
-                name="download" method="POST" 
+                name="download" 
+                method="POST" 
                 netlify="true" 
                 onSubmit={this.handleSubmit}
               >
