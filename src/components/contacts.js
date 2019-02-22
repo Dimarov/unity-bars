@@ -197,10 +197,10 @@ class Contacts extends React.Component {
             <StyledContactForm name="contact" method="post">
               <input type="hidden" name="form-name" value="contact" />
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
-              <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name" />
-              <StyledContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email" />
-              <StyledContactInput placeholder={t("Form.Number")} type="text" name="Phone" id="Phone" />
-              <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="Message" id="Message" />
+              <StyledContactInput placeholder={t("Form.Name")} type="text" name="name" id="name" />
+              <StyledContactInput placeholder={t("Form.Email")} type="text" name="email" id="email" />
+              <StyledContactInput placeholder={t("Form.Number")} type="text" name="phone" id="phone" />
+              <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="message" id="message" />
               <StyledContactSubmit type="submit">{t("Form.Send")}</StyledContactSubmit>
             </StyledContactForm>
           </StyledContact>

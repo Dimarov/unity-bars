@@ -218,7 +218,7 @@ class DownloadForm extends React.Component {
           <Formik
             initialValues={{
               username: '',
-              email: '',
+              useremail: '',
             }}
             onSubmit={this.handleSubmit}
           >
@@ -245,15 +245,15 @@ class DownloadForm extends React.Component {
                 <ContactInput 
                   placeholder={t("Form.Email")} 
                   type="text"
-                  name="email" 
+                  name="useremail" 
                   id="Email"  
                   validate={this.validateEmail}
                 />
-                {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
+                {errors.useremail && touched.useremail && <Span>{(errors.useremail == 'OK') ? '' : errors.useremail}</Span>}
                 <ContactSubmit 
-                  disabled={(errors.email != 'OK' || errors.username != 'OK')} 
+                  disabled={(errors.useremail != 'OK' || errors.username != 'OK')} 
                   type="submit" 
-                  onClick={(errors.email != 'OK' || errors.username != 'OK') ? null : this.enableLink}>
+                  onClick={(errors.useremail != 'OK' || errors.username != 'OK') ? null : this.enableLink}>
                     {t("Form.Download")}
                 </ContactSubmit>
                 <DownloadLink onClick={this.disableLink} enabled={this.state.enabled} href={withPrefix(`${this.props.pdfURL}`)} download={this.props.pdfFile}>

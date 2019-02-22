@@ -35,13 +35,13 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title}/>
         <form name="download" data-netlify="true" hidden>
           <input type="text" name="username" />
-          <input type="text" name="email" />
+          <input type="text" name="useremail" />
         </form>
         <form name="contact" data-netlify="true" hidden>
-          <input type="text" name="Name" />
-          <input type="text" name="Email" />
-          <input type="text" name="Phone" />
-          <input type="text" name="Message" />
+          <input type="text" name="name" />
+          <input type="text" name="email" />
+          <input type="text" name="phone" />
+          <input type="text" name="message" />
         </form>
 
 
