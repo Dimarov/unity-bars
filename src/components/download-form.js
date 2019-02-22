@@ -63,7 +63,7 @@ const ContactInput = styled(Field)`
   }
 `
 
-const ContactSubmit = styled.input`
+const ContactSubmit = styled.button`
   outline: none;
   background: ${props => props.themeDark ? "#fff" : "#000"};
   font-family: myriad-pro, sans-serif;
@@ -195,7 +195,7 @@ class DownloadForm extends React.Component {
             }}
           >
             {({ errors, touched, validateField, validateForm }) => (
-              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="POST" data-netlify="true">
+              <ContactForm isOpened={this.state.isOpened} key={this.state.isOpened ? 'open' : 'closed'} name="contact" method="POST" netlify data-netlify="true">
                 <ContactInput placeholder={t("Form.Name")} type="text" name="username" id="Name" validate={validateUsername} />
                 {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
                 <ContactInput placeholder={t("Form.Email")} type="text" name="email" id="Email"  validate={validateEmail} />
