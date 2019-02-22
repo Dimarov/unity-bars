@@ -196,7 +196,7 @@ class DownloadForm extends React.Component {
     return error;
   }
 
-  validateUsername = (value) => {
+  validateName = (value) => {
     let error;
     if (!value) {
       error = `${this.props.t("Form.Required")}`;
@@ -217,8 +217,8 @@ class DownloadForm extends React.Component {
         <FormModal className="modal" open={this.state.open} onClose={this.onCloseModal} center showCloseIcon={false}>
           <Formik
             initialValues={{
-              username: '',
-              useremail: '',
+              name: '',
+              email: '',
             }}
             onSubmit={this.handleSubmit}
           >
@@ -236,24 +236,24 @@ class DownloadForm extends React.Component {
                 <ContactInput 
                   placeholder={t("Form.Name")} 
                   type="text" 
-                  name="username" 
+                  name="name" 
                   id="Name" 
-                  validate={this.validateUsername}
+                  validate={this.validateName}
                 />
-                {errors.username && touched.username && <Span>{(errors.username == 'OK') ? '' : errors.username}</Span>}
+                {errors.name && touched.name && <Span>{(errors.name == 'OK') ? '' : errors.name}</Span>}
 
                 <ContactInput 
                   placeholder={t("Form.Email")} 
                   type="text"
-                  name="useremail" 
+                  name="email" 
                   id="Email"  
                   validate={this.validateEmail}
                 />
-                {errors.useremail && touched.useremail && <Span>{(errors.useremail == 'OK') ? '' : errors.useremail}</Span>}
+                {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
                 <ContactSubmit 
-                  disabled={(errors.useremail != 'OK' || errors.username != 'OK')} 
+                  disabled={(errors.email != 'OK' || errors.name != 'OK')} 
                   type="submit" 
-                  onClick={(errors.useremail != 'OK' || errors.username != 'OK') ? null : this.enableLink}>
+                  onClick={(errors.email != 'OK' || errors.name != 'OK') ? null : this.enableLink}>
                     {t("Form.Download")}
                 </ContactSubmit>
                 <DownloadLink onClick={this.disableLink} enabled={this.state.enabled} href={withPrefix(`${this.props.pdfURL}`)} download={this.props.pdfFile}>
