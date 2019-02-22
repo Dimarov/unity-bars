@@ -194,7 +194,7 @@ class Contacts extends React.Component {
             <StyledContactText>bars@unity-bars.com</StyledContactText>
           </StyledContact>
           <StyledContact>
-            <StyledContactForm name="contact" method="post" netlify>
+            <StyledContactForm name="contact" method="post">
               <input type="hidden" name="form-name" value="contact" />
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
               <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name" />

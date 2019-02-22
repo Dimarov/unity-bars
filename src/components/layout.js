@@ -37,6 +37,13 @@ const Layout = ({ children }) => (
           <input type="text" name="username" />
           <input type="text" name="email" />
         </form>
+        <form name="contact" netlify hidden>
+          <input type="text" name="Name" />
+          <input type="text" name="Email" />
+          <input type="text" name="Phone" />
+          <input type="text" name="Message" />
+        </form>
+
 
         <div>
 
