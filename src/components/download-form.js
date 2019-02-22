@@ -222,13 +222,11 @@ class DownloadForm extends React.Component {
               email: '',
               product: `${this.props.pdfFile}`
             }}
-            onSubmit={this.handleSubmit}
           >
             {({ errors, touched }) => (
               <ContactForm 
                 name="download" 
                 method="POST" 
-                onSubmit={this.handleSubmit}
                 action={this.props.pageURL}
               >
                 <ContactInput 
