@@ -275,7 +275,7 @@ class Absbars extends React.Component {
           <HeaderTitleParagraph>
             {t('Capabilities.Line13')}
           </HeaderTitleParagraph>
-          <DownloadForm pdfFile="ABS-BARS.pdf" pdfURL="/documents/ABS-BARS.pdf" />
+          <DownloadForm pdfFile="ABS-BARS.pdf" pdfURL="/documents/ABS-BARS.pdf" pageURL="/absbars" />
         </Container>
         <Container>
           <Table>
