@@ -152,7 +152,7 @@ const StyledContactTextarea = styled.textarea`
   }
 `
 
-const StyledContactSubmit = styled.input`
+const StyledContactSubmit = styled.button`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -194,13 +194,13 @@ class Contacts extends React.Component {
             <StyledContactText>bars@unity-bars.com</StyledContactText>
           </StyledContact>
           <StyledContact>
-            <StyledContactForm name="contact" method="post" action="https://briskforms.com/go/4419992171feffbde206c9b7e41afc6e">
+            <StyledContactForm name="contact" method="post" netlify>
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
               <StyledContactInput placeholder={t("Form.Name")} type="text" name="Name" id="Name" />
               <StyledContactInput placeholder={t("Form.Email")} type="text" name="Email" id="Email" />
               <StyledContactInput placeholder={t("Form.Number")} type="text" name="Phone" id="Phone" />
               <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="Message" id="Message" />
-              <StyledContactSubmit type="submit" value={t("Form.Send")} />
+              <StyledContactSubmit type="submit">{t("Form.Send")}</StyledContactSubmit>
             </StyledContactForm>
           </StyledContact>
         </StyledGrid>
