@@ -303,7 +303,7 @@ class Barsmmfo extends React.Component {
             {t("Capabilities.Line18")}
           </HeaderTitleParagraph>
 
-          <DownloadForm pdfFile="BARS-MMFO.pdf" pdfURL="/documents/BARS-MMFO.pdf" pageURL="/barsmmfo" />
+          <DownloadForm pdfFile="BARS-MMFO.pdf" pdfURL="/documents/BARS-MMFO.pdf" pageURL="/pages/barsmmfo" />
           <Table>
             <TableBody>
               <TableRow>

@@ -557,7 +557,7 @@ class Bone extends React.Component {
               <FunctionalitySubtitle>{t("Capabilities.Line6")}</FunctionalitySubtitle>
               <FunctionalitySubtitle>{t("Capabilities.Line7")}</FunctionalitySubtitle>
               <FunctionalitySubtitle>{t("Capabilities.Line8")}</FunctionalitySubtitle>
-              <DownloadForm pdfFile="BONE.pdf" pdfURL="/documents/BONE.pdf" pageURL="/pages/bone/" />
+              <DownloadForm pdfFile="BONE.pdf" pdfURL="/documents/BONE.pdf" pageURL="/bone/" />
             </div>
             <ImageContainer>
               <AboutImage src={boneImage} alt="bone-mockup" />
