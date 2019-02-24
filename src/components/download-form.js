@@ -227,7 +227,7 @@ class DownloadForm extends React.Component {
               <ContactForm 
                 name="download" 
                 method="POST" 
-                action="downloadFile.php"
+                action="/#"
                 onSubmit={this.handleSubmit}
               >
                 <ContactInput 
