@@ -227,8 +227,7 @@ class DownloadForm extends React.Component {
               <ContactForm 
                 name="download" 
                 method="POST" 
-                action={withPrefix(`${this.props.pdfURL}`)}
-                download={this.props.pdfFile}
+                action={this.props.pageURL}
               >
                 <ContactInput 
                   type="hidden" 
