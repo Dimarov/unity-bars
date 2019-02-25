@@ -122,7 +122,7 @@ class Creditmodule extends React.Component {
           <HeaderTitleParagraph>
             {t("Functionality.Line5")}
           </HeaderTitleParagraph>
-          <DownloadForm pdfFile="CREDITMODULE.pdf" pdfURL="/documents/CREDITMODULE.pdf" pageURL="/pages/creditmodule"/>
+          <DownloadForm pdfFile="CREDITMODULE.pdf" pdfURL="/documents/CREDITMODULE.pdf" pageURL="/creditmodule/"/>
 
           <HeaderTitle>{t("Specialties.Title")}</HeaderTitle>
           <HeaderTitleParagraph>

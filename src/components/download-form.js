@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Modal from 'react-responsive-modal';
 import { translate } from "react-i18next"
 import { withPrefix } from 'gatsby'
-import { Formik, Form, Field } from 'formik';
 
 
 const InfoElementDownloadLink = styled.button`
@@ -43,7 +42,7 @@ const ContactForm = styled.form`
   }
 `
 
-const ContactInput = styled(Field)`
+const ContactInput = styled.input`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -95,38 +94,6 @@ const ModalContainer = styled.div`
 
 `
 
-
-const DownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  width: 100%;
-  text-align: center;
-  color: #3EC4E1;
-  margin: 2rem 0 1rem;
-  padding: 0;
-  background: none;
-  border: none;
-  box-shadow: none;
-  text-decoration: none;
-  cursor: pointer;
-  display: ${props => props.enabled ? "static" : "none"};
-
-  @media (min-width: 40rem) {
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
-
-const Span = styled.span`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #000;
-`
-
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -137,76 +104,17 @@ class DownloadForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: localStorage.getItem('open') || 0,
-      enabled: localStorage.getItem('enabled') || 0
+      open: localStorage.getItem('open') || 0
     };
   }
 
   onOpenModal = () => {
-    this.setState({ open: true }, () => {
-      localStorage.setItem('open', this.state.open)
-    });
+    this.setState({ open: true })
   };
 
   onCloseModal = () => {
-    this.setState({ open: false }, () => {
-      localStorage.removeItem('open')
-    });
+    this.setState({ open: false })
   };
-
-  enableLink = () => {
-    this.setState({ enabled: true }, () => {
-      localStorage.setItem('enabled', this.state.enabled)
-    });
-  }
-
-  disableLink = () => {
-    this.setState({ enabled: false }, () => {
-      localStorage.removeItem('enabled');
-    });
-  }
-
-  handleSubmit = (e, values, { props = this.props, setSubmitting }) => {
-
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      action: `${this.props.fileURL}`,
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...values
-      })
-    })
-      .then(() => console.log(JSON.stringify(values)))
-      .catch(error => alert(error));
-
-    setSubmitting(false);
-
-    return;
-  }
-
-  validateEmail = (value) => {
-    let error;
-    if (!value) {
-      error = `${this.props.t("Form.Required")}`;
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,8}$/i.test(value)) {
-      error = `${this.props.t("Form.InvalidEmail")}`;
-    } else error = 'OK';
-
-    return error;
-  }
-
-  validateName = (value) => {
-    let error;
-    if (!value) {
-      error = `${this.props.t("Form.Required")}`;
-    } else if (/[.\-1-9_/§!@#$%^&*()+={}`~]/.test(value)) {
-      error = `${this.props.t("Form.InvalidName")}`
-    } else error = 'OK';
-
-    return error;
-  }
 
   render() {
     
@@ -216,19 +124,9 @@ class DownloadForm extends React.Component {
       <ModalContainer>
         <InfoElementDownloadLink onClick={this.onOpenModal} >{t("Download")}</InfoElementDownloadLink>
         <FormModal className="modal" open={this.state.open} onClose={this.onCloseModal} center showCloseIcon={false}>
-          <Formik
-            initialValues={{
-              name: '',
-              email: '',
-              product: `${this.props.pdfFile}`
-            }}
-            action={this.props.pageURL}
-          >
-            {({ errors, touched }) => (
               <ContactForm 
                 name="download" 
                 method="POST" 
-                
               >
                 <ContactInput 
                   type="hidden" 
@@ -245,33 +143,21 @@ class DownloadForm extends React.Component {
                   type="text" 
                   name="name" 
                   id="Name" 
-                  validate={this.validateName}
                 />
-                {errors.name && touched.name && <Span>{(errors.name == 'OK') ? '' : errors.name}</Span>}
 
                 <ContactInput 
                   placeholder={t("Form.Email")} 
                   type="text"
                   name="email" 
                   id="Email"  
-                  validate={this.validateEmail}
                 />
-                {errors.email && touched.email && <Span>{(errors.email == 'OK') ? '' : errors.email}</Span>}
                 <ContactSubmit 
-                  disabled={(errors.email != 'OK' || errors.name != 'OK')} 
-                  type="submit" 
-                  onClick={(errors.email != 'OK' || errors.name != 'OK') ? null : this.enableLink}>
+                  type="submit"
+                >
                     {t("Form.Download")}
                 </ContactSubmit>
-                <DownloadLink onClick={this.disableLink} enabled={this.state.enabled} href={withPrefix(`${this.props.pdfURL}`)} download={this.props.pdfFile}>
-                  {t("Link")}
-                </DownloadLink>
               </ContactForm>
-            )}
-          </Formik>
-
         </FormModal>
-        
       </ModalContainer>
     );
   }

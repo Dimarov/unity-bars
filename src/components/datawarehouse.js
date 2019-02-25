@@ -190,7 +190,7 @@ class Datawarehouse extends React.Component {
           <ParagraphText>
             {t("Line2")}
           </ParagraphText>
-          <DownloadForm pdfFile="DATAWAREHOUSE.pdf" pdfURL="/documents/DATAWAREHOUSE.pdf" pageURL="/pages/datawarehouse"/>
+          <DownloadForm pdfFile="DATAWAREHOUSE.pdf" pdfURL="/documents/DATAWAREHOUSE.pdf" pageURL="/datawarehouse/"/>
 
           <TitleBlackColor>{t("Components.Title")}</TitleBlackColor>
 
