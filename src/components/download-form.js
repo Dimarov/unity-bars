@@ -126,7 +126,8 @@ class DownloadForm extends React.Component {
         <FormModal className="modal" open={this.state.open} onClose={this.onCloseModal} center showCloseIcon={false}>
               <ContactForm 
                 name="download" 
-                method="POST" 
+                method="POST"
+                action="/"
               >
                 <ContactInput 
                   type="hidden" 
