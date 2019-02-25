@@ -307,650 +307,588 @@ class Barsmmfo extends React.Component {
           <Table>
             <TableBody>
               <TableRow>
-                <TableColumn>Код</TableColumn>
-                <TableColumn>Назва</TableColumn>
-                <TableColumn>Опис</TableColumn>
+                <TableColumn>{t("Table.Col1")}</TableColumn>
+                <TableColumn>{t("Table.Col2")}</TableColumn>
+                <TableColumn>{t("Table.Col3")}</TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn heading colspan="3">Група модулів "Основні"</TableColumn>
+                <TableColumn heading colspan="3">
+                  <TableColumn>{t("Table.Col4")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>KRN</TableColumn>
-                <TableColumn>Ядро системи</TableColumn>
-                <TableColumn>Модуль забезпечує базову функціональність "платформу", до якої відносяться внутрішні системні механізми та утіліти, адміністрування користувачів та підрозділів організації тощо</TableColumn>
+                <TableColumn>{t("Table.Col4")}</TableColumn>
+                <TableColumn>{t("Table.Col5")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col6")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CAC</TableColumn>
-                <TableColumn>Облік клієнтів</TableColumn>
-                <TableColumn>Модуль здійснює облік клієнтів (ФО, ЮО), пов'язаних осіб.</TableColumn>
+                <TableColumn>{t("Table.Col7")}</TableColumn>
+                <TableColumn>{t("Table.Col8")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col9")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>GL</TableColumn>
-                <TableColumn>Головна книга</TableColumn>
-                <TableColumn>Модуль забезпечує облік рахунків, документів, операцій.</TableColumn>
+                <TableColumn>{t("Table.Col10")}</TableColumn>
+                <TableColumn>{t("Table.Col11")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col12")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CASH</TableColumn>
-                <TableColumn>Управління роботою кас</TableColumn>
-                <TableColumn>Модуль забезпечує оперативну роботу каси</TableColumn>
+                <TableColumn>{t("Table.Col13")}</TableColumn>
+                <TableColumn>{t("Table.Col14")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col15")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>ARCH</TableColumn>
-                <TableColumn>Архівація оперативних даних</TableColumn>
-                <TableColumn>ARC – Архівація та перенесення даних з оперативної до архівної схеми
-
-                  Архівація – це винесення застарілих даних до архівного табличного простору, а також можливість винесення файлів даних таких табличних просторів на менш потужніші носії.
-
-                Архівацію можна виконати для партиційованої таблиці, виносячі архівні партиції в окремі таблиці в окремі табличні простори.</TableColumn>
+                <TableColumn>{t("Table.Col16")}</TableColumn>
+                <TableColumn>{t("Table.Col17")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col18")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>INFO</TableColumn>
-                <TableColumn>СМС та E-mail інформування</TableColumn>
-                <TableColumn>Модуль забезпечує СМС та Email інформування клієнтів за встановленими подіями.</TableColumn>
+                <TableColumn>{t("Table.Col19")}</TableColumn>
+                <TableColumn>{t("Table.Col20")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col21")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>DEALS</TableColumn>
-                <TableColumn>Облік угод</TableColumn>
-                <TableColumn>DEALS – єдиний модуль обліку угод всіх типів</TableColumn>
+                <TableColumn>{t("Table.Col22")}</TableColumn>
+                <TableColumn>{t("Table.Col23")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col24")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>VEGA2</TableColumn>
-                <TableColumn>ЕЦП (VEGA2)</TableColumn>
-                <TableColumn>Модуль запезпечує накладання ЕЦП (VEGA)</TableColumn>
+                <TableColumn>{t("Table.Col25")}</TableColumn>
+                <TableColumn>{t("Table.Col26")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col27")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn heading colspan="3">Група модулів "Бізнес"</TableColumn>
+                <TableColumn heading colspan="3">
+                  <TableColumn>{t("Table.Col28")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CCK</TableColumn>
-                <TableColumn>Кредитний портфель фізичних та юридичних осіб</TableColumn>
-                <TableColumn>CCK – Обслуговування кредитних договорів ФО та ЮО, Інвентаризація КП ФО
-
-                  Включає в себе
-
-                  Фронт – Докредитне обстеження позичальника, Введення та авторизація угод, Додадкові угоди, Реструктуризації. Довідки.
-
-                  Бек функціонал - нарахування %%, комісій, пені, амортизацій, рознесення сум погашень по заборгованостям, винесення на простроені, закриття угод. Звітність
-
-                  ARJK - АРЖК
-
-                Спеціальний функціонал контролю для частин (пулів) кредитного портфелю облік яких ведеться на балансі банку, але ресурс для яких надано іншою фінансовою установою</TableColumn>
+                <TableColumn>{t("Table.Col29")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col30")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col31")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>OVR</TableColumn>
-                <TableColumn>Овердрафт Банки, ЮО, ФО</TableColumn>
-                <TableColumn>OVR – Овердрафт Банки, ЮО, ФО
-
-                Автоматизація роботи з договорами овердрафтів</TableColumn>
+                <TableColumn>{t("Table.Col32")}</TableColumn>
+                <TableColumn>{t("Table.Col33")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col34")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>MBDK</TableColumn>
-                <TableColumn>Міжбанківські кредити, депозити</TableColumn>
-                <TableColumn>MBDK – Міжбанківські кредити, депозити
-
-                  Введення угод МБДК;
-
-                  Ведення портфелю угод МБДК (формування платежів по розміщенню/залученню, нарахування %%, пролонгація, ролловер, прив'язка угод забезпечень, формування SWIFT-повідомлень)
-
-                  - Угоди з фінансовими інститутами
-
-                Ведення 4 видів угод: Залучення кредитів; Залучення депозитів; Розміщення кредитів; Розміщення депозитів</TableColumn>
+                <TableColumn>{t("Table.Col35")}</TableColumn>
+                <TableColumn>{t("Table.Col36")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col37")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CRSOUR</TableColumn>
-                <TableColumn>Кредитні ресурси</TableColumn>
-                <TableColumn>CRSOUR – обслуговування угод на обмін грошовими ресурсами між ЦА та РУ
-
-                  Прийом заявок на виконання операцій по угодам Кредитних ресурсів від Аллегро;
-
-                  Обробка заявок, підготовка даних для передачі до АБС РУ та ЦА;
-
-                  Передача даних до АБС;
-
-                Налаштування зв’язку ЦБД Кредитних ресурсів з АБС.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>WCS</TableColumn>
-                <TableColumn>Докредитне обслуговування</TableColumn>
-                <TableColumn>WCS – Докредитне обслуговуання
-
-                Вибір умов кредитування; введення даних; автоматичні операції; розгляд службами РУ, ЦА; реєстрація неавторизованого договору у КП АБС; підписання договорів; видача кредиту</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>FXS</TableColumn>
-                <TableColumn>FOREX - угоди</TableColumn>
-                <TableColumn>FOREX – угоди
-
-                  Автоматизація угод по покупці-продажу валюти на міжбанківському ринку
-
-                  введення реквізитів угод
-
-                  автоматичне формування відповідних проводок
-
-                  друк тікета
-
-                  збереження реквізитів партнера по угоді
-
-                  перегляд робочих рахунків FOREX
-
-                  перегляд архіву FOREX–угод
-
-                перегляд Неттінгу FOREX-угод</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>CP</TableColumn>
-                <TableColumn>Цінні папери</TableColumn>
-                <TableColumn>CP – Облік різноманітних видів операцій з пакетами ЦП</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>FCT</TableColumn>
-                <TableColumn>Факторінг</TableColumn>
-                <TableColumn>FCT – Факторинг
-
-                Ведення портфелю факторингових договорів з клієнтами</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>REZ</TableColumn>
-                <TableColumn>Формування резервного фонду</TableColumn>
-                <TableColumn>REZ – Резервний фонд
-
-                Автоматизація розрахунку суми резервного фонду банку; автоматичне формування проводок</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>FCH</TableColumn>
-                <TableColumn>Ф'ючерси</TableColumn>
-                <TableColumn>робота з ф'ючерсами</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>GRN</TableColumn>
-                <TableColumn>Документарні операції, гарантії, акредитиви</TableColumn>
-                <TableColumn>GRN – Документарні операції, гарантії, акредитиви
-
-                Модуль дає можливість відслідковувати стан Договорів наданих гарантий (ДГ), які знаходяться в Портфелях банку (ПГ),  ЮО, ФО і банків-партнерів окремо</TableColumn>
+                <TableColumn>{t("Table.Col38")}</TableColumn>
+                <TableColumn>{t("Table.Col39")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col40")}</TableColumn>
+                </TableColumn>
               </TableRow>
-              <TableRow>
-                <TableColumn>INS</TableColumn>
-                <TableColumn>Страхування</TableColumn>
-                <TableColumn>INS – Страхування
-
-                Контроль страхування заставного майна; автоматизація розрахунку комісійної винагороди; контроль лімітів по партнерах - страхових компаніях.</TableColumn>
+              <TableRow>
+                <TableColumn>{t("Table.Col41")}</TableColumn>
+                <TableColumn>{t("Table.Col42")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col43")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col44")}</TableColumn>
+                <TableColumn>{t("Table.Col45")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col46")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col47")}</TableColumn>
+                <TableColumn>{t("Table.Col48")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col49")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col50")}</TableColumn>
+                <TableColumn>{t("Table.Col51")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col52")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col53")}</TableColumn>
+                <TableColumn>{t("Table.Col54")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col55")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col56")}</TableColumn>
+                <TableColumn>{t("Table.Col57")}</TableColumn>
+                <TableColumn>{t("Table.Col58")}</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col59")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col60")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col61")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col62")}</TableColumn>
+                <TableColumn>{t("Table.Col63")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col64")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col65")}</TableColumn>
+                <TableColumn>{t("Table.Col66")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col67")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col68")}</TableColumn>
+                <TableColumn>{t("Table.Col69")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col70")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col71")}</TableColumn>
+                <TableColumn>{t("Table.Col72")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col73")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col74")}</TableColumn>
+                <TableColumn>{t("Table.Col75")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col76")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col77")}</TableColumn>
+                <TableColumn>{t("Table.Col78")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col79")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col80")}</TableColumn>
+                <TableColumn>{t("Table.Col81")}</TableColumn>
+                <TableColumn>{t("Table.Col82")}</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col83")}</TableColumn>
+                <TableColumn>{t("Table.Col84")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col85")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col86")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col87")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col88")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col89")}</TableColumn>
+                <TableColumn>{t("Table.Col90")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col91")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col92")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col93")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col94")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col95")}</TableColumn>
+                <TableColumn>{t("Table.Col96")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col97")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col98")}</TableColumn>
+                <TableColumn>{t("Table.Col99")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col100")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col101")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col102")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col103")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col104")}</TableColumn>
+                <TableColumn>{t("Table.Col105")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col106")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col107")}</TableColumn>
+                <TableColumn>{t("Table.Col108")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col109")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col110")}</TableColumn>
+                <TableColumn>{t("Table.Col111")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col112")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn heading colspan="3">
+                  <TableColumn>{t("Table.Col113")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col114")}</TableColumn>
+                <TableColumn>{t("Table.Col115")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col116")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col117")}</TableColumn>
+                <TableColumn>{t("Table.Col118")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col119")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col120")}</TableColumn>
+                <TableColumn>{t("Table.Col121")}</TableColumn>
+                <TableColumn />
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col122")}</TableColumn>
+                <TableColumn>{t("Table.Col123")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col124")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>FINST</TableColumn>
-                <TableColumn>Розрахунок фін. стану клієнта ЮО</TableColumn>
-                <TableColumn>FINST – Розрахунок фін. стану клієнта ЮО
-
-                Розрахунок та аналіз фінансового стану клієнта на основі даних офіційної звітності клієнта.</TableColumn>
+                <TableColumn heading colspan="3">
+                  <TableColumn>{t("Table.Col125")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>FINP</TableColumn>
-                <TableColumn>Розрахунок фін. стану клієнта ФО</TableColumn>
-                <TableColumn>FINP – Розрахунок фін. стану клієнта ФО</TableColumn>
+                <TableColumn>{t("Table.Col126")}</TableColumn>
+                <TableColumn>{t("Table.Col127")}</TableColumn>
+                <TableColumn>{t("Table.Col128")}</TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>PAWN</TableColumn>
-                <TableColumn>Облік забезпечення</TableColumn>
-                <TableColumn>Облік забезпечення, що отримане банком</TableColumn>
+                <TableColumn>{t("Table.Col129")}</TableColumn>
+                <TableColumn>{t("Table.Col130")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col131")}</TableColumn>
+                </TableColumn>
               </TableRow>
-              <TableRow>
-                <TableColumn>DPT</TableColumn>
-                <TableColumn>Депозити ФО</TableColumn>
-                <TableColumn>DPT – Депозитний портфель ФО
-
-                  заведення депозитів
-
-                  заведення ДУ
-
-                  виплата депозитів
-
-                  друк документів по депозитам
-
-                  CRNV – Облік нерухомих вкладів
-
-                Робота з депозитними договорами клієнтів ФО.</TableColumn>
+              <TableRow>
+                <TableColumn>{t("Table.Col132")}</TableColumn>
+                <TableColumn>{t("Table.Col133")}</TableColumn>
+                <TableColumn>{t("Table.Col134")}</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col135")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col136")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col137")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col138")}</TableColumn>
+                <TableColumn>{t("Table.Col139")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col140")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col141")}</TableColumn>
+                <TableColumn>{t("Table.Col142")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col143")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col144")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col145")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col146")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col147")}</TableColumn>
+                <TableColumn>{t("Table.Col148")}</TableColumn>
+                <TableColumn>{t("Table.Col149")}</TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col150")}</TableColumn>
+                <TableColumn>{t("Table.Col151")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col152")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col153")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col154")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col155")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>DPU</TableColumn>
-                <TableColumn>Депозити ЮО</TableColumn>
-                <TableColumn>DPU – Депозити ЮО
-
-                Робота з депозитними договорами клієнтів ЮО.</TableColumn>
+                <TableColumn>{t("Table.Col156")}</TableColumn>
+                <TableColumn>{t("Table.Col157")}</TableColumn>
+                <TableColumn>{t("Table.Col158")}</TableColumn>
               </TableRow>
-              <TableRow>
-                <TableColumn>SKN</TableColumn>
-                <TableColumn>Депозитні скриньки</TableColumn>
-                <TableColumn>Облік параметрів депозитних сейфів.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>ZAY</TableColumn>
-                <TableColumn>Біржові операції</TableColumn>
-                <TableColumn>Робота за заявками клієнтів на купівлю/продаж/конверсію іноземних валют</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>RKO</TableColumn>
-                <TableColumn>Розрахунково-касове обслуговування та абонплата</TableColumn>
-                <TableColumn>RKO – Розрахунково-касове обслуговування
-
-                  ELT – Угоди електронних послуг.
-
-                  Нарахування та списання абонплати як виду комісії. Специфіка застосування різних тарифів щодо
-
-                  абонплати. Специфіка методики нарахування абонплати в різних КБ.
-
-                  CIN – Підтримка централізованої інкасації
-
-                  Розрахунок сум плати (комісії), яку стягує банк з клієнтів за РКО і автоматичне формування необхідних проводок.
-
-                Одноразові комісії</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>LOM</TableColumn>
-                <TableColumn>Скупка лому дорогоцінних металів</TableColumn>
-                <TableColumn>LOM – Скупка лому дорогоцінних металів
-
-                  Введення  поточних операцій по скупці та по прийому на експертизу для оцінки виробів із дорогоцінних металів;
-
-                  Автоматичне відображення проводками в бухгалтерському обліку банківської установи.
-
-                  <em> </em></TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>BRO</TableColumn>
-                <TableColumn>Бронювання коштів на рахунках господарюючих органів</TableColumn>
-                <TableColumn>BRO – Бронювання коштів на рахунках господарюючих органів
-
-                Ведення договорів клієнтів на тимчасове незниження залишків на поточних рахунках</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>STO</TableColumn>
-                <TableColumn>Регулярні платежі</TableColumn>
-                <TableColumn>Автоматичне формування платежів при настанні дат.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>NOS</TableColumn>
-                <TableColumn>Корр.рахунки ЛОРО та НОСТРО</TableColumn>
-                <TableColumn>Портфель ностро договорів
-
-                Робота позиціонера</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>MT</TableColumn>
-                <TableColumn>Внутрішньо-банківські, міжбанківські та міжнародні перекази</TableColumn>
-                <TableColumn>Модуль «Перекази» дозволяє виконувати переказ готівкових грошових коштів у національній валюті у внутрішній єдиній автоматизованій банківській системі.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>CH_1</TableColumn>
-                <TableColumn>Дорожні чеки</TableColumn>
-                <TableColumn>Збір з підлеглих у станов, формування, відпрака, контроль посилок в інобанки, покриття та розрахунки
-
-                Прийняття чеків на ІНКАССО: РУ відправляє в ЦА, ЦА консолідує та одним пакетом відправляє в банк-емітент.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>EXCL</TableColumn>
-                <TableColumn>Спец функціонал</TableColumn>
-                <TableColumn>1) Енерго-ринок
-
-                  2) Виплата коштів волонтерам Корпуса Миру
-
-                  3) Взаємодія з філіями по передачі виробів з БМ
-
-                  4) LOT – Фронт-операції, Розрахунки, Звітність по розповсюдженню лотерей
-
-                5) AVKAS – Сервіс оплати документів</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>NU</TableColumn>
-                <TableColumn>Податковий облік</TableColumn>
-                <TableColumn>NU – Податковий облік
-
-                Ведення та відображення в системі податкового обліку даних фінансового обліку</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn heading colspan="3">Група модулів "Звітність"</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>NBUR</TableColumn>
-                <TableColumn>Звітність НБУ</TableColumn>
-                <TableColumn>NSI – Ведення класифікаторів звітності НБУ
-
-                  Довідники, класифікатори та кодифікатори НБУ та внутрішні довідники для потреб звітності. Надано можливість перегляду та редагування даних в ручному режимі, а також .Доступна функція "Редагування синхронізованих таблиць", що дозволяє завантажувати оновлені довідники в пакетному режимі чи окремо по кожному довіднику, попередньо переглянувши перелік змінених записів.
-
-                  OTC – Звітність НБУ для ком. банків
-
-                  АРМ для формування файлів звітності НБУ та внутрішньої звітності . Надає можливість формування файлів, перегляд показників, перегляд детального протоколу, редагування показників та збереження даних, а також вивантаження файлу в текстовий файл спеціального формату для відправлення в НБУ
-
-                  AUD – Аудит спецпараметрів НБУ
-
-                Функція перевірки параметрів рахунків та клієнтів . Перевіряється  правильність заповнення (чи проставлені значення для обов'язкових параметрів та відповідність цих значень класифікаторам та кодифікаторам НБУ) та узгодженість параметрів між собою.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>INTG_DPA</TableColumn>
-                <TableColumn>Звітність до органів</TableColumn>
-                <TableColumn>@F – Звітність до ДПА по відкритих рахунках
-
-                  Обмін файлами (формування файлів, прийом квитанцій) з ДПА.
-
-                NU – Податковий облік КБ. Звітність до ДПА</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>DELOIT</TableColumn>
-                <TableColumn>Звіти для аудиторів (з АБС)</TableColumn>
-                <TableColumn></TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>ANI</TableColumn>
-                <TableColumn>Аналітичні звіти</TableColumn>
-                <TableColumn>1) Аналіз балансу
-
-                  2) Концентрація ресурсів
-
-                  3) Залучення та резерв на кор.рах
-
-                  4) Аналіз оборотів по кор.рахунку
-
-                  5) Аналіз відповідності АКТ та ПАС
-
-                  6) Var-аналіз
-
-                  7) Аналіз фін.результату за період по бранчам, клієнтам, угодам
-
-                  ANB – Аналіз банків (розрахунок лімітів на активні операції)
-
-                  ANL – Аналіз клієнтів
-
-                  Відстеження роботи клієнтів по ряду статистичних показників, що розраховуються
-
-                Підрахунок загальних доходів-витрат банку в результаті роботи з клієнтами</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn heading colspan="3">Група модулів "Інтеграційні"</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>MGR</TableColumn>
-                <TableColumn>Міграція даних з інших систем</TableColumn>
-                <TableColumn>Міграція даних з інших систем</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>DEBREG</TableColumn>
-                <TableColumn>Інтерфейс з "Реєстром боржників"</TableColumn>
-                <TableColumn>Моніторинг/поставка інформації по просрочених процентних активах, загальна сума яких по одному клієнту-боржнику перевищує 10 000.00 грн в еквіваленті, на задану дату.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>NSM</TableColumn>
-                <TableColumn>Інтерфейс з НСМЕП</TableColumn>
-                <TableColumn>Інтерфейс з НСМЕП</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>CIG</TableColumn>
-                <TableColumn>Інтерфейс з ПВБКІ (Реєстр позичальників)</TableColumn>
-                <TableColumn>Інтерфейс з ПВБКІ
-
-                Забезпечення можливості взаємодії АБС «БАРС» з системою ПВБКІ. Предмет взаємодії – дані позичальників банку: фізичних та юридичних осіб (в форматі ПВБКІ).</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>SWT</TableColumn>
-                <TableColumn>Інтерфейс з системою SWIFT</TableColumn>
-                <TableColumn>Інтерфейс з системою SWIFT
-
-                  Обробка вихідних повідомлень:
-
-                  Формування повідомлень: МТ103, МТ200, МТ202
-
-                  Формування повідомлень: МТ103 з покриттям
-
-                  Введення  документів за повідомленнями  МТ103, МТ200, МТ202
-
-                  Підбір коррахунку
-
-                  Управління експортом повідомлень
-
-                  Журнал повідомлень
-
-                  Імпорт повідомлень з SWIFT в АБС:
-
-                  Обробка вхідних повідомлень
-
-                  Імпортовані повідомлення без аутентифікації
-
-                  Обробка/розподіл повідомлень
-
-                  Формування повідомлень  МТ940/МТ950
-
-                  Обробка виписок
-
-                Імпорт довідника учасників</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>SSV</TableColumn>
-                <TableColumn>Взаємодія СЕП-СВІФТ-ВПС</TableColumn>
-                <TableColumn>Автоматичне розпізнавання РУ отримувача вхідного СВИФТ-повідомлення. Накопичення фільтрів розпізнавання.
-
-                  Переформатування платіжних документів різних транспортних систем СЕП-СВІФТ-ВПС-АБС(внутр).
-
-                Лоро-рахунки.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>VMD</TableColumn>
-                <TableColumn>Приймання ВМД (валютно-митних декларацій)</TableColumn>
-                <TableColumn>Приймання ВМД (валютно-митних декларацій)</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>IBOX</TableColumn>
-                <TableColumn>Взаємодія з платіжними терміналами</TableColumn>
-                <TableColumn>Взаємодія з платіжними терміналами</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>DCPN</TableColumn>
-                <TableColumn>Інтеграція з депозитарієм ЦП (НБУ)</TableColumn>
-                <TableColumn>Інтеграція з депозитарієм ЦП (НБУ)
-
-                  <em> </em></TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>RBNBU</TableColumn>
-                <TableColumn>Інтеграція з розрахунковим банком (НБУ)</TableColumn>
-                <TableColumn>Інтеграція з розрахунковим банком (НБУ)
-
-                  <em> </em></TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>RI</TableColumn>
-                <TableColumn>Інтерфейс з реєстром інсайдерів</TableColumn>
-                <TableColumn>Інтерфейс з реєстром інсайдерів</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>INTG_EA</TableColumn>
-                <TableColumn>Інтеграція АБС з електронним архівом</TableColumn>
-                <TableColumn>Синхронізація з електронним архівом, передача інформації по клієнтам та рахункам депозитного модулю (ФО/ЮО)</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>INTG_GMSU</TableColumn>
-                <TableColumn>Інтеграція АБС і GMSU</TableColumn>
-                <TableColumn>Інтеграція АБС - GMSU. Надсилання sms-повідомлень клієнтам про зміни станів рахунків.</TableColumn>
-              </TableRow>
-              <TableRow>
-                <TableColumn>DCP</TableColumn>
-                <TableColumn>Інтерфейс з депозитарієм цінних паперів</TableColumn>
-                <TableColumn>Інтерфейс з депозитарієм цінних паперів
-
-                Імпорт файлів з ДЦП, формування платежів.</TableColumn>
+              <TableRow>
+                <TableColumn>{t("Table.Col159")}</TableColumn>
+                <TableColumn>{t("Table.Col160")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col161")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col162")}</TableColumn>
+                <TableColumn>{t("Table.Col163")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col164")}</TableColumn>
+                </TableColumn>
+              </TableRow>
+              <TableRow>
+                <TableColumn>{t("Table.Col165")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col166")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col167")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>INTG_WB</TableColumn>
-                <TableColumn>Інтеграція  WAY4 web banking</TableColumn>
-                <TableColumn>Взаємодія АБС "БАРС Millennium" з системою Персонального Банкінгу WAY4.</TableColumn>
+                <TableColumn>{t("Table.Col168")}</TableColumn>
+                <TableColumn>{t("Table.Col169")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col170")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>NDRCRM</TableColumn>
-                <TableColumn>Взаємодія з CRM BPMNOnline</TableColumn>
-                <TableColumn>Реєстрація клієнта, кредитної угоди в CRM системі BPMOnline з подальшою передачею даних, реєстрацією клієнта, кредитної угоди в АБС БАРС
-
-                  <em> </em></TableColumn>
+                <TableColumn>{t("Table.Col171")}</TableColumn>
+                <TableColumn>{t("Table.Col172")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col173")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn></TableColumn>
-                <TableColumn>Взаємодія з Microsoft CRM</TableColumn>
-                <TableColumn>Вивантаження даних з АБС у CRM систему на рівні файлового обміну</TableColumn>
+                <TableColumn />
+                <TableColumn>{t("Table.Col174")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col175")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>BPK</TableColumn>
-                <TableColumn>Інтеграція з ПЦ Way4</TableColumn>
-                <TableColumn>Реєстрація договорів БПК
-
-                  Взаємодія з системою CardMake (синхронізація продуктів Way4, угод БПК)
-
-                Взаємодія з ПЦ Way4 (обмін файлами по зарахуванню/списанню коштів, балансу карткових рахунків)</TableColumn>
+                <TableColumn>{t("Table.Col176")}</TableColumn>
+                <TableColumn>{t("Table.Col177")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col178")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CARD</TableColumn>
-                <TableColumn>Інтеграція з ПЦ УкрКард (УПБ)</TableColumn>
-                <TableColumn>Інтеграція з ПЦ УкрКард (УПБ)</TableColumn>
+                <TableColumn>{t("Table.Col179")}</TableColumn>
+                <TableColumn>{t("Table.Col180")}</TableColumn>
+                <TableColumn>{t("Table.Col181")}</TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>FGV</TableColumn>
-                <TableColumn>Взаємодія з фондом гарантування вкладів</TableColumn>
-                <TableColumn>Взаємодія з фондом гарантування вкладів</TableColumn>
+                <TableColumn>{t("Table.Col182")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col183")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col184")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>SEP+VPS</TableColumn>
-                <TableColumn>Підтримка СЕП НБУ та Внутрішня платіжна система банку(за наявності)</TableColumn>
-                <TableColumn>cистема термінових переказів (СТП)
-
-                  управління СЕП/ВПС  платежами
-
-                  управління корр. Рахунком
-
-                  управління нез'ясованими платежами
-
-                  обробка інформаційних запитів
-
-                  управління файлами
-
-                  оновлення ключів НБУ
-
-                  робота з системою ІПС(інформаційно-пошукова система НБУ)
-
-                  розбір нез'ясованих надходжень(розбір 3720)
-
-                  зарахування на рахунки  по майбутній даті
-
-                зарахування на рахунки  по альтернативному рахунку 3720</TableColumn>
+                <TableColumn>{t("Table.Col185")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col186")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col187")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CORP2</TableColumn>
-                <TableColumn>Корпоративний Клієнт-Банк</TableColumn>
-                <TableColumn>CORP-2 – Корпоративний Клієнт-Банк
-
-                  CORP-2 – система з широким переліком функціональних можливостей, що дозволяє Клієнтам банку цілодобово управляти рахунками, не виходячи з офісу. В системі виконуються: внутрішні та зовнішні перекази; поповнення рахунків; платежі у SWIFT; заявки на купівлю/продаж валюти; зарплатний проект.<em> </em></TableColumn>
+                <TableColumn>{t("Table.Col188")}</TableColumn>
+                <TableColumn>{t("Table.Col189")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col190")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>DWHEXP</TableColumn>
-                <TableColumn>Вивантаження даних у Сховище даних (DWH)</TableColumn>
-                <TableColumn>Вивантаження даних у Сховище даних (DWH)</TableColumn>
+                <TableColumn>{t("Table.Col191")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col192")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col193")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CLIM</TableColumn>
-                <TableColumn>Моніторинг касових лімітів і залишків</TableColumn>
-                <TableColumn>Моніторинг касових лімітів і залишків в касі по географії всього банку з центрального офісу, та можливість встановлювати допустимі ліміти на зберігання готівки у касі та оповіщення при їх порушенні</TableColumn>
+                <TableColumn>{t("Table.Col194")}</TableColumn>
+                <TableColumn>{t("Table.Col195")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col196")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CDM(CORP)</TableColumn>
-                <TableColumn>Інтегрція з Єдиною базою клієнтів</TableColumn>
-                <TableColumn>Інтегрція з Єдиною базою клієнтів</TableColumn>
+                <TableColumn>{t("Table.Col197")}</TableColumn>
+                <TableColumn>{t("Table.Col198")}</TableColumn>
+                <TableColumn>{t("Table.Col199")}</TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>KFILE</TableColumn>
-                <TableColumn>Консолідація К-файлів</TableColumn>
-                <TableColumn>Модуль призначений для формування консолідованих файлів звітності та банківських технічних виписок на основі прийнятих від банківських установ файлів К з даними про рух коштів по рахункам корпоративних клієнтів банку.</TableColumn>
+                <TableColumn>{t("Table.Col200")}</TableColumn>
+                <TableColumn>{t("Table.Col201")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col202")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CRCA</TableColumn>
-                <TableColumn>Централізований реєстр компенсаційних рахунків (ЦРКР)</TableColumn>
-                <TableColumn>Централізований реєстр компенсаційних рахунків (ЦРКР)</TableColumn>
+                <TableColumn>{t("Table.Col203")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col204")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col205")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>BICF</TableColumn>
-                <TableColumn>Інтеграція ПЗ АБС "БАРС" та модулю Card Managegement "Кредитна фабрика"</TableColumn>
-                <TableColumn>Інтеграція ПЗ АБС "БАРС" та модулю Card Managegement "Кредитна фабрика"</TableColumn>
+                <TableColumn>{t("Table.Col206")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col207")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col208")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>INTG_CRNV</TableColumn>
-                <TableColumn>ЦРНВ (нерухомі вклади)</TableColumn>
-                <TableColumn>нерухомі вклади</TableColumn>
+                <TableColumn>{t("Table.Col209")}</TableColumn>
+                <TableColumn>{t("Table.Col210")}</TableColumn>
+                <TableColumn>{t("Table.Col211")}</TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>INTG_RRODB</TableColumn>
-                <TableColumn>Реєстр вкладників Родовід банку</TableColumn>
-                <TableColumn>Реєстр вкладників Родовід банку</TableColumn>
+                <TableColumn>{t("Table.Col212")}</TableColumn>
+                <TableColumn>{t("Table.Col213")}</TableColumn>
+                <TableColumn>{t("Table.Col214")}</TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>INTG_CRV</TableColumn>
-                <TableColumn>ЦРВ (центральний реєстр вкладників СССР)</TableColumn>
-                <TableColumn>ЦРВ (центральний реєстр вкладників СССР)</TableColumn>
+                <TableColumn>{t("Table.Col215")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col216")}</TableColumn>
+                </TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col217")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn heading colspan="3">Група модулів "Управління/Моніторинг/Контроль"</TableColumn>
+                <TableColumn heading colspan="3">
+                  <TableColumn>{t("Table.Col218")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>KST</TableColumn>
-                <TableColumn>Кошторис</TableColumn>
-                <TableColumn>KST – Кошторис
-
-                Передавання та приймання даних за проводками по рахункам, необхідних для контролю виконня кошторису.</TableColumn>
+                <TableColumn>{t("Table.Col219")}</TableColumn>
+                <TableColumn>{t("Table.Col220")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col221")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>BUDG</TableColumn>
-                <TableColumn>Бюджетування. План-факт</TableColumn>
-                <TableColumn>В розрізі символів (що визначено банком-замовником) та Бранчів-2.
-
-                  Функції моделювання та вводу позицій "План" .
-
-                Розрахунок позицій "Факт" та "Відхилення" за різні звітні періоди. Динаміка.</TableColumn>
+                <TableColumn>{t("Table.Col222")}</TableColumn>
+                <TableColumn>{t("Table.Col223")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col224")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>CIM</TableColumn>
-                <TableColumn>Валютний контроль</TableColumn>
-                <TableColumn>CIM – Валютний контроль
-
-                Ведення контрактів по експортним і імпортним операціям в розрізі клієнтів, валют контрактів, типів контрактів.</TableColumn>
+                <TableColumn>{t("Table.Col225")}</TableColumn>
+                <TableColumn>{t("Table.Col226")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col227")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>DBT</TableColumn>
-                <TableColumn>Господарська дебіторка</TableColumn>
-                <TableColumn>XOZ – Автоматичне відслідковування фактів дебетування окремо визначених котлових рахунків (тип XOZ). Контроль за їх своєчасним та коректним закриттям . Розрахунок резерву на звітну дату згідно 23 постанови НБУ.</TableColumn>
+                <TableColumn>{t("Table.Col228")}</TableColumn>
+                <TableColumn>{t("Table.Col229")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col230")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>LCS</TableColumn>
-                <TableColumn>Контроль валютообмінних операцій</TableColumn>
-                <TableColumn>LCS – Контроль за валютообміннимим операціями
-
-                Контроль за переказами іноземної валюти, що здійснюються за дорученням ФО</TableColumn>
+                <TableColumn>{t("Table.Col231")}</TableColumn>
+                <TableColumn>{t("Table.Col232")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col233")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>FINMON</TableColumn>
-                <TableColumn>Фінансовий моніторинг - реєстр</TableColumn>
-                <TableColumn>1. Реєстр – Обслуговування реєстру операцій, щодо яких здійснюється повідомлення органів СДФМ
-
-                  2. Анкети:
-
-                  заповнення детальної інформації щодо клієнта;
-
-                  заповнення інформації щодо пов'язаних осіб;
-
-                  автоматичне формування електронних анкет клієнтів.
-
-                3. Блокування операцій - Ведення реєстру осіб, пов'язаних з тероризмом; здійснення             призупинення та повідмлення про операції, що є підозрілими для ФМ</TableColumn>
+                <TableColumn>{t("Table.Col234")}</TableColumn>
+                <TableColumn>{t("Table.Col235")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col236")}</TableColumn>
+                </TableColumn>
               </TableRow>
               <TableRow>
-                <TableColumn>MTV</TableColumn>
-                <TableColumn>Система мотивації персоналу банку</TableColumn>
-                <TableColumn>Довідник "операцій банку" з поділом на:
-
-                  Автоматичні (такі, що можна вичленити з АБС)
-
-                  Ручні (не можна вичленити з АБС, інформація про них вноситься вручну)
-
-                Бальна система оцінки операцій різних типів. Набір звітів про кількість різних операцій та їх бальна оцінка за період в розборі календарних днів та Бранчів-3</TableColumn>
+                <TableColumn>{t("Table.Col237")}</TableColumn>
+                <TableColumn>{t("Table.Col238")}</TableColumn>
+                <TableColumn>
+                  <TableColumn>{t("Table.Col239")}</TableColumn>
+                </TableColumn>
               </TableRow>
             </TableBody>
           </Table>
