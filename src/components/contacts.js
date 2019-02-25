@@ -194,14 +194,45 @@ class Contacts extends React.Component {
             <StyledContactText>bars@unity-bars.com</StyledContactText>
           </StyledContact>
           <StyledContact>
-            <StyledContactForm name="contact" method="post" action="/contacts">
-              <input type="hidden" name="form-name" value="contact" />
+            
+            <StyledContactForm 
+              name="contact" 
+              method="POST"
+            >
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
-              <StyledContactInput placeholder={t("Form.Name")} type="text" name="username" id="username" />
-              <StyledContactInput placeholder={t("Form.Email")} type="text" name="useremail" id="useremail" />
-              <StyledContactInput placeholder={t("Form.Number")} type="text" name="phone" id="phone" />
-              <StyledContactTextarea placeholder={t("Form.Message")} type="text" name="message" id="message" />
-              <StyledContactSubmit type="submit">{t("Form.Send")}</StyledContactSubmit>
+              <StyledContactInput 
+                type="hidden" 
+                name="form-name" 
+                value="contact"  
+              />      
+              <StyledContactInput 
+                placeholder={t("Form.Name")} 
+                type="text" 
+                name="username" 
+                id="username" 
+              />
+              <StyledContactInput 
+                placeholder={t("Form.Email")} 
+                type="text" 
+                name="useremail" 
+                id="useremail" 
+              />
+              <StyledContactInput 
+                placeholder={t("Form.Number")} 
+                type="text" 
+                name="phone" 
+                id="phone" 
+              />
+              <StyledContactTextarea 
+                placeholder={t("Form.Message")} 
+                type="text" 
+                name="message" 
+                id="message" 
+              />
+              <StyledContactSubmit 
+                type="submit">
+                {t("Form.Send")}
+              </StyledContactSubmit>
             </StyledContactForm>
           </StyledContact>
         </StyledGrid>
