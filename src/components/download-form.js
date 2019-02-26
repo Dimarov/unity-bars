@@ -38,7 +38,7 @@ const ContactForm = styled.form`
   }
 
   @media (min-width: 80rem) {
-    width: 32rem;
+    width: 26rem;
   }
 `
 
