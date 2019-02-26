@@ -34,7 +34,7 @@ class LanguageSwitcher extends Component {
     this.handleChangeLanguage = this.handleChangeLanguage.bind(this)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({ language: nextProps.i18n.language })
   }
 

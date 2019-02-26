@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 import { translate } from 'react-i18next'
-import boneImage from "../images/mockups/bone-macbook.png"
+import boneImage from "../images/mockups/bone-macbook-2.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
 
@@ -269,9 +269,9 @@ class ProductPreview extends React.Component {
               <Title themeColorSecondary='#FFF'>B.One</Title>
               <Subtitle themeColorSecondary='#FFF'>{t("Internet banking for SME and individuals")}</Subtitle>
               <ButtonContainer>
-                <Button href="https://itunes.apple.com/ru/app/bone-client-bank/id1156928571?mt=8" themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
-                <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
-                <Button href="https://bone.unity-bars.com:2443/auth/logon" outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/bone-client-bank/id1156928571?mt=8" themeColor='#000' themeColorSecondary='#FFF'>App Store</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#000' themeColorSecondary='#FFF'>Google Play</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://bone.unity-bars.com:2443/auth/logon" outline themeColor='#000' themeColorSecondary='#FFF'>Web Demo</Button>
               </ButtonContainer>
               <MoreButton to="/bone" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButton>
             </Info>
@@ -283,9 +283,9 @@ class ProductPreview extends React.Component {
               <Title themeColorSecondary='#303030'>CorpLight <Span color="#3EC4E1">{t("Oschadbank")}</Span></Title>
               <Subtitle themeColorSecondary='#303030'>{t("Online banking products and services control system")}</Subtitle>
               <ButtonContainer>
-                <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
-                <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
-                <Button href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#FEFEFE' themeColorSecondary='#303030'>App Store</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#FEFEFE' themeColorSecondary='#303030'>Google Play</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#FEFEFE' themeColorSecondary='#303030'>Web Demo</Button>
               </ButtonContainer>
               <MoreButton to="/corplight" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButton>
             </Info>
@@ -303,9 +303,9 @@ class ProductPreview extends React.Component {
               <Title themeColorSecondary='#29333E'><Span color="#991F3A">Forward</Span> Online</Title>
               <Subtitle themeColorSecondary='#29333E'>{t("24/7 access to your banking services")}</Subtitle>
               <ButtonContainer>
-                <Button href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
-                <Button href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
-                <Button href="https://online.forward-bank.com/dashboard" outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#FAFAFA' themeColorSecondary='#29333E'>App Store</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#FAFAFA' themeColorSecondary='#29333E'>Google Play</Button>
+                <Button target="_blank" rel="noopener noreferrer" href="https://online.forward-bank.com/dashboard" outline themeColor='#FAFAFA' themeColorSecondary='#29333E'>Web Demo</Button>
               </ButtonContainer>
               <MoreButton to="/forward" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButton>
             </Info>

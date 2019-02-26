@@ -539,9 +539,9 @@ class Bone extends React.Component {
             <Title>B.One</Title>
             <Subtitle>{t("Internet banking for SME and individuals")}</Subtitle>
             <ButtonContainer>
-              <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-              <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
             </ButtonContainer>
           </Container>
         </Header>
@@ -634,9 +634,9 @@ class Bone extends React.Component {
             <DownloadSubtitle>{t("Try Web")}</DownloadSubtitle>
 
             <ButtonContainer>
-              <Button href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-              <Button href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-              <Button href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
             </ButtonContainer>
           </DownloadContainer>
         </Container>

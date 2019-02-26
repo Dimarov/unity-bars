@@ -39,6 +39,7 @@ const Header = styled.div`
   @media (min-width: 80rem) {
     background-image: url(${office});
     background-size: cover;
+    background-position: bottom;
   }
 `
 
