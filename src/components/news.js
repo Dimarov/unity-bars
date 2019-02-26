@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 import office from '../images/fix/office3.jpg'
-import bg from "../images/products.jpg"
+import officemobile from '../images/fix/office3mobile.jpg'
 import { translate } from 'react-i18next'
 import one from "../images/news/news1.jpg"
 import two from "../images/news/news2.jpg"
@@ -12,7 +12,7 @@ import five from "../images/news/news5.jpg"
 import six from "../images/news/news6.jpg"
 
 
-const StyledBackground = styled.div`
+const Background = styled.div`
   width: 100%;
   height: auto;
   position: relative;
@@ -25,31 +25,38 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-position: bottom;
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledGrid = styled.div`
+const Grid = styled.div`
   height: auto;
   margin: 0 auto;
   max-width: 1440px;
@@ -71,7 +78,7 @@ const StyledGrid = styled.div`
   }
 `
 
-const StyledNews = styled.div`
+const NewsBlock = styled.div`
   width: 100%;
   height: auto;
   border-radius: .125rem;
@@ -96,7 +103,7 @@ const StyledNews = styled.div`
     }
   }
 `
-const StyledNewsPhoto = styled.div`
+const NewsPhoto = styled.div`
   background-image: url(${props => props.image});
   background-size: cover;
   background-position: center;
@@ -114,7 +121,7 @@ const StyledNewsPhoto = styled.div`
   }
 `
 
-const StyledNewsTitle = styled.h2`
+const NewsTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
@@ -123,25 +130,7 @@ const StyledNewsTitle = styled.h2`
   transition: all .3s ease-in-out;
 `
 
-const StyledNewsText = styled.p`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 1rem;
-  color: #1A1A1A;
-  width: 18rem;
-  transition: all .3s ease-in-out;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    width: 24rem;
-  }
-`
-
-const StyledNewsDate = styled.p`
+const NewsDate = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -150,7 +139,7 @@ const StyledNewsDate = styled.p`
   transition: all .3s ease-in-out;
 `
 
-const StyledLink = styled(Link)`
+const NewsLink = styled(Link)`
   text-decoration: none;
 `
 
@@ -160,75 +149,75 @@ class News extends React.Component {
     const { t } = this.props
 
     return(
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>{t("News")}</StyledTitle>
-            <StyledSubtitle>{t("Latest news in UNITY-BARS")}</StyledSubtitle>
+            <Title>{t("News")}</Title>
+            <Subtitle>{t("Latest news in UNITY-BARS")}</Subtitle>
           </Container>
-        </StyledHeader>
-        <StyledGrid>
+        </Header>
+        <Grid>
 
-          <StyledNews>
-            <StyledLink to="news-1">
-              <StyledNewsPhoto image={one}></StyledNewsPhoto>
-              <StyledNewsTitle>{t("FirstPostTitle")}</StyledNewsTitle>
+          <NewsBlock>
+            <NewsLink to="news-1">
+              <NewsPhoto image={one}></NewsPhoto>
+              <NewsTitle>{t("FirstPostTitle")}</NewsTitle>
 
-              <StyledNewsDate>12.02.2019</StyledNewsDate>
-            </StyledLink>
-          </StyledNews>
-
-
-          <StyledNews>
-            <StyledLink to="news-2">
-              <StyledNewsPhoto image={two}></StyledNewsPhoto>
-              <StyledNewsTitle>{t("SecondPostTitle")}</StyledNewsTitle>
-
-              <StyledNewsDate>23.08.2018</StyledNewsDate>
-            </StyledLink>
-          </StyledNews>
+              <NewsDate>12.02.2019</NewsDate>
+            </NewsLink>
+          </NewsBlock>
 
 
+          <NewsBlock>
+            <NewsLink to="news-2">
+              <NewsPhoto image={two}></NewsPhoto>
+              <NewsTitle>{t("SecondPostTitle")}</NewsTitle>
 
-          <StyledNews>
-            <StyledLink to="news-3">
-              <StyledNewsPhoto image={three}></StyledNewsPhoto>
-              <StyledNewsTitle>{t("ThirdPostTitle")}</StyledNewsTitle>
-
-              <StyledNewsDate>16.05.2018</StyledNewsDate>
-            </StyledLink>
-          </StyledNews>
-
-
-          <StyledNews>
-            <StyledLink to="news-4">
-              <StyledNewsPhoto image={four}></StyledNewsPhoto>
-              <StyledNewsTitle>{t("FourthPostTitle")}</StyledNewsTitle>
-
-              <StyledNewsDate>16.03.2018</StyledNewsDate>
-            </StyledLink>
-          </StyledNews>
+              <NewsDate>23.08.2018</NewsDate>
+            </NewsLink>
+          </NewsBlock>
 
 
-          <StyledNews>
-            <StyledLink to="news-5">
-              <StyledNewsPhoto image={five}></StyledNewsPhoto>
-              <StyledNewsTitle>{t("FifthPostTitle")}</StyledNewsTitle>
-              <StyledNewsDate>03.03.2018</StyledNewsDate>
-            </StyledLink>
-          </StyledNews>
+
+          <NewsBlock>
+            <NewsLink to="news-3">
+              <NewsPhoto image={three}></NewsPhoto>
+              <NewsTitle>{t("ThirdPostTitle")}</NewsTitle>
+
+              <NewsDate>16.05.2018</NewsDate>
+            </NewsLink>
+          </NewsBlock>
 
 
-          <StyledNews>
-            <StyledLink to="news-6">
-              <StyledNewsPhoto image={six}></StyledNewsPhoto>
-              <StyledNewsTitle>{t("SixthPostTitle")}</StyledNewsTitle>
-              <StyledNewsDate>21.11.2017</StyledNewsDate>
-            </StyledLink>
-          </StyledNews>
+          <NewsBlock>
+            <NewsLink to="news-4">
+              <NewsPhoto image={four}></NewsPhoto>
+              <NewsTitle>{t("FourthPostTitle")}</NewsTitle>
 
-        </StyledGrid>
-      </StyledBackground>
+              <NewsDate>16.03.2018</NewsDate>
+            </NewsLink>
+          </NewsBlock>
+
+
+          <NewsBlock>
+            <NewsLink to="news-5">
+              <NewsPhoto image={five}></NewsPhoto>
+              <NewsTitle>{t("FifthPostTitle")}</NewsTitle>
+              <NewsDate>03.03.2018</NewsDate>
+            </NewsLink>
+          </NewsBlock>
+
+
+          <NewsBlock>
+            <NewsLink to="news-6">
+              <NewsPhoto image={six}></NewsPhoto>
+              <NewsTitle>{t("SixthPostTitle")}</NewsTitle>
+              <NewsDate>21.11.2017</NewsDate>
+            </NewsLink>
+          </NewsBlock>
+
+        </Grid>
+      </Background>
     )
   }
 }

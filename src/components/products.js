@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 import { translate } from 'react-i18next'
-import bg from "../images/products.jpg"
 import office from '../images/fix/office.jpg'
+import officemobile from '../images/fix/officemobile.jpg'
 import absbars from "../images/products/absbars.png"
 import absbarsmmfo from "../images/products/absbarsmmfo.png"
 import corp2 from "../images/products/corp2.png"
@@ -28,10 +28,18 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
 const Title = styled.h1`

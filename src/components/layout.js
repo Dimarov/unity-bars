@@ -2,12 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { CSSTransitionGroup } from 'react-transition-group'
-
-import LanguageSwitcher from './language-switcher'
 import Header from './header'
 import Footer from './footer'
-import i18n from '../i18n'
 import './layout.css'
 
 const Layout = ({ children }) => (

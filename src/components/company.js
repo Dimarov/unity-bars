@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { translate } from 'react-i18next'
 
 import office from '../images/fix/office4.jpg'
+import officemobile from '../images/fix/office4mobile.jpg'
 
 import one from "../images/clients/1.jpg"
 import two from "../images/clients/2.jpg"
@@ -72,10 +73,18 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
-  padding-top: 8rem;
+  padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
 const Title = styled.h1`

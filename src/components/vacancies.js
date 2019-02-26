@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from "styled-components"
 import office from '../images/fix/office.jpg'
-import bg from "../images/products.jpg"
+import officemobile from '../images/fix/officemobile.jpg'
 import { translate } from 'react-i18next'
 
-const StyledBackground = styled.div`
+const Background = styled.div`
   width: 100%;
   height: auto;
   position: relative;
@@ -17,30 +17,38 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1.25rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledGrid = styled.div`
+const Grid = styled.div`
   height: auto;
   margin: 0 auto;
   max-width: 1440px;
@@ -50,7 +58,7 @@ const StyledGrid = styled.div`
   padding: 1rem;
 `
 
-const StyledVacancy = styled.div`
+const Vacancy = styled.div`
   width: 100%;
   height: auto;
   border-radius: .125rem;
@@ -67,7 +75,7 @@ const StyledVacancy = styled.div`
   }
 `
 
-const StyledVacancyTitle = styled.h2`
+const VacancyTitle = styled.h2`
   display: inline;
   padding: .25rem .5rem;
   font-family: myriad-pro, sans-serif;
@@ -79,7 +87,7 @@ const StyledVacancyTitle = styled.h2`
   border-radius: .125rem;
 `
 
-const StyledVacancySubtitle = styled.h3`
+const VacancySubtitle = styled.h3`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -87,7 +95,7 @@ const StyledVacancySubtitle = styled.h3`
   margin: 2rem 0 1rem;
 `
 
-const StyledVacancyText = styled.p`
+const VacancyText = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -101,115 +109,115 @@ class Vacancies extends React.Component {
     const { t } = this.props
 
     return(
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>{t("Vacancies")}</StyledTitle>
-            <StyledSubtitle>hr@unity-bars.com</StyledSubtitle>
+            <Title>{t("Vacancies")}</Title>
+            <Subtitle>hr@unity-bars.com</Subtitle>
           </Container>
-        </StyledHeader>
-        <StyledGrid>
-          <StyledVacancy>
-            <StyledVacancyTitle>Business analyst</StyledVacancyTitle>
-            <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("Business Analyst.line1")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line2")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line3")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line4")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line5")}</StyledVacancyText>
+        </Header>
+        <Grid>
+          <Vacancy>
+            <VacancyTitle>Business analyst</VacancyTitle>
+            <VacancySubtitle>{t("Needed")}:</VacancySubtitle>
+            <VacancyText>{t("Business Analyst.line1")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line2")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line3")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line4")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line5")}</VacancyText>
 
 
-            <StyledVacancySubtitle>{t("Would be an advantage")}:</StyledVacancySubtitle>
+            <VacancySubtitle>{t("Would be an advantage")}:</VacancySubtitle>
 
-            <StyledVacancyText>{t("Business Analyst.line6")}</StyledVacancyText>
+            <VacancyText>{t("Business Analyst.line6")}</VacancyText>
 
-            <StyledVacancySubtitle>{t("We offer")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("Business Analyst.line7")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line8")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line9")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line10")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line11")}</StyledVacancyText>
-            <StyledVacancyText>{t("Business Analyst.line12")}</StyledVacancyText>
-          </StyledVacancy>
-          <StyledVacancy>
-            <StyledVacancyTitle>QA</StyledVacancyTitle>
-            <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("QA.line1")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line2")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line3")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line4")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line5")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line6")}</StyledVacancyText>
+            <VacancySubtitle>{t("We offer")}:</VacancySubtitle>
+            <VacancyText>{t("Business Analyst.line7")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line8")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line9")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line10")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line11")}</VacancyText>
+            <VacancyText>{t("Business Analyst.line12")}</VacancyText>
+          </Vacancy>
+          <Vacancy>
+            <VacancyTitle>QA</VacancyTitle>
+            <VacancySubtitle>{t("Needed")}:</VacancySubtitle>
+            <VacancyText>{t("QA.line1")}</VacancyText>
+            <VacancyText>{t("QA.line2")}</VacancyText>
+            <VacancyText>{t("QA.line3")}</VacancyText>
+            <VacancyText>{t("QA.line4")}</VacancyText>
+            <VacancyText>{t("QA.line5")}</VacancyText>
+            <VacancyText>{t("QA.line6")}</VacancyText>
 
-            <StyledVacancySubtitle>{t("Would be an advantage")}:</StyledVacancySubtitle>
+            <VacancySubtitle>{t("Would be an advantage")}:</VacancySubtitle>
 
-            <StyledVacancyText>{t("QA.line7")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line8")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line9")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line10")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line11")}</StyledVacancyText>
+            <VacancyText>{t("QA.line7")}</VacancyText>
+            <VacancyText>{t("QA.line8")}</VacancyText>
+            <VacancyText>{t("QA.line9")}</VacancyText>
+            <VacancyText>{t("QA.line10")}</VacancyText>
+            <VacancyText>{t("QA.line11")}</VacancyText>
 
-            <StyledVacancySubtitle>{t("Responsibilities")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("QA.line12")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line13")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line14")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line15")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line16")}</StyledVacancyText>
-            <StyledVacancyText>{t("QA.line17")}</StyledVacancyText>
-          </StyledVacancy>
-          <StyledVacancy>
-            <StyledVacancyTitle>Project Manager</StyledVacancyTitle>
-            <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("Project Manager.line1")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line2")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line3")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line4")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line5")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line6")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line7")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line8")}</StyledVacancyText>
+            <VacancySubtitle>{t("Responsibilities")}:</VacancySubtitle>
+            <VacancyText>{t("QA.line12")}</VacancyText>
+            <VacancyText>{t("QA.line13")}</VacancyText>
+            <VacancyText>{t("QA.line14")}</VacancyText>
+            <VacancyText>{t("QA.line15")}</VacancyText>
+            <VacancyText>{t("QA.line16")}</VacancyText>
+            <VacancyText>{t("QA.line17")}</VacancyText>
+          </Vacancy>
+          <Vacancy>
+            <VacancyTitle>Project Manager</VacancyTitle>
+            <VacancySubtitle>{t("Needed")}:</VacancySubtitle>
+            <VacancyText>{t("Project Manager.line1")}</VacancyText>
+            <VacancyText>{t("Project Manager.line2")}</VacancyText>
+            <VacancyText>{t("Project Manager.line3")}</VacancyText>
+            <VacancyText>{t("Project Manager.line4")}</VacancyText>
+            <VacancyText>{t("Project Manager.line5")}</VacancyText>
+            <VacancyText>{t("Project Manager.line6")}</VacancyText>
+            <VacancyText>{t("Project Manager.line7")}</VacancyText>
+            <VacancyText>{t("Project Manager.line8")}</VacancyText>
 
-            <StyledVacancySubtitle>{t("Would be an advantage")}:</StyledVacancySubtitle>
-
-
-            <StyledVacancyText>{t("Project Manager.line9")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line10")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line11")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line12")}</StyledVacancyText>
-
-            <StyledVacancySubtitle>{t("Responsibilities")}:</StyledVacancySubtitle>
-
-            <StyledVacancyText>{t("Project Manager.line13")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line14")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line15")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line16")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line17")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line18")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line19")}</StyledVacancyText>
-            <StyledVacancyText>{t("Project Manager.line20")}</StyledVacancyText>
-          </StyledVacancy>
-          <StyledVacancy>
-            <StyledVacancyTitle>ORACLE DBA</StyledVacancyTitle>
-            <StyledVacancySubtitle>{t("Needed")}:</StyledVacancySubtitle>
-            <StyledVacancyText>{t("ORACLE DBA.line1")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line2")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line3")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line4")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line5")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line6")}</StyledVacancyText>
-
-            <StyledVacancySubtitle>{t("Would be an advantage")}:</StyledVacancySubtitle>
-
-            <StyledVacancyText>{t("ORACLE DBA.line7")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line8")}</StyledVacancyText>
-            <StyledVacancyText>{t("ORACLE DBA.line9")}</StyledVacancyText>
+            <VacancySubtitle>{t("Would be an advantage")}:</VacancySubtitle>
 
 
-          </StyledVacancy>
+            <VacancyText>{t("Project Manager.line9")}</VacancyText>
+            <VacancyText>{t("Project Manager.line10")}</VacancyText>
+            <VacancyText>{t("Project Manager.line11")}</VacancyText>
+            <VacancyText>{t("Project Manager.line12")}</VacancyText>
+
+            <VacancySubtitle>{t("Responsibilities")}:</VacancySubtitle>
+
+            <VacancyText>{t("Project Manager.line13")}</VacancyText>
+            <VacancyText>{t("Project Manager.line14")}</VacancyText>
+            <VacancyText>{t("Project Manager.line15")}</VacancyText>
+            <VacancyText>{t("Project Manager.line16")}</VacancyText>
+            <VacancyText>{t("Project Manager.line17")}</VacancyText>
+            <VacancyText>{t("Project Manager.line18")}</VacancyText>
+            <VacancyText>{t("Project Manager.line19")}</VacancyText>
+            <VacancyText>{t("Project Manager.line20")}</VacancyText>
+          </Vacancy>
+          <Vacancy>
+            <VacancyTitle>ORACLE DBA</VacancyTitle>
+            <VacancySubtitle>{t("Needed")}:</VacancySubtitle>
+            <VacancyText>{t("ORACLE DBA.line1")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line2")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line3")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line4")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line5")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line6")}</VacancyText>
+
+            <VacancySubtitle>{t("Would be an advantage")}:</VacancySubtitle>
+
+            <VacancyText>{t("ORACLE DBA.line7")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line8")}</VacancyText>
+            <VacancyText>{t("ORACLE DBA.line9")}</VacancyText>
+
+
+          </Vacancy>
 
           
-        </StyledGrid>
-      </StyledBackground>
+        </Grid>
+      </Background>
     )
   }
 }

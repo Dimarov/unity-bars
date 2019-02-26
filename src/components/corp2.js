@@ -5,6 +5,7 @@ import { translate } from 'react-i18next'
 import DownloadForm from './download-form'
 
 import office from '../images/fix/office.jpg'
+import officemobile from '../images/fix/officemobile.jpg'
 import corpSignIn from '../images/fix/corp2_sign-in.png'
 import oshad from '../images/fix/oshadbank1_1_corp.png'
 import dksu from '../images/fix/dksy1_1_corp.png'
@@ -52,10 +53,18 @@ const ImageContainer = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
 const Title = styled.h2`
@@ -97,16 +106,6 @@ const HeaderTitleParagraph = styled.div`
   @media screen and (max-width: 60rem) {
 
   }
-`
-
-const ThereIsWillBeImage = styled.h1`
-  font-family: myriad-pro, sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  background-color: red;
-  height: 32rem;
-  color: #000;
-  margin: 4rem 0 3rem 0;
 `
 
 const ImageContainers = styled.div`

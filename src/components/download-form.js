@@ -2,7 +2,6 @@ import React from 'react'
 import styled from "styled-components"
 import Modal from 'react-responsive-modal';
 import { translate } from "react-i18next"
-import { withPrefix } from 'gatsby'
 
 
 const InfoElementDownloadLink = styled.button`

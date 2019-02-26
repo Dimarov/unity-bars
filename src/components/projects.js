@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import { translate } from 'react-i18next'
-import bg from "../images/products.jpg"
 import office from '../images/fix/office4.jpg'
+import officemobile from '../images/fix/office4mobile.jpg'
 import bankid from "../images/projects/bankid.png"
 import prozorro from "../images/projects/prozorro.png"
 import edata from "../images/projects/edata.png"
@@ -24,10 +24,18 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
 const Title = styled.h1`
@@ -96,6 +104,7 @@ const ProjectPhoto = styled.div`
   flex: 0 0 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   @media (min-width: 40rem) {
 

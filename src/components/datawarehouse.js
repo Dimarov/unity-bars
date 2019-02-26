@@ -5,6 +5,7 @@ import { translate } from 'react-i18next'
 import DownloadForm from './download-form'
 
 import office from '../images/fix/office.jpg'
+import officemobile from '../images/fix/officemobile.jpg'
 import dwhMac from '../images/fix/dwh_mac.png'
 import dwhLogoSVG from '../images/fix/dwh_logo.png'
 import macCanDataware from '../images/fix/dwh_mac_can.png'
@@ -25,10 +26,18 @@ const Container = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 32rem;
-  background-image: url(${office});
-  background-size: cover;
+  background-image: url(${officemobile});
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    background-image: url(${office});
+    background-size: cover;
+  }
 `
 
 const Title = styled.h2`

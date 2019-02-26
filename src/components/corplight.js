@@ -236,24 +236,6 @@ const InfoElement = styled.div`
   align-content: center;
 `
 
-const InfoElementDownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #3EC4E1;
-  margin: .5rem 0;
-  padding: 0 0 0 7rem;
-  text-decoration: none;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
-
 const InfoElementIcon = styled.div`
   flex: 0 0 6rem;
   height: 6rem;
