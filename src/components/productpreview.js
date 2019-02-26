@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 import { translate } from 'react-i18next'
-import boneImage from "../images/mockups/bone-macbook-2.png"
+import boneImage from "../images/mockups/bone-macbook.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
 
