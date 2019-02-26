@@ -49,23 +49,6 @@ const ImageContainer = styled.div`
   }
 `
 
-const DownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #3EC4E1;
-  margin: .5rem 0;
-  text-decoration: none;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
-
 const Header = styled.div`
   width: 100%;
   height: 32rem;
@@ -96,32 +79,11 @@ const TitleBlack = styled.h2`
 
 const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
 `
 
-const SubtitleWhite = styled.div`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 3rem;
-  color: #fff;
-  margin: 3rem 0 3rem 0;
-`
-
-const HeaderTitle = styled.div`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
-  color: #000;
-  line-height: 2.5rem;
-  font-weight: 200;
-  margin: 5rem 0 3rem 0;
-
-  @media screen and (max-width: 60rem) {
-
-  }
-`
 
 const HeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
@@ -228,7 +190,7 @@ class Corp2 extends React.Component {
         <Header>
           <Container>
             <Title>CORP 2</Title>
-            <SubtitleWhite>{t("Corporate Online Banking")}</SubtitleWhite>
+            <Subtitle>{t("Corporate Online Banking")}</Subtitle>
           </Container>
         </Header>
         <ImageContainer>

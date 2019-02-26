@@ -57,6 +57,14 @@ const StyledVacancy = styled.div`
   background: #fafafa;
   margin-bottom: 1rem;
   padding: 2rem 1rem;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    padding: 2rem 3rem;
+  }
 `
 
 const StyledVacancyTitle = styled.h2`
@@ -66,7 +74,7 @@ const StyledVacancyTitle = styled.h2`
   font-size: 2rem;
   font-weight: 400;
   color: #3EC4E1;
-  margin: 1rem 2rem;
+  margin: 1rem 0;
   border: .125rem solid #3EC4E1;
   border-radius: .125rem;
 `
@@ -76,7 +84,7 @@ const StyledVacancySubtitle = styled.h3`
   font-size: 1rem;
   font-weight: 600;
   color: #1A1A1A;
-  margin: 2rem 2rem 1rem;
+  margin: 2rem 0 1rem;
 `
 
 const StyledVacancyText = styled.p`
@@ -84,7 +92,7 @@ const StyledVacancyText = styled.p`
   font-size: 1rem;
   font-weight: 400;
   color: #1A1A1A;
-  margin: .25rem 2rem;
+  margin: .25rem 0;
 `
 
 class Vacancies extends React.Component {

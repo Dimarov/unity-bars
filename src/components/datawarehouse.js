@@ -42,11 +42,9 @@ const Title = styled.h2`
 
 const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
-
-
 `
 
 const ParagraphText = styled.div`
@@ -75,29 +73,12 @@ const TitleBlackColor = styled.div`
   }
 `
 
-const ThereIsWillBeImage = styled.h1`
-  font-family: myriad-pro, sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  background-color: red;
-  height: 32rem;
-  // font-weight: 400;
-  color: #000;
-  margin: 4rem 0 3rem 0;
-`
+
 
 const TestMargin = styled.div`
   margin-bottom: 7rem;
 `
 
-const HeaderTitle = styled.div`
-font-family: myriad-pro, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: white;
-  line-height: 3rem;
-  margin-bottom: 1rem;
-`
 
 const DwhMac = styled.img`
   margin-top: 2.5rem;
@@ -149,22 +130,6 @@ margin-top: 3.2rem;
     text-align: center;
   }
 `
-const DownloadLink = styled.a`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #3EC4E1;
-  margin: .5rem 0;
-  text-decoration: none;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 1.5rem;
-  }
-`
 
 class Datawarehouse extends React.Component {
 
@@ -177,7 +142,7 @@ class Datawarehouse extends React.Component {
           <Container>
             <Title>Datawarehouse</Title>
 
-            <HeaderTitle>{t("Description")}</HeaderTitle>
+            <Subtitle>{t("Description")}</Subtitle>
           </Container>
         </Header>
 

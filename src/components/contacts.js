@@ -4,7 +4,7 @@ import { translate } from 'react-i18next'
 
 import office from '../images/fix/office3.jpg'
 
-const StyledBackground = styled.div`
+const Background = styled.div`
   width: 100%;
   height: auto;
   position: relative;
@@ -17,7 +17,7 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const StyledHeader = styled.div`
+const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${office});
@@ -27,21 +27,21 @@ const StyledHeader = styled.div`
   padding: 8rem 1rem;
 `
 
-const StyledTitle = styled.h2`
+const Title = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
 `
 
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
 `
 
-const StyledGrid = styled.div`
+const Grid = styled.div`
   height: auto;
   margin: 0 auto;
   max-width: 1440px;
@@ -57,7 +57,7 @@ const StyledGrid = styled.div`
   }
 `
 
-const StyledContactTitle = styled.h2`
+const ContactTitle = styled.h2`
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -65,7 +65,7 @@ const StyledContactTitle = styled.h2`
   margin: 1rem 2rem;
 `
 
-const StyledContactSubtitle = styled.h3`
+const ContactSubtitle = styled.h3`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -73,7 +73,7 @@ const StyledContactSubtitle = styled.h3`
   margin: 1rem 2rem;
 `
 
-const StyledContactText = styled.p`
+const ContactText = styled.p`
   font-family: myriad-pro, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -81,7 +81,7 @@ const StyledContactText = styled.p`
   margin: .25rem 2rem;
 `
 
-const StyledContact = styled.div`
+const Contact = styled.div`
   width: 100%;
   height: 32rem;
   border-radius: .125rem;
@@ -94,7 +94,7 @@ const StyledContact = styled.div`
   }
 `
 
-const StyledContactForm = styled.form`
+const ContactForm = styled.form`
   width: 60%;
   margin-left: 20%;
   display: flex;
@@ -105,7 +105,7 @@ const StyledContactForm = styled.form`
   }
 `
 
-const StyledContactFormTitle = styled.h3`
+const ContactFormTitle = styled.h3`
   font-family: myriad-pro, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -113,7 +113,7 @@ const StyledContactFormTitle = styled.h3`
   margin: 1rem;
 `
 
-const StyledContactInput = styled.input`
+const ContactInput = styled.input`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -132,7 +132,7 @@ const StyledContactInput = styled.input`
   }
 `
 
-const StyledContactTextarea = styled.textarea`
+const ContactTextarea = styled.textarea`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -152,7 +152,7 @@ const StyledContactTextarea = styled.textarea`
   }
 `
 
-const StyledContactSubmit = styled.button`
+const ContactSubmit = styled.button`
   outline: none;
   background: none;
   font-family: myriad-pro, sans-serif;
@@ -162,7 +162,7 @@ const StyledContactSubmit = styled.button`
   color: #3EC4E1;
   border: .125rem solid #3EC4E1;
   border-radius: .25rem;
-  padding: .5rem 2rem;
+  padding: 1rem 2rem;
   cursor: pointer;
   transition: all .1s ease-in;
   :hover {
@@ -177,67 +177,67 @@ class Contacts extends React.Component {
     const { t } = this.props
 
     return (
-      <StyledBackground>
-        <StyledHeader>
+      <Background>
+        <Header>
           <Container>
-            <StyledTitle>{t("Contacts")}</StyledTitle>
-            <StyledSubtitle>
+            <Title>{t("Contacts")}</Title>
+            <Subtitle>
               {t("Contact us and find out how we can help your business achieve high results")}
-            </StyledSubtitle>
+            </Subtitle>
           </Container>
-        </StyledHeader>
-        <StyledGrid>
-          <StyledContact>
-            <StyledContactTitle>{t("Contacts")}</StyledContactTitle>
-            <StyledContactText>{t("Adress")}</StyledContactText>
-            <StyledContactSubtitle>(044) 568-52-11</StyledContactSubtitle>
-            <StyledContactText>bars@unity-bars.com</StyledContactText>
-          </StyledContact>
-          <StyledContact>
+        </Header>
+        <Grid>
+          <Contact>
+            <ContactTitle>{t("Contacts")}</ContactTitle>
+            <ContactText>{t("Adress")}</ContactText>
+            <ContactSubtitle>(044) 568-52-11</ContactSubtitle>
+            <ContactText>bars@unity-bars.com</ContactText>
+          </Contact>
+          <Contact>
             
-            <StyledContactForm 
+            <ContactForm 
               name="contact" 
               method="POST"
               action="/success-contact/"
             >
-              <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
-              <StyledContactInput 
+              <ContactFormTitle>{t("Send Message")}</ContactFormTitle>
+              <ContactInput 
                 type="hidden" 
                 name="form-name" 
                 value="contact"  
               />      
-              <StyledContactInput 
+              <ContactInput 
                 placeholder={t("Form.Name")} 
                 type="text" 
                 name="username" 
                 id="username" 
               />
-              <StyledContactInput 
+              <ContactInput 
                 placeholder={t("Form.Email")} 
                 type="text" 
                 name="useremail" 
                 id="useremail" 
               />
-              <StyledContactInput 
+              <ContactInput 
                 placeholder={t("Form.Number")} 
                 type="text" 
                 name="phone" 
                 id="phone" 
               />
-              <StyledContactTextarea 
+              <ContactTextarea 
                 placeholder={t("Form.Message")} 
                 type="text" 
                 name="message" 
                 id="message" 
               />
-              <StyledContactSubmit 
+              <ContactSubmit 
                 type="submit">
                 {t("Form.Send")}
-              </StyledContactSubmit>
-            </StyledContactForm>
-          </StyledContact>
-        </StyledGrid>
-      </StyledBackground>
+              </ContactSubmit>
+            </ContactForm>
+          </Contact>
+        </Grid>
+      </Background>
     )
   }
 }

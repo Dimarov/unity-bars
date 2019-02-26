@@ -58,57 +58,6 @@ const Title = styled.h2`
   font-size: 2.5rem;
   font-weight: 400;
   color: #fff;
-
-
-`
-
-const ParagraphText = styled.div`
-  font-family: myriad-pro, sans-serif;
-  line-height: 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 200;
-  color: #000;
-
-  @media screen and (max-width: 60rem) {
-    margin: 1.3rem;
-  }
-`
-
-const TitleBlackColor = styled.div`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
-  // font-weight: 400;
-  line-height: 2.5rem;
-  color: #000;
-  margin: 4rem 0 3rem 0;
-
-  @media screen and (max-width: 60rem) {
-   margin: 0.5rem;
-  }
-`
-
-const ThereIsWillBeImage = styled.h1`
-  font-family: myriad-pro, sans-serif;
-  font-size: 4rem;
-  text-align: center;
-  background-color: red;
-  height: 32rem;
-  // font-weight: 400;
-  color: #000;
-  margin: 4rem 0 3rem 0;
-`
-
-const HeaderTitleParagraph = styled.div`
-  font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
-  color: #000;
-  font-weight: 400;
-  margin: 0 0 1.3rem 0;
-  opacity: .8;
-
-  @media screen and (max-width: 60rem) {
-
-  }
 `
 
 const HeaderSubTitleHuge = styled.div`
@@ -121,18 +70,32 @@ const HeaderSubTitleHuge = styled.div`
 
 `
 
-const HeaderTitle = styled.div`
+const HeaderTitleParagraph = styled.div`
   font-family: myriad-pro, sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   color: #000;
-  line-height: 2.5rem;
   font-weight: 400;
-  margin: 5rem 0 3rem 0;
+  margin: 0 0 1.3rem 0;
+  opacity: 0.8;
 
   @media screen and (max-width: 60rem) {
-
+    margin: 1rem 0;
   }
 `
+
+const HeaderTitle = styled.div`
+  font-family: myriad-pro, sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #000;
+  font-weight: 500;
+  margin: 4rem 0 2rem 0;
+
+  @media screen and (max-width: 60rem) {
+    margin: 0.5rem 0;
+  }
+`
+
 
 const TestMargin = styled.div`
   margin-bottom: 7rem;
@@ -157,12 +120,11 @@ const AbsImage = styled.img`
 
 const Table = styled.table`
   width: 100%;
-  border: .0625rem solid #000;
-  padding: .5rem;
+  padding: 0.5rem;
   margin: 1rem 0 0;
+  border: none;
 
   @media (min-width: 40rem) {
-
   }
 
   @media (min-width: 80rem) {
@@ -176,16 +138,14 @@ const TableBody = styled.tbody`
 
 const TableRow = styled.tr`
   font-family: myriad-pro, sans-serif;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #000;
   font-weight: 400;
-  opacity: .6;
-  border: .0625rem solid #000;
-  padding: .5rem;
+  opacity: 0.6;
+  padding: 0.5rem;
   text-align: center;
 
   @media (min-width: 40rem) {
-
   }
 
   @media (min-width: 80rem) {
@@ -195,18 +155,22 @@ const TableRow = styled.tr`
 `
 
 const TableColumn = styled.td`
-  border: .0625rem solid #000;
-  padding: .5rem;
+  border: 0.0625rem solid #e1e1e1;
+  padding: 0 !important;
   text-align: center;
-  background: ${props => props.heading ? "#e1e1e1" : "none"};
+  background: ${props => (props.heading ? '#e1e1e1' : 'none')};
+  border-radius: .125rem;
 
   @media (min-width: 40rem) {
-
   }
 
   @media (min-width: 80rem) {
     font-size: 1.25rem;
-    padding: 1rem;
+    font-weight: 500;
+    padding: 1.5rem 3rem !important;
+    text-align: left;
+    border: none;
+    border-bottom: 0.0625rem solid #e1e1e1;
   }
 `
 

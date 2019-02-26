@@ -87,7 +87,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
 `
@@ -102,9 +102,10 @@ const Topic = styled.h2`
 const Grid = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
   grid-gap: 1rem .5rem;
+  justify-items: center;
 
   @media (min-width: 40rem) {
 
@@ -201,7 +202,7 @@ const Person = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   transition: all .1s ease-out;
 
 
@@ -211,6 +212,7 @@ const Person = styled.div`
   }
 
   @media (min-width: 80rem) {
+    align-items: baseline;
     :hover {
       transform: translateY(-.125rem);
     }
@@ -256,6 +258,7 @@ const PersonPosition = styled.h3`
   font-weight: 200;
   margin: .5rem 0;
   color: #37B3FF;
+  text-align: center;
 
   @media (min-width: 40rem) {
 
@@ -263,6 +266,7 @@ const PersonPosition = styled.h3`
 
   @media (min-width: 80rem) {
     font-size: 1.25rem;
+    text-align: left;
   }
 `
 
