@@ -161,15 +161,14 @@ const Client = styled.div`
 `
 
 const Image = styled.img`
-  max-width: 100%;
-  height: 4rem;
+  height: 3rem;
 
   @media (min-width: 40rem) {
 
   }
 
   @media (min-width: 80rem) {
-    height: 6rem;
+    height: 4rem;
   }
 `
 
@@ -219,8 +218,8 @@ const Person = styled.div`
 `
 
 const PersonPhoto = styled.div`
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   background-image: url(${props => props.person});
   background-size: cover;
@@ -231,8 +230,8 @@ const PersonPhoto = styled.div`
   }
 
   @media (min-width: 80rem) {
-    width: 12rem;
-    height: 12rem;
+    width: 10rem;
+    height: 10rem;
   }
 `
 
