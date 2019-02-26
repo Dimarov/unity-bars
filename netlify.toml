@@ -2,3 +2,4 @@
   from = "/success-contact/"
   to = "/success/"
   status = 301
+  force = true
