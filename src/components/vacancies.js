@@ -43,7 +43,7 @@ const Title = styled.h2`
 
 const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
 `
