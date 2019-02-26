@@ -31,9 +31,9 @@ const Layout = ({ children }) => (
           ]}>
           <html lang="uk" />
         </Helmet>
-        <script src="//instant.page/1.1.0" type="module" integrity="sha384-EwBObn5QAxP8f09iemwAJljc+sU+eUXeL9vSBw1eNmVarwhKk2F9vBEpaN9rsrtp"></script>
+        
         <Header siteTitle={data.site.siteMetadata.title}/>
-        <form name="download" data-netlify="true" hidden>
+        <form name="download" data-netlify="true" action="/success" hidden>
           <input type="text" name="name" />
           <input type="text" name="email" />
           <input type="hidden" name="product" />

@@ -8,5 +8,6 @@
     "InvalidEmail": "Enter valid Email",
     "InvalidName": "Enter valid name",
     "Required": "Required"
-  }
+  },
+  "Send Message": "We'll send presentation om your email"
 }

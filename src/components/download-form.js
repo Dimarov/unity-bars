@@ -94,11 +94,13 @@ const ModalContainer = styled.div`
 
 `
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
+const ContactFormTitle = styled.h3`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1A1A1A;
+  margin: 1rem 0;
+`
 
 class DownloadForm extends React.Component {
   constructor(props) {
@@ -127,8 +129,9 @@ class DownloadForm extends React.Component {
               <ContactForm 
                 name="download" 
                 method="POST"
-                action="/"
+                action="/success"
               >
+                <ContactFormTitle>{t("Send Message")}</ContactFormTitle>
                 <ContactInput 
                   type="hidden" 
                   name="form-name" 
