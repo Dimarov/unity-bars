@@ -141,6 +141,11 @@ class DownloadForm extends React.Component {
                   name="product"
                   value={this.props.pdfFile}
                 />
+                <ContactInput
+                  type="hidden"
+                  name="url"
+                  value={this.props.pdfURL}
+                />
                 <ContactInput 
                   placeholder={t("Form.Name")} 
                   type="text" 
