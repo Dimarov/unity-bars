@@ -90,10 +90,10 @@ class Success extends React.Component {
                         <ThankYouMessage>{t('Thank You')}</ThankYouMessage>
                         <div>
                             <Link to="/company">
-                                <StyledButton>{t('About Us')}</StyledButton>
+                                <StyledButton>{t('About Us Link')}</StyledButton>
                             </Link>
                             <Link to="/products">
-                                <StyledButton outline>{t('Products')}</StyledButton>
+                                <StyledButton outline>{t('Products Link')}</StyledButton>
                             </Link>
                         </div>
                     </StyledContent>

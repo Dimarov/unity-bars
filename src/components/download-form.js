@@ -131,7 +131,7 @@ class DownloadForm extends React.Component {
                 method="POST"
                 action="/success"
               >
-                <ContactFormTitle>{t("Send Message")}</ContactFormTitle>
+                <ContactFormTitle>{t("Send Presentation")}</ContactFormTitle>
                 <ContactInput 
                   type="hidden" 
                   name="form-name" 
