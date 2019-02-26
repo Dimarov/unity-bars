@@ -25,6 +25,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-135191475-1",
+      },
+    },
+    {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
@@ -34,7 +40,7 @@ module.exports = {
         mergeCachingHeaders: true, // boolean to turn off the default caching headers
         transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
-      }
+      },
     }
   ],
 }
