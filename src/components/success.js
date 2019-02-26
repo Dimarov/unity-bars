@@ -42,9 +42,17 @@ const StyledContent = styled.div`
 
 const ThankYouMessage = styled.h1`
   font-family: myriad-pro, sans-serif;
-  font-size: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #000;
+
+  @media (min-width: 40rem) {
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 3rem;
+  }
 `
 
 const StyledButton = styled.button`
