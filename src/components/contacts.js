@@ -198,7 +198,7 @@ class Contacts extends React.Component {
             <StyledContactForm 
               name="contact" 
               method="POST"
-              action="/success-contact"
+              action="/success-contact/"
             >
               <StyledContactFormTitle>{t("Send Message")}</StyledContactFormTitle>
               <StyledContactInput 
