@@ -87,7 +87,7 @@ class Success extends React.Component {
             <StyledBackground>
                 <Container>
                     <StyledContent className="content">
-                        <ThankYouMessage>{t("Thank You")}</ThankYouMessage>
+                        <ThankYouMessage>{t('Thank You')}</ThankYouMessage>
                         <div>
                             <Link to="/company">
                                 <StyledButton>{t('About Us')}</StyledButton>
