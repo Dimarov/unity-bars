@@ -48,7 +48,7 @@ const Header = styled.div`
   width: 100%;
   height: 32rem;
   background-image: url(${officemobile});
-  background-size: cover;
+  background-size: 32rem auto;
   background-attachment: fixed;
   padding: 8rem 1rem;
 
@@ -57,6 +57,7 @@ const Header = styled.div`
 
   @media (min-width: 80rem) {
     background-image: url(${office});
+    background-size: cover;
   }
 `
 

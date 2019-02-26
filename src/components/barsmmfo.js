@@ -60,14 +60,12 @@ const Title = styled.h2`
   color: #fff;
 `
 
-const HeaderSubTitleHuge = styled.div`
+const Subtitle = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   color: #fff;
-  line-height: 32px;
-  margin-bottom: 2rem;
-
+  line-height: 2rem;
 `
 
 const HeaderTitleParagraph = styled.div`
@@ -184,9 +182,9 @@ class Barsmmfo extends React.Component {
         <Header>
           <Container>
             <Title>BARS MMFO | Core Banking System</Title>
-            <HeaderSubTitleHuge>
+            <Subtitle>
               {t("Description")}
-            </HeaderSubTitleHuge>
+            </Subtitle>
           </Container>
         </Header>
         <ImageContainer>
