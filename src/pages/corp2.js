@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Corp2 from '../components/corp2'
 
 const Corp2Page = () => (
-  <Layout title="UNITY-BARS | CORP2">
+  <Layout>
     <Corp2 />
   </Layout>
 )

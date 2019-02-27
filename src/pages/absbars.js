@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Absbars from '../components/absbars'
 
 const AbsbarsPage = () => (
-  <Layout title="UNITY-BARS | ABS BARS">
+  <Layout>
     <Absbars />
   </Layout>
 )

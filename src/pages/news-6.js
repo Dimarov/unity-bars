@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import News6 from '../components/news/news-6'
 
 const News6Page = () => (
-  <Layout title="UNITY-BARS | Новини">
+  <Layout>
 
     <News6 />
   </Layout>

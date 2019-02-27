@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import News3 from '../components/news/news-3'
 
 const News3Page = () => (
-  <Layout title="UNITY-BARS | Новини">
+  <Layout>
     <News3 />
   </Layout>
 )

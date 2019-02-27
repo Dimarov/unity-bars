@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Success from '../components/success'
 
 const SuccessPage = () => (
-    <Layout title="UNITY-BARS | Успіх">
+    <Layout>
         <Success />
     </Layout>
 )

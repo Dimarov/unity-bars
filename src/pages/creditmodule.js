@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Creditmodule from '../components/creditmodule'
 
 const CreditmodulePage = () => (
-  <Layout title="UNITY-BARS | CREDITMODULE">
+  <Layout>
     <Creditmodule />
   </Layout>
 )
