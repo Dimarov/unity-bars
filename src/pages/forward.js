@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Forward from '../components/forward'
 
 const ForwardPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | FORWARD ONLINE">
 
     <Forward />
   </Layout>

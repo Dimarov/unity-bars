@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Products from '../components/products'
 
 const ProductsPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | Продукти">
 
     <Products />
   </Layout>

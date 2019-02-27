@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Barsmmfo from '../components/barsmmfo'
 
 const BarsmmfoPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | BARS MMFO">
     <Barsmmfo />
   </Layout>
 )

@@ -18,18 +18,24 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={({
+      site: {
+        siteMetadata: { title },
+      },
+    }) => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          defaultTitle={title} titleTemplate={`%s | ${title}`}
           meta={[
+            { httpEquiv: "Content-Type", content: "text/html; charset=utf-8" },
+            { name: 'viewport', content: "width=device-width, initial-scale=1" },
             { name: 'description', content: 'Компанія UNITY-BARS успішно працює на ринку 25 років в сфері розробки банківського програмного забезпечення. Більше 90 професійних фахівців різних напрямків.' },
             { name: 'keywords', content: 'IT, FinTech, ПЗ, банкінг' },
           ]}>
           <html lang="uk" />
         </Helmet>
         
-        <Header siteTitle={data.site.siteMetadata.title}/>
+        <Header siteTitle={title}/>
         <form name="download" data-netlify="true" action="/success" hidden>
           <input type="text" name="name" />
           <input type="text" name="email" />
@@ -50,7 +56,7 @@ const Layout = ({ children }) => (
 
         </div>
 
-        <Footer siteTitle={data.site.siteMetadata.title} />
+        <Footer siteTitle={title} />
       </>
     )}
   />

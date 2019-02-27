@@ -548,7 +548,7 @@ class Forward extends React.Component {
                   </InfoElementDescription>
                 </InfoElement>
                 <InfoElement>
-                  <DownloadForm pdfFile="FORWARD.pdf" pdfURL="/documents/FORWARD.pdf" pageURL="/forward/" />
+                  <DownloadForm pdfFile="FORWARD-ONLINE.pdf" pdfURL="/documents/FORWARD-ONLINE.pdf" pageURL="/forward/" />
                 </InfoElement>
               </InfoElementContainer>
             </InfoContainer>

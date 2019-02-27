@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Corplight from '../components/corplight'
 
 const CorplightPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | CORPLIGHT">
     <Corplight />
   </Layout>
 )

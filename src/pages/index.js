@@ -5,7 +5,7 @@ import ProductPreview from '../components/productpreview'
 
 
 const IndexPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS |  — розробка програмного забезпечення, тестування, аутсорсинг IT послуг, IT консалтінг">
     <Background />
     <ProductPreview />
   </Layout>

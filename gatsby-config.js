@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'UNITY-BARS',
+    title: 'UNITY-BARS | Розробка програмного забезпечення, IT тестування та консалтінг',
   },
   plugins: [
     'gatsby-plugin-styled-components',

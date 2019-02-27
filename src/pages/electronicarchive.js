@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Electronicarchive from '../components/electronicarchive'
 
 const ElectronicarchivePage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | ELECTRONICARCHIVE">
     <Electronicarchive />
   </Layout>
 )

@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Contacts from '../components/contacts'
 
 const ContactsPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | Контакти">
     <Contacts />
   </Layout>
 )

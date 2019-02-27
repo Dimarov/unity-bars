@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Company from '../components/company'
 
 const CompanyPage = () => (
-  <Layout>
+  <Layout title="UNITY-BARS | Компанія">
     <Company />
   </Layout>
 )
