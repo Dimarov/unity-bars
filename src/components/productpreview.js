@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from "styled-components"
 import { translate } from 'react-i18next'
-import boneImage from "../images/mockups/bone-macbook.png"
-import corpImage from "../images/mockups/corplight-iphone.png"
-import forwardImage from "../images/mockups/forward-samsung.png"
-import mysteryBox from "../images/mystery-box.jpg"
+import boneImage from "../images/mockups/bone-macbook-3.png"
+import corpImage from "../images/mockups/corplight-iphone-5.png"
+import forwardImage from "../images/mockups/forward-samsung-4.png"
+import mysteryBox from "../images/mockups/mystery-box.jpg"
 
 const Background = styled.div`
   width: 100%;
@@ -29,6 +29,7 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
 
   @media (min-width: 40rem) {
   }
@@ -83,41 +84,71 @@ const ImageContainer = styled.div`
 `
 
 const ImageBone = styled.img`
-  height: 16rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 14rem;
   margin: 0;
 
   @media (min-width: 40rem) {
-
+    height: 20rem;
   }
 
   @media (min-width: 80rem) {
     height: 28rem;
+    transform: none;
+    left: 0;
+  }
+
+  @media (min-width: 120rem) {
+    left: 16rem;
   }
 `
 
 const ImageCorp = styled.img`
-  height: 16rem;
+  position: absolute;
+  transform: translateX(40%);
+  right: 50%;
+  bottom: 0;
+  height: 14rem;
   margin: 0;
 
   @media (min-width: 40rem) {
-
+    height: 20rem;
   }
 
   @media (min-width: 80rem) {
     height: 32rem;
+    transform: none;
+    right: 0;
+  }
+
+  @media (min-width: 120rem) {
+    right: 16rem;
   }
 `
 
 const ImageForward = styled.img`
-  height: 20rem;
+  position: absolute;
+  transform: translateX(-40%);
+  left: 50%;
+  bottom: 0;
+  height: 14rem;
   margin: 0;
 
   @media (min-width: 40rem) {
-
+    height: 20rem;
   }
 
   @media (min-width: 80rem) {
     height: 32rem;
+    transform: none;
+    left: 0;
+  }
+
+  @media (min-width: 120rem) {
+    left: 16rem;
   }
 `
 
@@ -181,7 +212,7 @@ const ButtonContainer = styled.div`
   width: 100%;
   display: flex;
   margin: .5rem 0;
-  justify-content: space-evenly;
+  justify-content: center;
 
   @media (min-width: 40rem) {
 
@@ -220,7 +251,9 @@ const Button = styled.a`
   }
 
   @media (min-width: 40rem) {
-
+    font-size: 1rem;
+    margin: 0 1rem 0 0;
+    padding: .6rem 2.5rem;
   }
 
   @media (min-width: 80rem) {
