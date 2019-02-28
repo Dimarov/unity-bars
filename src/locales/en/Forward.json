@@ -14,21 +14,17 @@
         "Subtitle": "Basic functionality",
         "Line1": "Self-registration in the system, the ability of the account management client.",
         "Line2": "Viewing Deposit products (including the files) with possibility of replenishment and open (WEB, mobile app).",
-        "Line3": "The formation of statements of accounts of the user, display account statements (WEB, mobile, apps), the mechanism of the latest operations of the user-specific account, export \/ print statements.",
-        "Line4": "Create and send Bank transfers between your accounts, by account number to the Bank's Clients, by phone number to Forward online users, saving templates of payment documents.",
-        "Line5": "A mechanism for receiving and loading data of branches and ATMs (input xml file), determining the current location of the receive location data about your current location.",
-        "Line6": "Automatic download of current exchange rates from the ABS, information on the current rates in the System (web) with possibility of transition to a separate screen to display the change history of course.",
-        "Line7": "Services for locking and unlocking a user for CRM system ",
-        "Line8": "Setting currency exchange rates MPs through the administrative part and their reflection in the System (WEB, mobile app).",
-        "Line9": "Services for card management."
-    },
-    "Security": {
-        "Title": "System Security",
-        "Line1": "Authentication: username and password, fingerprint, OTP by SMS, digital signature",
-        "Line2": "The dependence of the available functionality of the system from the authentication method",
-        "Line3": "Control and check the status of user certificates",
-        "Line4": "Distribution of administrators \/ engineers \/ users of the Bank according to the provided roles",
-        "Line5": "Support various systems of cryptography and tokens (RSA, GOST)"
+        "Line3": "View existing credit products with the ability to make a payment for repayment",
+        "Line4": "View the minimum required payment by credit card",
+        "Line5": "Services for blocking, unlocking and changing the user's phone number for the CRM system",
+        "Line6": "The formation of statements of accounts of the user, display account statements (WEB, mobile, apps), the mechanism of the latest operations of the user-specific account, export \/ print statements.",
+        "Line7": "Create and send Bank transfers between your accounts, by account number to the Bank's Clients, by phone number to Forward online users, saving templates of payment documents.",
+        "Line8": "Map of branches and other points of presence of the Bank, with the possibility of laying the route and viewing detailed information. Edit data through the admin panel.",
+        "Line9": "Automatic download of current exchange rates from the ABS, information on the current rates in the System (WEB, mobile app) with possibility of transition to a separate screen to display the change history of course.",
+        "Line10": "Services for locking and unlocking a user for CRM system ",
+        "Line11": "Setting currency exchange rates MPs through the administrative part and their reflection in the System (WEB, mobile app).",
+        "Line12": "Services for card management.",
+        "Line13": "Authentication: username and password, fingerprint, OTP by SMS, FaceID (iOS only)"
     },
     "Download": "Download Forward Online",
     "Try Web": "Or try the web version"

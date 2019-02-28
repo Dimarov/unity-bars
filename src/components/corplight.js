@@ -597,7 +597,7 @@ class Corplight extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line28")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line29")}</FunctionalityParagraph>
             </div>
-            <div>
+            {/* <div>
               <FunctionalitySubtitle>{t("Functionality.Subtitle4")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line30")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line31")}</FunctionalityParagraph>
@@ -608,7 +608,7 @@ class Corplight extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line36")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line37")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line38")}</FunctionalityParagraph>
-            </div>
+            </div> */}
           </FunctionalityContainer>
           <SecurityContainer>
             <SecurityInfoContainer>

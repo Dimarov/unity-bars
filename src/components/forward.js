@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import header from "../images/mockups/forward-samsugs.png"
 import about from "../images/mockups/forward-samsung-2.png"
-import security from "../images/mockups/forward-samsung-3.png"
 
 import banking from "../images/icons/banking.svg"
 import functionality from "../images/icons/functionality.svg"
@@ -352,101 +351,6 @@ const FunctionalityParagraph = styled.p `
   }
 `
 
-const SecurityContainer = styled.div`
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-`
-
-const SecurityInfoContainer = styled.div`
-  margin: 4rem 0;
-  width: 100%;
-  padding: 0;
-  box-sizing: border-box;
-  height: auto;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    width: 36rem;
-    height: 40rem;
-    padding: 0;
-  }
-`
-
-const SecurityInfoTitle = styled.h2`
-  font-family: myriad-pro, sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #fff;
-  padding: 1rem 2rem;
-  background: #991F3A;
-  width: 100%;
-  text-align: center;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    font-size: 3rem;
-  }
-`
-
-const SecurityInfoParagraph = styled.p `
-  font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  margin: .5rem 0;
-  color: #29333E;
-  opacity: .8;
-  padding-bottom: .5rem;
-  border-bottom: .0625rem solid #29333E;
-
-  :last-of-type {
-    border: none;
-  }
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-`
-
-const SecurityImage = styled.img`
-  height: 20rem;
-  width: auto;
-  position: absolute;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    height: 40rem;
-  }
-`
-
 const DownloadContainer = styled.div`
   width: 100%;
   margin: 0 0 4rem 0;
@@ -566,23 +470,13 @@ class Forward extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line6")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line7")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line8")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line9")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line10")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line11")}</FunctionalityParagraph>
+              <FunctionalityParagraph>{t("Functionality.Line12")}</FunctionalityParagraph>
             </div>
 
           </FunctionalityContainer>
-          <SecurityContainer>
-            <SecurityInfoContainer>
-              <SecurityInfoTitle>{t("Security.Title")}</SecurityInfoTitle>
-              <SecurityInfoParagraph>{t("Security.Line1")}</SecurityInfoParagraph>
-              <SecurityInfoParagraph>{t("Security.Line2")}</SecurityInfoParagraph>
-              <SecurityInfoParagraph>{t("Security.Line3")}</SecurityInfoParagraph>
-              <SecurityInfoParagraph>{t("Security.Line4")}</SecurityInfoParagraph>
-              <SecurityInfoParagraph>{t("Security.Line5")}</SecurityInfoParagraph>
-            </SecurityInfoContainer>
-
-            <ImageContainer>
-              <SecurityImage src={security} alt="security-mockup" />
-            </ImageContainer>
-          </SecurityContainer>
           <DownloadContainer>
             <DownloadTitle>{t("Download")}</DownloadTitle>
             <DownloadSubtitle>{t("Try Web")}</DownloadSubtitle>

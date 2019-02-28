@@ -6,6 +6,7 @@ import Header from './header'
 import Footer from './footer'
 import './layout.css'
 import i18n from '../i18n'
+import SEO from './SEO'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,17 +25,7 @@ const Layout = ({ children }) => (
       },
     }) => (
       <>
-        <Helmet
-          defaultTitle={title} titleTemplate={`%s | ${title}`}
-          meta={[
-            { httpEquiv: "Content-Type", content: "text/html; charset=utf-8" },
-            { name: 'viewport', content: "width=device-width, initial-scale=1" },
-            { name: 'description', content: 'Компанія UNITY-BARS успішно працює на ринку 25 років в сфері розробки банківського програмного забезпечення. Більше 90 професійних фахівців різних напрямків.' },
-            { name: 'keywords', content: 'IT, FinTech, ПЗ, банкінг' },
-            { name: "google-site-verification", content: "QHNZ30ZtCng5ZXbVuGlZ-HoEjPBjBp9Jp-UliaGpYTQ" }
-          ]}>
-          <html lang="uk" />
-        </Helmet>
+        <SEO title={title} />
         
         <Header siteTitle={title}/>
         <form name="download" data-netlify="true" action="/success" hidden>

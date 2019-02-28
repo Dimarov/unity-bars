@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'UNITY-BARS | Розробка програмного забезпечення, IT тестування та консалтінг',
+    title: 'Розробка програмного забезпечення, IT тестування та консалтінг',
+    titleTemplate: 'UNITY-BARS | %s ',
+    url: "https://www.unity-bars.com",
+    description: 'Компанія UNITY-BARS успішно працює на ринку 25 років в сфері розробки банківського програмного забезпечення. Ми надаємо послуги розробки, тестування та консалтингу у сфері банківського обслуговування.',
+    image: '/og-image.jpg',
+    keywords: 'Unity Bars, IT, FinTech, Software, Development, Testing, Consulting, banking, ФінТех, банкінг, ПЗ, розробка, тестування, консалтинг, ПО, банкинг, разработка'
   },
   plugins: [
     'gatsby-plugin-styled-components',
