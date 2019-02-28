@@ -5,28 +5,13 @@ import { translate } from 'react-i18next'
 import boneImage from "../images/mockups/bone-macbook.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
+import mysteryBox from "../images/mystery-box.jpg"
 
 const Background = styled.div`
   width: 100%;
   height: 32rem;
   background: ${props => props.themeColor || "#000"};
   background-size: cover;
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    height: 40rem;
-  }
-`
-
-const BackgroundNew = styled.div`
-  width: 100%;
-  height: 32rem;
-  background: ${props => props.themeColor || "#000"};
-  background-size: cover;
-  filter: brightness(.6);
 
   @media (min-width: 40rem) {
 
@@ -136,6 +121,19 @@ const ImageForward = styled.img`
   }
 `
 
+const MysteryBox = styled.img`
+  height: 16rem;
+  margin: 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
+  }
+`
+
 const Title = styled.h1`
   font-size: 2rem;
   margin: .25rem 0;
@@ -208,7 +206,7 @@ const Button = styled.a`
   font-family: myriad-pro, sans-serif;
   font-weight: 600;
   color: ${props => props.outline ? props.themeColorSecondary : props.themeColor};
-  cursor: pointer;
+  
   transition: all .3s ease-out;
 
   :focus,
@@ -226,9 +224,9 @@ const Button = styled.a`
   }
 
   @media (min-width: 80rem) {
-    font-size: .85rem;
+    font-size: 1rem;
     margin: 0 1rem 0 0;
-    padding: .4rem 2rem;
+    padding: .6rem 2.5rem;
   }
 `
 
@@ -314,14 +312,17 @@ class ProductPreview extends React.Component {
             </Info>
           </Content>
         </Background>
-        <BackgroundNew themeColor='#1a1a1a'>
+        <Background themeColor='#111111'>
           <Content>
             <Info>
-              <Title themeColorSecondary='#FFF'>{t("BOne system for")} <Span color="#F90400">{t("UBRR")}</Span></Title>
-              <Subtitle themeColorSecondary='#FFF'>{t("Expect the latest development in April 2019")}</Subtitle>
+              <Title themeColorSecondary='#fff' >{t("BOne system for")} <Span color="#F90400">{t("UBRR")}</Span></Title>
+              <Subtitle themeColorSecondary='#fff'>{t("Expect the latest development in April 2019")}</Subtitle>
             </Info>
+            <ImageContainer>
+              <MysteryBox src={mysteryBox} alt="mystery-box" />
+            </ImageContainer>
           </Content>
-        </BackgroundNew>
+        </Background>
       </div>
     )
   }

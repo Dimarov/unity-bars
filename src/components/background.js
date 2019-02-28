@@ -87,7 +87,9 @@ const StyledButton = styled.button`
   }
 
   @media (min-width: 80rem) {
-    padding: 0.5rem 3rem;
+    font-size: 1rem;
+    margin: 1rem;
+    padding: .6rem 2.5rem;
   }
 `
 

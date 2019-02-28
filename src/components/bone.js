@@ -9,6 +9,7 @@ import header from "../images/mockups/bone-iphones.png"
 import boneImage from "../images/mockups/bone-macbook.png"
 import corpImage from "../images/mockups/corplight-iphone.png"
 import forwardImage from "../images/mockups/forward-samsung.png"
+import mysteryBox from "../images/mystery-box.jpg"
 
 const Background = styled.div`
   width: 100%;
@@ -305,24 +306,6 @@ const BackgroundCase = styled.div`
     transition: all .3s ease-in-out;
   }
 `
-
-const BackgroundCaseNew = styled.div`
-  width: 100%;
-  height: 32rem;
-  margin-bottom: 2rem;
-  background: ${props => props.themeColor || "#000"};
-  background-size: cover;
-  filter: brightness(.6);
-
-  @media (min-width: 40rem) {
-
-  }
-
-  @media (min-width: 80rem) {
-    height: 40rem;
-  }
-`
-
 const ContentCase = styled.div`
   height: 100%;
   width: 100%;
@@ -395,6 +378,19 @@ const ImageCorp = styled.img`
 
 const ImageForward = styled.img`
   height: 20rem;
+  margin: 0;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    height: 32rem;
+  }
+`
+
+const MysteryBox = styled.img`
+  height: 16rem;
   margin: 0;
 
   @media (min-width: 40rem) {
@@ -496,9 +492,9 @@ const ButtonCase = styled.a`
   }
 
   @media (min-width: 80rem) {
-    font-size: .85rem;
+    font-size: 1rem;
     margin: 0 1rem 0 0;
-    padding: .4rem 2rem;
+    padding: .6rem 2.5rem;
   }
 `
 
@@ -541,7 +537,7 @@ class Bone extends React.Component {
             <ButtonContainer>
               <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/us/app/bone-client-bank/id1156928571?mt=8" >App Store</Button>
               <Button target="_blank" rel="noopener noreferrer" href=" https://play.google.com/store/apps/details?id=com.unitybars.bone" >Google Play</Button>
-              <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://bone.unity-bars.com:2443/auth/logon"  outline >Web Demo</Button>
             </ButtonContainer>
           </Container>
         </Header>
@@ -588,9 +584,9 @@ class Bone extends React.Component {
                 <TitleCase themeColorSecondary='#fff'>CorpLight <SpanCase color="#3EC4E1">{t("Oschadbank")}</SpanCase></TitleCase>
                 <SubtitleCase themeColorSecondary='#fff'>{t("Online banking products and services control system")}</SubtitleCase>
                 <ButtonContainerCase>
-                  <ButtonCase href="https://itunes.apple.com/us/app/bone-client-bank/id1156928571?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
-                  <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
-                  <ButtonCase href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
+                  <ButtonCase href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
+                  <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
+                  <ButtonCase href="https://cl.oschadbank.ua/auth/logon" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
                 </ButtonContainerCase>
                 <MoreButtonCase to="/corplight" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButtonCase>
               </InfoCase>
@@ -616,7 +612,7 @@ class Bone extends React.Component {
               </InfoCase>
             </ContentCase>
           </BackgroundCase>
-          <BackgroundCaseNew themeColor='#1A1A1A'>
+          <BackgroundCase themeColor='#111111'>
             <ContentCase>
 
               <InfoCase>
@@ -624,8 +620,11 @@ class Bone extends React.Component {
                 <SubtitleCase themeColorSecondary='#fff'>{t("Expect the latest development in April 2019")}</SubtitleCase>
 
               </InfoCase>
+              <ImageContainerCase>
+                <MysteryBox src={mysteryBox} alt="mystery-box" />
+              </ImageContainerCase>
             </ContentCase>
-          </BackgroundCaseNew>
+          </BackgroundCase>
 
         </ContainerCase>
         <Container>
@@ -636,7 +635,7 @@ class Bone extends React.Component {
             <ButtonContainer>
               <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/us/app/bone-client-bank/id1156928571?mt=8" >App Store</Button>
               <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.bone" >Google Play</Button>
-              <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://bone.unity-bars.com:2443/auth/logon"  outline >Web Demo</Button>
             </ButtonContainer>
           </DownloadContainer>
         </Container>
