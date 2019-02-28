@@ -539,8 +539,8 @@ class Bone extends React.Component {
             <Title>B.One</Title>
             <Subtitle>{t("Internet banking for SME and individuals")}</Subtitle>
             <ButtonContainer>
-              <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
-              <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/us/app/bone-client-bank/id1156928571?mt=8" >App Store</Button>
+              <Button target="_blank" rel="noopener noreferrer" href=" https://play.google.com/store/apps/details?id=com.unitybars.bone" >Google Play</Button>
               <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
             </ButtonContainer>
           </Container>
@@ -588,8 +588,8 @@ class Bone extends React.Component {
                 <TitleCase themeColorSecondary='#fff'>CorpLight <SpanCase color="#3EC4E1">{t("Oschadbank")}</SpanCase></TitleCase>
                 <SubtitleCase themeColorSecondary='#fff'>{t("Online banking products and services control system")}</SubtitleCase>
                 <ButtonContainerCase>
-                  <ButtonCase href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
-                  <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
+                  <ButtonCase href="https://itunes.apple.com/us/app/bone-client-bank/id1156928571?mt=8" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
+                  <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
                   <ButtonCase href="https://corplight.unity-bars.com:3443/auth/logon" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
                 </ButtonContainerCase>
                 <MoreButtonCase to="/corplight" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButtonCase>
