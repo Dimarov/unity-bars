@@ -29,11 +29,12 @@ const Container = styled.div`
 
 const Header = styled.div`
   width: 100%;
-  height: 48rem;
-  padding-top: 24rem;
+  height: 56rem;
+  padding-top: 28rem;
 
   @media (min-width: 40rem) {
-
+    height: 80rem;
+    padding-top: 48rem;
   }
 
   @media (min-width: 80rem) {
@@ -122,7 +123,9 @@ const Button = styled.a`
   }
 
   @media (min-width: 40rem) {
-
+    padding: .8rem 3rem;
+    margin: 0 1rem 0 0;
+    font-size: 1.25rem;
   }
 
   @media (min-width: 80rem) {
@@ -137,6 +140,14 @@ const HeaderImage = styled.img`
   top: 0rem;
   right: 0;
   width: 47rem;
+  
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+
+  }
 `
 
 const AboutContainer = styled.div`
@@ -177,7 +188,8 @@ const AboutImage = styled.img`
   width: auto;
 
   @media (min-width: 40rem) {
-
+    width: 10rem;
+    height: auto;
   }
 
   @media (min-width: 80rem) {
@@ -631,7 +643,7 @@ class Corplight extends React.Component {
             <ButtonContainer>
               <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
               <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-              <Button target="_blank" rel="noopener noreferrer" href="https://corplight.unity-bars.com:3443/auth/logon"  outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="http://cl.oschadbank.ua/"  outline >Web Demo</Button>
             </ButtonContainer>
           </DownloadContainer>
         </Container>

@@ -46,11 +46,14 @@ const Content = styled.div`
   flex-wrap: wrap;
 
   @media (min-width: 40rem) {
-
   }
 
   @media (min-width: 80rem) {
-    padding: 0 14rem;
+    padding: 0 4rem;
+  }
+
+  @media (min-width: 120rem) {
+    padding: 0 24rem;
   }
 `
 
