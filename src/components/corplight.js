@@ -643,7 +643,7 @@ class Corplight extends React.Component {
             <ButtonContainer>
               <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/ru/app/corplight-osadbank/id1120169675?mt=8" >App Store</Button>
               <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.corplight.oschadbank" >Google Play</Button>
-              <Button target="_blank" rel="noopener noreferrer" href="http://cl.oschadbank.ua/"  outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="https://cl.oschadbank.ua/"  outline >Web Demo</Button>
             </ButtonContainer>
           </DownloadContainer>
         </Container>
