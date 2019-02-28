@@ -31,6 +31,7 @@ const Layout = ({ children }) => (
             { name: 'viewport', content: "width=device-width, initial-scale=1" },
             { name: 'description', content: 'Компанія UNITY-BARS успішно працює на ринку 25 років в сфері розробки банківського програмного забезпечення. Більше 90 професійних фахівців різних напрямків.' },
             { name: 'keywords', content: 'IT, FinTech, ПЗ, банкінг' },
+            { name: "google-site-verification", content: "QHNZ30ZtCng5ZXbVuGlZ-HoEjPBjBp9Jp-UliaGpYTQ" }
           ]}>
           <html lang="uk" />
         </Helmet>
