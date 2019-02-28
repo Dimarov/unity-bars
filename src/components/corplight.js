@@ -111,6 +111,7 @@ const Button = styled.a`
   color: ${props => props.outline ? "#303030" : "#FEFEFE"};
   cursor: pointer;
   transition: all .3s ease-out;
+  z-index: 9000;
 
   :focus,
   :hover {
