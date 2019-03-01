@@ -3,3 +3,11 @@
   to = "/success/"
   status = 301
   force = true
+
+  #old site redirects
+
+[[redirects]]
+  from = "/portfolio/*"
+  to = "/"
+  status = 301
+  force = true
