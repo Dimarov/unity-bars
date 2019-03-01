@@ -7,8 +7,8 @@ import DownloadForm from './download-form'
 
 import header from "../images/mockups/bone-iphones.png"
 import boneImage from "../images/mockups/bone-macbook.png"
-import corpImage from "../images/mockups/corplight-iphone.png"
-import forwardImage from "../images/mockups/forward-samsung.png"
+import corpImage from "../images/mockups/corplight-iphone-5.png"
+import forwardImage from "../images/mockups/forward-samsung-4.png"
 import mysteryBox from "../images/mystery-box.jpg"
 
 const Background = styled.div`
@@ -176,7 +176,7 @@ const FunctionalityTitle = styled.h3`
   font-family: myriad-pro, sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  margin: 0;
+  margin: 1rem 0;
   color: #fff;
 
   @media (min-width: 40rem) {
@@ -313,13 +313,20 @@ const ContentCase = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 
   @media (min-width: 40rem) {
-
   }
 
   @media (min-width: 80rem) {
-    padding: 0 10rem;
+    padding: 0 4rem;
+    flex-wrap: nowrap;
+  }
+
+  @media (min-width: 120rem) {
+    padding: 0 24rem;
   }
 `
 
@@ -337,7 +344,7 @@ const InfoCase = styled.div`
   }
 
   @media (min-width: 80rem) {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
     height: 100%;
     padding: 3rem 4rem;
     align-items: flex-start;
@@ -357,35 +364,55 @@ const ImageContainerCase = styled.div`
   }
 
   @media (min-width: 80rem) {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
     height: 100%;
     order: 0;
   }
 `
 
 const ImageCorp = styled.img`
-  height: 16rem;
+  position: absolute;
+  transform: translateX(40%);
+  right: 50%;
+  bottom: 0;
+  height: 14rem;
   margin: 0;
 
   @media (min-width: 40rem) {
-
+    height: 20rem;
   }
 
   @media (min-width: 80rem) {
     height: 32rem;
+    transform: none;
+    right: 0;
+  }
+
+  @media (min-width: 120rem) {
+    right: 16rem;
   }
 `
 
 const ImageForward = styled.img`
-  height: 20rem;
+  position: absolute;
+  transform: translateX(-40%);
+  left: 50%;
+  bottom: 0;
+  height: 14rem;
   margin: 0;
 
   @media (min-width: 40rem) {
-
+    height: 20rem;
   }
 
   @media (min-width: 80rem) {
     height: 32rem;
+    transform: none;
+    left: 0;
+  }
+
+  @media (min-width: 120rem) {
+    left: 16rem;
   }
 `
 
