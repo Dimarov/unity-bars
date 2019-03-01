@@ -30,6 +30,8 @@ const Content = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 
   @media (min-width: 40rem) {
   }
