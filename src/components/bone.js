@@ -338,6 +338,7 @@ const InfoCase = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 9000;
 
   @media (min-width: 40rem) {
 
