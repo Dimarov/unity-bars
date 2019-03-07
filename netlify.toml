@@ -11,3 +11,9 @@
   to = "/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/corp_light"
+  to = "/corplight"
+  status = 301
+  force = true
