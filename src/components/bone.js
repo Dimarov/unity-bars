@@ -36,7 +36,7 @@ const Header = styled.div`
   }
 
   @media (min-width: 80rem) {
-    height: 100vh;
+    height: 60rem;
     padding-top: 12rem;
   }
 `

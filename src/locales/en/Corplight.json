@@ -10,6 +10,7 @@
     "Title": "System Security"
   },
   "Oschadbank": "Oschadbank",
+  "for SME": "For small and medium-sized enterprises",
   "Capabilities": {
     "Line1": "Online banking",
     "Line2": "Access to banking products and services anywhere and at any time.",
@@ -61,7 +62,7 @@
     "Line38": "The formation history of operations on a corporate card.",
     "Subtitle": "Basic functionality",
     "Subtitle4": "The functionality of corporate cards",
-    "Subtitle2": "Payments nsmenu currency",
+    "Subtitle2": "Payments menu currency",
     "Subtitle3": "Salary project"
   },
   "Online banking products and services control system": "Online system of managing Bank accounts and products"

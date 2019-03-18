@@ -35,7 +35,7 @@ const Header = styled.div`
   }
 
   @media (min-width: 80rem) {
-    height: 100vh;
+    height: 60rem;
     padding-top: 12rem;
   }
 `
@@ -74,6 +74,24 @@ const Subtitle = styled.p`
   @media (min-width: 80rem) {
     font-size: 2rem;
     margin: 4rem 0;
+  }
+`
+
+const Text = styled.p`
+  font-family: myriad-pro, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  color: #991F3A;
+  opacity: .8;
+
+  @media (min-width: 40rem) {
+
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 1.5rem;
+    margin: 2rem 0;
   }
 `
 
@@ -409,6 +427,7 @@ class Forward extends React.Component {
           <Container>
             <HeaderImage src={header} alt="header-mockup" />
             <Title>Forward <br /><Span>Online</Span></Title>
+            <Text>{t("for individuals")}</Text>
             <Subtitle>{t("24/7 access to your banking services")}</Subtitle>
             <ButtonContainer>
               <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
