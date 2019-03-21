@@ -83,8 +83,8 @@ const Subtitle = styled.p`
 
 const Text = styled.p`
   font-family: myriad-pro, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 1rem 0;
   color: #3EC4E1;
   opacity: .8;
@@ -94,8 +94,9 @@ const Text = styled.p`
   }
 
   @media (min-width: 80rem) {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 2rem 0;
+    font-weight: 300;
   }
 `
 
