@@ -215,6 +215,7 @@ const ButtonContainer = styled.div`
   display: flex;
   margin: .5rem 0;
   justify-content: center;
+  z-index: 9000;
 
   @media (min-width: 40rem) {
 
