@@ -47,6 +47,14 @@ import fifteene from "../images/employees/15.jpg"
 import sixteene from "../images/employees/16.jpg"
 import seventeene from "../images/employees/17.jpg"
 import eighteene from "../images/employees/18.jpg"
+import nineteene from "../images/employees/19.jpg"
+import twentye from "../images/employees/20.jpg"
+import twentyonee from "../images/employees/21.jpg"
+import twentytwoe from "../images/employees/22.jpg"
+import twentythreee from "../images/employees/23.jpg"
+import twentyfoure from "../images/employees/24.jpg"
+import twentyfivee from "../images/employees/25.jpg"
+import twentysixee from "../images/employees/26.jpg"
 
 const Background = styled.div`
   width: 100%;
@@ -387,6 +395,46 @@ class Company extends React.Component {
               <PersonPhoto person={eighteene}></PersonPhoto>
               <PersonName>{t("Team.Name18")}</PersonName>
               <PersonPosition>{t("Team.Position18")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={nineteene}></PersonPhoto>
+              <PersonName>{t("Team.Name19")}</PersonName>
+              <PersonPosition>{t("Team.Position19")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentye}></PersonPhoto>
+              <PersonName>{t("Team.Name20")}</PersonName>
+              <PersonPosition>{t("Team.Position20")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentyonee}></PersonPhoto>
+              <PersonName>{t("Team.Name21")}</PersonName>
+              <PersonPosition>{t("Team.Position21")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentytwoe}></PersonPhoto>
+              <PersonName>{t("Team.Name22")}</PersonName>
+              <PersonPosition>{t("Team.Position22")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentythreee}></PersonPhoto>
+              <PersonName>{t("Team.Name23")}</PersonName>
+              <PersonPosition>{t("Team.Position23")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentyfoure}></PersonPhoto>
+              <PersonName>{t("Team.Name24")}</PersonName>
+              <PersonPosition>{t("Team.Position24")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentyfivee}></PersonPhoto>
+              <PersonName>{t("Team.Name25")}</PersonName>
+              <PersonPosition>{t("Team.Position25")}</PersonPosition>
+            </Person>
+            <Person>
+              <PersonPhoto person={twentysixee}></PersonPhoto>
+              <PersonName>{t("Team.Name26")}</PersonName>
+              <PersonPosition>{t("Team.Position26")}</PersonPosition>
             </Person>
           </Grid>
           <Topic>{t("Clients and partners")}</Topic>
