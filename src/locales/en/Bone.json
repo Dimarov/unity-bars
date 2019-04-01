@@ -1,28 +1,25 @@
 {
-  "Internet banking for SME and individuals": "Online banking for SME and individuals",
+  "Internet banking for SME and individuals": "Web and mobile banking",
   "Capabilities": {
-    "Title": "With system B.One You can",
+    "Title": "Features",
     "Line1": "Obtain information about-fees and payments",
     "Line2": "Generate payments",
     "Line3": "Create reports",
     "Line4": "Pay loans",
-    "Line5": "Control deposits",
+    "Line5": "Apply for deposits",
     "Line6": "Apply for the connection of the deposits of Bank products",
     "Line7": "Manage regular payments",
     "Line8": "Control access for employees, connected to the system"
   },
   "Download Presentation": "Download Presentation",
   "Functionality": {
-    "Title": "Functionality B.One",
-    "Subtitle": "Basic functionality",
-    "Line1": "The statement of the operator mapping of a user account (web, mobile), the mechanism of the most recent transactions on a particular account user, export / save extracts",
-    "Line2": "Viewing Deposit products with replenishment (web, mobile app)",
-    "Line3": "Viewing loan products with possibility of their repayment",
-    "Line4": "Receives and loads of branches and ATMs (input xml file) that determines the current location for obtaining geolocation information about the current location; Automatically download information about your current exchange with the ABS, information about the current courses in the system (Web) with the transition to a separate screen form to display the history of changes in exchange rates; Realization information about the current system chips CorpLight is that the user can add avitarescape the employee directly to the network",
-    "Line5": "An authorized user can add an employee\" directly to the Internet",
-    "Line6": "To apply for the connection of the deposits of Bank products",
-    "Line7": "The client connection to the system, the ability to manage client accounts",
-    "Line8": "Change password, password recovery, lock, electronic authentication in the client authentication token OTP generating client and sending passwords via SMS"
+    "Title": "B.One platform functionality",
+    "Line2": "Access to the deposits, making replenishment (web and mobile app)",
+    "Line3": "Access to the loans, making repayment (web and mobile app)",
+    "Line4": "Branches and ATM map. Making routes to the nearest branch/ATM. Import points via XML file or from Core system. Online currency rates (from Core system).",
+    "Line5": "An authorized user can create an restricted access  \"user\". Amount of \"users\" has no limitation.",
+    "Line6": "Make an application for deposit, credit, bank guarantee or any other bank product",
+    "Line8": "The user has the ability to change and recover the password. Use EDS-token or SMS OTP Authentication. For mobile applications - use FaceID, TouchID. The Admin Console has flexible user lock settings"
   },
   "Products": "Products based on B.One",
   "Oschadbank": "Oschadbank",

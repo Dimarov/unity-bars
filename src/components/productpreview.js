@@ -274,6 +274,7 @@ const MoreButton = styled(Link)`
   text-decoration: none;
   color: ${props => props.themeColorSecondary};
   transition: all .3s ease-out;
+  z-index: 9000;
 
   :focus,
   :hover {

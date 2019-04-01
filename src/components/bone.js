@@ -534,6 +534,7 @@ const MoreButtonCase = styled(Link)`
   text-decoration: none;
   color: ${props => props.themeColorSecondary};
   transition: all .3s ease-out;
+  z-index: 9000;
 
   :focus,
   :hover {
@@ -592,14 +593,11 @@ class Bone extends React.Component {
 
             <FunctionalityTitle>{t("Functionality.Title")}</FunctionalityTitle>
             <div>
-              <FunctionalitySubtitle>{t("Functionality.Subtitle")}</FunctionalitySubtitle>
-              <FunctionalityParagraph>{t("Functionality.Line1")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line2")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line3")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line4")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line5")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line6")}</FunctionalityParagraph>
-              <FunctionalityParagraph>{t("Functionality.Line7")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line8")}</FunctionalityParagraph>
             </div>
           </FunctionalityContainer>

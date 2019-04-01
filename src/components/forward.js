@@ -482,7 +482,6 @@ class Forward extends React.Component {
 
             <FunctionalityTitle>{t("Functionality.Title")} <FunctionalityTitleSpan>Forward</FunctionalityTitleSpan></FunctionalityTitle>
             <div>
-              <FunctionalitySubtitle>{t("Functionality.Subtitle")}</FunctionalitySubtitle>
               <FunctionalityParagraph>{t("Functionality.Line1")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line2")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line3")}</FunctionalityParagraph>
@@ -492,7 +491,6 @@ class Forward extends React.Component {
               <FunctionalityParagraph>{t("Functionality.Line7")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line8")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line9")}</FunctionalityParagraph>
-              <FunctionalityParagraph>{t("Functionality.Line10")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line11")}</FunctionalityParagraph>
               <FunctionalityParagraph>{t("Functionality.Line12")}</FunctionalityParagraph>
             </div>
