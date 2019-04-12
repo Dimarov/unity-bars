@@ -33,6 +33,7 @@ const SEO = ({ title, image, description, keywords }) => (
                         <meta name="description" content={seo.description} />
                         <meta name="keywords" content={seo.keywords} />
                         <meta name="image" content={seo.image} />
+                        <meta name="google-site-verification" content="QHNZ30ZtCng5ZXbVuGlZ-HoEjPBjBp9Jp-UliaGpYTQ" />
                         {seo.title && <meta property="og:title" content={seo.title} />}
                         {seo.description && (
                             <meta property="og:description" content={seo.description} />
