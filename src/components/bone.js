@@ -632,7 +632,7 @@ class Bone extends React.Component {
                 <ButtonContainerCase>
                   <ButtonCase href="https://itunes.apple.com/us/app/forward-online/id1445428569" themeColor='#1a1a1a' themeColorSecondary='#fff'>App Store</ButtonCase>
                   <ButtonCase href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" themeColor='#1a1a1a' themeColorSecondary='#fff'>Google Play</ButtonCase>
-                  <ButtonCase href="https://online.forward-bank.com/dashboard" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
+                  <ButtonCase href="http://boneonline.unity-bars.com:1080/auth" outline themeColor='#1a1a1a' themeColorSecondary='#fff'>Web Demo</ButtonCase>
                 </ButtonContainerCase>
                 <MoreButtonCase to="/forward" themeColorSecondary='#3EC4E1'>{t("More")}</MoreButtonCase>
               </InfoCase>

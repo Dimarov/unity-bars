@@ -24,7 +24,7 @@
     "gatsby-plugin-styled-components": "^3.0.1",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-source-sanity": "^2.0.1",
-    "i18next": "^15.0.4",
+    "i18next": "^15.0.9",
     "i18next-browser-languagedetector": "^3.0.0",
     "i18next-node-fs-backend": "^2.1.1",
     "i18next-xhr-backend": "^2.0.0",

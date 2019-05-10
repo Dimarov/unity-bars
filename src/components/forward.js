@@ -503,7 +503,7 @@ class Forward extends React.Component {
             <ButtonContainer>
               <Button target="_blank" rel="noopener noreferrer" href="https://itunes.apple.com/us/app/forward-online/id1445428569" >App Store</Button>
               <Button target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.unitybars.bone.personal.forward" >Google Play</Button>
-              <Button target="_blank" rel="noopener noreferrer" href="https://online.forward-bank.com/dashboard" outline >Web Demo</Button>
+              <Button target="_blank" rel="noopener noreferrer" href="http://boneonline.unity-bars.com:1080/auth" outline >Web Demo</Button>
             </ButtonContainer>
           </DownloadContainer>
         </Container>
